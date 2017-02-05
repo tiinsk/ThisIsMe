@@ -17,6 +17,11 @@ WebFont.load({
     },
 });
 
+if(__PRODUCTION__){
+  ga('create', 'UA-54768362-3', 'auto');
+  ga('send', 'pageview');
+}
+
 render((
     <Provider store={store}>
        <App/>
