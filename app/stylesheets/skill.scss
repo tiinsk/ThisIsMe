@@ -1,0 +1,24 @@
+.skill{
+  display: flex;
+  align-items: center;
+  .label{
+    color: white;
+    width: 6rem;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+  }
+  .ratings {
+    .skill-item {
+      display: inline-block;
+      margin-left: 0.25rem;
+      font-size: 1.7rem;
+      &.empty {
+        color: #464970;
+      }
+      &.full {
+        color: #ffb650;
+      }
+    }
+  }
+}

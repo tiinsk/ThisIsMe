@@ -1,0 +1,14 @@
+.bubble-chart{
+  height: 100%;
+    .bubble-chart-container{
+      width: 100%;
+      height: 25rem;
+      .bubble-chart-d3 .bubble-chart-text{
+        height: 30rem;
+        width: 800px!important;
+      }
+      .bubble-label{
+        color: white !important;
+      }
+  }
+}

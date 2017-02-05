@@ -1,0 +1,7 @@
+.row{
+  display: flex;
+  justify-content: center;
+  @media (max-width: $md-size){
+    flex-wrap: wrap;
+  }
+}

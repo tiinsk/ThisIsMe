@@ -1,0 +1,61 @@
+//$md-size: 1399px;
+$md-size: 999px;
+$sm-size: 799px;
+$xs-size: 499px;
+
+@import "../../node_modules/react-bubble-chart/src/style.css";
+
+@import './header.scss';
+@import './introduction.scss';
+@import './section.scss';
+@import './column.scss';
+@import './work_item.scss';
+@import './section_title.scss';
+@import 'course_item';
+@import './row.scss';
+@import './thesis_item.scss';
+@import './synopsis.scss';
+@import './edu_item.scss';
+@import './education.scss';
+@import './skill.scss';
+@import './contact_card.scss';
+@import './bubble_chart.scss';
+@import '/skills.scss';
+@import './project.scss';
+@import './travel_map.scss';
+@import 'time_line';
+@import './time_bubble.scss';
+@import './work_history';
+
+body{
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+html{
+  font-size: 15px;
+  @media (max-width: $md-size){
+    font-size: 14px;
+  }
+  @media (max-width: $sm-size){
+    font-size: 13px;
+  }
+  @media (max-width: $xs-size){
+    font-size: 12px;
+  }
+}
+
+*{
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+::selection {
+  background: #4e5178;
+  color: white;
+}
+
+::-moz-selection {
+  background: #4e5178;
+  color: white;
+}

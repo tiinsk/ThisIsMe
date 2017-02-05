@@ -1,0 +1,153 @@
+.time-bubble{
+  flex: 0 0 50%;
+  @media (max-width: $md-size) {
+    flex: 0 0 100%;
+  }
+  .content-box{
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.33);
+    border: 1px solid rgba(0,0,0,.09);
+    padding: 1.5rem;
+    margin-right: 2rem;
+    flex: 0 0 50%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    .details{
+      flex: 0 1 75%;
+      margin: 0 1rem;
+      .title{
+        font-size: 1.2rem;
+        color: #647692;
+        margin-top: 0.25rem;
+      }
+      .program{
+        font-size: 1.2rem;
+        color: #647692;
+      }
+      .school{
+        color: #647692;
+        font-weight: 100;
+      }
+      ul{
+        padding-left: 2rem;
+        color: #3a3a3a;
+        font-weight: 100;
+      }
+    }
+    .time{
+      flex: 0 0 25%;
+      text-align: center;
+      color: #647692;
+      font-size: 1.3rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 1.5rem 0 1rem;
+      .year-line{
+        margin-top: 1rem;
+        padding: 0 0.8rem;
+      }
+      .month{
+        font-size: 1rem;
+        font-weight: 100;
+      }
+    }
+    &.left{
+      margin-right: 2.2rem;
+      padding-right: 0;
+      @media (max-width: $md-size) {
+        margin-right: 0;
+        margin-left: 2.2rem;
+        padding-left: 0;
+      }
+      .details{
+        order: 1;
+        @media (max-width: $md-size) {
+          order: 2;
+        }
+      }
+      .time{
+        order: 2;
+        border-left: 2px solid #ff8250;
+        @media (max-width: $md-size) {
+          order: 1;
+          border-left: none;
+          border-right: 2px solid #ff8250;
+        }
+      }
+    }
+    &.right{
+      margin-left: 2.2rem;
+      margin-top: 11rem;
+      padding-left: 0;
+      @media (max-width: $md-size) {
+        margin-top: 2rem;
+        margin-right: 0;
+      }
+      .details{
+        order: 2;
+      }
+      .time{
+        order: 1;
+        border-right: 2px solid #ff8250;
+      }
+    }
+
+    .pointer{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      .dot{
+        height: 1rem;
+        width: 1rem;
+        border: 4px solid #ff8250;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+      .triangle{
+        width: 0;
+        height: 0;
+        border-top: 1rem solid transparent;
+        border-bottom: 1rem solid transparent;
+        display: inline-block;
+      }
+      &.left{
+        right: -2.4rem;
+        @media (max-width: $md-size) {
+          left: -2.4rem;
+          right: 0;
+        }
+        .dot{
+          right: -0.35rem;
+          @media (max-width: $md-size) {
+            left: -0.35rem;
+            right: 0;
+          }
+        }
+        .triangle{
+          border-left: 2.4rem solid #e8e8e8;
+          @media (max-width: $md-size) {
+            border-left: none;
+            border-right: 2.4rem solid #e8e8e8;
+          }
+        }
+      }
+      &.right{
+        left: -2.4rem;
+        .dot{
+          left: -0.35rem;
+        }
+        .triangle{
+          border-right: 2.4rem solid #e8e8e8;
+        }
+      }
+    }
+  }
+}
