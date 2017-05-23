@@ -1,0 +1,21 @@
+.console-skill-ratio-meter{
+  position: relative;
+  .skill-bar {
+
+    .skill-name{
+      padding-right: 0.5rem;
+      color: white;
+    }
+    .skill-rate {
+      margin-left: 0.5rem;
+      color: $grey-text;
+    }
+    .line:before{
+      content: "||";
+      @media (max-width: $sm-size){
+        content: "|";
+      }
+    }
+
+  }
+}

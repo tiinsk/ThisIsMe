@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {getTranslations} from './i18n/languages';
+import {getTranslations, translations} from './i18n/languages';
 
 const translate = (Component) => connect(mapStateToProps, null)(
   class extends React.Component {
@@ -14,6 +14,18 @@ const translate = (Component) => connect(mapStateToProps, null)(
       )
     };
 });
+
+export const addAllTranslations = (Component) => class extends React.Component {
+    constructor(props){
+      super(props);
+    }
+
+    render() {
+      return (
+        <Component {...this.props} allStrings={translations}/>
+      )
+    };
+};
 
 function mapStateToProps({language}) {
   return {

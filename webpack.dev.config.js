@@ -28,6 +28,15 @@ var config = {
       __PRODUCTION__: 'false',
     }),
   ],
+  resolve: {
+    extensions: [
+      "",
+      ".jsx",
+      ".js",
+      ".json",
+      ".scss",
+    ]
+  },
   module: {
     loaders: [{
       test: /\.jsx?$/,
@@ -57,6 +66,10 @@ var config = {
         test: /(\.scss)|(\.css)$/,
         /*loader: 'style!css?modules&sourceMap&localIdentName=[local]___[hash:base64:5]sass?outputStyle=expanded&sourceMap'*/
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.flf$/,
+        loader: 'raw-loader'
       }]
 
   }

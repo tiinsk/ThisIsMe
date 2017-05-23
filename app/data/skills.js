@@ -51,38 +51,45 @@ export default {
   ],
   lang_skills: [
     {
-      "language": "finnish",
-      "value": 5,
+      language: "fi",
+      value: 4.7,
+      color: "#00d8ff"
     },
 
     {
-      "language": "english",
-      "value": 4,
+      language: "en",
+      value: 3.5,
+      color: "#dd0031"
     },
 
     {
-      "language": "swedish",
-      "value": 3,
+      language: "se",
+      value: 2,
+      color: "#ffc100"
     },
   ],
   frameworkSkills: [
     {
-      "framework": "React.js",
-      "value": 4,
+      framework: "react",
+      value: 4,
+      color: "#00d8ff"
     },
 
     {
-      "framework": "Angular.js",
-      "value": 2,
+      framework: "angular",
+      value: 2,
+      color: "#dd0031"
     },
     {
-      "framework": "Angular 2",
-      "value": 1,
+      framework: "angular2",
+      value: 1,
+      color: "#dd0031"
     },
 
     {
-      "framework": "Node.js",
-      "value": 3,
+      framework: "node",
+      value: 3,
+      color: "#90c53f"
     },
   ],
   otherSkills: [

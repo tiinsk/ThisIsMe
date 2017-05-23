@@ -96,6 +96,14 @@ export const sumEducationAndWorkData = () => {
   });
 };
 
+export const calcPercentagesAndOrder = (data) => {
+  let sum = _.sum(_.values(data));
+  const percentages = _.map(data, (skill, key) => ({
+    key: key,
+    value: Math.round(skill / sum * 100)
+  }));
+  return _.orderBy(percentages, ['value'], ['desc']);
+};
 
 const calcEdu = (data, courses) => {
   return courses.reduce((prev, course) => {

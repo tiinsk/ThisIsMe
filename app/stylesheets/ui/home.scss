@@ -1,0 +1,96 @@
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  @media (max-width: $sm-size){
+    flex-direction: column;
+  }
+  .ui-header{
+    flex: 1 1 50%;
+    background-color: black;
+    background-image: url("../../assets/background.JPG");
+
+    background-size: cover;
+    background-position: bottom center;
+    overflow: hidden;
+    top: 0;
+    position: relative;
+    .overlay{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(13, 11, 48, 0.55);
+      z-index: 0;
+    }
+  }
+  .console-header{
+    flex: 1 1 50%;
+    background: $almost-black;
+    position: relative;
+    .cursor{
+      font-size: 2rem;
+      padding: 1rem 1.5rem;
+      color: $green;
+      .blinking-underline{
+        animation: blinker 1.5s steps(1, start) infinite;
+      }
+    }
+    @-webkit-keyframes blinker {
+      0% { opacity: 1; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  }
+  .title{
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 5rem;
+    font-family: 'Amatica SC', cursive;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+    @media (max-width: $sm-size){
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+    }
+  }
+  .choose-btn{
+    position: absolute;
+    color: white;
+    top: 55%;
+    @media (max-width: $sm-size){
+      top: 50%;
+    }
+    transform: translate(-50%, 0);
+    text-align: center;
+    padding: 1rem 0 0.8rem 0;
+    width: 12rem;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 0.4rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1.5rem;
+    text-decoration: none;
+    left: 50%;
+    &.ui-btn{
+      background: $magenta;
+      border-bottom-color: darken($magenta, 15%);
+      &:hover{
+        background: darken($magenta, 5% );
+      }
+    }
+    &.console-btn{
+      background: $green;
+      border-bottom-color: darken($green, 15%);
+      font-family: Consolas, monospace;
+      &:hover{
+        background: darken($green, 5%);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.introduction{
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $md-size) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: -3rem;
+  }
+  .description{
+    flex: 1 1 auto;
+    margin-left: 3rem;
+    font-size: 1.4rem;
+    color: $grey-text;
+    font-weight: 300;
+    line-height: 150%;
+    @media (max-width: $md-size) {
+      text-align: justify;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+    .hello{
+      font-size: 2.5rem;
+      color: $magenta;
+      margin: 1rem 0;
+      font-family: 'Amatica SC', sans-serif;
+    }
+    .highlight{
+      color: $magenta;
+      font-family: 'Amatica SC', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    p{
+      margin-top: 0;
+    }
+  }
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    .own-image {
+      background-image: url("../../assets/me_2_0.jpg");
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      background-size: contain;
+
+    }
+  }
+}

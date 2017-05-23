@@ -1,0 +1,41 @@
+.skill-ratio-meter{
+  position: relative;
+  .meter-item {
+    display: flex;
+    .skill-bar {
+      width: 50px;
+      &.first{
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      &.last{
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+    }
+    .skill-name {
+      align-self: center;
+      margin-left: 1rem;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: $grey-text;
+    }
+  }
+  .light-reflection{
+    .reflection{
+      width: 6px;
+      background: rgba(255, 255, 255, 0.55);
+      position: absolute;
+      left: 10px;
+      border-radius: 7px;
+    }
+    .small{
+      height: 2%;
+      top: 3%;
+    }
+    .large{
+      height: 92%;
+      top: 6%;
+    }
+  }
+}

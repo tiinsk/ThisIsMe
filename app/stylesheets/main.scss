@@ -1,35 +1,54 @@
-//$md-size: 1399px;
+$lg-size: 1999px;
 $md-size: 999px;
 $sm-size: 799px;
 $xs-size: 499px;
 
 @import "../../node_modules/react-bubble-chart/src/style.css";
+@import "../../node_modules/animate.css/animate.min.css";
+@import "./colors";
 
-@import './header.scss';
-@import './introduction.scss';
-@import './section.scss';
-@import './column.scss';
-@import './work_item.scss';
-@import './section_title.scss';
-@import 'course_item';
-@import './row.scss';
-@import './thesis_item.scss';
-@import './synopsis.scss';
-@import './edu_item.scss';
-@import './education.scss';
-@import './skill.scss';
-@import './contact_card.scss';
-@import './bubble_chart.scss';
-@import '/skills.scss';
-@import './project.scss';
-@import './travel_map.scss';
-@import 'time_line';
-@import './time_bubble.scss';
-@import './work_history';
+@import 'ui/header';
+@import 'ui/introduction';
+@import 'ui/section';
+@import 'ui/column';
+@import 'ui/work_item';
+@import 'ui/course_item';
+@import 'ui/row';
+@import 'ui/edu_item';
+@import 'ui/education';
+@import 'ui/skill';
+@import 'ui/contact_card';
+@import 'ui/bubble_chart';
+@import 'ui/skills';
+@import 'ui/project';
+@import 'ui/travel_map';
+@import 'ui/time_line';
+@import 'ui/time_bubble';
+@import 'ui/work_history';
+@import 'ui/contacts';
+@import "ui/skill_meter";
+@import "ui/skill_ratio_meter";
+@import "ui/home";
+@import "console/console_site";
+@import "console/command_line";
+@import "console/introduction";
+@import "console/edu_item";
+@import "console/work_item";
+@import "console/skill_ratio_meter";
+@import "console/skill_meter";
+@import "console/skills";
+@import "console/project";
+@import "console/contacts";
+@import "console/map";
+@import "console/interests";
+@import "console/help";
+@import "console/asciifont";
+@import "ui/language_selector";
 
 body{
-  font-family: Roboto, sans-serif;
+  font-family: "Open Sans";
   margin: 0;
+  //padding-top: 100vh;
 }
 
 html{
@@ -58,4 +77,13 @@ html{
 ::-moz-selection {
   background: #4e5178;
   color: white;
+}
+
+#app{
+  background: #f1f1f1;
+}
+
+.white-box{
+  background: white;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.18);
 }

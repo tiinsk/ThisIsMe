@@ -37,6 +37,15 @@ var config = {
       minRatio: 0.8
     })
   ],
+  resolve: {
+    extensions: [
+      "",
+      ".jsx",
+      ".js",
+      ".json",
+      ".scss",
+    ]
+  },
   module: {
     loaders: [{
       test: /\.jsx?$/,
