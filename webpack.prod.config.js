@@ -74,6 +74,10 @@ var config = {
       {
         test: /(\.scss)|(\.css)$/,
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.flf$/,
+        loader: 'raw-loader'
       }]
 
   }
