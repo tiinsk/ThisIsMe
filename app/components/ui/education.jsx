@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Section from './presentational/section.jsx';
-import EduItem from './presentational/edu_item.jsx';
-import TimeLine from './presentational/time_line.jsx';
-import TimeBubble from './presentational/time_bubble.jsx';
-import Row from './presentational/row.jsx';
-import Column from './presentational/column.jsx';
+import Section from './presentational/section';
+import EduItem from './presentational/edu_item';
+import TimeLine from './presentational/time_line';
+import TimeBubble from './presentational/time_bubble';
+import Row from './presentational/row';
+import Column from './presentational/column';
 
 import education from '../../data/education';
 

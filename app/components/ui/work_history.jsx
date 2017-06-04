@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Section from './presentational/section.jsx';
-import Row from './presentational/row.jsx';
-import Column from './presentational/column.jsx';
-import WorkItem from './presentational/work_item.jsx';
+import Section from './presentational/section';
+import Row from './presentational/row';
+import Column from './presentational/column';
+import WorkItem from './presentational/work_item';
 
 import workExperience from '../../data/work_experience';
-import TimeLine from './presentational/time_line.jsx';
-import TimeBubble from './presentational/time_bubble.jsx';
+import TimeLine from './presentational/time_line';
+import TimeBubble from './presentational/time_bubble';
 
-import translate from '../../translate.jsx';
+import translate from '../main/translate';
 
 const WorkHistory = () => {
 
@@ -27,7 +27,7 @@ const WorkHistory = () => {
           >
             <TimeLine>
               {
-                [...workExperience.workexp, ...workExperience.otherworkexp].map((workitem, i) => {
+                workExperience.workexp.map((workitem, i) => {
                   return (
                     <TimeBubble
                       key={i}

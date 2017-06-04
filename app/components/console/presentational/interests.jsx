@@ -38,7 +38,6 @@ class Interests extends React.Component {
   }
 
   render() {
-    console.log(this.state.windowWidth);
     return (
       <div className="console-interests">
         <div className="interests-title">{this.props.strings.interests.travelling}</div>

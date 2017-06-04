@@ -2,7 +2,7 @@ import React from 'react';
 import ReactBubbleChart from 'react-bubble-chart';
 
 
-import translate from '../../../translate';
+import translate from '../../main/translate';
 
 var colorLegend = [
   "#0c1544",

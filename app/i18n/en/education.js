@@ -45,7 +45,7 @@ export default {
     "KIE":"Languages",
     "TIE": "Computer Science",
     "MEC": "Others",
-  },*/
+  },
   "bachelor": {
     "title": "Bachelor of Science",
     "major": "Tissue Engineering",
@@ -144,6 +144,6 @@ export default {
     "INT-COM": "Intercultural Communications (NUS)",
     "GAME-DESIGN": "Game Design (NUS)",
     "PROG-LANG": "Programming Languages Concepts (NUS)",
-  }
+  }*/
 }
 

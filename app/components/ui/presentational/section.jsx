@@ -1,5 +1,5 @@
 import React from 'react';
-import translate from '../../../translate';
+import translate from '../../../components/main/translate';
 import _ from 'lodash';
 
 const Section = ({strings, children, titleId}) => {

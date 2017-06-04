@@ -1,10 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import {
   Link
 } from 'react-router-dom'
 
-import translate from '../../../translate';
-import Header from '../presentational/header';
+import cv_en_pdf from '../../../../assets/cv_en.pdf';
+import cv_fi_pdf from '../../../../assets/cv_fi.pdf';
+
+import translate from '../../main/translate';
 import LanguageSelector from './language_selector';
 
 class Home extends React.Component {
@@ -15,7 +19,7 @@ class Home extends React.Component {
         <LanguageSelector/>
         <div className="ui-header">
           <div className="overlay"></div>
-          <Link className="choose-btn ui-btn" to="/cv" >
+          <Link className="choose-btn ui-btn" to="/ui" >
             {this.props.strings.useUI}
           </Link>
         </div>
@@ -29,9 +33,16 @@ class Home extends React.Component {
           </Link>
         </div>
         <div className="title">{this.props.strings.chooseSide}</div>
+        <a className="cv-link" target="_blank" href={this.props.language == "fi" ? cv_fi_pdf : cv_en_pdf}>{this.props.strings.downloadPDF}</a>
       </div>
     );
   }
 }
 
-export default translate(Home);
+function mapStateToProps({language}) {
+  return {
+    language: language.language
+  }
+}
+
+export default  connect(mapStateToProps, null)(translate(Home));

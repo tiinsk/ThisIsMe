@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {getTranslations, translations} from './i18n/languages';
+import {getTranslations, translations} from '../../i18n/languages';
 
 const translate = (Component) => connect(mapStateToProps, null)(
   class extends React.Component {

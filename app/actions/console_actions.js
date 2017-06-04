@@ -1,18 +1,21 @@
+import _ from 'lodash';
 import {languageOptions} from '../i18n/languages';
 
 export const ADD_COMMAND = 'ADD_COMMAND';
 
-const COMMANDS = [
-  "--help",
-  "all",
-  "introduction",
-  "education",
-  "workHistory",
-  "skills",
-  "projects",
-  "interests",
-  "contacts"
-];
+export const commands = {
+  Introduction: "introduction",
+  Education: "education",
+  WorkHistory: "workHistory",
+  Skills: "skills",
+  Projects: "projects",
+  Interests: "interests",
+  Contacts: "contacts",
+  All: "all"
+};
+
+export const helpCommand = "help";
+
 
 export function addCommand(command){
   return{
@@ -32,12 +35,13 @@ export function addErrorCommand(){
 
 export function parseCommand(command){
   return (dispatch) => {
-    const commandArray = command.split(" ");
+    const commandArray = command.split(/\s+/);
+    console.log(commandArray);
     const mainCommand = commandArray[0];
     if(commandArray.length > 3){
       dispatch(addErrorCommand());
     }
-    if(COMMANDS.some(cmnd => cmnd === mainCommand)){
+    if(_.some({...commands, helpCommand}, cmnd => cmnd === mainCommand)){
       const command = {
         command: mainCommand,
         language: "en"
@@ -47,6 +51,7 @@ export function parseCommand(command){
       }
       else if(commandArray[1]){
         dispatch(addErrorCommand());
+        return;
       }
       dispatch(addCommand(command));
     }

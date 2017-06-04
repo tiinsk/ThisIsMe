@@ -5,7 +5,7 @@ import {
 
 
 import LanguageSelector from '../containers/language_selector';
-import translate from '../../../translate';
+import translate from '../../main/translate';
 
 const Header = ({strings}) => {
   return(

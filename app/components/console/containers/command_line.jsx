@@ -15,9 +15,11 @@ class CommandLine extends React.Component {
   }
 
   keyDownHandler(keyCode, value) {
-    //console.log(keyCode);
     if(keyCode === 13){
       this.props.parseCommand(value);
+      this.setState({
+        input: ""
+      });
     }
     //back <-
     else if(keyCode === 37){
@@ -44,7 +46,8 @@ class CommandLine extends React.Component {
           className="command-input"
           id="command-input"
           onKeyDown={({keyCode, target}) => this.keyDownHandler(keyCode, target.value) }
-          onChange={({target}) => {;
+          value={this.state.input}
+          onChange={({target}) => {
             this.setState({
               input: target.value,
               cursorPosition: this.state.cursorPosition + 1

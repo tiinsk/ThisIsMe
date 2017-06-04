@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import translate from '../../../translate';
+import translate from '../../main/translate';
 
 
 const EduItem = ({strings, data}) => {

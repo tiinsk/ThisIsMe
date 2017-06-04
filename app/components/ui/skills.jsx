@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Section from './presentational/section.jsx';
-import Row from './presentational/row.jsx';
-import Column from './presentational/column.jsx';
+import Section from './presentational/section';
+import Row from './presentational/row';
+import Column from './presentational/column';
 import SkillRatioMeter from './presentational/skill_ratio_meter';
 import SkillMeter from './presentational/skill_meter';
 
 import skills from '../../data/skills';
 import {giveWorkExperienceData, giveEducationData, sumEducationAndWorkData, calcPercentagesAndOrder} from '../../data/data_formatter';
 
-import translate from '../../translate.jsx';
+import translate from '../main/translate';
 
 
 const Skills = ({strings}) => {

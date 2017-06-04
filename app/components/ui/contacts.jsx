@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ContactCard from './presentational/contact_card.jsx';
-import translate from '../../translate.jsx';
+import ContactCard from './presentational/contact_card';
+import translate from '../main/translate';
 
 import contacts from '../../data/contacts';
 

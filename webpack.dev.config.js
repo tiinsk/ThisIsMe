@@ -10,7 +10,7 @@ var config = {
   entry: [
     'babel-polyfill',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    path.join(__dirname, 'app/main.jsx')
+    path.join(__dirname, 'app/components/main/main.jsx')
   ],
   output: {
     path: path.join(__dirname, '/public/'),
@@ -54,7 +54,7 @@ var config = {
       },
       {
         //IMAGE LOADER
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|pdf)$/i,
         loader: 'file-loader?name=assets/[name].[ext]'
       },
       //SVG LOADER

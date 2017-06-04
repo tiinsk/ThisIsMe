@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import translate from '../../../translate';
+import translate from '../../main/translate';
 
 const colors = [
   '#f70047',
@@ -32,7 +32,7 @@ const SkillRatioMeter = ({strings, skills}) => {
                     color: colors[i % colors.length]
                   }}>
                     {
-                      _.range(skill.value).map(line => (<span className="line"/>))
+                      _.range(skill.value).map((line,j) => (<span key={j} className="line"/>))
                     }
                   <span className="skill-rate">{skill.value}%</span>
                 </td>

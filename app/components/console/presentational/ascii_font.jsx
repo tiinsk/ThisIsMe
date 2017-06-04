@@ -1,7 +1,7 @@
 import React from 'react';
 import getAsciiFont from "../../../utils/asciifonts";
 
-import translate from '../../../translate';
+import translate from '../../main/translate';
 
 
 const AsciiFont = ({strings, text}) => {

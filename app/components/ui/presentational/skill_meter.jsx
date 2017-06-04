@@ -1,6 +1,6 @@
 import React from 'react';
 
-import translate from '../../../translate';
+import translate from '../../main/translate';
 
 const SkillMeter = ({icon, color, rate}) => {
   return(

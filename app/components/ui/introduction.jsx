@@ -1,6 +1,6 @@
 import React from 'react';
-import translate from '../../translate.jsx';
-import Section from './presentational/section.jsx';
+import translate from '../../components/main/translate';
+import Section from './presentational/section';
 
 const Introduction = ({strings}) => {
   return(

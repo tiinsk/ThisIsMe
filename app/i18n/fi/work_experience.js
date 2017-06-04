@@ -16,7 +16,7 @@ export default {
       },
       "microsoft_msthesis": {
         "title": "Diplomityöntekijä",
-        "company": "Nokia /Microsoft Corp.",
+        "company": "Nokia /Microsoft",
         "description": "Tein diplomityötäni Imaging Algorithms and Middleware -tiimissä Tampereella. Diplomityöni keskittyi mobiilikameroiden kuvantamisalgoritmien parantamiseen kahden kameran avulla. Diplomityössä tutkittiin mahdollisia kahden kameran avulla toteutettavia algoritmeja ja luotiin kahden kameran algoritmien kehitystyökalu. Kehitettävät algoritmit kohdistuivat automaattisen valkotasapainon säätöön, automaattisen valotusajan säätöön ja liikkeen aiheuttaman sumeuden poistamiseen."
       },
 

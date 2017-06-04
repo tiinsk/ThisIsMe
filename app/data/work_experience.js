@@ -70,6 +70,31 @@ export default {
         ]
       },
       {
+        "key": "demola",
+        "from": {
+          "month": 2,
+          "year": 2015
+        },
+        "to": {
+          "month": 5,
+          "year": 2015,
+        },
+        "workPercentage": 0.2,
+        "skills": {
+          "programming": {
+            matlab: 1.0
+          },
+          "tech": {
+            programming: 0.5,
+            signal_processing: 0.5
+          },
+          "all":{
+            innovation: 0.8,
+            tech: 0.2
+          }
+        }
+      },
+      {
         "key": "microsoft_msthesis",
         "from": {
           "month": 1,
@@ -155,33 +180,6 @@ export default {
           }
         }
       }
-  ],
-  "otherworkexp": [
-      {
-        "key": "demola",
-        "from": {
-          "month": 2,
-          "year": 2015
-        },
-        "to": {
-          "month": 5,
-          "year": 2015,
-        },
-        "workPercentage": 0.2,
-        "skills": {
-          "programming": {
-            matlab: 1.0
-          },
-          "tech": {
-            programming: 0.5,
-            signal_processing: 0.5
-          },
-          "all":{
-            innovation: 0.8,
-            tech: 0.2
-          }
-        }
-      },
   ],
   "positiontrust": [
       {

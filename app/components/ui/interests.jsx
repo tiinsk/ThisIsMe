@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Section from './presentational/section.jsx';
-import Row from './presentational/row.jsx';
-import Column from './presentational/column.jsx';
-import BubbleChart from './presentational/bubble_chart.jsx';
-import TravelMap from './presentational/travel_map.jsx';
-import translate from '../../translate.jsx';
+import Section from './presentational/section';
+import Row from './presentational/row';
+import Column from './presentational/column';
+import BubbleChart from './presentational/bubble_chart';
+import TravelMap from './presentational/travel_map';
+import translate from '../main/translate';
 
 const Interests = ({strings}) => {
 

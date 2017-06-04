@@ -1,5 +1,5 @@
 import React from 'react';
-import translate from '../../../translate.jsx';
+import translate from '../../main/translate';
 
 const WorkItem = ({strings, data}) => {
   return(

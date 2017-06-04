@@ -3,7 +3,6 @@ import DashedLine from './dashed_line';
 
 const EduItem = ({strings, data}) => {
   let translations = strings.education.educationList[data.key];
-  console.log(data);
   return(
     <div className="console-edu-item">
       <DashedLine/>

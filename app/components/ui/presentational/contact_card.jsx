@@ -1,7 +1,6 @@
 import React from 'react';
-import translate from '../../../translate';
 
-const ContactCard = ({strings, contact}) => {
+const ContactCard = ({contact}) => {
   return(
     <div className="contact-card">
       <div className="content-box">
@@ -38,4 +37,4 @@ const ContactCard = ({strings, contact}) => {
   )
 };
 
-export default translate(ContactCard);
+export default ContactCard;

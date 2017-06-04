@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Section from './presentational/section.jsx';
-import Row from './presentational/row.jsx';
-import Column from './presentational/column.jsx';
-import Project from './presentational/project.jsx';
+import Section from './presentational/section';
+import Row from './presentational/row';
+import Column from './presentational/column';
+import Project from './presentational/project';
 
 import skills from '../../data/skills';
 
-import translate from '../../translate.jsx';
+import translate from '../main/translate';
 
 const Projects = () => {
   return(

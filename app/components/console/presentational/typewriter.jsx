@@ -1,5 +1,4 @@
 import React from 'react';
-import translate from '../../../translate';
 
 class Typewriter extends React.Component{
   constructor(){
@@ -39,4 +38,4 @@ class Typewriter extends React.Component{
   }
 }
 
-export default translate(Typewriter);
+export default Typewriter;

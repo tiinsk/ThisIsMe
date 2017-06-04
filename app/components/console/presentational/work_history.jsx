@@ -7,7 +7,7 @@ const WorkHistory = ({strings}) => {
   return(
     <div className="console-education">
       {
-        [...workExperience.workexp, ...workExperience.otherworkexp].map((workitem, i) => {
+        workExperience.workexp.map((workitem, i) => {
           return (
             <WorkItem
               strings={strings}

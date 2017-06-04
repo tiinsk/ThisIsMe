@@ -1,5 +1,8 @@
 import React from 'react';
 import AsciiFont from './ascii_font';
+import _ from 'lodash';
+
+import {commands, helpCommand} from '../../../actions/console_actions';
 
 const Help = () => {
   return(
@@ -11,13 +14,17 @@ const Help = () => {
           <td className="command-col">Usage:</td>
           <td>&lt;cmd&gt;</td>
         </tr>
-        <br/>
+        <tr><td><br/></td></tr>
         <tr>
           <td className="command-col">where &lt;cmd&gt; is one of:</td>
-          <td>introduction, education, workHistory, skills, projects, interests, contacts, all</td>
+          <td>
+            {
+              _.map(_.values(commands), (cmd,i) => `${cmd}${i < _.keys(commands).length - 1 ? ", " : ""}`)
+            }
+          </td>
         </tr>
         <tr>
-          <td className="command-col">--help</td>
+          <td className="command-col">{helpCommand}</td>
           <td>Prints help</td>
         </tr>
         <tr>

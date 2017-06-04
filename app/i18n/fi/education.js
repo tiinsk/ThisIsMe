@@ -46,7 +46,7 @@ export default {
     "KIE":"Kielet",
     "TIE": "Tietotekniikka",
     "MEC": "Muut",
-  },*/
+  },
   "bachelor": {
     "title": "Kandidaatintutkinto",
     "major": "Kudosteknologia",
@@ -145,5 +145,5 @@ export default {
     "INT-COM": "Intercultural Communications (NUS)",
     "GAME-DESIGN": "Game Design (NUS)",
     "PROG-LANG": "Programming Languages Concepts (NUS)",
-  }
+  }*/
 }
