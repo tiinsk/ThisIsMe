@@ -20,7 +20,7 @@ export default {
     {
       key: "this_is_me",
       github: "https://github.com/tiinsk/ThisIsMe",
-      link: "https://thisisme.koskiranta.fi",
+      link: "https://tiina.koskiranta.fi",
       image: "thisisme.png",
       skills: [
         "React",
