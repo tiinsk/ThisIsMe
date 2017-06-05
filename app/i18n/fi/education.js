@@ -1,4 +1,7 @@
 export default {
+  "major": "Pääaine",
+  "minor": "Sivuaine",
+  "thesis": "Lopputyö",
   "educationList":  {
     "ms": {
       "title": "Diplomi-insinööri",

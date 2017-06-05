@@ -6,7 +6,7 @@ import ConsoleSite from '../console/console_site';
 
 export default (store) => {
   return (
-    <div>
+    <div style={{height: "100%"}}>
       <Route exact path="/" component={Home}/>
       <Route path="/ui" component={UISite}/>
       <Route path="/console" component={ConsoleSite}/>

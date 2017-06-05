@@ -18,21 +18,49 @@ const SkillRatioMeter = ({strings, skills}) => {
 
   return(
     <div className="skill-ratio-meter">
-      {
-        skills.map((skill, i) => {
-          return(
-            <div className="meter-item" key={i} style={{height: `${skill.value*9}px`}}>
+      <div style={{
+        display: "flex"
+      }}>
+        <div className="meter">
+        {
+          skills.map((skill, i) => {
+            return(
               <div
-                className={"skill-bar" + (i == 0 ? " first" : "") + (i == skills.length - 1 ? " last" : "")}
+                className="meter-item"
+                key={i}
                 style={{
-                  backgroundColor: colors[i % colors.length]
+                  height: `${skill.value/2}rem`
                 }}
-              />
-              <div className="skill-name">{`${strings.skills.skillNames[skill.key] || skill.key} (${skill.value}%)`}</div>
-            </div>
-          );
-        })
-      }
+              >
+                <div
+                  className="skill-bar"
+                  style={{
+                    backgroundColor: colors[i % colors.length]
+                  }}
+                />
+              </div>
+            );
+          })
+        }
+        </div>
+        <div className="names">
+          {
+            skills.map((skill, i) => {
+              return(
+                <div
+                  className="name-item"
+                  key={i}
+                  style={{
+                    height: `${skill.value/2}rem`
+                  }}
+                >
+                  <div className="skill-name">{`${strings.skills.skillNames[skill.key] || skill.key} (${skill.value}%)`}</div>
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
       <div className="light-reflection">
         <div className="reflection small"></div>
         <div className="reflection large"></div>

@@ -20,5 +20,8 @@
     @media (min-width: $lg-size){
       margin: 0 auto;
     }
+    @media (max-width: $xs-size){
+      margin-left: 0;
+    }
   }
 }

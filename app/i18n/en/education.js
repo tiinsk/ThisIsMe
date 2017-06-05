@@ -1,4 +1,7 @@
 export default {
+  "major": "Major",
+  "minor": "Minor",
+  "thesis": "Thesis",
   "educationList": {
     "ms":{
       "title": "Master of Science",

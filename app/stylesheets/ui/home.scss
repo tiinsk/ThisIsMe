@@ -1,12 +1,13 @@
 .home{
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
   @media (max-width: $sm-size){
     flex-direction: column;
   }
   .ui-header{
-    flex: 1 1 50%;
+    flex: 0 1 50%;
     background-color: black;
     background-image: url("../../assets/background.JPG");
 
@@ -24,7 +25,7 @@
     }
   }
   .console-header{
-    flex: 1 1 50%;
+    flex: 0 1 50%;
     background: $almost-black;
     position: relative;
     .cursor{

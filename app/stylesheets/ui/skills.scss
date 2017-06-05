@@ -15,6 +15,9 @@
         flex: 1 0 100%;
         justify-content: center;
       }
+      @media (max-width: $xs-size){
+        margin-left: 0;
+      }
       .category-name {
         font-size: 1.6rem;
         display: flex;
@@ -23,6 +26,9 @@
         font-weight: 300;
         color: #9799b3;
         flex: 0 0 80px;
+        @media (max-width: $xs-size){
+          flex: 0 0 30px;
+        }
         position: relative;
         & > div {
           white-space: nowrap;
@@ -34,6 +40,9 @@
     }
     .rateless-skills {
       width: 345px;
+      @media (max-width: $xs-size){
+        width: 280px;
+      }
       display: flex;
       flex-wrap: wrap;
       .rateless-skill {
