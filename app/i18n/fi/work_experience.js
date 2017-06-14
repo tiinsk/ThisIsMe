@@ -15,13 +15,13 @@ export default {
         "description": "Työskentelin yhden kesän ajan Imaging Software tiimissä Nokia Technologiesilla. Kesän aikana opin paljon Androidista, Javasta ja OpenGL:stä. Suurimpana yhtenäisenä tehtävänä toteutin 360 asteen VR video playerin Google Cardboardille. Osaillistuin myös muiden Android sovellusten kehittämiseen."
       },
       "microsoft_msthesis": {
-        "title": "Diplomityöntekijä",
+        "title": "Diplomityöntekijä, Imaging Algorithms and Middleware",
         "company": "Nokia /Microsoft",
         "description": "Tein diplomityötäni Imaging Algorithms and Middleware -tiimissä Tampereella. Diplomityöni keskittyi mobiilikameroiden kuvantamisalgoritmien parantamiseen kahden kameran avulla. Diplomityössä tutkittiin mahdollisia kahden kameran avulla toteutettavia algoritmeja ja luotiin kahden kameran algoritmien kehitystyökalu. Kehitettävät algoritmit kohdistuivat automaattisen valkotasapainon säätöön, automaattisen valotusajan säätöön ja liikkeen aiheuttaman sumeuden poistamiseen."
       },
 
       "nokia": {
-        "title": "Kesäharjoittelija",
+        "title": "Kesäharjoittelija, Imaging Algorithms and Middleware",
         "company": "Nokia",
         "description": "Työskentelin Nokialla Imaging Algorithms and Middleware -tiimissä. Tutkin kesän aikana automaattisen valkotasapainon säätöalgoritmeja ja kehitin Matlab työkalua kuvien parametrien analysointiin."
       },

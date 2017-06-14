@@ -23,8 +23,8 @@ class UISite extends React.Component {
         <Header/>
         <div>
           <Introduction />
-          <Education/>
           <WorkHistory/>
+          <Education/>
           <Skills/>
           <Projects/>
           <Interests/>

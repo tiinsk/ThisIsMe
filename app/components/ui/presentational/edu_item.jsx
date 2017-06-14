@@ -6,7 +6,6 @@ import translate from '../../main/translate';
 
 const EduItem = ({strings, data}) => {
   let translations = strings.education.educationList[data.key];
-  console.log(translations);
   return(
       <div className="edu-item">
         <div className="school">{translations.school}</div>

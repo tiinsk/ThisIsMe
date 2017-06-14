@@ -4,12 +4,10 @@ import SkillRatioMeter from './skill_ratio_meter';
 import SkillMeter from './skill_meter';
 
 import skills from '../../../data/skills';
-import {sumEducationAndWorkData, calcPercentagesAndOrder} from '../../../data/data_formatter';
 
 const Skills = ({strings}) => {
 
-  const summedData = sumEducationAndWorkData();
-  const programmingPercentages = calcPercentagesAndOrder(summedData.programming);
+  const programmingPercentages = skills.programmingSkills;
 
   return (
 

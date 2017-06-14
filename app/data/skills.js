@@ -68,6 +68,32 @@ export default {
       color: "#ffc100"
     },
   ],
+  programmingSkills: [
+    {
+      key: "javascript",
+      value: 30,
+    },
+    {
+      key: "c_pp",
+      value: 20,
+    },
+    {
+      key: "java_android",
+      value: 15,
+    },
+    {
+      key: "matlab",
+      value: 15,
+    },
+    {
+      key: "typescript",
+      value: 10,
+    },
+    {
+      key: "c_sharp",
+      value: 10,
+    },
+  ],
   frameworkSkills: [
     {
       framework: "react",
@@ -99,6 +125,10 @@ export default {
     "Sass",
     "MQTT",
     "Webpack",
+    "Mocha",
+    "Chai",
+    "Enzyme",
+    "SQL",
     "IBM Bluemix",
     "Git",
     "SVN",

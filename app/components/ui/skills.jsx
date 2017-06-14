@@ -7,18 +7,13 @@ import SkillRatioMeter from './presentational/skill_ratio_meter';
 import SkillMeter from './presentational/skill_meter';
 
 import skills from '../../data/skills';
-import {giveWorkExperienceData, giveEducationData, sumEducationAndWorkData, calcPercentagesAndOrder} from '../../data/data_formatter';
 
 import translate from '../main/translate';
 
 
 const Skills = ({strings}) => {
-  console.log("work",giveWorkExperienceData());
-  console.log("educ",giveEducationData());
 
-  const summedData = sumEducationAndWorkData();
-  const programmingPercentages = calcPercentagesAndOrder(summedData.programming);
-
+  const programmingPercentages = skills.programmingSkills;
   const columnStyle = {
     display: 'flex',
     flexDirection: 'column',

@@ -2,7 +2,7 @@ import React from 'react';
 import AsciiFont from './ascii_font';
 
 import {addAllTranslations, translateToLanguage} from '../../main/translate';
-import {commands, helpCommand} from '../../../actions/console_actions';
+import {commands, helpCommand, allCommand} from '../../../actions/console_actions';
 
 import Introduction from './introduction';
 import Education from './education';
@@ -18,19 +18,19 @@ const Command = ({command, allStrings}) => {
   switch (command.command){
     case helpCommand:
       return <Help/>;
-    case commands.All:
+    case allCommand:
       const allCommands = [
         {
           command: commands.Introduction,
           body: Introduction
         },
         {
-          command: commands.Education,
-          body: Education
-        },
-        {
           command: commands.WorkHistory,
           body: WorkHistory
+        },
+        {
+          command: commands.Education,
+          body: Education
         },
         {
           command: commands.Skills,

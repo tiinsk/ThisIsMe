@@ -11,11 +11,10 @@ export const commands = {
   Projects: "projects",
   Interests: "interests",
   Contacts: "contacts",
-  All: "all"
 };
 
 export const helpCommand = "help";
-
+export const allCommand = "all";
 
 export function addCommand(command){
   return{
@@ -36,12 +35,11 @@ export function addErrorCommand(){
 export function parseCommand(command){
   return (dispatch) => {
     const commandArray = command.split(/\s+/);
-    console.log(commandArray);
     const mainCommand = commandArray[0];
     if(commandArray.length > 3){
       dispatch(addErrorCommand());
     }
-    if(_.some({...commands, helpCommand}, cmnd => cmnd === mainCommand)){
+    if(_.some({...commands, helpCommand, allCommand}, cmnd => cmnd === mainCommand)){
       const command = {
         command: mainCommand,
         language: "en"
