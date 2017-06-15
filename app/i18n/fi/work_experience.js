@@ -7,12 +7,12 @@ export default {
       "wapice": {
         "title": "Ohjelmistosuunnittelija",
         "company": "Wapice Oy",
-        "description": "Työskentelen tällä hetkellä ohjelmistosuunnittelijana Wapicella. Työskentelen pääasiassa web-ohjelmistojen parissa ja olen työskennellyt useissa asiakaslähtöisissä ohjelmistoprojekteissa. Olen työskennellyt pääasiassa full-stack kehittäjänä, mutta front-end painotteisesti. Kahdessa pääprojektissani front-end on tehty Reactilla ja Javascriptilla/Typescriptilla. Toisen projektissa on Node.js back-end, kun taas toisessa on käytössä C#."
+        "description": "Toimin tällä hetkellä ohjelmistosuunnittelijana Wapicella. Työskentelen pääasiassa web-ohjelmistojen parissa. Wapicella työskennellessäni olen ollut mukana useissa asiakaslähtöisissä ohjelmistoprojekteissa. Olen toiminut pääasiassa full-stack kehittäjänä, mutta front-end painotteisesti. Projekteissa olen käyttänyt Reactia, JavaScriptiä ja TypeScriptiä front-endissä, sekä Node.js:ää ja C#:a back-endissä."
       },
       "nokia_android": {
         "title": "Harjoittelija, Imaging Software",
         "company": "Nokia Technologies",
-        "description": "Työskentelin yhden kesän ajan Imaging Software tiimissä Nokia Technologiesilla. Kesän aikana opin paljon Androidista, Javasta ja OpenGL:stä. Suurimpana yhtenäisenä tehtävänä toteutin 360 asteen VR video playerin Google Cardboardille. Osaillistuin myös muiden Android sovellusten kehittämiseen."
+        "description": "Työskentelin yhden kesän ajan Imaging Software -tiimissä Nokia Technologiesilla. Kesän aikana opin paljon Androidista, Javasta ja OpenGL:stä. Suurimpana yhtenäisenä tehtävänä toteutin 360 asteen VR video playerin Google Cardboardille. Osaillistuin myös muiden Android sovellusten kehittämiseen."
       },
       "microsoft_msthesis": {
         "title": "Diplomityöntekijä, Imaging Algorithms and Middleware",
@@ -29,12 +29,12 @@ export default {
       "tty_advisor": {
         "title": "Biotekniikan opintoneuvoja (osa-aikainen)",
         "company": "Tampereen teknillinen yliopisto",
-        "description" : "Avustin opiskelijatovereitani opintosuunnitelmien ja kurssivalintojen teossa. Järjestimme muiden opintoneuvojien kanssa yliopistollamme kaikennäköisiä opiskeluun liittyviä tapahtumia, kuten messuja ja lukiolaisinfoja."
+        "description" : "Avustin opiskelijatovereitani opintosuunnitelmien ja kurssivalintojen teossa. Järjestimme muiden opintoneuvojien kanssa yliopistollamme erilaisia opiskeluun liittyviä tapahtumia, kuten messuja ja lukiolaisinfoja."
       },
       "demola": {
         "title": "Demola projekti",
         "company": "Demola Tampere/Intel",
-        "description": "Työskentelin noin 10h/vko Demola projektissa. Kehitimme 6 hengen ryhmässä Quadcopterin avulla automaattisesti muodostettavaa Google-street-view:n kaltaista näkymää sisätiloista. Projekti toteutettiin Intel Tampereen toimeksiannosta. Projekti voitti Demolan kevään 2015 parhaan projektin palkinnon."
+        "description": "Työskentelin noin 10h/vko Demola projektissa. Kehitimme 6-hengen ryhmässä sisätiloissa Quadcopterin avulla automaattisesti muodostettavaa Google-street-view:n kaltaista näkymää. Projekti toteutettiin Intelin toimeksiannosta. Projekti voitti Demolan kevään 2015 parhaan projektin palkinnon."
       },
       "guild": {
         "title": "Hallitustoiminta",

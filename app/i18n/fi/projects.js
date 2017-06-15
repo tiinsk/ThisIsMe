@@ -1,7 +1,7 @@
 export default {
   this_is_me: {
     name: "Tämä sivu",
-      description: "Tämä sivu, jota tällä hetkellä selailet on tehty pääasiassa juuri sinua varten. Kun aloitin tämän projektin, olin tehnyt jo useita projekteja käyttäen niitä samoja kirjastoja ja ohjelmointikeiliä, joita tässäkin projektissa on käytössä. Joten, tässä projektissa ei ollut mitään erityisen hankalaa toteutuksen kannalta. Se mitä tätä sivua tehdessäni opin, oli se kuinka paljon olen oppinut tehdessäni web sivuja töissä ja vapaa-ajalla."
+      description: "Tämä sivu, jota tällä hetkellä selailet on tehty pääasiassa juuri sinua varten. Kun aloitin tämän projektin, olin tehnyt jo useita projekteja käyttäen niitä samoja kirjastoja ja ohjelmointikeiliä, joita tässäkin projektissa on käytössä. Joten, tässä projektissa ei ollut mitään erityisen hankalaa toteutuksen kannalta. Se mitä tätä sivua tehdessäni opin, oli se kuinka paljon olen oppinut tehdessäni web-sivuja töissä ja vapaa-ajalla."
   },
   cottage_page: {
     name: "Mökki-sivu",
