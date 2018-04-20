@@ -1,14 +1,35 @@
 export default {
   "workexp": [
     {
+      "key": "gofore",
+      "from": {
+        "month": 9,
+        "year": 2017
+      },
+      "to": {
+        "month": undefined,
+        "year": undefined
+      },
+      "skillList": [
+        "Vue.js",
+        "Vuex",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Hapi.js",
+        "PostgresSQL",
+        "Knex.js"
+      ]
+    },
+    {
       "key": "wapice",
       "from": {
         "month": 12,
         "year": 2015
       },
       "to": {
-        "month": undefined,
-        "year": undefined
+        "month": 9,
+        "year": 2017
       },
       "skillList": [
         "JavaScript",

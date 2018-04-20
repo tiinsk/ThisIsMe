@@ -45,7 +45,8 @@ export default {
     node: "Node.js",
     react: "React",
     angular: "Angular.js",
-    angular2: "Angular 2"
+    angular2: "Angular 2",
+    vue: "Vue.js"
   },
   langSkills: "Language Skills",
   frameworkSkills: "Software Frameworks",

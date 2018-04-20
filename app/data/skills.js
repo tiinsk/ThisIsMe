@@ -71,28 +71,28 @@ export default {
   programmingSkills: [
     {
       key: "javascript",
-      value: 30,
+      value: 35,
+    },
+    {
+      key: "typescript",
+      value: 15,
     },
     {
       key: "c_pp",
       value: 20,
     },
     {
-      key: "java_android",
-      value: 15,
-    },
-    {
       key: "matlab",
       value: 15,
-    },
-    {
-      key: "typescript",
-      value: 10,
     },
     {
       key: "c_sharp",
       value: 10,
     },
+    {
+      key: "java_android",
+      value: 5,
+    }
   ],
   frameworkSkills: [
     {
@@ -100,10 +100,14 @@ export default {
       value: 4,
       color: "#00d8ff"
     },
-
+    {
+      framework: "vue",
+      value: 3,
+      color: "#25c17c"
+    },
     {
       framework: "angular",
-      value: 2,
+      value: 1,
       color: "#dd0031"
     },
     {
@@ -120,6 +124,10 @@ export default {
   ],
   otherSkills: [
     "Redux",
+    "Vuex",
+    "Hapi.js",
+    "Express.js",
+    "Knex.js",
     "ES6",
     "HTML5",
     "Sass",
@@ -128,6 +136,7 @@ export default {
     "Mocha",
     "Chai",
     "Enzyme",
+    "PostgreSQL",
     "SQL",
     "IBM Bluemix",
     "Git",

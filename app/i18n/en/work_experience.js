@@ -4,10 +4,15 @@ export default {
         "otherworkexp": "Other Work Experience",
         "positiontrust": "Positions of Trust"
       },
+      "gofore": {
+        "title": "Software Designer",
+        "company": "Gofore",
+        "description": "I currently work as a software designer at Gofore. I have been working on an internal web project, which has been developed with the following technologies: Vue.js, Vuex, TypeSctript, Node.js, Hapi.js, PostgeSQL and Knex.js."
+      },
       "wapice": {
         "title": "Software Designer",
         "company": "Wapice",
-        "description": "I currently work as an software designer at Wapice. My main focus area has been web development. I have been part of multiple project teams which have developed web software products and services directly to customers. I have been working as a full stack developer, focusing on front-end development. The main technologies, which I have used in the projects, are React, Javascript and TypeScript in front-end, and Node.js and C# in back-end."
+        "description": "I worked as a software designer at Wapice focusing on web development. I was part of multiple project teams, which developed web software products and services directly to customers. I worked as a full stack developer, focusing on front-end development. The main technologies, which I used in the projects, were React, Javascript, TypeScript, Node.js, and C#."
       },
       "nokia_android": {
         "title": "Summer Trainee, Imaging Software",

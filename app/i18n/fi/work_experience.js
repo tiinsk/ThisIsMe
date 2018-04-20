@@ -4,10 +4,15 @@ export default {
         "otherworkexp": "Muu työkokemus",
         "positiontrust": "Luottamustehtävät"
       },
+      "gofore": {
+        "title": "Ohjelmistosuunnittelija",
+        "company": "Gofore Oyj",
+        "description": "Työskentelen tällä hetkellä ohjelmistosuunnittelijana Goforella. Olen työskennellyt pääasiassa yhdessä sisäisessä projektissa, jossa olen käyttänyt seuraavia tekniikoita: Vue.js, Vuex, TypeSctript, Node.js, Hapi.js, PostgeSQL ja Knex.js."
+      },
       "wapice": {
         "title": "Ohjelmistosuunnittelija",
         "company": "Wapice Oy",
-        "description": "Toimin tällä hetkellä ohjelmistosuunnittelijana Wapicella. Työskentelen pääasiassa web-ohjelmistojen parissa. Wapicella työskennellessäni olen ollut mukana useissa asiakaslähtöisissä ohjelmistoprojekteissa. Olen toiminut pääasiassa full-stack kehittäjänä, mutta front-end painotteisesti. Projekteissa olen käyttänyt Reactia, JavaScriptiä ja TypeScriptiä front-endissä, sekä Node.js:ää ja C#:a back-endissä."
+        "description": "Työskentelin pääasiassa web-ohjelmistojen parissa. Wapicella työskennellessäni olin mukana useissa asiakaslähtöisissä ohjelmistoprojekteissa. Toimin pääasiassa full-stack kehittäjänä, mutta front-end painotteisesti. Projekteissa käytettyjä tekniikoita olivat React, JavaScript, TypeScript, Node.js ja C#."
       },
       "nokia_android": {
         "title": "Harjoittelija, Imaging Software",
