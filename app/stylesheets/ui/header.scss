@@ -1,53 +1,90 @@
 .header{
-  background-color: black;
-  background-image: url("../../assets/background.JPG");
   height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: bottom center;
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  .overlay{
-    position: absolute;
-    height: 100vh;
+  min-height: 885px;
+
+  .header-content {
     width: 100%;
-    background: rgba(13, 11, 48, 0.55);
-    z-index: 0;
-  }
-  .home-icon{
-    position: absolute;
+    overflow: hidden;
+    position: relative;
     top: 0;
-    right: 0;
-    font-size: 2rem;
-    padding: 1rem;
-    z-index: 100;
-    line-height: 1;
-    color: rgba(255, 255, 255, 0.9);
-  }
-  .titles {
+    min-height: 775px;
+    height: calc(100vh - #{$nav-bar-height} - #{$base-size});
+    margin-bottom: $base-size;
+
     display: flex;
-    align-items: flex-start;
-    height: 100vh;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1;
-    position: absolute;
-    padding: 0 2.5rem;
-    right: 0;
-    color: white;
-    .title {
-      font-size: 2rem;
-      @media (max-width: $xs-size) {
-        font-size: 1.5rem;
+    align-items: stretch;
+
+    .titles {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: $base-size;
+
+      position: relative;
+
+      .palms {
+        height: 100%;
+      }
+
+      .corner {
+        position: absolute;
+
+        height: 85px;
+        width: 85px;
+
+        &.top {
+          top: 0;
+          left: 0;
+          border-left: 7px solid $green-NEW;
+          border-top: 7px solid $green-NEW;
+        }
+
+        &.bottom {
+          bottom: 0;
+          right: 0;
+          border-right: 7px solid $green-NEW;
+          border-bottom: 7px solid $green-NEW;
+        }
+      }
+
+      .content-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        font-family: $font-lato;
+        font-weight: $font-weight-light;
+
+        .title {
+          font-size: 20px;
+          color: white;
+
+          @media (max-width: $xs-size) {
+            font-size: 1.5rem;
+          }
+        }
+        .name {
+          font-size: 40px;
+          text-transform: uppercase;
+
+          @media (max-width: $xs-size) {
+            font-size: 4rem;
+          }
+        }
       }
     }
-    .name {
-      font-size: 5rem;
-      @media (max-width: $xs-size) {
-        font-size: 4rem;
-      }
-      font-family: 'Fascinate Inline', sans-serif;
+    .header-introduction {
+      display: flex;
+      align-items: flex-start;
     }
   }
 };

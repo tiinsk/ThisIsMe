@@ -14,7 +14,14 @@ const store = configureStore();
 
 WebFont.load({
   google: {
-        families: ['Fascinate+Inline',  'Amatica+SC:400,700', "Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i",],
+        families: [
+          'Fascinate+Inline',
+          'Amatica+SC:400,700',
+          "Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i",
+          "Hind:300,400,500,600,700",
+          "Lato:100,100i,300,300i,400,400i,700,700i,900,900i",
+          'Quicksand:300,400,500,700'
+        ],
     },
 });
 

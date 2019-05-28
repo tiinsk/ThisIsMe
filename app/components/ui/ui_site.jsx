@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './presentational/header';
-import Introduction from './introduction';
 
 import WorkHistory from './work_history';
 import Education from './education';
@@ -22,7 +21,6 @@ class UISite extends React.Component {
       <div>
         <Header/>
         <div>
-          <Introduction />
           <WorkHistory/>
           <Education/>
           <Skills/>

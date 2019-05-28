@@ -1,46 +1,57 @@
+$image-size: 115px;
+
 .introduction{
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: $md-size) {
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-top: -3rem;
-  }
-  .description{
-    flex: 1 1 auto;
-    margin-left: 3rem;
-    font-size: 1.4rem;
-    color: $grey-text;
-    font-weight: 300;
-    line-height: 150%;
-    @media (max-width: $md-size) {
-      text-align: justify;
-      margin-left: 0;
-      margin-bottom: 1rem;
+  position: relative;
+
+  margin: 2*$base-size $base-size*2 2*$base-size $base-size;
+
+  .summary {
+    .summary-title {
+      display: inline-block;
+
+      font-family: $font-quicksand;
+      color: $blue-NEW;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-Large;
+
+      margin: $base-size 0;
+      padding-right: $base-size*2;
+
+      border-bottom: 2px solid $blue-NEW;
     }
-    .hello{
-      font-size: 2.5rem;
-      color: $magenta;
-      margin: 1rem 0;
-      font-family: 'Amatica SC', sans-serif;
+    .summary-text {
+      font-family: $font-open-sans;
+      font-weight: $font-weight-light;
+      line-height: $font-size-Default*2;
+      margin-bottom: $base-size;
     }
-    .highlight{
-      color: $magenta;
-      font-family: 'Amatica SC', sans-serif;
-      font-weight: 600;
-      font-size: 1.5rem;
+    .summary-btn {
+      font-family: $font-lato;
+      font-size: $font-size-Default;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      color: $blue-NEW;
+
+      border: 2px solid  $blue-NEW;
+      padding: $base-size/2 $base-size;
+
+      user-select: none;
+
+      cursor: pointer;
+
+      &:hover {
+        background: $blue-NEW;
+        color: white;
+      }
     }
-    p{
-      margin-top: 0;
-    }
-  }
+   }
   .image-wrapper {
-    display: flex;
-    justify-content: center;
+    padding: 10px;
+
     .own-image {
-      background-image: url("../../assets/me_2_0.jpg");
-      height: 20rem;
-      width: 20rem;
+      background-image: url("../../assets/me_2_0_black.png");
+      width: $image-size;
+      height: $image-size;
       border-radius: 50%;
       background-size: contain;
 

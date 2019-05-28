@@ -3,6 +3,36 @@ $md-size: 999px;
 $sm-size: 799px;
 $xs-size: 499px;
 
+$font-lato: 'Lato', sans-serif;
+$font-hindi: 'Hindi', sans-serif;
+$font-quicksand: 'Quicksand', sans-serif;
+$font-open-sans: 'Open sans', sans-serif;
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 900;
+
+$base-size: 25px;
+
+$font-size-XXLarge: 4rem;
+$font-size-XLarge: 2.3rem;
+$font-size-Large: 1.8rem;
+
+$font-size-Default: 1.5rem;
+
+$font-size-Medium: 1.4rem;
+$font-size-Small: 1.3rem;
+$font-size-XSmall: 1.2rem;
+$font-size-XXSmall: 1.1rem;
+$font-size-XXXSmall: 1rem;
+
+$nav-bar-height: 100px;
+$lang-selection-width: 85px;
+
 @import "../../node_modules/react-bubble-chart/src/style.css";
 @import "../../node_modules/animate.css/animate.min.css";
 @import "./colors";
@@ -44,16 +74,22 @@ $xs-size: 499px;
 @import "console/help";
 @import "console/asciifont";
 @import "ui/language_selector";
+@import "ui/icon_button";
+@import "ui/navbar";
 
 body{
   font-family: "Open Sans";
   margin: 0;
   height: 100%;
+  font-size: 1.5rem;
 }
 
 html{
   height: 100%;
-  font-size: 15px;
+
+  font-size: 62.5%; //1.5rem -> 15px, 1.4rem ->14px etc.
+
+  /*font-size: 15px;
   @media (max-width: $md-size){
     font-size: 14px;
   }
@@ -62,7 +98,7 @@ html{
   }
   @media (max-width: $xs-size){
     font-size: 10px;
-  }
+  }*/
 }
 
 *{

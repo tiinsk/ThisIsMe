@@ -10,8 +10,24 @@ $dark-magenta: #bb0d3f;
 
 $light-blue: #9799b3;
 
+//New colors
+$yellow-NEW: #FFC963;
+$yellow-dark-NEW: #F7C567;
+$almost-white: #FCFCFC;
+$bluish-grey: #B7BED4;
+$black: black;
+$light-grey: #F2F2F2;
+$light-blue-NEW: #7398BF;
+$green-NEW: #C5F699;
+$grey-unselected-text: #E6E6E6;
+$blue-NEW: #425DD1;
+
 .magenta-text{
   color: $magenta;
+}
+
+.yellow-text{
+  color: $yellow-NEW;
 }
 
 $almost-black: #101010;

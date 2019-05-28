@@ -6,12 +6,13 @@
     margin: 4rem auto;
   }
   .title{
-    margin: 2rem 0;
-    color: $grey-text;
-    font-size: 3.5rem;
-    font-weight: 300;
+    margin: $base-size 0;
+    color: $black;
+    font-size: $font-size-XLarge;
+
     text-transform: uppercase;
-    font-family: 'Amatica SC', sans-serif;
+    font-family: $font-lato;
+    font-weight: $font-weight-light;
   }
   .section-body{
     position: relative;

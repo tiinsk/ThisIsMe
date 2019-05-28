@@ -1,28 +1,37 @@
 import React from 'react';
-import {
-  Link
-} from 'react-router-dom'
-
 
 import LanguageSelector from '../containers/language_selector';
 import translate from '../../main/translate';
+import Introduction from '../introduction';
+import name from '../../../../assets/name_outline.svg';
+import palms from '../../../../assets/palms.png';
+import Navbar from "./navbar";
 
 const Header = ({strings}) => {
   return(
     <div className="header">
-      <div className="overlay"></div>
+     <Navbar/>
+      <div className="header-content">
+        <LanguageSelector/>
         <div className="titles">
-          <div className="title">
-            {strings.introductionHiThisIs} <span className="magenta-text">{strings.introductionMe}</span>
-          </div>
-          <div className="name">
-            Tiina <span className="magenta-text">Koskiranta</span>
+          <img className="palms" src={palms} alt=""/>
+          <div className="content-wrapper">
+            <div className="corner top"/>
+            <div>
+              <div className="title">
+                {strings.titles.hi}
+              </div>
+              <div className="name yellow-text">
+                <img src={name} alt="Tiina Koskiranta"/>
+              </div>
+            </div>
+            <div className="corner bottom"/>
           </div>
         </div>
-      <LanguageSelector/>
-      <Link className="home-icon" to="/" >
-        <i className="fa fa-th-large"/>
-      </Link>
+        <div className="header-introduction">
+          <Introduction />
+        </div>
+      </div>
     </div>
   )
 };

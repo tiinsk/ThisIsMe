@@ -1,0 +1,42 @@
+.nav {
+  height: $nav-bar-height;
+  margin-left: $lang-selection-width + $base-size;
+
+  .nav-list {
+    height: 100%;
+
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+
+    .home-icon{
+      padding: $base-size;
+      margin-right: $base-size;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+
+      .material-icons {
+        color: $black;
+        font-size: $font-size-XXLarge;
+      }
+    }
+
+    .nav-item {
+      font-size: $font-size-Default;
+      text-transform: uppercase;
+      font-weight: $font-weight-regular;
+      color: $black;
+      text-align: center;
+    }
+
+  }
+}

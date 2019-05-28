@@ -10,10 +10,14 @@ const LanguageSelector = ({chooseLanguage, language}) => {
   return(
     <div className="language-selector">
       <div className={"lang" + (language === "fi" ? " selected": "")} onClick={() => chooseLanguage("fi")}>
-        {languageOptions.fi}
+        <div className="text-wrapper">
+          {languageOptions.fi}
+        </div>
       </div>
       <div className={"lang" + (language === "en" ? " selected": "")} onClick={() => chooseLanguage("en")}>
-        {languageOptions.en}
+        <div className="text-wrapper">
+          {languageOptions.en}
+        </div>
       </div>
     </div>
   )
