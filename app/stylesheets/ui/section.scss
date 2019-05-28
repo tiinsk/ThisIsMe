@@ -1,0 +1,27 @@
+.section{
+  position: relative;
+  margin: 4rem 2rem;
+  max-width: 2000px;
+  @media (min-width: $lg-size){
+    margin: 4rem auto;
+  }
+  .title{
+    margin: 2rem 0;
+    color: $grey-text;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Amatica SC', sans-serif;
+  }
+  .section-body{
+    position: relative;
+    margin-left: 10%;
+    max-width: 1400px;
+    @media (min-width: $lg-size){
+      margin: 0 auto;
+    }
+    @media (max-width: $xs-size){
+      margin-left: 0;
+    }
+  }
+}

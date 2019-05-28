@@ -1,16 +1,16 @@
 import fi from './fi/fi.js';
 import en from './en/en.js';
 
-const languages = {
+export const translations = {
   fi,
   en
 };
 
 export const languageOptions = {
-  fi: languages.fi.language,
-  en: languages.en.language
+  fi: translations.fi.language,
+  en: translations.en.language
 };
 
 export const getTranslations = (language) => {
-  return languages[language] || languages.en;
+  return translations[language] || translations.en;
 };

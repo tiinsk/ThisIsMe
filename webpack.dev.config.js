@@ -10,7 +10,7 @@ var config = {
   entry: [
     'babel-polyfill',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    path.join(__dirname, 'app/main.jsx')
+    path.join(__dirname, 'app/components/main/main.jsx')
   ],
   output: {
     path: path.join(__dirname, '/public/'),
@@ -28,6 +28,15 @@ var config = {
       __PRODUCTION__: 'false',
     }),
   ],
+  resolve: {
+    extensions: [
+      "",
+      ".jsx",
+      ".js",
+      ".json",
+      ".scss",
+    ]
+  },
   module: {
     loaders: [{
       test: /\.jsx?$/,
@@ -45,7 +54,7 @@ var config = {
       },
       {
         //IMAGE LOADER
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|pdf)$/i,
         loader: 'file-loader?name=assets/[name].[ext]'
       },
       //SVG LOADER
@@ -57,6 +66,10 @@ var config = {
         test: /(\.scss)|(\.css)$/,
         /*loader: 'style!css?modules&sourceMap&localIdentName=[local]___[hash:base64:5]sass?outputStyle=expanded&sourceMap'*/
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.flf$/,
+        loader: 'raw-loader'
       }]
 
   }

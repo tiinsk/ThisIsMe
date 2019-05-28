@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import languageReducer from './language_reducer';
+import consoleReducer from './console_reducer';
 
 export default combineReducers({
-  language: languageReducer
+  language: languageReducer,
+  commands: consoleReducer
 });

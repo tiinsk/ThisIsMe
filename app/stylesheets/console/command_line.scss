@@ -1,0 +1,41 @@
+.command-line{
+  width: 100%;
+  //font-size: 1.2rem;
+  display: flex;
+  margin-top: 1rem;
+  .line-icon{
+    padding-right: 0.5rem;
+    line-height: 1.5rem;
+  }
+
+  .input-line{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: pre;
+    z-index: 1;
+    .cursor{
+      height: 100%;
+      width: 0.7rem;
+      background-color: $green;
+      display: inline-block;
+      margin: 0 0.2rem;
+      animation: blinker 1.5s steps(1, start) infinite;
+      @-webkit-keyframes blinker {
+        0% { opacity: 1; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    }
+  }
+  .command-input{
+    background: transparent;
+    outline: none;
+    position: fixed;
+    bottom: 200vh;
+    z-index: 0;
+    color: transparent;
+    pointer-events: none;
+  }
+}

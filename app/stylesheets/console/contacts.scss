@@ -1,0 +1,19 @@
+.console-contacts{
+  border-top:  2px solid $green;
+  border-bottom: 2px solid $green;
+  width: 35rem;
+  max-width: 100%;
+  .detail{
+    width: 35rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    span{
+      color: $green;
+    }
+    a{
+      color: $magenta;
+    }
+  }
+}

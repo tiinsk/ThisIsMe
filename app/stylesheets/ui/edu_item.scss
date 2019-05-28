@@ -1,0 +1,26 @@
+.edu-item{
+  .edu-title{
+    font-size: 1.2rem;
+    color: $grey-text;
+    margin: 0.25rem 0;
+  }
+  .program{
+    font-size: 1.2rem;
+    color: $grey-text;
+    margin: -0.25rem 0;
+  }
+  .school{
+    color: $grey-text;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0.3rem 0 0.5rem 0;
+  }
+  .description{
+    //padding-left: 2rem;
+    color: $grey-text;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+}
