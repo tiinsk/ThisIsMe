@@ -13,8 +13,6 @@ const Education = () => {
     <div className="education">
       <Section
         titleId="titles.education"
-        backgroundColor="#3e4461"
-        titleBackgroundColor="rgba(26, 33, 68, 0.5)"
       >
         <TimeLine>
           {

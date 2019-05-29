@@ -1,26 +1,29 @@
 .edu-item{
   .edu-title{
-    font-size: 1.2rem;
-    color: $grey-text;
-    margin: 0.25rem 0;
+    color: $black;
+    font-family: $font-lato;
+    font-size: $font-size-Large;
+
+    margin-top: $base-size/2;
   }
   .program{
-    font-size: 1.2rem;
-    color: $grey-text;
-    margin: -0.25rem 0;
+    margin-top: 0;
+    margin-bottom: $base-size/2;
   }
   .school{
-    color: $grey-text;
-    font-weight: 300;
+    color: $black;
+    font-weight: $font-weight-light;
     text-transform: uppercase;
-    font-size: 1.3rem;
-    margin: 0.3rem 0 0.5rem 0;
+    font-size: $font-size-XLarge;
+    font-family: $font-lato;
+
+    margin: $base-size/2 0 $base-size/2 0;
   }
   .description{
-    //padding-left: 2rem;
-    color: $grey-text;
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin: 1rem 0;
+    color: $black;
+    font-family: $font-open-sans;
+    font-weight: $font-weight-light;
+    font-size: $font-size-Default;
+    line-height: 2.5rem;
   }
 }

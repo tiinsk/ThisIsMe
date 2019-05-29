@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 
 import translate from '../../main/translate';
 
@@ -12,7 +11,7 @@ const EduItem = ({strings, data}) => {
         <div className="edu-title">{`${translations.title}${translations.program ? ",": ""}`}</div>
         {
           translations.program ?
-            <div className="program">{translations.program}</div> : null
+            <div className="edu-title program">{translations.program}</div> : null
         }
         { translations.major || translations.minor || translations.thesis ?
           <div className="description">
