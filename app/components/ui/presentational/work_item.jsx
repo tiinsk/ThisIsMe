@@ -1,5 +1,6 @@
 import React from 'react';
 import translate from '../../main/translate';
+import Skill from "./skill";
 
 const WorkItem = ({strings, data}) => {
   return(
@@ -15,9 +16,7 @@ const WorkItem = ({strings, data}) => {
         <div className="wrapper">
           { data.skillList ? data.skillList.map( (skill,i) => {
               return(
-                <div key={i} className="rateless-skill">
-                  {strings.skills.skillNames[skill] || skill}
-                </div>
+                <Skill key={i} skill={skill}/>
               )
             }) : null
           }

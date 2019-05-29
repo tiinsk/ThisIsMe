@@ -4,8 +4,8 @@ const TimeLine = ({children}) => {
 
   return(
     <div className="time-line">
-      <div className="line"></div>
-      <div className="end-dot line-dot"></div>
+      <div className="line"/>
+      <div className="end-dot line-dot"/>
       {children}
     </div>
   )

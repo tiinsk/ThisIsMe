@@ -20,7 +20,7 @@ class TimeBubble extends React.Component {
 
         return (
           <div className="time-bubble">
-              <div className={"pointer" + " " + side}></div>
+              <div className={"pointer" + " " + side}/>
               <Waypoint
                 topOffset={"-50%"}
                 onEnter={() => {

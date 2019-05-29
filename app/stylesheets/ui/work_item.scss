@@ -1,31 +1,28 @@
 .work-item{
   .company{
-    color: $grey-text;
-    font-weight: 300;
+    color: $black;
+    font-weight: $font-weight-light;
     text-transform: uppercase;
-    font-size: 1.3rem;
-    margin: 0.3rem 0 1rem 0;
+    font-size: $font-size-XLarge;
+    font-family: $font-lato;
+
+    margin: $base-size/2 0 $base-size/2 0;
   }
   .work-title{
-    font-size: 1.2rem;
-    color: $grey-text;
-    margin: 0.25rem 0;
+    color: $black;
+    font-family: $font-lato;
+    font-size: $font-size-Large;
+
+    margin: 3*$base-size/4 0;
   }
   .work-description{
-    color: $grey-text;
-    font-weight: 300;
-    font-size: 1.1rem;
+    color: $black;
+    font-family: $font-open-sans;
+    font-weight: $font-weight-light;
+    font-size: $font-size-Default;
+    line-height: 2.5rem;
   }
   .wrapper{
-    margin: 1rem 0 0 0;
-    .rateless-skill{
-      display: inline-block;
-      padding: 0.2rem 0.3rem;
-      margin: 0.2rem 0.2rem;
-      background: $magenta;
-      color: white;
-      border-radius: 2px;
-      border-bottom: 3px solid $dark-magenta;
-    }
+    margin-top: $base-size;
   }
 }
