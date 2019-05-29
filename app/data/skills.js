@@ -53,73 +53,84 @@ export default {
     {
       language: "fi",
       value: 4.7,
-      color: "#00d8ff"
+      color: "#525279",
+      textColor: "#525279"
     },
 
     {
       language: "en",
       value: 3.5,
-      color: "#dd0031"
+      color: "#D27E86",
+      textColor: "#D27E86"
     },
 
     {
       language: "se",
       value: 2,
-      color: "#ffc100"
+      color: "#F1E39E",
+      textColor: "#F1E39E"
     },
   ],
-  programmingSkills: [
+  rated_skills: [
     {
       key: "javascript",
-      value: 35,
+      value: 1,
+      color: "#fbf2ca",
+      textColor: "#D3A600"
     },
     {
       key: "typescript",
-      value: 15,
+      value: 1,
+      color: "#cfe5f6",
+      textColor: "#336689"
     },
     {
       key: "c_pp",
-      value: 20,
-    },
-    {
-      key: "matlab",
-      value: 15,
+      value: 1,
+      color: "#ced9e8",
+      textColor: "#3d5b85"
     },
     {
       key: "c_sharp",
-      value: 10,
+      value: 1,
+      color: "#e9d6f0",
+      textColor: "#5d1871"
     },
     {
-      key: "java_android",
-      value: 5,
-    }
-  ],
-  frameworkSkills: [
+      key: "java",
+      value: 1,
+      color: "#d0e2ef",
+      textColor: "#143e5b"
+    },
     {
-      framework: "react",
+      key: "react",
       value: 4,
-      color: "#00d8ff"
+      color: "#d7f1f6",
+      textColor: "#195a67"
     },
     {
-      framework: "vue",
+      key: "vue",
       value: 3,
-      color: "#25c17c"
+      color: "#c6e7d9",
+      textColor: "#328965"
     },
     {
-      framework: "angular",
+      key: "angular",
       value: 1,
-      color: "#dd0031"
+      color: "#f3ced6",
+      textColor: "#710d0e"
     },
     {
-      framework: "angular2",
-      value: 1,
-      color: "#dd0031"
-    },
-
-    {
-      framework: "node",
+      key: "node",
       value: 3,
-      color: "#90c53f"
+      color: "#dbeec2",
+      textColor: "#45483d"
+    },
+    {
+      key: "sketch",
+      value: 3,
+      color: "#fbecb6",
+      textColor: "#f5ac6e"
     },
   ],
   otherSkills: [
@@ -141,10 +152,10 @@ export default {
     "IBM Bluemix",
     "Git",
     "SVN",
-    "DrawPlus",
     "OpenGL",
     "VR",
-    "computer_graphics"
+    "computer_graphics",
+    'matlab'
   ]
 
 }

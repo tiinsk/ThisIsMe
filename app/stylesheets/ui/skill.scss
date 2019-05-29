@@ -1,9 +1,13 @@
 .skill{
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: $base-size/8 $base-size/2;
   margin: $base-size/8;
 
   border-radius: 30px;
+  height: 30px;
 
   background: $green-skill-background;
 

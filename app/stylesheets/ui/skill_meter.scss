@@ -1,67 +1,63 @@
 .skill-meter{
   position: relative;
-  margin: 0 0 10px 10px;
-  padding: 25px 0 25px 40px;
-  .skill-bar{
-    position: relative;
-    width: 300px;
-    @media (max-width: $xs-size){
-      width: 200px;
-    }
-    max-width: 100%;
-    height: 25px;
-    background: #dedede;
-    border-radius: 25px;
-    overflow: hidden;
-    .fill {
-      height: 100%;
-    }
-    .light-reflection{
-      .reflection{
-        height: 6px;
-        background: rgba(255, 255, 255, 0.55);
-        position: absolute;
-        border-radius: 7px;
-        top: 5px;
-      }
-      .small{
-        width: 4%;
-        right: 7%;
-      }
-      .large{
-        width: 80%;
-        left: 6%;
-      }
-    }
-    .metrics{
-      .line{
-        width: 3px;
-        background: rgba(255, 255, 255, 0.70);
-        position: absolute;
-        bottom: 0;
-      }
-      .lg-line{
-        height: 10px;
-      }
-      .sm-line{
-        height: 6px;
-      }
-    }
-  }
+  margin-bottom: $base-size*2;
+
+  display: flex;
+  align-items: stretch;
+
   .icon{
-    height: 80px;
-    width: 80px;
+    flex-shrink: 0;
+
+    height: 60px;
+    width: 60px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
-    top: -4px;
-    left: -5px;
+
     @media (max-width: $xs-size){
-      height: 70px;
-      width: 70px;
-      top: 2px;
-      left: 2px;
+
+    }
+  }
+  .skill-bar-wrapper {
+    flex-grow: 1;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-left: $base-size/2;
+
+    .skill-name {
+      font-family: $font-quicksand;
+      font-weight: $font-weight-medium;
+    }
+
+    .skill-rate {
+      position: absolute;
+      padding-left: 5px;
+      padding-top: 1px;
+
+      font-family: $font-lato;
+      font-weight: $font-weight-light;
+      font-size: $font-size-XXXSmall;
+      color: $grey-text;
+    }
+
+    .skill-bar {
+      position: relative;
+      width: 100%;
+
+      height: 15px;
+      border-radius: 15px;
+
+      background: $light-grey-background;
+
+      overflow: hidden;
+
+      .fill {
+        height: 100%;
+      }
     }
   }
 }

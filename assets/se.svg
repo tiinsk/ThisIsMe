@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <circle id="se-a" cx="30" cy="30" r="30"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="se-b" fill="#fff">
+      <use xlink:href="#se-a"/>
+    </mask>
+    <use fill="#383862" xlink:href="#se-a"/>
+    <polygon fill="#F2DF84" points="13.023 -2.791 27.442 -2.791 27.442 66.977 13.023 66.977" mask="url(#se-b)"/>
+    <polygon fill="#F2DF84" points="64.419 23.953 64.419 38.372 -5.349 38.372 -5.349 23.953" mask="url(#se-b)"/>
+  </g>
+</svg>

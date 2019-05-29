@@ -1,61 +1,32 @@
 .skills{
-  .skill-categories {
+  .rated-skills {
     display: flex;
     flex-wrap: wrap;
+
     @media (max-width: $md-size) {
       margin-top: 4rem;
     }
-    .skill-category {
-      flex: 1 0 100%;
-      display: flex;
-      margin-top: 30px;
-      justify-content: flex-start;
+    .skill-column {
+      flex: 1 0 33%;
+
+      padding-right: $base-size;
+
       @media (max-width: $md-size) {
         margin-left: -80px;
         flex: 1 0 100%;
         justify-content: center;
       }
+
       @media (max-width: $xs-size){
         margin-left: 0;
       }
-      .category-name {
-        font-size: 1.6rem;
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        font-weight: 300;
-        color: #9799b3;
-        flex: 0 0 80px;
-        @media (max-width: $xs-size){
-          flex: 0 0 30px;
-        }
-        position: relative;
-        & > div {
-          white-space: nowrap;
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, -50%) rotate(-90deg);
-          top: 50%;
-        }
-      }
     }
     .rateless-skills {
-      width: 345px;
-      @media (max-width: $xs-size){
-        width: 280px;
-      }
       display: flex;
       flex-wrap: wrap;
-      .rateless-skill {
-        flex: 1 0 auto;
-        padding: 0.4rem 0.6rem;
-        margin: 0.3rem 0.3rem;
-        background: $magenta;
-        color: white;
-        border-radius: 4px;
-        border-bottom: 3px solid $dark-magenta;
-        font-size: 1.2rem;
-        font-weight: 300;
+      align-content: flex-start;
+
+      @media (max-width: $xs-size){
       }
     }
   }

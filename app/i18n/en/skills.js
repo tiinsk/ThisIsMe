@@ -5,7 +5,7 @@ export default {
   ownProjects: "Own Projects",
   skillNames: {
     //programming
-    java_android: "Java (Android)",
+    java: "Java",
     c_pp: "C++",
     matlab: "Matlab",
     javascript: "JavaScript",
@@ -13,6 +13,11 @@ export default {
     c_sharp: "C#",
     customer_service: "Customer Service",
     sql: "SQL",
+    sketch: "Sketch",
+    node: "Node.js",
+    react: "React",
+    angular: "Angular",
+    vue: "Vue",
     //tech
     programming: "Programming",
     image_processing: "Image Processing",
@@ -40,13 +45,6 @@ export default {
     fi: "Finnish",
     en: "English",
     se: "Swedish",
-  },
-  frameworks: {
-    node: "Node.js",
-    react: "React",
-    angular: "Angular.js",
-    angular2: "Angular 2",
-    vue: "Vue.js"
   },
   langSkills: "Language Skills",
   frameworkSkills: "Software Frameworks",

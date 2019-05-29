@@ -24,5 +24,8 @@
   }
   .wrapper{
     margin-top: $base-size;
+
+    display: flex;
+    flex-wrap: wrap;
   }
 }

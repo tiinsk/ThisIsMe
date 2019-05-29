@@ -2,35 +2,38 @@ import React from 'react';
 
 import translate from '../../main/translate';
 
-const SkillMeter = ({icon, color, rate}) => {
+const MAX_RATE = 5;
+
+const SkillMeter = ({strings, icon, color, textColor, rate}) => {
   return(
     <div className="skill-meter">
-      <div className="skill-bar">
-        <div
-          className="fill"
-          style={{
-            width: `${rate/5*100}%`,
-            backgroundColor: color
-          }}
-        />
-        <div className="light-reflection">
-          <div className="reflection large"></div>
-          <div className="reflection small"></div>
-        </div>
-        <div className="metrics">
-          {
-            ["20%", "40%", "60%", "80%"].map( pos => <div key={pos} className="line lg-line" style={{left: pos}}></div>)
-          }
-          {
-            ["10%", "30%", "50%", "70%", "90%"].map( pos => <div key={pos} className="line sm-line" style={{left: pos}}></div>)
-          }
-        </div>
-      </div>
       <div className="icon" style={
         {
-          backgroundImage: `url(${require(`../../../../assets/${icon}.png`)}`
+          backgroundImage: `url(${require(`../../../../assets/${icon}.svg`)}`
         }
-      }></div>
+      }/>
+      <div className="skill-bar-wrapper">
+        <div className="skill-name" style={{
+          color: textColor
+        }}>{strings.skills.skillNames[icon] || icon}</div>
+        <div className="skill-bar">
+          <div
+            className="skill-rate"
+            style={{
+              left: `${rate/MAX_RATE*100}%`
+            }}
+          >
+            {rate}/10
+          </div>
+          <div
+            className="fill"
+            style={{
+              width: `${rate/MAX_RATE*100}%`,
+              backgroundColor: color
+            }}
+          />
+        </div>
+      </div>
     </div>
   )
 };

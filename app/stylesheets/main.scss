@@ -58,7 +58,6 @@ $lang-selection-width: 85px;
 @import 'ui/work_history';
 @import 'ui/contacts';
 @import "ui/skill_meter";
-@import "ui/skill_ratio_meter";
 @import "ui/home";
 @import "console/console_site";
 @import "console/command_line";
@@ -81,7 +80,6 @@ $lang-selection-width: 85px;
 body{
   font-family: "Open Sans";
   margin: 0;
-  height: 100%;
   font-size: 1.5rem;
 }
 
@@ -118,7 +116,6 @@ html{
 }
 
 #app{
-  background: #f1f1f1;
   height: 100%;
 }
 
