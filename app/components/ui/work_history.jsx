@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Section from './presentational/section';
-import Row from './presentational/row';
-import Column from './presentational/column';
 import WorkItem from './presentational/work_item';
 
 import workExperience from '../../data/work_experience';
@@ -17,34 +15,25 @@ const WorkHistory = () => {
     <div className="work-history">
       <Section
         titleId="titles.workHistory"
-        backgroundColor="#2e3157"
-        titleBackgroundColor="rgba(14, 23, 53, 0.5)"
       >
-        <Row>
-          <Column
-            parts={1}
-            ofParts={1}
-          >
-            <TimeLine>
-              {
-                workExperience.workexp.map((workitem, i) => {
-                  return (
-                    <TimeBubble
-                      key={i}
-                      from={workitem.from}
-                      to={workitem.to}
-                      index={i}
-                    >
-                      <WorkItem
-                        data={workitem}
-                      />
-                    </TimeBubble>
-                  )
-                })
-              }
-            </TimeLine>
-          </Column>
-        </Row>
+        <TimeLine>
+          {
+            workExperience.workexp.map((workitem, i) => {
+              return (
+                <TimeBubble
+                  key={i}
+                  from={workitem.from}
+                  to={workitem.to}
+                  index={i}
+                >
+                  <WorkItem
+                    data={workitem}
+                  />
+                </TimeBubble>
+              )
+            })
+          }
+        </TimeLine>
       </Section>
     </div>
   )

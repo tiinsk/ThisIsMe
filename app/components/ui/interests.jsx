@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Section from './presentational/section';
-import Row from './presentational/row';
-import Column from './presentational/column';
 import BubbleChart from './presentational/bubble_chart';
 import TravelMap from './presentational/travel_map';
 import translate from '../main/translate';
@@ -29,20 +27,8 @@ const Interests = ({strings}) => {
       <Section
         titleId="titles.interests"
       >
-        <Row>
-          <Column
-            parts={1}
-            ofParts={3}
-          >
-            <BubbleChart data={data}/>
-          </Column>
-          <Column
-            parts={2}
-            ofParts={3}
-          >
-            <TravelMap/>
-          </Column>
-        </Row>
+        <BubbleChart data={data}/>
+        <TravelMap/>
       </Section>
     </div>
   )
