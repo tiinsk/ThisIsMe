@@ -37,6 +37,7 @@ $lang-selection-width: 85px;
 @import "../../node_modules/react-bubble-chart/src/style.css";
 @import "../../node_modules/animate.css/animate.min.css";
 @import "./colors";
+@import "./material_icons";
 
 @import 'ui/header';
 @import 'ui/introduction';
@@ -52,6 +53,7 @@ $lang-selection-width: 85px;
 @import 'ui/bubble_chart';
 @import 'ui/skills';
 @import 'ui/project';
+@import 'ui/projects';
 @import 'ui/travel_map';
 @import 'ui/time_line';
 @import 'ui/time_bubble';

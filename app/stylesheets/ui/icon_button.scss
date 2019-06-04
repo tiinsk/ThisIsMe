@@ -1,0 +1,27 @@
+.icon-button {
+  height: 35px;
+  width: 35px;
+  padding: 0 $base-size;
+
+  border: 2px solid $blue-NEW;
+  border-radius: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $font-size-XLarge;
+  color: $blue-NEW;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &:hover {
+    background: $blue-NEW;
+    color: white;
+  }
+
+  .material-icons {
+    font-size: $font-size-XLarge;
+  }
+}

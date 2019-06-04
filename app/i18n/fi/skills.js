@@ -4,7 +4,6 @@ export default {
   overallSkills: "Yleiset taidot",
   ownProjects: "Omat projektit",
   skillNames: {
-    //programming
     java: "Java",
     c_pp: "C++",
     matlab: "Matlab",
@@ -18,21 +17,8 @@ export default {
     react: "React",
     angular: "Angular",
     vue: "Vue",
-    //tech
-    programming: "Ohjelmointi",
     image_processing: "Kuvankäsittely",
-    biotech: "Biotekniikka",
-    physics: "Fysiikka",
-    chemistry: "Kemia",
-    mathematics: "Matematiikka",
-    other: "Muut",
-    signal_processing: "Sign./kuvan käsittely",
-    software_management: "Ohj. tuotanto",
-    project_management: "Projektin hallinta",
-    testing: "Testaus",
-    software_architectures: "Ohj. arkkiteht.",
     ui_design: "UX Suunnittelu",
-    //all
     tech: "Tekniset taidot",
     communication: "Kommunikaatio",
     research: "Tutkimus",
@@ -46,7 +32,4 @@ export default {
     english: "Englanti",
     swedish: "Ruotsi",
   },
-  langSkills: "Kielitaito",
-  frameworkSkills: "Ohjelmistokehykset",
-  otherSkills: "Muut taidot",
 };

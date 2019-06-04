@@ -1,92 +1,79 @@
 .project{
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-  padding: 0;
-  display: flex;
-  .project-name {
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #9799b3;
-    flex: 0 0 30px;
-    margin-right: 1.5rem;
-    position: relative;
-    &>div {
-      white-space: nowrap;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg);
-      top: 50%;
-    }
-  }
+  flex: 0 0 50%;
+  .project-wrapper {
+    max-width: 500px;
 
-  .wrapper {
-    display: flex;
-    @media (max-width: $md-size){
-      flex-wrap: wrap;
+    margin-right: $base-size;
+    margin-bottom: $base-size;
+
+    padding: $base-size;
+
+    position: relative;
+    overflow: hidden;
+
+    .project-image {
+      background-size: cover;
+      height: 300px;
     }
-    .image-wrapper {
-      flex: 0 0 37%;
-      margin-right: 2rem;
-      position: relative;
-      min-height: 400px;
-      max-width: 400px;
-      @media (max-width: $md-size) {
-        flex: 0 0 100%;
-        width: 100%;
-        max-width: 100%;
-        max-height: inherit;
-        min-height: inherit;
-        height: 20rem;
-        padding-right: 0;
-        margin-bottom: 1rem;
-      }
-      .image {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        @media (max-width: $md-size) {
-          width: 100%;
-          max-width: inherit;
-        }
-      }
+
+    .project-name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: $base-size 0;
+
+      text-transform: uppercase;
+      font-family: $font-quicksand;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-XXLarge;
+      color: $black;
+
       .icons {
-        background: $magenta;
-        font-size: 1.5rem;
-        padding: 0.7rem;
-        line-height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        a {
-          display: block;
-          text-underline: none;
-          cursor: pointer;
-          color: white !important;
-          margin-left: 0.2rem;
+        display: flex;
+        a:first-child {
+          margin-right: $base-size/4;
         }
       }
     }
+
     .project-description {
-      flex: 1 1 50%;
-      color: $grey-text;
-      font-weight: 300;
       text-align: justify;
-      font-size: 1.2rem;
-      line-height: 150%;
+      font-size: $font-size-Default;
+      font-family: $font-open-sans;
+      font-weight: $font-weight-light;
+      color: $black;
+      line-height: $base-size;
     }
     .project-skills {
-      margin-top: 1rem;
-      .project-skill {
-        display: inline-block;
-        padding: 0.3rem 0.5rem;
-        margin: 0.3rem 0.3rem;
-        background: $magenta;
-        color: white;
-        border-radius: 4px;
-        border-bottom: 3px solid $dark-magenta;
+      flex-shrink: 0;
+      flex-grow: 1;
+
+      margin-top: $base-size/2;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+    }
+
+    .corner {
+      position: absolute;
+
+      height: 85px;
+      width: 85px;
+
+      &.top {
+        top: 0;
+        left: 0;
+        border-left: 7px solid $green-NEW;
+        border-top: 7px solid $green-NEW;
+      }
+
+      &.bottom {
+        bottom: 0;
+        right: 0;
+        border-right: 7px solid $green-NEW;
+        border-bottom: 7px solid $green-NEW;
       }
     }
   }

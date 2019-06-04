@@ -4,7 +4,6 @@ export default {
   overallSkills: "General Skills",
   ownProjects: "Own Projects",
   skillNames: {
-    //programming
     java: "Java",
     c_pp: "C++",
     matlab: "Matlab",
@@ -18,26 +17,8 @@ export default {
     react: "React",
     angular: "Angular",
     vue: "Vue",
-    //tech
-    programming: "Programming",
     image_processing: "Image Processing",
-    biotech: "Biotechnics",
-    physics: "Physics",
-    chemistry: "Chemistry",
-    mathematics: "Math",
-    other: "Others",
-    signal_processing: "Sgn/Img Processing",
-    software_management: "Software Mgmt.",
-    project_management: "Project Mgmt.",
-    testing: "Testing",
-    software_architectures: "SW Architect.",
     ui_design: "UX Design",
-    //all
-    tech: "Technical Skills",
-    communication: "Communication",
-    research: "Research",
-    innovation: "Innovation",
-    languages: "Languages",
     computer_graphics: "Computer Graphics",
     imaging_algorithms: "Imaging Algorithms"
   },
@@ -45,8 +26,5 @@ export default {
     fi: "Finnish",
     en: "English",
     se: "Swedish",
-  },
-  langSkills: "Language Skills",
-  frameworkSkills: "Software Frameworks",
-  otherSkills: "Other Skills",
+  }
 };

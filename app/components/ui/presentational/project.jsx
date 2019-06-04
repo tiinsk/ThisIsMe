@@ -1,5 +1,7 @@
 import React from 'react';
 import translate from '../../../components/main/translate';
+import Skill from './skill';
+import IconButton from "./icon_button";
 
 const Project = ({strings, project}) => {
 
@@ -7,33 +9,37 @@ const Project = ({strings, project}) => {
 
   return(
     <div className="project">
+      <div className="project-wrapper">
+        <div className="corner top"/>
+        <div className="project-image" style={{backgroundImage: `url(${image}`}}/>
         <div className="project-name">
           <div>{strings.projects[project.key].name}</div>
-        </div>
-      <div className="wrapper">
-        <div className="image-wrapper">
-          <div className="image" style={{backgroundImage: `url(${image}`}}></div>
           <div className="icons">
-            <a href={project.link} target="_blank" style={{marginBottom: "0.5rem"}}>
-              <i className="fa fa-external-link"/>
-            </a>
-            <a href={project.github} target="_blank">
-              <i className="fa fa-github-square"/>
-            </a>
+            <IconButton
+              icon="public"
+              link={project.link}
+              type="material-icons"
+            />
+            <IconButton
+              icon="github"
+              link={project.github}
+              type="fa-icons"
+            />
           </div>
         </div>
         <div className="project-description">
           {strings.projects[project.key].description}
-          <div className="project-skills">
-            {
-              project.skills.map( (skill,i) => {
-                return (
-                  <div key={i} className="project-skill">{strings.skills.skillNames[skill] || skill}</div>
-                )
-              })
-            }
-          </div>
         </div>
+        <div className="project-skills">
+          {
+            project.skills.map( (skill,i) => {
+              return (
+                <Skill key={i} skill={skill}/>
+              )
+            })
+          }
+        </div>
+        <div className="corner bottom"/>
       </div>
     </div>
   )

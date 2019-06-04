@@ -24,6 +24,7 @@
     "express": "^4.14.0",
     "figlet": "^1.2.0",
     "lodash": "^4.17.4",
+    "material-design-icons": "^3.0.1",
     "moment": "^2.17.1",
     "react": "^15.4.2",
     "react-bubble-chart": "^0.4.0",
