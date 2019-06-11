@@ -1,22 +1,34 @@
 .section{
   position: relative;
-  margin: 4rem 2rem;
+  margin: 18rem 2rem;
+  margin-left: 150px;
+
   max-width: 2000px;
+
   @media (min-width: $lg-size){
     margin: 4rem auto;
   }
+
   .title{
-    margin: $base-size 0;
-    color: $black;
-    font-size: $font-size-XXLarge;
+    margin: 0;
+    color: $light-grey;
+    font-size: 80px;
 
     text-transform: uppercase;
     font-family: $font-lato;
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-regular;
+
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transform-origin: top right;
+    transform: rotate(-90deg) translateY(-100%);
+
   }
   .section-body{
     position: relative;
-    margin-left: 10%;
+    margin-left: $base-size*2;
     max-width: 1400px;
     @media (min-width: $lg-size){
       margin: 0 auto;

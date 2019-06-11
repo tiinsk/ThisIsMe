@@ -5,7 +5,9 @@ import _ from 'lodash';
 const Section = ({strings, children, titleId}) => {
   return(
     <div className="section">
-      <div className="title">{_.get(strings, titleId)}</div>
+      <div className="title">
+        {_.get(strings, titleId)}
+      </div>
       <div className="section-body">
         {children}
       </div>
