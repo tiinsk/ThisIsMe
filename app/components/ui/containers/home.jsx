@@ -9,16 +9,15 @@ import cv_en_pdf from '../../../../assets/cv_en.pdf';
 import cv_fi_pdf from '../../../../assets/cv_fi.pdf';
 
 import translate from '../../main/translate';
-import LanguageSelector from './language_selector';
+import LanguageSelectorSmall from "./language_selector_small";
 
 class Home extends React.Component {
 
   render() {
     return (
       <div className="home">
-        <LanguageSelector/>
+        <LanguageSelectorSmall/>
         <div className="ui-header">
-          <div className="overlay"></div>
           <Link className="choose-btn ui-btn" to="/ui" >
             {this.props.strings.useUI}
           </Link>

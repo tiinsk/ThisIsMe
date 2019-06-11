@@ -76,6 +76,7 @@ $lang-selection-width: 85px;
 @import "console/help";
 @import "console/asciifont";
 @import "ui/language_selector";
+@import "ui/language_selector_small";
 @import "ui/icon_button";
 @import "ui/navbar";
 @import "ui/description";
@@ -119,7 +120,7 @@ html{
 }
 
 #app{
-  height: 100%;
+  min-height: 100vh;
 }
 
 .white-box{
