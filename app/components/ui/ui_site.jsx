@@ -9,6 +9,7 @@ import Contacts from './contacts';
 import Projects from './projects';
 
 import translate from '../main/translate';
+import Description from "./description";
 
 class UISite extends React.Component {
 
@@ -21,6 +22,7 @@ class UISite extends React.Component {
       <div>
         <Header/>
         <div>
+          <Description/>
           <WorkHistory/>
           <Education/>
           <Skills/>
