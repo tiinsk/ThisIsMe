@@ -16,7 +16,7 @@ const EduItem = ({strings, data}) => {
       </div>
 
       { translations.major || translations.minor || translations.thesis ?
-        <div className="description">
+        <div className="edu-description">
           {
             translations.major ?
               <div>{strings.education.major}: {translations.major}</div> : null

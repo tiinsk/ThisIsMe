@@ -31,7 +31,7 @@ class Typewriter extends React.Component{
 
   render() {
     return (
-      <div className={`typewriter ${this.props.className}`} style={this.props.style}>
+      <div className="typewriter" style={this.props.style}>
         {this.props.text.slice(0, this.state.index)}
       </div>
     )

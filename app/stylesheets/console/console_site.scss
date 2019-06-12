@@ -2,10 +2,12 @@
   background: $almost-black;
   color: $green;
   min-height: 100vh;
-  font-family: Consolas, monospace;
+  font-family: $font-space;
   padding: 2rem 1rem;
   padding-bottom: 2rem;
-  font-size: 1.2rem;
+
+  font-size: $font-size-Default;
+
   @media (max-width: $md-size){
     font-size: 1.1rem;
   }

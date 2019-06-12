@@ -19,7 +19,7 @@ const Header = ({strings}) => {
             <div className="corner top"/>
             <div>
               <div className="title">
-                {strings.titles.hi}
+                {strings.titles.introduction}
               </div>
               <div className="name yellow-text">
                 <img src={name} alt="Tiina Koskiranta"/>

@@ -7,6 +7,8 @@ $font-lato: 'Lato', sans-serif;
 $font-hindi: 'Hindi', sans-serif;
 $font-quicksand: 'Quicksand', sans-serif;
 $font-open-sans: 'Open sans', sans-serif;
+$font-space: 'Space Mono', monospace;
+
 
 $font-weight-thin: 100;
 $font-weight-light: 300;
@@ -66,7 +68,6 @@ $lang-selection-width: 85px;
 @import "console/introduction";
 @import "console/edu_item";
 @import "console/work_item";
-@import "console/skill_ratio_meter";
 @import "console/skill_meter";
 @import "console/skills";
 @import "console/project";

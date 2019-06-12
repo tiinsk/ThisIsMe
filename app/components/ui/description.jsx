@@ -9,7 +9,7 @@ const Description = ({strings}) => {
   return (
     <div className="work-history">
       <Section
-        titleId="titles.hi"
+        titleId="titles.introduction"
       >
         <div className="description" dangerouslySetInnerHTML={{__html: strings.introduction}}/>
       </Section>
