@@ -20,37 +20,83 @@
     margin: 0 auto;
     padding-bottom: 52%;
     position: relative;
+    background-size: contain;
   }
   .visit-dots {
     position: absolute;
     width: 100%;
     height: 100%;
+
     .dot {
       position: absolute;
-      background: $orange;
+      background: $blue-map-dot;
       border-radius: 50%;
       height: 6px;
       width: 6px;
       display: inline-block;
-      &.home{
-        background: $green;
+
+      &.home-dot{
+        background: $green-home-dot;
+
         .gps_ring{
-          border-color: $green !important;
+          border-color: $green-home-dot !important;
+        }
+      }
+
+      .hover-note {
+        display: none;
+
+        background: $blue-map-dot;
+        border-radius: 3px;
+
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        white-space: nowrap;
+
+        padding: $base-size/6 $base-size/4;
+
+        font-size: $font-size-XXSmall;
+        color: white;
+        font-family: $font-lato;
+        font-weight: $font-weight-regular;
+
+        .hover-arrow {
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          z-index: 0;
+
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+
+          transform:  translateX(-50%);
+          border-top: 5px solid $blue-map-dot;
+        }
+      }
+      &:hover {
+        .hover-note {
+          display: initial;
         }
       }
     }
 
     .gps_ring {
-      border: 3px solid $orange;
+      border: 1px solid $blue-map-dot;
       -webkit-border-radius: 50%;
-      height: 18px;
-      width: 18px;
+      height: 12px;
+      width: 12px;
       position: relative;
       -webkit-animation: pulsate 1s linear;
       -webkit-animation-iteration-count: infinite;
        opacity: 0.0;
-      left: -6px;
-      top: -6px;
+      left: -3px;
+      top: -3px;
     }
     @-webkit-keyframes pulsate {
       0% {

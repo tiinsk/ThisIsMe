@@ -1,0 +1,22 @@
+.interests {
+  display: flex;
+  width: 100%;
+
+  .travel-map {
+    flex: 1 0 60%;
+  }
+
+  .interest-list {
+    padding: 0 $base-size*3 0 $base-size;
+
+    color: $black;
+    font-family: $font-lato;
+    font-size: $font-size-Large;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+
+    .interest {
+      margin-bottom: $base-size/2;
+    }
+  }
+}

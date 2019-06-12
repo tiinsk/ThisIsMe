@@ -1,20 +1,39 @@
 export default {
-  travelling: "Matkustaminen",
-  top: [
-    "Matkustelu",
-    "Kirjat",
-  ],
-  middle: [
-    "Ystävät",
-    "Musiikki",
+  interest_list: [
+    "Matkustaminen",
+    "Luonto",
+    "Vaeltaminen",
     "Pelit",
-    "Lenkkeily",
+    "Leipominen",
     "Ruoka",
-    "Kutominen",
+    "Lautapelit"
   ],
-  lower: [
-    "Lautapelit",
-    "Olut",
-    "Oluen paneminen"
-  ]
+  cities: {
+    singapore: "Singapore",
+    taipei: "Taipei",
+    kualalumpur: "Kuala Lumpur",
+    hanoi: "Hanoi",
+    saigon: "Ho Chi Minh",
+    thailand: "Thaimaa",
+    bali: "Bali",
+    hongkong: "Hong Kong",
+    london: "Lontoo",
+    rome: "Rooma",
+    frankfurt: "Frankfurt",
+    paris: "Pariisi",
+    vienna: "Wien",
+    stockholm: "Tukholma",
+    tallinn: "Tallinna",
+    rhodes: "Rodos",
+    berlin: "Berliini",
+    dublin: "Dublin",
+    barcelona: "Barcelona",
+    los_angeles: "Los Angeles",
+    san_diego: "San Diego",
+    las_vegas: "Las Vegas",
+    irvine: "Irvine",
+    tampere: "Tampere",
+    lofoten: "Lofootit",
+    tromssa: "Tromssa",
+  }
 }

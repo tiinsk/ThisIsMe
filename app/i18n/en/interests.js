@@ -1,20 +1,39 @@
 export default {
-  travelling: "Travelling",
-  top: [
-    "Travelling",
-    "Books",
+  interest_list: [
+  "Travelling",
+  "Nature",
+  "Trekking",
+  "Games",
+  "Baking",
+  "Food",
+  "Board Games"
   ],
-  middle: [
-    "Friends",
-    "Music",
-    "Games",
-    "Jogging",
-    "Food",
-    "Knitting",
-  ],
-  lower: [
-    "Board Games",
-    "Beer",
-    "Brewing"
-  ]
+  cities: {
+    singapore: "Singapore",
+    taipei: "Taipei",
+    kualalumpur: "Kuala Lumpur",
+    hanoi: "Hanoi",
+    saigon: "Ho Chi Minh",
+    thailand: "Thailand",
+    bali: "Bali",
+    hongkong: "Hong Kong",
+    london: "London",
+    rome: "Rome",
+    frankfurt: "Frankfurt",
+    paris: "Paris",
+    vienna: "Vienna",
+    stockholm: "Stockholm",
+    tallinn: "Tallinn",
+    rhodes: "Rhodes",
+    berlin: "Berlin",
+    dublin: "Dublin",
+    barcelona: "Barcelona",
+    los_angeles: "Los Angeles",
+    san_diego: "San Diego",
+    las_vegas: "Las Vegas",
+    irvine: "Irvine",
+    tampere: "Tampere",
+    lofoten: "Lofoten Islands",
+    tromssa: "Tromsø",
+  }
 }

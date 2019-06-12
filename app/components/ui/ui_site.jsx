@@ -5,7 +5,6 @@ import WorkHistory from './work_history';
 import Education from './education';
 import Skills from './skills';
 import Interests from './interests';
-import Contacts from './contacts';
 import Projects from './projects';
 
 import translate from '../main/translate';
@@ -28,7 +27,6 @@ class UISite extends React.Component {
           <Skills/>
           <Projects/>
           <Interests/>
-          <Contacts/>
         </div>
       </div>
     );
