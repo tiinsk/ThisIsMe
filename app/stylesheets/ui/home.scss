@@ -29,8 +29,8 @@
     background: $almost-black;
     position: relative;
     .cursor{
-      font-size: 2rem;
-      padding: 1rem 1.5rem;
+      font-size: 3rem;
+      padding: $base-size/2 $base-size;
       color: $green;
       .blinking-underline{
         animation: blinker 1.5s steps(1, start) infinite;
@@ -47,12 +47,18 @@
     top: 34%;
     left: 50%;
     transform: translate(-50%, 0);
+
     color: white;
     font-size: 5rem;
-    font-family: 'Amatica SC', cursive;
-    padding-bottom: 1.5rem;
+    font-family: $font-lato;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+
+    padding-bottom: $base-size;
+
     width: 100%;
     text-align: center;
+
     @media (max-width: $sm-size){
       top: 50%;
       transform: translate(-50%, -50%);
@@ -66,31 +72,34 @@
     @media (max-width: $sm-size){
       top: 50%;
     }
+
     transform: translate(-50%, 0);
     text-align: center;
-    padding: 1rem 0 0.8rem 0;
-    width: 12rem;
-    border-radius: 5px;
-    border-bottom-style: solid;
-    border-bottom-width: 0.4rem;
-    font-size: 1.2rem;
+    padding: $base-size/2;
+    width: 18rem;
+
+    font-size: $font-size-Large;
     cursor: pointer;
-    line-height: 1.5rem;
     text-decoration: none;
     left: 50%;
+
+    text-transform: uppercase;
+
     &.ui-btn{
-      background: $magenta;
-      border-bottom-color: darken($magenta, 15%);
+      background: $blue-NEW;
+
+      font-family: $font-lato;
+      font-weight: $font-weight-light;
+
       &:hover{
-        background: darken($magenta, 5% );
+        background: darken($blue-NEW, 5%);
       }
     }
     &.console-btn{
-      background: $green;
-      border-bottom-color: darken($green, 15%);
-      font-family: Consolas, monospace;
+      background: $green-console-btn;
+      font-family: $font-space;
       &:hover{
-        background: darken($green, 5%);
+        background: darken($green-console-btn, 5%);
       }
     }
   }
