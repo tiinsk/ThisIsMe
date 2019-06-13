@@ -8,14 +8,16 @@ import Interests from './interests';
 import Projects from './projects';
 
 import translate from '../main/translate';
-import Description from "./description";
+import AboutMe from "./about_me";
+
+const SCROLL_OFFSET = 50;
 
 class UISite extends React.Component {
 
   constructor(props) {
     super(props);
     this.scrollRefs = {
-        description: React.createRef(),
+        aboutMe: React.createRef(),
         workHistory: React.createRef(),
         education: React.createRef(),
         skills: React.createRef(),
@@ -26,7 +28,7 @@ class UISite extends React.Component {
 
   onScrollToRef(section) {
     window.scrollTo({
-      top: this.scrollRefs[section].current.offsetTop,
+      top: this.scrollRefs[section].current.offsetTop - SCROLL_OFFSET,
       left: 0,
       behavior: 'smooth'
     });
@@ -37,7 +39,7 @@ class UISite extends React.Component {
       <div>
         <Header onScrollToRef={(section) => this.onScrollToRef(section)}/>
         <div>
-          <Description scrollRef={this.scrollRefs.description}/>
+          <AboutMe scrollRef={this.scrollRefs.aboutMe}/>
           <WorkHistory scrollRef={this.scrollRefs.workHistory}/>
           <Education scrollRef={this.scrollRefs.education}/>
           <Skills scrollRef={this.scrollRefs.skills}/>

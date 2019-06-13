@@ -15,6 +15,7 @@ const WorkHistory = ({scrollRef}) => {
     <div className="work-history" ref={scrollRef}>
       <Section
         titleId="titles.workHistory"
+        maxWidth="1000px"
       >
         <TimeLine>
           {

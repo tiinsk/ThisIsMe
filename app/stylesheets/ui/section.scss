@@ -24,8 +24,8 @@
   }
   .section-body{
     position: relative;
-    margin-left: $base-size*2;
-    max-width: 1400px;
+    margin-left: 10%;
+    max-width: 1200px;
   }
 
   @media (max-width: $breakpoint-mobile){

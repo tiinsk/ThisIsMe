@@ -13,6 +13,7 @@ const Education = ({scrollRef}) => {
     <div className="education" ref={scrollRef}>
       <Section
         titleId="titles.education"
+        maxWidth="1000px"
       >
         <TimeLine>
           {

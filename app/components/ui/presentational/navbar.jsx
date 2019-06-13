@@ -38,12 +38,6 @@ class Navbar extends React.Component {
         <ul className="nav-list">
           <li
             className="nav-item"
-            onClick={() => this.props.onScrollToRef('description')}
-          >
-            {this.props.strings.titles.aboutMe}
-          </li>
-          <li
-            className="nav-item"
             onClick={() => this.props.onScrollToRef('workHistory')}
           >
             {this.props.strings.titles.workHistory}

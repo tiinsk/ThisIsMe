@@ -4,6 +4,7 @@ $image-size: 115px;
   position: relative;
 
   margin: 2*$base-size $base-size*2 2*$base-size $base-size;
+  max-width: 550px;
 
   .summary {
     .summary-title {
@@ -57,5 +58,8 @@ $image-size: 115px;
       background-size: contain;
 
     }
+  }
+  @media (max-width: $breakpoint-small-window) {
+    margin: 0;
   }
 }

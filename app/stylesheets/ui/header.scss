@@ -35,7 +35,6 @@
 
           .palms {
             height: 100%;
-            width: 100%;
           }
         }
 
@@ -94,7 +93,8 @@
     .header-introduction {
       display: flex;
       align-items: flex-start;
-
+      flex-grow: 1;
+      justify-content: center;
     }
   }
   @media (max-width: $breakpoint-small-window){
@@ -113,16 +113,13 @@
         .titles {
           flex-grow: 1;
           margin-right: $base-size*2;
+          .palms-container .palms {
+            width: 100%;
+          }
         }
       }
       .header-introduction {
-        margin: 2rem;
-        margin-left: 105px;
-        max-width: 750px;
-
-        .introduction {
-          margin-bottom: 0;
-        }
+        display: none;
       }
     }
   }
@@ -138,10 +135,6 @@
             }
           }
         }
-      }
-      .header-introduction {
-        margin-left: $base-size;
-        max-width: initial;
       }
     }
   }

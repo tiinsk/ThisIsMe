@@ -9,7 +9,7 @@ const Introduction = ({strings}) => {
         </div>
         <div className="summary">
           <div className="summary-title">{strings.summary.title}</div>
-          <div className="summary-text">{strings.summary.text}</div>
+          <div className="summary-text" dangerouslySetInnerHTML={{__html: strings.introduction}}/>
           <button className="summary-btn">{strings.summary.printBtn}</button>
         </div>
       </div>
