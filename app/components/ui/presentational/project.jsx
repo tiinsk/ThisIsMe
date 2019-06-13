@@ -10,7 +10,6 @@ const Project = ({strings, project}) => {
   return(
     <div className="project">
       <div className="project-wrapper">
-        <div className="corner top"/>
         <div className="project-image" style={{backgroundImage: `url(${image}`}}/>
         <div className="project-name">
           <div>{strings.projects[project.key].name}</div>
@@ -39,7 +38,6 @@ const Project = ({strings, project}) => {
             })
           }
         </div>
-        <div className="corner bottom"/>
       </div>
     </div>
   )

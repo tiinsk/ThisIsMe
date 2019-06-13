@@ -42,4 +42,7 @@
       top: 50%;
     }
   }
+  @media (max-width: $breakpoint-mobile){
+    display: none;
+  }
 }

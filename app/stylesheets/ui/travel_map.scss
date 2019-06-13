@@ -1,10 +1,4 @@
 .travel-map{
-  @media (max-width: $md-size){
-    padding: 0 15%;
-  }
-  @media (max-width: $sm-size){
-    padding: 0 0.5rem;
-  }
   .map-title{
     color: $grey-text;
     font-size: 2rem;
@@ -109,6 +103,21 @@
       100% {
         -webkit-transform: scale(1.2, 1.2);
         opacity: 0.0;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile){
+    padding: 0;
+    .visit-dots {
+      .dot {
+        height: 2px;
+        width: 2px;
+      }
+      .gps_ring {
+        height: 6px;
+        width: 6px;
+        left: -2px;
+        top: -2px;
       }
     }
   }

@@ -19,4 +19,13 @@
       margin-bottom: $base-size/2;
     }
   }
+  @media (max-width: $breakpoint-small-window){
+    flex-wrap: wrap;
+    .travel-map {
+      flex: 0 0 100%;
+    }
+    .interest-list {
+      margin-top: $base-size;
+    }
+  }
 }
