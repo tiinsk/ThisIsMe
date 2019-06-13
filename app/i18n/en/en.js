@@ -23,6 +23,7 @@ export default {
   link: "Link",
   links: "Links",
   titles:{
+    home: "Home",
     introduction: "Hi, I am",
     aboutMe: "About me",
     specialities: "Specialities",

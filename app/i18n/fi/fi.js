@@ -23,6 +23,7 @@ export default {
   Link: "Linkki",
   links: "Linkit",
   titles:{
+    home: "Etusivu",
     introduction: "Hei, olen",
     aboutMe: "Minusta",
     specialities: "Erikoisosaaminen",

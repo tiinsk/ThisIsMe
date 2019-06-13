@@ -15,9 +15,20 @@ class Navbar extends React.Component {
     }
   }
   toggleMenu () {
+    if(this.state.openMenu) {
+      document.body.classList.remove('mobile-menu-open');
+    } else {
+      document.body.classList.add('mobile-menu-open');
+    }
+
     this.setState({
       openMenu: !this.state.openMenu
     })
+  }
+
+  onMobileNavItemClick(navItem) {
+    this.toggleMenu();
+    this.props.onScrollToRef(navItem);
   }
 
 
@@ -71,37 +82,44 @@ class Navbar extends React.Component {
           <div className={`mobile-nav-items ${this.state.openMenu ? 'open': ''}`}>
             <li
               className="nav-item"
-              onClick={() => this.props.onScrollToRef('description')}
+            >
+              <Link onClick={() => this.toggleMenu()} to="/">
+                {this.props.strings.titles.home}
+              </Link>
+            </li>
+            <li
+              className="nav-item"
+              onClick={() => this.onMobileNavItemClick('description')}
             >
               {this.props.strings.titles.aboutMe}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.props.onScrollToRef('workHistory')}
+              onClick={() => this.onMobileNavItemClick('workHistory')}
             >
               {this.props.strings.titles.workHistory}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.props.onScrollToRef('education')}
+              onClick={() => this.onMobileNavItemClick('education')}
             >
               {this.props.strings.titles.education}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.props.onScrollToRef('skills')}
+              onClick={() => this.onMobileNavItemClick('skills')}
             >
               {this.props.strings.titles.skills}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.props.onScrollToRef('projects')}
+              onClick={() => this.onMobileNavItemClick('projects')}
             >
               {this.props.strings.titles.projects}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.props.onScrollToRef('interests')}
+              onClick={() => this.onMobileNavItemClick('interests')}
             >
               {this.props.strings.titles.interests}
             </li>
