@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import Waypoint from 'react-waypoint';
+import { Waypoint } from 'react-waypoint';
 
 class TimeBubble extends React.Component {
     constructor(){

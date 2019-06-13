@@ -8,9 +8,9 @@ import TimeBubble from './presentational/time_bubble';
 import education from '../../data/education';
 
 
-const Education = () => {
+const Education = ({scrollRef}) => {
   return(
-    <div className="education">
+    <div className="education" ref={scrollRef}>
       <Section
         titleId="titles.education"
       >

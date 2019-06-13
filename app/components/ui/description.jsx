@@ -4,10 +4,9 @@ import Section from './presentational/section';
 
 import translate from '../main/translate';
 
-const Description = ({strings}) => {
-
+const Description = ({strings, scrollRef}) => {
   return (
-    <div className="work-history">
+    <div className="work-history" ref={scrollRef}>
       <Section
         titleId="titles.introduction"
       >

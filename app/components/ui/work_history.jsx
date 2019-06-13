@@ -9,10 +9,10 @@ import TimeBubble from './presentational/time_bubble';
 
 import translate from '../main/translate';
 
-const WorkHistory = () => {
+const WorkHistory = ({scrollRef}) => {
 
   return (
-    <div className="work-history">
+    <div className="work-history" ref={scrollRef}>
       <Section
         titleId="titles.workHistory"
       >

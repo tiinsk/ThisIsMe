@@ -7,24 +7,26 @@ import skills from '../../data/skills';
 
 import translate from '../main/translate';
 
-const Projects = () => {
-  return(
-    <Section
-      titleId="titles.projects"
-    >
-      <div className="projects">
-        {
-          skills.projects.map( (project, i) => {
-            return (
-              <Project
-                key={i}
-                project={project}
-              />
-            );
-          })
-        }
-      </div>
-    </Section>
+const Projects = ({scrollRef}) => {
+  return (
+    <div ref={scrollRef}>
+      <Section
+        titleId="titles.projects"
+      >
+        <div className="projects">
+          {
+            skills.projects.map((project, i) => {
+              return (
+                <Project
+                  key={i}
+                  project={project}
+                />
+              );
+            })
+          }
+        </div>
+      </Section>
+    </div>
   )
 };
 

@@ -8,10 +8,10 @@ import nameLast from '../../../../assets/name_outline_last.svg';
 import palms from '../../../../assets/palms.jpg';
 import Navbar from "./navbar";
 
-const Header = ({strings}) => {
+const Header = ({strings, onScrollToRef}) => {
   return (
     <div className="header">
-      <Navbar/>
+      <Navbar onScrollToRef={onScrollToRef}/>
       <div className="header-content">
         <div className="left-side-wrapper">
           <LanguageSelector/>

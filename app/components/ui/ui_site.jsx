@@ -12,21 +12,37 @@ import Description from "./description";
 
 class UISite extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
+    this.scrollRefs = {
+        description: React.createRef(),
+        workHistory: React.createRef(),
+        education: React.createRef(),
+        skills: React.createRef(),
+        projects: React.createRef(),
+        interests: React.createRef(),
+      };
+  }
+
+  onScrollToRef(section) {
+    window.scrollTo({
+      top: this.scrollRefs[section].current.offsetTop,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   render() {
     return (
       <div>
-        <Header/>
+        <Header onScrollToRef={(section) => this.onScrollToRef(section)}/>
         <div>
-          <Description/>
-          <WorkHistory/>
-          <Education/>
-          <Skills/>
-          <Projects/>
-          <Interests/>
+          <Description scrollRef={this.scrollRefs.description}/>
+          <WorkHistory scrollRef={this.scrollRefs.workHistory}/>
+          <Education scrollRef={this.scrollRefs.education}/>
+          <Skills scrollRef={this.scrollRefs.skills}/>
+          <Projects scrollRef={this.scrollRefs.projects}/>
+          <Interests scrollRef={this.scrollRefs.interests}/>
         </div>
       </div>
     );
