@@ -17,9 +17,8 @@ const Skills = ({strings, scrollRef}) => {
       >
         <div className="skills">
           <div className="rated-skills">
-            <div className="skill-column">
               {
-                skills.rated_skills.slice(0, 4).map((skill, i) => {
+                skills.rated_skills.map((skill, i) => {
                   return (
                     <SkillMeter
                       key={i}
@@ -31,37 +30,6 @@ const Skills = ({strings, scrollRef}) => {
                   )
                 })
               }
-            </div>
-            <div className="skill-column">
-              {
-                skills.rated_skills.slice(4, 8).map((framework, i) => {
-                  return (
-                    <SkillMeter
-                      key={i}
-                      rate={framework.value}
-                      icon={framework.key}
-                      color={framework.color}
-                      textColor={framework.textColor}
-                    />
-                  )
-                })
-              }
-            </div>
-            <div className="skill-column">
-              {
-                skills.rated_skills.slice(8).map((framework, i) => {
-                  return (
-                    <SkillMeter
-                      key={i}
-                      rate={framework.value}
-                      icon={framework.key}
-                      color={framework.color}
-                      textColor={framework.textColor}
-                    />
-                  )
-                })
-              }
-            </div>
             {/*<div className="skill-category">
             {
               skills.lang_skills.map((language, i) => {
@@ -76,16 +44,16 @@ const Skills = ({strings, scrollRef}) => {
                 })
             }
           </div>*/}
+          </div>
+          <div className="rateless-skills">
             <div className="rateless-skills">
-              <div className="rateless-skills">
-                {
-                  skills.otherSkills.map((skill, i) => {
-                    return (
-                      <Skill key={i} skill={skill}/>
-                    )
-                  })
-                }
-              </div>
+              {
+                skills.otherSkills.map((skill, i) => {
+                  return (
+                    <Skill key={i} skill={skill}/>
+                  )
+                })
+              }
             </div>
           </div>
         </div>

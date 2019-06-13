@@ -1,18 +1,14 @@
 .skills{
   .rated-skills {
+    display: grid;
+    padding-right: $base-size;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 0 $base-size;
+  }
+  .rateless-skills {
     display: flex;
     flex-wrap: wrap;
-
-    .skill-column {
-      flex: 1 0 33%;
-
-      padding-right: $base-size;
-    }
-    .rateless-skills {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: flex-start;
-    }
+    align-content: flex-start;
   }
   @media (max-width: $breakpoint-mobile){
     .rated-skills {
