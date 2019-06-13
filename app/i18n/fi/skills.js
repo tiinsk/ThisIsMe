@@ -27,9 +27,18 @@ export default {
     computer_graphics: "Tietokone grafiikka",
     imaging_algorithms: "Kuvantamisalgoritmit"
   },
-  languages: {
-    finnish: "Suomi",
-    english: "Englanti",
-    swedish: "Ruotsi",
-  },
+  languages: [
+    {
+      language: "Fi",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      language: "En",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      language: "Sv",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+  ]
 };

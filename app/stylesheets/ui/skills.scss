@@ -10,11 +10,57 @@
     flex-wrap: wrap;
     align-content: flex-start;
   }
+  .lang-skills {
+    margin-top: $base-size*2;
+    display: flex;
+
+    .language {
+      width: 33%;
+      padding-right: $base-size/2;
+
+      .lang-title {
+        display: flex;
+        align-items: flex-end;
+
+        margin-bottom: $base-size/2;
+
+        .lang-name {
+          font-family: $font-quicksand;
+          font-size: $font-size-XXXLarge;
+          font-weight: $font-weight-medium;
+
+          margin-right: $base-size/2;
+        }
+        .lang-level {
+          padding-bottom: 6px;
+
+          font-family: $font-lato;
+          font-size: $font-size-Default;
+          font-weight: $font-weight-light;
+          color: #B0B0B0;
+        }
+      }
+
+      .lang-text {
+        font-family: $font-lato;
+        font-size: $font-size-Default;
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+
   @media (max-width: $breakpoint-mobile){
     .rated-skills {
       .skill-column {
         flex: 1 0 100%;
         justify-content: center;
+      }
+    }
+    .lang-skills {
+      flex-wrap: wrap;
+      .language {
+        width: 100%;
+        margin-top: $base-size/2;
       }
     }
   }

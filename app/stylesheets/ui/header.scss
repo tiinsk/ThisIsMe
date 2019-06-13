@@ -7,15 +7,17 @@
     overflow: hidden;
     position: relative;
     top: 0;
+    margin-bottom: $base-size;
+
     min-height: 775px;
     height: calc(100vh - #{$nav-bar-height} - #{$base-size});
-    margin-bottom: $base-size;
 
     display: flex;
     align-items: stretch;
 
     .left-side-wrapper {
       display: flex;
+      max-width: 60%;
       .titles {
         display: flex;
         align-items: center;
@@ -34,7 +36,9 @@
           justify-content: flex-end;
 
           .palms {
-            height: 100%;
+            width: auto;
+            min-height: 725px;
+            height: calc(100vh - #{$nav-bar-height} - #{$base-size*3});
           }
         }
 
@@ -108,6 +112,7 @@
       margin-bottom: 0;
 
       .left-side-wrapper {
+        max-width: initial;
         width: 100%;
         height: calc(100vh - #{$nav-bar-height} - #{$base-size});
         .titles {

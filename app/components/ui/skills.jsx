@@ -30,20 +30,6 @@ const Skills = ({strings, scrollRef}) => {
                   )
                 })
               }
-            {/*<div className="skill-category">
-            {
-              skills.lang_skills.map((language, i) => {
-                return (
-                  <SkillMeter
-                    key={i}
-                    rate={language.value}
-                    icon={language.language}
-                    color={language.color}
-                  />
-                  )
-                })
-            }
-          </div>*/}
           </div>
           <div className="rateless-skills">
             <div className="rateless-skills">
@@ -55,6 +41,26 @@ const Skills = ({strings, scrollRef}) => {
                 })
               }
             </div>
+          </div>
+          <div className="lang-skills">
+            {
+              strings.skills.languages.map((language) => {
+                return (
+                  <div className="language" key={language.language}>
+                    <div className="lang-title">
+                      <div className="lang-name">
+                        {language.language}
+                      </div>
+                      <div className="lang-level">
+                        {language.level}
+                      </div>
+                    </div>
+                    <div className="lang-text">
+                      {language.text}
+                    </div>
+                  </div>
+                )})
+            }
           </div>
         </div>
       </Section>
