@@ -2,9 +2,9 @@ import React from 'react';
 
 import translate from '../../main/translate';
 
-const MAX_RATE = 5;
+const MAX_RATE = 10;
 
-const SkillMeter = ({strings, icon, color, textColor, rate}) => {
+const SkillMeter = ({strings, icon, color, textColor, rate, entered}) => {
   return(
     <div className="skill-meter">
       <div className="icon" style={
@@ -26,7 +26,7 @@ const SkillMeter = ({strings, icon, color, textColor, rate}) => {
             {rate}/10
           </div>
           <div
-            className="fill"
+            className={`fill ${entered ? "animated slideInLeft" : ""}`}
             style={{
               width: `${rate/MAX_RATE*100}%`,
               backgroundColor: color
