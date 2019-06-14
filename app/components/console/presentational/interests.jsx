@@ -48,7 +48,7 @@ class Interests extends React.Component {
         }
         <div className="rateless-skills">
           {
-            [...this.props.strings.interests.top, ...this.props.strings.interests.middle, ...this.props.strings.interests.lower].map((interest, i) => {
+            this.props.strings.interests.interest_list.map((interest, i) => {
               return (
                 <div className="rateless-skill" key={i}>
                   <span className="line">/</span>
