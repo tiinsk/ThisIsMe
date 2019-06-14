@@ -14,7 +14,7 @@ const TravelMap = ({strings}) => {
             dots.map( (dot, i) => {
               return(
                 <div className={`dot ${dot.isHome ? 'home-dot' : ''}`} style={dot} key={i}>
-                  <div className="gps_ring"></div>
+                  <div className="gps_ring"/>
                   <div className="hover-note">
                     {strings.interests.cities[dot.key]}
                     <div className="hover-arrow"/>
