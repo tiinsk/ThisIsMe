@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <linearGradient id="button_border-a" x1="20.674%" x2="78.066%" y1="10.87%" y2="90.848%">
+      <stop offset="0%" stop-color="#D4DCF4"/>
+      <stop offset="100%" stop-color="#B9DAE0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="16.5" cy="16.5" r="16.5" fill="none" stroke="url(#button_border-a)" stroke-width="2" opacity=".504" transform="translate(1 1)"/>
+</svg>

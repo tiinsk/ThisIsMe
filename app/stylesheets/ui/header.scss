@@ -42,6 +42,47 @@
           }
         }
 
+        .links {
+          display: flex;
+          justify-content: flex-end;
+
+          .link {
+            margin-left: $base-size/4;
+
+            position: relative;
+
+            background: url("../../assets/button_border.svg");
+            background-size: cover;
+            height: 35px;
+            width: 35px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: rgba(white, 0.75);
+            font-size: 1.7rem;
+            font-family: $font-lato;
+            font-weight: $font-weight-bold;
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+            &:hover {
+              color: white;
+              background: url("../../assets/button_border_hover.svg");
+              .hover-bubble {
+                display: initial;
+              }
+            }
+
+            .material-icons {
+              font-size: 1.7rem;
+            }
+          }
+        }
+
         .corner {
           position: absolute;
 
