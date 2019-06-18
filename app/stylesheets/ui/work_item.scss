@@ -27,5 +27,13 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    &.left {
+      justify-content: flex-end;
+
+      @media (max-width: $md-size) {
+        justify-content: flex-start;
+      }
+    }
   }
 }

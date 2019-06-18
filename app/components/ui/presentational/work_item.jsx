@@ -2,7 +2,7 @@ import React from 'react';
 import translate from '../../main/translate';
 import Skill from "./skill";
 
-const WorkItem = ({strings, data}) => {
+const WorkItem = ({strings, data, isOnLeft}) => {
   return(
     <div className="work-item">
       <div className="company">
@@ -13,7 +13,7 @@ const WorkItem = ({strings, data}) => {
       </div>
       <div className="work-description">
         {strings.workExperience[data.key].description}
-        <div className="wrapper">
+        <div className={`wrapper ${isOnLeft ? 'left' : 'right'}`}>
           { data.skillList ? data.skillList.map( (skill,i) => {
               return(
                 <Skill key={i} skill={skill}/>

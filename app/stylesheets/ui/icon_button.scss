@@ -1,10 +1,10 @@
 .icon-button {
-  height: 35px;
-  width: 35px;
-  padding: 0 $base-size;
+  height: 30px;
+  width: 30px;
+  padding: 0 3*$base-size/4;
 
   border: 2px solid $blue-NEW;
-  border-radius: 35px;
+  border-radius: 30px;
 
   display: flex;
   justify-content: center;
@@ -17,8 +17,7 @@
   cursor: pointer;
 
   &:hover {
-    background: $blue-NEW;
-    color: white;
+    background: $blue-hover-btn;
   }
 
   .material-icons {
