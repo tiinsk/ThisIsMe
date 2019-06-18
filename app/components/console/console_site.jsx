@@ -15,25 +15,27 @@ class ConsoleSite extends React.Component{
 
   render() {
     return (
-      <div className="console-site"
-        onClick={() => {
-          document.getElementById("command-input").focus();
-        }}
-      >
-        <div style={{margin: "0 1rem 1rem 1rem"}}>
-          <Typewriter text={`Hi there and welcome. You should try typing "${helpCommand}".`}/>
+      <div className="console-site-wrapper">
+        <div className="console-site"
+          onClick={() => {
+            document.getElementById("command-input").focus();
+          }}
+        >
+          <div style={{margin: "0 1rem 1rem 1rem"}}>
+            <Typewriter text={`Hi there and welcome. You should try typing "${helpCommand}".`}/>
+          </div>
+          {
+            this.props.commands.map((cmd, i) => {
+              return(
+                <Command
+                  key={i}
+                  command={cmd}
+                />
+              );
+            })
+          }
+          <CommandLine/>
         </div>
-        {
-          this.props.commands.map((cmd, i) => {
-            return(
-              <Command
-                key={i}
-                command={cmd}
-              />
-            );
-          })
-        }
-        <CommandLine/>
       </div>
     )
   }

@@ -1,8 +1,31 @@
 .map-container {
-  font-size: 0.5rem;
-  @media (max-width: $xs-size){
-    font-size: 0.3rem;
+  font-size: 7px;
+  font-family: Consolas, monospace;
+
+  @media (max-width: $breakpoint-small-window){
+    font-size: 6px;
   }
+
+  @media (max-width: 925px){
+    font-size: 5px;
+  }
+
+  @media (max-width: 800px){
+    font-size: 7px;
+  }
+
+  @media (max-width: 550px){
+    font-size: 6px;
+  }
+
+  @media (max-width: 500px){
+    font-size: 5px;
+  }
+
+  @media (max-width: 400px){
+    font-size: 4px;
+  }
+
   color: $grey-text;
   .highlight{
     color: $magenta;

@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 
+const MAX_RATE = 10;
+
 const SkillMeter = ({rate, name}) => {
   return(
     <tr className="console-skill-meter">
@@ -14,7 +16,7 @@ const SkillMeter = ({rate, name}) => {
           </span>
           <span className="unrated">
             {
-              _.range(5-rate).map(rateNum => " * " )
+              _.range(MAX_RATE-rate).map(rateNum => " * " )
             }
           </span>
         </td>

@@ -7,7 +7,7 @@ import skills from '../../../data/skills';
 
 const Projects = ({strings}) => {
   return(
-    <div className="projects">
+    <div className="console-projects">
       {
         skills.projects.map( (project, i) => {
           return (

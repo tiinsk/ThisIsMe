@@ -2,8 +2,7 @@ import React from 'react';
 import Map from './map';
 import SmallMap from './small_map';
 
-const SM_WINDOW_LIMIT = 1100;
-const XS_WINDOW_LIMIT = 499;
+const SM_WINDOW_LIMIT = 800;
 
 class Interests extends React.Component {
 
@@ -16,11 +15,10 @@ class Interests extends React.Component {
   }
 
   updateDimensions() {
-    const isExtraSmallWindow= window.innerWidth <= XS_WINDOW_LIMIT;
     const isSmallWindow= window.innerWidth <= SM_WINDOW_LIMIT;
 
     this.setState({
-      windowWidth: isExtraSmallWindow ? "XS" : isSmallWindow ? "SM" : "MD"
+      windowWidth: isSmallWindow ? "SM" : "MD"
     });
   }
 

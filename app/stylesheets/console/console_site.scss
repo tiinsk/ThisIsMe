@@ -1,40 +1,45 @@
-.console-site{
+.console-site-wrapper {
   background: $almost-black;
-  color: $green;
   min-height: 100vh;
-  font-family: $font-space;
-  padding: 2rem 1rem;
-  padding-bottom: 2rem;
 
-  font-size: $font-size-Default;
+  .console-site {
+    max-width: 1200px;
 
-  @media (max-width: $md-size){
-    font-size: 1.1rem;
-  }
-  @media (max-width: $sm-size){
-    font-size: 1.0rem;
-  }
-  @media (max-width: $xs-size){
-    font-size: 0.8rem;
-  }
-  ::selection {
-    background: $green;
-    color: white;
-  }
+    color: $green;
+    font-family: $font-space;
+    padding: 2rem 1rem;
+    padding-bottom: 2rem;
 
-  ::-moz-selection {
-    background: $green;
-    color: white;
-  }
-  .rateless-skills {
-    display: flex;
-    margin: 1rem 0;
-    flex-wrap: wrap;
-    .rateless-skill {
+    font-size: $font-size-Default;
+
+    @media (max-width: $md-size) {
+      font-size: 1.1rem;
+    }
+    @media (max-width: $sm-size) {
+      font-size: 1.0rem;
+    }
+    @media (max-width: $xs-size) {
+      font-size: 0.8rem;
+    }
+    ::selection {
+      background: $green;
       color: white;
-      margin-right: 1rem;
-      .line {
-        color: $magenta;
+    }
+
+    ::-moz-selection {
+      background: $green;
+      color: white;
+    }
+    .rateless-skills {
+      display: flex;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+      .rateless-skill {
+        color: white;
+        margin-right: 1rem;
+        .line {
+          color: $magenta;
+        }
       }
     }
   }
