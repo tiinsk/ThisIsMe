@@ -7,18 +7,18 @@ export default {
         "year": 2017
       },
       "to": {
-        "month": undefined,
-        "year": undefined
+        "month": 11,
+        "year": 2018
       },
       "skillList": [
-        "Vue.js",
-        "Vuex",
-        "JavaScript",
-        "TypeScript",
-        "Node.js",
-        "Hapi.js",
-        "PostgresSQL",
-        "Knex.js"
+        "vue",
+        "vuex",
+        "javascript",
+        "typescript",
+        "node",
+        "hapi",
+        "psql",
+        "knex"
       ]
     },
     {
@@ -32,17 +32,17 @@ export default {
         "year": 2017
       },
       "skillList": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "Webpack",
-        "Mocha",
-        "Chai",
-        "Enzyme",
-        "IBM Bluemix",
-        "MQTT",
-        "C#",
+        "javascript",
+        "typescript",
+        "react",
+        "node",
+        "webpack",
+        "mocha",
+        "chai",
+        "enzyme",
+        "bluemix",
+        "mqtt",
+        "c_sharp",
         "customer_service"
       ]
     },
@@ -58,9 +58,9 @@ export default {
         },
         "workPercentage": 1,
         "skillList": [
-          "Java (Android)",
-          "C++",
-          "VR",
+          "java",
+          "c_pp",
+          "vr",
           "computer_graphics",
         ]
       },
@@ -86,8 +86,8 @@ export default {
           "year": 2014,
         },
         "skillList": [
-          "C++",
-          "Matlab",
+          "c_pp",
+          "matlab",
           "image_processing",
           "imaging_algorithms"
         ]
@@ -106,8 +106,8 @@ export default {
           "year": 2013,
         },
         "skillList": [
-          "C++",
-          "Matlab",
+          "c_pp",
+          "matlab",
           "image_processing",
           "imaging_algorithms"
         ]

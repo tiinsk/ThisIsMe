@@ -1,14 +1,10 @@
 export default {
-  programmingSkills: "Programming Skills",
-  techSkills: "Tech Skills",
-  overallSkills: "General Skills",
-  ownProjects: "Own Projects",
   skillNames: {
     java: "Java",
     c_pp: "C++",
     matlab: "Matlab",
     javascript: "JavaScript",
-    typescript: "Typescript",
+    typescript: "TypeScript",
     c_sharp: "C#",
     customer_service: "Customer Service",
     sql: "SQL",
@@ -20,23 +16,46 @@ export default {
     image_processing: "Image Processing",
     ui_design: "UX Design",
     computer_graphics: "Computer Graphics",
-    imaging_algorithms: "Imaging Algorithms"
+    imaging_algorithms: "Imaging Algorithms",
+    vuex: "Vuex",
+    hapi: "Hapi.js",
+    knex: "Knex.js",
+    psql: "PostgreSQL",
+    webpack: "Webpack",
+    mocha: "Mocha",
+    chai: "Chai",
+    enzyme: "Enzyme",
+    bluemix: "IBM Bluemix",
+    mqtt: "MQTT",
+    vr: "VR",
+    html: "HTML",
+    sass: "Sass",
+    git: "Git",
+    redux: "Redux",
+    express: "Express.js",
+    es6: "ES6",
+    svn: "SVN",
+    opengl: "Open GL",
+    styled_components: "Styled Components",
+    ble: "Bluetooth LE",
+    noble: "Noble",
+    raspberry: "Raspberry Pi"
   },
   languages: [
     {
       language: "Fi",
-      level: "Fluent",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+      level: "Mother Tongue",
+      text: "Finnish is my mother Tongue. I have studied Finnish language and literature from 1-9 grade and in high school. I have also always liked to read Finnish literature a lot.",
     },
     {
       language: "En",
       level: "Fluent",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+      text: "I have studied English since was 7 years old. I was also in student exchange in Singapore for one semester when I studied at the university. I have worked in international project teams and I also read work related articles almost daily. I also like to read English language literature.",
     },
     {
       language: "Sv",
-      level: "Fluent",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+      level: "Intermediate",
+      text: `I have studied Swedish since I was 12 years old from grades 6 to 9 and in high school. In Finland Swedish is compulsory language from 6 to 9 grade and also in high school. I also passed swedish language test (so-called public servant's Swedish test) at the university which tested both written and spoken language.`
     },
   ]
 };

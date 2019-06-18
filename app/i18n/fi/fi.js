@@ -10,17 +10,12 @@ export default {
   chooseSide: "Valitse puolesi",
   useUI: "Käyttöliittymä",
   useConsole: "Konsoli",
-  downloadPDF: "Haluatko ladata CV:n pdf:nä?",
-  introduction: '<p>Tiina Koskiranta ja olen 26-vuotias ohjelmistokehittäjä. Valmistuin noin kolme vuotta sitten Tampereen teknillisestä yliopistosta. Sen jälkeen olenkin työskennellyt full-stack web kehittäjänä. Kiinnostukeni painottuu kuitenkin enemmän front-end kehityksen suuntaan ja haluaisin myös tulla paremmaksi UX suunnitelijaksi.</p> <p>Minulla on aina ollut suuri halu kehittää jotakin uutta, ja haluaisinkin hyödyntää tätä puolta itsessäni uusien innovatiivisten ohjelmistoratkaisuiden luomisessa jokaiselle erilaiselle käyttäjälle ja asiakkaalle. Juurikin työskentely asiaksprojekteissa herätti mielenkiintoni käytettävyyttä ja palvelumuotoilua kohtaan.</p>',
+  downloadPDF: "Haluatko ladata tulostaa CV:ni?",
+  introduction: 'Olen full-stack web-kehittäjä, joka on innostunut front-end kehityksestä ja UX-suunnittelusta. Koen itseni luovaksi henkilöksi, joka on aina kiinnostunut kehittämään jotain uutta. Työskentely asiaksprojekteissa sai minut ymmärtämään käytettävyyden ja palvelumuotoilun tärkeyden ohjelmistoprojekteissa arkkitehtuurin lisäksi.',
   summary: {
-    title: "I am a software engineer and a web developer",
-    printBtn: "Print resume"
+    title: "Olen ohjelmistosuunnittelija ja web-kehittäjä",
+    printBtn: "Tulosta CV"
   },
-  months: "kk",
-  op: "op",
-  grade: "Arvosana",
-  Link: "Linkki",
-  links: "Linkit",
   titles:{
     home: "Etusivu",
     introduction: "Hei, olen",

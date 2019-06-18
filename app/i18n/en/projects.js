@@ -5,10 +5,14 @@ export default {
   },
   cottage_page: {
     name: "Cottage home page",
-      description: "This has been one of my longest free time projects. The project was started because a family summer cottage had too many users to keep track of all chores, repairs and who was there at which time. I started the project with Ruby and Rails, but soon the interest of learning that language faded. Later on, I started the project again, when I wanted to learn React and JavaScript. This time the backend was written in Node.js. This project has been mainly my React learning exercise and because of this project I have been able to use React and JavaScript more fluently in work projects. When I did the first React version of the web site, I used Alt library to bring flux architecture to the project, but I later refactored the page to use Redux instead. This project is still under development, but I hope that it will be soon finished and I can focus on other projects and perhaps even other technologies."
+      description: "This has been one of my longest free time projects. The project was started because a family summer cottage had too many users to keep track of all chores, repairs and who was there at which time. I have developed the project with multiple technologies and changed the technologies multiple times. The newest version is written in Vue and Node.js. This project is still under development, but I hope that it will finish is some day."
   },
   travel_pics: {
     name: "Travel Pictures",
       description: "During my exchange year in Singapore, I wanted to create a website for all travel pictures, so I could share my experience with family and friends. Of course I could have used some existing website, but I had wanted to do some own programming project and this seemed like an good opportunity. I created the website with Angular.js and Node.js. This website was my first totally self made website. After I had returned back home from Singapore, I did some refactoring and gave the website an improved look."
+  },
+  home_monitor: {
+    name: "Home Monitor",
+    description: "I developed a home monitoring system to monitor temperature changes inside and outside my apartment. This project consists of multiple parts: Two different temperature sensors (one collects only temperature data and the other collects also humidity, pressure and light data), a Raspberry Pi which sends sensor data to cloud, a cloud API, and a cloud front-end service. All of the different parts are written in JavaScript."
   }
 };

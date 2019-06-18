@@ -10,17 +10,12 @@ export default {
   chooseSide: "Choose your side",
   useUI: "UI",
   useConsole: "Console",
-  downloadPDF: "Want to download CV as pdf?",
-  introduction: '<p>Tiina Koskiranta, and I am 26 years old software developer. I graduated from Tampere University of Technology almost three years ago. Since then I have worked as a full stack web developer. My main interests are in front-end development and I would like to improve as an UX designer also.</p>  <p>I have always had an urge to develop something new, and I would like to use this urge to create best solutions for end users and customers. By working with customers and customer projects, I have become more interested about usability and service design. </p>',
+  downloadPDF: "Want to print my resume?",
+  introduction: 'I am a full stack web developer, and a front-end and UX design enthusiastic. I am creative person and I have always been excited to created something new. By working with different customers and customer projects, I have understood the importance of usability and service design in addition to software architecture design.',
   summary: {
     title: "I am a software engineer and a web developer",
     printBtn: "Print resume"
   },
-  months: "months",
-  op: "credits",
-  grade: "Grade",
-  link: "Link",
-  links: "Links",
   titles:{
     home: "Home",
     introduction: "Hi, I am",
