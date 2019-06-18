@@ -1,17 +1,12 @@
 .project{
-  flex: 0 0 50%;
-  .project-wrapper {
-    max-width: 500px;
-
-    margin-right: $base-size;
-    margin-bottom: $base-size;
-
     position: relative;
     overflow: hidden;
 
+    max-width: 500px;
+
     .project-image {
       background-size: cover;
-      height: 300px;
+      padding-bottom: 65%;
     }
 
     .project-name {
@@ -19,7 +14,7 @@
       align-items: center;
       justify-content: space-between;
 
-      margin: $base-size 0;
+      margin: $base-size*2 0 $base-size 0;
 
       text-transform: uppercase;
       font-family: $font-quicksand;
@@ -55,16 +50,14 @@
       align-content: flex-end;
     }
   }
-  @media (max-width: $breakpoint-mobile){
-    flex: 0 0 100%;
-    .project-wrapper {
-      margin: 0;
-      margin-right: $base-size/2;
-      margin-bottom: $base-size;
-      padding: 0;
-      .corner {
-        display: none;
-      }
+  @media (max-width: $breakpoint-small-window) {
+    .project-image {
+      //height: 255px;
     }
   }
+
+  @media (max-width: $breakpoint-mobile){
+    .corner {
+      display: none;
+    }
 }

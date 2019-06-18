@@ -1,4 +1,7 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: $base-size*2 $base-size;
+  justify-items: center;
+  padding-right: $base-size;
 }
