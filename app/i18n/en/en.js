@@ -12,7 +12,7 @@ export default {
   useConsole: "Console",
   downloadPDF: "Want to print my resume?",
   links: "Links",
-  introduction: 'I am a full stack web developer, and a front-end and UX design enthusiastic. I am creative person and I have always been excited to created something new. By working with different customers and customer projects, I have understood the importance of usability and service design in addition to software architecture design.',
+  introduction: 'I am a full stack web developer, and a front-end and UX design enthusiastic. I am creative person and I have always been excited to create something new. By working with different customers and customer projects, I have understood the importance of usability and service design in addition to software architecture design.',
   summary: {
     title: "I am a software engineer and a web developer",
     printBtn: "Print resume"
