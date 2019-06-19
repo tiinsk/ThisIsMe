@@ -2,7 +2,7 @@ export default {
   projects: [
     {
       key: "home_monitor",
-      github: "",
+      github: "https://github.com/tiinsk/sensor-frontend",
       link: "https://home.koskiranta.fi",
       image: "home_monitor.jpg",
       skills: [
@@ -37,8 +37,8 @@ export default {
     },
     {
       key: "cottage_page",
-      github: "https://github.com/tiinsk/Tammaniemi",
-      link: "https://tammaniemi.fi",
+      github: "https://github.com/tiinsk/tammaniemi_3.0",
+      link: null,
       image: "cottage.jpg",
       skills: [
         "react",
@@ -53,7 +53,7 @@ export default {
     },
     {
       key: "travel_pics",
-      github: "https://github.com/tiinsk/Matkakuvat",
+      github: "https://github.com/tiinsk/travel-pictures",
       link: "https://koskiranta.fi",
       image: "travel_site.jpg",
       skills: [

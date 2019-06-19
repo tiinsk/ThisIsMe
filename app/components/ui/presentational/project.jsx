@@ -13,11 +13,14 @@ const Project = ({strings, project}) => {
       <div className="project-name">
         <div>{strings.projects[project.key].name}</div>
         <div className="icons">
-          <IconButton
-            icon="public"
-            link={project.link}
-            type="material-icons"
-          />
+          {
+            project.link ?
+            <IconButton
+              icon="public"
+              link={project.link}
+              type="material-icons"
+            /> : ""
+          }
           <IconButton
             icon="github"
             link={project.github}
