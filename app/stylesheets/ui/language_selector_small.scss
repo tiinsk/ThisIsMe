@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: $bluish-grey;
+  color: $grey-unselected-text;
   z-index: 2;
 
   font-family: $font-lato;
@@ -16,11 +16,11 @@
     &:first-of-type {
       padding-right: $base-size;
       margin-right: 0;
-      border-right: 1px solid $bluish-grey;
+      border-right: 1px solid $grey-unselected-text;
     }
 
     &.selected{
-      color: $green-timeline;
+      color: $black;
     }
   }
 }
