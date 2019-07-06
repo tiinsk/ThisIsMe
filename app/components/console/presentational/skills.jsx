@@ -2,6 +2,7 @@ import React from 'react';
 import SkillMeter from './skill_meter';
 
 import skills from '../../../data/skills';
+import LangSkill from "./lang_skill";
 
 const Skills = ({strings}) => {
   return (
@@ -28,6 +29,18 @@ const Skills = ({strings}) => {
               <div key={i} className="rateless-skill">
                 <span className="line">/</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>
               </div>
+            )
+          })
+        }
+      </div>
+      <div className="console-lang-skills">
+        {
+          strings.skills.languages.map((lang, i) => {
+            return(
+              <LangSkill
+                key={i}
+                lang={lang}
+              />
             )
           })
         }
