@@ -10,6 +10,7 @@ export default {
         "javascript",
         "node",
         "html",
+        "css",
         "styled_components",
         "psql",
         "knex",
@@ -30,6 +31,7 @@ export default {
         "javascript",
         "node",
         "html",
+        "css",
         "sass",
         "git",
         "ui_design",
@@ -46,6 +48,7 @@ export default {
         "webpack",
         "node",
         "html",
+        "css",
         "sass",
         "git",
         "ui_design",
@@ -61,33 +64,12 @@ export default {
         "angular",
         "javascript",
         "html",
+        "css",
         "sass",
         "git",
         "ui_design",
       ]
     }
-  ],
-  lang_skills: [
-    {
-      language: "fi",
-      value: 9,
-      color: "#525279",
-      textColor: "#525279"
-    },
-
-    {
-      language: "en",
-      value: 8,
-      color: "#D27E86",
-      textColor: "#D27E86"
-    },
-
-    {
-      language: "se",
-      value: 6,
-      color: "#F1E39E",
-      textColor: "#F1E39E"
-    },
   ],
   rated_skills: [
     {
@@ -159,6 +141,7 @@ export default {
     "knex",
     "es6",
     "html",
+    "css",
     "sass",
     "mqtt",
     "webpack",

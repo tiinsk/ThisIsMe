@@ -39,7 +39,8 @@ export default {
     styled_components: "Styled Components",
     ble: "Bluetooth LE",
     noble: "Noble",
-    raspberry: "Raspberry Pi"
+    raspberry: "Raspberry Pi",
+    css: "CSS"
   },
   languages: [
     {

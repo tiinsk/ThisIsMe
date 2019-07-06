@@ -30,10 +30,5 @@ export default {
     "title": "Biotekniikan opintoneuvoja (10h viikossa)",
     "company": "Tampereen teknillinen yliopisto",
     "description" : "Avustin opiskelijatovereitani opintosuunnitelmien ja kurssivalintojen teossa. Järjestimme muiden opintoneuvojien kanssa yliopistollamme erilaisia opiskeluun liittyviä tapahtumia, kuten messuja ja lukiolaisinfoja."
-  },
-  "demola": {
-    "title": "Demola projekti (10h viikkossa)",
-    "company": "Demola Tampere/Intel",
-    "description": "Kehitimme 6-hengen ryhmässä sisätiloissa dronen avulla automaattisesti muodostettavaa Google-street-view:n kaltaista näkymää. Projekti toteutettiin Intelin toimeksiannosta. Projekti voitti Demolan kevään 2015 parhaan projektin palkinnon."
   }
 }

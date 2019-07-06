@@ -12,7 +12,7 @@ export default {
   "nokia_android": {
     "title": "Summer Trainee, Imaging Software",
     "company": "Nokia Technologies",
-    "description": "I worked as part of Imaging Software team at Nokia. My main focus area was Android software development with Java and OpenGL. During the summer I created a 360 degree VR panorama video player for Google Cardboard and participated in developing other Android applications."
+    "description": "I worked as part of Imaging Software team at Nokia. My main focus area was Android software development with Java and OpenGL. During the summer I created a 360° VR panorama video player for Google Cardboard and participated in developing other Android applications."
   },
   "microsoft_msthesis": {
     "title": "Thesis Worker, Imaging Algorithms and Middleware",
@@ -29,11 +29,5 @@ export default {
     "title": "Biotechnology Student Advisor (10h per week)",
     "company": "Tampere University of Technology",
     "description": "I helped the students to do their student plans and I answered their questions about studies. I also organized student counselling events, expos, and other info events."
-  },
-  "demola": {
-    "title": "Demola Project (10h per week)",
-    "company": "Demola Tampere/Intel",
-    "description": "Our team of 6 persons researched and developed a mapping service (similar to Google Street View) for indoors that could be automatized with a drone. The project won the Best Project of Demola Spring 2015 award."
-
   }
 }

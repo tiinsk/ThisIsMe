@@ -16,6 +16,8 @@ export default {
         "javascript",
         "typescript",
         "node",
+        "css",
+        "sass",
         "hapi",
         "psql",
         "knex"
@@ -36,6 +38,8 @@ export default {
         "typescript",
         "react",
         "node",
+        "css",
+        "sass",
         "webpack",
         "mocha",
         "chai",
@@ -63,17 +67,6 @@ export default {
           "vr",
           "computer_graphics",
         ]
-      },
-      {
-        "key": "demola",
-        "from": {
-          "month": 2,
-          "year": 2015
-        },
-        "to": {
-          "month": 5,
-          "year": 2015,
-        },
       },
       {
         "key": "microsoft_msthesis",
