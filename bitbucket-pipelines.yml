@@ -1,0 +1,23 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - yarn cache clean
+          - yarn install --network-timeout 1000000
+          - CI=false && yarn build
+          - pipe: atlassian/sftp-deploy:0.5.6
+            variables:
+              USER: 'bitbucket'
+              SERVER: '161.35.28.38'
+              REMOTE_PATH: '/thisisme'
+              LOCAL_PATH: 'build/*'
+              PASSWORD: $PASSWORD
