@@ -110,19 +110,19 @@ export default {
     },
     {
       key: "c_pp",
-      value: 5,
+      value: 4,
       color: "#ced9e8",
       textColor: "#3d5b85"
     },
     {
       key: "c_sharp",
-      value: 5,
+      value: 4,
       color: "#e9d6f0",
       textColor: "#5d1871"
     },
     {
       key: "java",
-      value: 4,
+      value: 3,
       color: "#d0e2ef",
       textColor: "#143e5b"
     },
