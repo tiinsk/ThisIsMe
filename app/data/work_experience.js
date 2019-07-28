@@ -20,7 +20,13 @@ export default {
         "sass",
         "hapi",
         "psql",
-        "knex"
+        "knex",
+        "git",
+        "docker",
+        "jira",
+        "jenkins",
+        "aws",
+        "kanban"
       ]
     },
     {
@@ -47,6 +53,8 @@ export default {
         "bluemix",
         "mqtt",
         "c_sharp",
+        "git",
+        "tfs",
         "customer_service"
       ]
     },
@@ -62,8 +70,10 @@ export default {
         },
         "workPercentage": 1,
         "skillList": [
+          "android",
           "java",
           "c_pp",
+          "open_gl",
           "vr",
           "computer_graphics",
         ]

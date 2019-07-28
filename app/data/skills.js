@@ -9,16 +9,18 @@ export default {
         "react",
         "javascript",
         "node",
+        "hapi",
+        "psql",
         "html",
         "css",
         "styled_components",
-        "psql",
         "knex",
         "ui_design",
         "ble",
         "noble",
         "raspberry",
-        "hapi"
+        "digital_ocean",
+        "nginx"
       ]
     },
     {
@@ -35,6 +37,8 @@ export default {
         "sass",
         "git",
         "ui_design",
+        "digital_ocean",
+        "nginx"
       ]
     },
     {
@@ -68,6 +72,8 @@ export default {
         "sass",
         "git",
         "ui_design",
+        "digital_ocean",
+        "nginx"
       ]
     }
   ],
@@ -143,6 +149,7 @@ export default {
     "html",
     "css",
     "sass",
+    "styled_components",
     "mqtt",
     "webpack",
     "mocha",
@@ -156,7 +163,12 @@ export default {
     "opengl",
     "vr",
     "computer_graphics",
-    'matlab'
+    'matlab',
+    "digital_ocean",
+    "nginx",
+    "docker",
+    "jira",
+    "jenkins"
   ]
 
 }

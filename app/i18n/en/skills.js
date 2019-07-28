@@ -40,7 +40,17 @@ export default {
     ble: "Bluetooth LE",
     noble: "Noble",
     raspberry: "Raspberry Pi",
-    css: "CSS"
+    css: "CSS",
+    docker: "Docker",
+    jira: "Jira",
+    jenkins: "Jenkins",
+    aws: "AWS",
+    tfs: "TFS",
+    digital_ocean: "Digital Ocean",
+    nginx: "NGINX",
+    open_gl: "Open GL",
+    android: "Android",
+    kanban: "Kanban"
   },
   languages: [
     {
