@@ -1,31 +1,44 @@
 import React from 'react';
-import translate from '../../main/translate';
 import styled from 'styled-components/macro';
+import {ReactComponent as PeakIcon} from '../icons/peakIcon.svg';
+
+import translate from '../../main/translate';
+import {TagText} from '../../../theme/fonts';
 
 const StyledSkill = styled.div`
-display: flex;
+  ${TagText};
+  
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: ${({theme}) => theme.spaces.baseSize}/8 ${({theme}) => theme.spaces.baseSize}/2;
-  margin: ${({theme}) => theme.spaces.baseSize}/8;
+  padding: 3px;
+  margin: ${({theme}) => theme.spaces.base(0.2)};
 
-  border-radius: 30px;
+  border-radius: 15px;
   height: 30px;
-
-  background: ${({theme}) => theme.colors.greenSkillBackground};
-
-  color: ${({theme}) => theme.colors.greenSkillText};
-  font-family: ${({theme}) => theme.fonts.fontLato};
-  font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
-  text-transform: uppercase;
-  font-size: ${({theme}) => theme.fontSizes.fontSizeXSmall};
+  
+  background: ${({theme}) => theme.new.colors.white};
+  box-shadow: 0 2px 5px 0 rgba(33,41,32,0.17);
+  
+  .skill-wrapper {
+    border: 1px solid ${({isPeakSkill, theme}) => isPeakSkill ? theme.new.colors.greenTransparent : 'transparent'};
+    border-radius: 15px;
+    padding: 4px;
+  }
 `;
 
-const Skill = ({strings, skill}) => {
+const StyledPeakIcon = styled(PeakIcon)`
+  margin-right: ${({theme}) => theme.spaces.base(0.25)};
+`;
+
+const Skill = ({strings, skill, isPeakSkill = false}) => {
   return(
-    <StyledSkill>
-      {strings.skills.skillNames[skill] || skill}
+    <StyledSkill isPeakSkill={isPeakSkill}>
+      <div className="skill-wrapper">
+        {isPeakSkill && <StyledPeakIcon/>}
+        {strings.skills.skillNames[skill] || skill}
+      </div>
     </StyledSkill>
   )
 };

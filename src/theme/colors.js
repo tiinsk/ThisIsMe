@@ -22,3 +22,17 @@ export const colors = {
   blueHoverBtn: '#eaeeff',
   almostBlack: '#1f2a35',
 }
+
+export const newColors = {
+  white: 'white',
+  black: 'black',
+  almostBlack: '#31373D',
+  greyText: '#7694a7',
+
+  green: '#457A64',
+  greenDark: '#0E4C32',
+  greenTransparent: '#457A6466',
+  berry: '#BE5C85',
+  lightestGrey: '#F7F7F7',
+  lightestGreyAlt: '#F1F1F1',
+}

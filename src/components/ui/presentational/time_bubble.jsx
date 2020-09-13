@@ -3,6 +3,8 @@ import moment from 'moment';
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components/macro';
 
+import {H2} from '../../../theme/fonts';
+
 const StyledTimeBubble = styled.div`
 position: relative;
   .content-box{
@@ -18,23 +20,12 @@ position: relative;
       padding: 2rem 0rem 2rem 2rem;
     }
     .time-range{
-      color: ${({theme}) => theme.colors.greyText};
-      font-weight: 500;
-      font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
-
-      .time{
-        display: inline-block;
-        color: ${({theme}) => theme.colors.greenNEW};
-        font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
-        font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
-        text-transform: capitalize;
-
-        &.start{
-          margin-right: 1rem;
-        }
-        &.end{
-          margin-left: 1rem;
-        }
+      display: inline-flex;
+      align-items: center;
+      i {
+        color: ${({theme}) => theme.new.colors.greyText};
+        font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
+        margin: 0 ${({theme}) => theme.spaces.base(0.2)};
       }
     }
     &.left{
@@ -59,14 +50,15 @@ position: relative;
       }
     }
   }
-  .pointer{
+  .dot{
     position: absolute;
     top: 0;
     height: 1rem;
     width: 1rem;
-    background: ${({theme}) => theme.colors.greenTimeline};
+    background: ${({theme}) => theme.new.colors.black};
     border-radius: 50%;
     z-index: 1;
+    
     &.left{
       right: calc(50% - 0.5rem);
       @media (max-width: ${({theme}) => theme.breakpoints.mdSize}) {
@@ -101,7 +93,7 @@ class TimeBubble extends React.Component {
 
         return (
           <StyledTimeBubble>
-              <div className={"pointer" + " " + side}/>
+              <div className={"dot" + " " + side}/>
               <Waypoint
                 topOffset={"-50%"}
                 onEnter={() => {
@@ -110,11 +102,10 @@ class TimeBubble extends React.Component {
               >
                   <div className={"content-box" + " " + side + " " + (this.state.entered ? "animated fadeInUp" : "")}>
                       <div className="time-range">
-                          <div className="time start">{fromMoment.format("MMM ")} {fromMoment.format("YYYY")}</div>
-                          <i className="year-line fa fa-angle-right"/>
+                          <H2 className="start">{fromMoment.format("MMM ")} {fromMoment.format("YYYY")}</H2>
+                        <i className="year-line material-icons">chevron_right</i>
                           {
-                              toMoment ? <div
-                                className="time end">{toMoment.format("MMM ")} {toMoment.format("YYYY")}</div> : null
+                              toMoment ? <H2 className="end">{toMoment.format("MMM ")} {toMoment.format("YYYY")}</H2> : null
                           }
                       </div>
                       <div className="details">

@@ -1,0 +1,14 @@
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="2020_light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="starred-box" transform="translate(-9.000000, -8.000000)">
+            <g id="Group" transform="translate(10.000000, 8.002236)">
+                <polygon id="Triangle" fill-opacity="0.204982517" fill="#457A64"
+                         points="6.99281329 9.9475983e-14 8.97991779 6.99598934 6.99281329 5.6505037 4.807928 8.47337636 2.9713999 6.99598934 1.3753014 7.94981965 2.9713999 3.50204139 4.807928 5.22022724"></polygon>
+                <polygon id="Triangle" stroke="#457A64" stroke-linejoin="round"
+                         points="6.99281329 -6.66133815e-14 10.1538462 10.9981076 0 10.9981076 2.9713999 3.50204139 4.807928 5.22022724"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
+

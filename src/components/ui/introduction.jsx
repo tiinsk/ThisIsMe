@@ -6,13 +6,13 @@ import translate from '../../components/main/translate';
 import cv_en_pdf from '../../assets/cv_en.pdf';
 import cv_fi_pdf from '../../assets/cv_fi.pdf';
 import myImage from '../../assets/me_2_0_black.png';
+import {LinkButton} from './presentational/button';
 
 const ImageSize = '115px';
 
 const StyledIntroduction = styled.div`
   position: relative;
-
-  margin: ${({theme}) => theme.spaces.base(2)} ${({theme}) => theme.spaces.base(2)} ${({theme}) => theme.spaces.base(2)} ${({theme}) => theme.spaces.baseSize};
+  display: flex;
   max-width: 550px;
 
   .summary {
@@ -24,7 +24,7 @@ const StyledIntroduction = styled.div`
       font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
       font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
 
-      margin: ${({theme}) => theme.spaces.baseSize} 0;
+      margin-bottom: ${({theme}) => theme.spaces.baseSize};
       padding-right: ${({theme}) => theme.spaces.base(2)};
 
       border-bottom: 2px solid ${({theme}) => theme.colors.blueNEW};
@@ -32,31 +32,11 @@ const StyledIntroduction = styled.div`
     .summary-text {
       font-family: ${({theme}) => theme.fonts.fontOpenSans};
       font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
-      margin: ${({theme}) => theme.spaces.baseSize} 0 ${({theme}) => theme.spaces.base(2)} 0;
-    }
-    .summary-btn {
-      font-family: ${({theme}) => theme.fonts.fontLato};
-      font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
-      text-transform: uppercase;
-      color: ${({theme}) => theme.colors.blueNEW};
-      background: white;
-      text-decoration: none;
-
-      border: 2px solid  ${({theme}) => theme.colors.blueNEW};
-      padding: ${({theme}) => theme.spaces.base(0.5)} ${({theme}) => theme.spaces.baseSize};
-
-      user-select: none;
-
-      cursor: pointer;
-
-      &:hover {
-        background: ${({theme}) => theme.colors.blueHoverBtn};
-      }
+      margin-bottom: ${({theme}) => theme.spaces.base(2)};
     }
    }
   .image-wrapper {
-    padding: 10px;
+    padding-left: ${({theme}) => theme.spaces.baseSize};
 
     .own-image {
       background-image: url(${myImage});
@@ -75,19 +55,18 @@ const StyledIntroduction = styled.div`
 const Introduction = ({strings, language}) => {
   return (
       <StyledIntroduction>
-        <div className="image-wrapper">
-          <div className="own-image"/>
-        </div>
         <div className="summary">
-          <div className="summary-title">{strings.summary.title}</div>
           <div className="summary-text" dangerouslySetInnerHTML={{__html: strings.introduction}}/>
-          <a
-            className="summary-btn"
+          <LinkButton
             target="_blank"
             href={language === "fi" ? cv_fi_pdf : cv_en_pdf}
           >
+            <i className="material-icons">print</i>
             {strings.summary.printBtn}
-          </a>
+          </LinkButton>
+        </div>
+        <div className="image-wrapper">
+          <div className="own-image"/>
         </div>
       </StyledIntroduction>
   )
