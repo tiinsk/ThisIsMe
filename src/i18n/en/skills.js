@@ -52,6 +52,27 @@ export default {
     android: "Android",
     kanban: "Kanban"
   },
+  ratedSkills: {
+    topSkills: {
+      title: 'Skills that I use most',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    },
+    bottomSkills: {
+      title: 'Skills that support my daily work',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    }
+  },
+  ratelessSkills: {
+    topSkills: {
+      title: 'Tools that help me success every day',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    },
+    bottomSkills: {
+      title: 'Tools that support my daily work',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    },
+  },
+  langSkills: 'Language Skills',
   languages: [
     {
       language: "Fi",

@@ -33,6 +33,12 @@ export const newColors = {
   greenDark: '#0E4C32',
   greenTransparent: '#457A6466',
   berry: '#BE5C85',
+
+  // ~50 shades of grey:
+  superLightGrey: '#F0F0F0',
   lightestGrey: '#F7F7F7',
   lightestGreyAlt: '#F1F1F1',
+  grey: '#7C7C7C',
+  mediumGrey: '#818181',
+  insetShadow: 'inset 1px 1px 3px 0 #27332B40',
 }
