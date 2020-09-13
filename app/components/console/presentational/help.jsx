@@ -3,10 +3,21 @@ import AsciiFont from './ascii_font';
 import _ from 'lodash';
 
 import {commands, helpCommand, allCommand} from '../../../actions/console_actions';
+import styled from 'styled-components';
+
+const StyledConsoleHelp = styled.div`
+  table{
+    padding: 0 2rem;
+    width: 100%;
+  }
+  .command-col{
+    width: 19rem;
+  }
+`;
 
 const Help = () => {
   return(
-    <div className="console-help">
+    <StyledConsoleHelp>
       <AsciiFont text="Help"/>
       <table>
         <tbody>
@@ -37,7 +48,7 @@ const Help = () => {
         </tr>
         </tbody>
       </table>
-    </div>
+    </StyledConsoleHelp>
   )
 };
 

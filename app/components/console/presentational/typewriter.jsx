@@ -1,4 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledConsoleTypewriter = styled.div`
+
+`;
 
 class Typewriter extends React.Component{
   constructor(){
@@ -31,9 +36,9 @@ class Typewriter extends React.Component{
 
   render() {
     return (
-      <div className="typewriter" style={this.props.style}>
+      <StyledConsoleTypewriter style={this.props.style}>
         {this.props.text.slice(0, this.state.index)}
-      </div>
+      </StyledConsoleTypewriter>
     )
   }
 }

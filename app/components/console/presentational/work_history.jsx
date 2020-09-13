@@ -2,10 +2,15 @@ import React from 'react';
 import WorkItem from './work_item';
 
 import workExperience from '../../../data/work_experience';
+import styled from 'styled-components';
+
+const StyledConsoleWorkHistory = styled.div`
+
+`;
 
 const WorkHistory = ({strings}) => {
   return(
-    <div className="console-education">
+    <StyledConsoleWorkHistory>
       {
         workExperience.workexp.map((workitem, i) => {
           return (
@@ -17,7 +22,7 @@ const WorkHistory = ({strings}) => {
           )
         })
       }
-    </div>
+    </StyledConsoleWorkHistory>
   )
 };
 

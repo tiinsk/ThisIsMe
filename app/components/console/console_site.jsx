@@ -7,6 +7,55 @@ import Typewriter from './presentational/typewriter';
 import Command from './presentational/command';
 import {helpCommand} from '../../actions/console_actions';
 
+import styled from 'styled-components';
+
+const StyledConsoleSite = styled.div`
+background: ${({theme}) => theme.colors.almostBlack};
+  min-height: 100vh;
+
+  .console-site {
+    max-width: 1200px;
+
+    color: ${({theme}) => theme.colors.green}
+    font-family: ${({theme}) => theme.fonts.fontSpaceMono};
+    padding: 2rem 1rem;
+    padding-bottom: 2rem;
+
+    font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mdSize}) {
+      font-size: 1.1rem;
+    }
+    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+      font-size: 1.0rem;
+    }
+    @media (max-width: ${({theme}) => theme.breakpoints.xsSize}) {
+      font-size: 0.8rem;
+    }
+    ::selection {
+      background: ${({theme}) => theme.colors.green}
+      color: white;
+    }
+
+    ::-moz-selection {
+      background: ${({theme}) => theme.colors.green}
+      color: white;
+    }
+    .rateless-skills {
+      display: flex;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+      .rateless-skill {
+        color: white;
+        margin-right: 1rem;
+        .line {
+          color: ${({theme}) => theme.colors.magenta};
+        }
+      }
+    }
+  }
+`;
+
 class ConsoleSite extends React.Component{
 
   componentDidMount(){
@@ -15,7 +64,7 @@ class ConsoleSite extends React.Component{
 
   render() {
     return (
-      <div className="console-site-wrapper">
+      <StyledConsoleSite>
         <div className="console-site"
           onClick={() => {
             document.getElementById("command-input").focus();
@@ -36,7 +85,7 @@ class ConsoleSite extends React.Component{
           }
           <CommandLine/>
         </div>
-      </div>
+      </StyledConsoleSite>
     )
   }
 };

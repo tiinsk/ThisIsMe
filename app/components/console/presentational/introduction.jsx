@@ -1,9 +1,18 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const StyledConsoleIntroduction = styled.div`
+color: ${({theme}) => theme.colors.greyText};
+  .highlight{
+    color: white;
+  }
+`;
+
 const Introduction = ({strings}) => {
   return(
-    <div className="console-introduction" dangerouslySetInnerHTML={{__html: strings.introduction}}>
-    </div>
+    <StyledConsoleIntroduction dangerouslySetInnerHTML={{__html: strings.introduction}}>
+    </StyledConsoleIntroduction>
   )
 };
 

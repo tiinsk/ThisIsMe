@@ -4,16 +4,21 @@ import Section from './presentational/section';
 
 import translate from '../main/translate';
 import Introduction from "../ui/introduction";
+import styled from 'styled-components';
+
+const StyledAboutMe = styled.div`
+
+`;
 
 const AboutMe = ({strings, scrollRef}) => {
   return (
-    <div className="about-me" ref={scrollRef}>
+    <StyledAboutMe ref={scrollRef}>
       <Section
         titleId="titles.aboutMe"
       >
         <Introduction/>
       </Section>
-    </div>
+    </StyledAboutMe>
   )
 };
 

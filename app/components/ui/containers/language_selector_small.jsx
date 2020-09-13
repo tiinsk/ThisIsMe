@@ -5,17 +5,45 @@ import {bindActionCreators} from 'redux';
 import translate from '../../main/translate';
 import {languageOptions} from '../../../i18n/languages';
 import {chooseLanguage} from '../../../actions/language_actions';
+import styled from 'styled-components';
+
+const StyledLanguageSelectorSmall = styled.div`
+ position: absolute;
+  top: 0;
+  left: 0;
+  color: ${({theme}) => theme.colors.greyUnselectedText};
+  z-index: 2;
+
+  font-family: ${({theme}) => theme.fonts.fontLato};
+  font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
+
+  .lang{
+    display: inline-block;
+    margin: ${({theme}) => theme.spaces.baseSize};
+    cursor: pointer;
+
+    &:first-of-type {
+      padding-right: ${({theme}) => theme.spaces.baseSize};
+      margin-right: 0;
+      border-right: 1px solid ${({theme}) => theme.colors.greyUnselectedText};
+    }
+
+    &.selected{
+      color: ${({theme}) => theme.colors.black};
+    }
+  }
+`;
 
 const LanguageSelectorSmall = ({chooseLanguage, language}) => {
   return(
-    <div className="language-selector-small">
+    <StyledLanguageSelectorSmall>
       <div className={"lang" + (language === "fi" ? " selected": "")} onClick={() => chooseLanguage("fi")}>
         {languageOptions.fi}
       </div>
       <div className={"lang" + (language === "en" ? " selected": "")} onClick={() => chooseLanguage("en")}>
         {languageOptions.en}
       </div>
-    </div>
+    </StyledLanguageSelectorSmall>
   )
 };
 

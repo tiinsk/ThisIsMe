@@ -3,6 +3,13 @@ import Map from './map';
 import SmallMap from './small_map';
 
 const SM_WINDOW_LIMIT = 800;
+import styled from 'styled-components';
+
+const StyledConsoleInterests = styled.div`
+.interests-title{
+    color: ${({theme}) => theme.colors.magenta};
+  }
+`;
 
 class Interests extends React.Component {
 
@@ -37,7 +44,7 @@ class Interests extends React.Component {
 
   render() {
     return (
-      <div className="console-interests">
+      <StyledConsoleInterests>
         <div className="interests-title">{this.props.strings.interests.travelling}</div>
         {
           this.state.windowWidth !== "MD" ?
@@ -57,7 +64,7 @@ class Interests extends React.Component {
             })
           }
         </div>
-      </div>
+      </StyledConsoleInterests>
     )
   }
 }

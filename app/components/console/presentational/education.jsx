@@ -2,10 +2,15 @@ import React from 'react';
 import EduItem from './edu_item';
 
 import education from '../../../data/education';
+import styled from 'styled-components';
+
+const StyledConsoleEducation = styled.div`
+
+`;
 
 const Education = ({strings}) => {
   return(
-    <div className="console-education">
+    <StyledConsoleEducation>
       {
         education.educationList.map((school, i) => {
           return(
@@ -17,7 +22,7 @@ const Education = ({strings}) => {
           );
         })
       }
-    </div>
+    </StyledConsoleEducation>
   )
 };
 

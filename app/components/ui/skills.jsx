@@ -8,6 +8,75 @@ import skills from '../../data/skills';
 
 import translate from '../main/translate';
 import {Waypoint} from "react-waypoint";
+import styled from 'styled-components';
+
+const StyledSkills = styled.div`
+.rated-skills {
+    display: grid;
+    padding-right: ${({theme}) => theme.spaces.baseSize};
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 0 ${({theme}) => theme.spaces.baseSize};
+  }
+  .rateless-skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  .lang-skills {
+    margin-top: ${({theme}) => theme.spaces.baseSize}*2;
+    display: flex;
+
+    .language {
+      width: 33%;
+      padding-right: ${({theme}) => theme.spaces.baseSize}/2;
+
+      .lang-title {
+        display: flex;
+        align-items: flex-end;
+
+        margin-bottom: ${({theme}) => theme.spaces.baseSize}/2;
+
+        .lang-name {
+          font-family: ${({theme}) => theme.fonts.fontQuicksand};
+          font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
+          font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
+
+          margin-right: ${({theme}) => theme.spaces.baseSize}/2;
+        }
+        .lang-level {
+          padding-bottom: 6px;
+
+          font-family: ${({theme}) => theme.fonts.fontLato};
+          font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
+          font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
+          color: #B0B0B0;
+        }
+      }
+
+      .lang-text {
+        font-family: ${({theme}) => theme.fonts.fontLato};
+        font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
+        font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
+      }
+    }
+  }
+
+  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+    .rated-skills {
+      .skill-column {
+        flex: 1 0 100%;
+        justify-content: center;
+      }
+    }
+    .lang-skills {
+      flex-wrap: wrap;
+      .language {
+        width: 100%;
+        margin-top: ${({theme}) => theme.spaces.baseSize}/2;
+      }
+    }
+  }
+`;
 
 
 class Skills extends React.Component {
@@ -24,7 +93,7 @@ class Skills extends React.Component {
         <Section
           titleId="titles.skills"
         >
-          <div className="skills">
+          <StyledSkills>
             <Waypoint
               onEnter={() => {
                 this.setState({entered: true})
@@ -82,7 +151,7 @@ class Skills extends React.Component {
                 })
               }
             </div>
-          </div>
+          </StyledSkills>
         </Section>
       </div>
     );

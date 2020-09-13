@@ -1,10 +1,28 @@
 import React from 'react';
 import DashedLine from './dashed_line';
+import styled from 'styled-components';
+
+const StyledConsoleEduItem = styled.div`
+ margin: 0.5rem 0;
+  .dates{
+    margin: 0.5rem 0;
+  }
+  .edu-title{
+    color: ${({theme}) => theme.colors.magenta};
+  }
+  .school{
+    color: white;
+  }
+  .edu-description{
+    margin: 1rem 0;
+    color: ${({theme}) => theme.colors.greyText};
+  }
+`;
 
 const EduItem = ({strings, data}) => {
   let translations = strings.education.educationList[data.key];
   return(
-    <div className="console-edu-item">
+    <StyledConsoleEduItem>
       <DashedLine/>
       <div className="dates">
         <span>{`${data.from.month}/${data.from.year}`} - </span>{data.to ? <span>{`${data.to.month}/${data.to.year}`}</span> : null }
@@ -31,7 +49,7 @@ const EduItem = ({strings, data}) => {
           }
         </div> : null
       }
-    </div>
+    </StyledConsoleEduItem>
   )
 };
 

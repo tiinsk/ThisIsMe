@@ -1,14 +1,16 @@
 import 'babel-polyfill';
-import '../../stylesheets/main.scss';
+import '../../../node_modules/animate.css/animate.min.css';
 
 import React from 'react';
 import {render} from 'react-dom';
 import WebFont from 'webfontloader';
 import { Provider } from 'react-redux';
-import { BrowserRouter, browserHistory } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import {ThemeProvider} from 'styled-components';
 
 import configureStore from '../../configure_store';
 import routes from './routes';
+import {GlobalStyle, theme} from '../../theme';
 
 const store = configureStore();
 
@@ -29,10 +31,13 @@ if(__PRODUCTION__){
 }
 
 render((
+  <ThemeProvider theme={theme}>
+    <GlobalStyle/>
     <Provider store={store}>
       <BrowserRouter>
         {routes(store)}
       </BrowserRouter>
     </Provider>
+  </ThemeProvider>
 ), document.getElementById('app'));
 

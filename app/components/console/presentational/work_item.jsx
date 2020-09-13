@@ -1,9 +1,27 @@
 import React from 'react';
 import DashedLine from './dashed_line';
+import styled from 'styled-components';
+
+const StyledConsoleWorkItem = styled.div`
+.dates{
+    margin: 0.5rem 0;
+  }
+  .company{
+    text-transform: uppercase;
+    color: white;
+  }
+  .work-title{
+    margin: 1rem 0;
+    color: ${({theme}) => theme.colors.magenta};
+  }
+  .work-description {
+    color: ${({theme}) => theme.colors.greyText};
+  }
+`;
 
 const WorkItem = ({strings, data}) => {
   return(
-    <div className="console-work-item">
+    <StyledConsoleWorkItem>
       <DashedLine/>
       <div className="dates">
         <span>{`${data.from.month}/${data.from.year}`} - </span>{data.to && data.to.month && data.to.year ? <span>{`${data.to.month}/${data.to.year}`}</span> : null }
@@ -27,7 +45,7 @@ const WorkItem = ({strings, data}) => {
           }
         </div>
       </div>
-    </div>
+    </StyledConsoleWorkItem>
   )
 };
 

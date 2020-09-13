@@ -3,11 +3,16 @@ import React from 'react';
 import Project from './project';
 
 import skills from '../../../data/skills';
+import styled from 'styled-components';
+
+const StyledConsoleProjects = styled.div`
+
+`;
 
 
 const Projects = ({strings}) => {
   return(
-    <div className="console-projects">
+    <StyledConsoleProjects>
       {
         skills.projects.map( (project, i) => {
           return (
@@ -19,7 +24,7 @@ const Projects = ({strings}) => {
           );
         })
       }
-    </div>
+    </StyledConsoleProjects>
   )
 };
 

@@ -7,6 +7,16 @@ import skills from '../../data/skills';
 
 import translate from '../main/translate';
 
+import styled from 'styled-components';
+
+const StyledProjects = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: ${({theme}) => theme.spaces.baseSize}*2 ${({theme}) => theme.spaces.baseSize};
+  justify-items: center;
+  padding-right: ${({theme}) => theme.spaces.baseSize};
+`;
+
 const Projects = ({scrollRef}) => {
   return (
     <div ref={scrollRef}>

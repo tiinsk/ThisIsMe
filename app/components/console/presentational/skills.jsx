@@ -3,10 +3,20 @@ import SkillMeter from './skill_meter';
 
 import skills from '../../../data/skills';
 import LangSkill from "./lang_skill";
+import styled from 'styled-components';
+
+const StyledConsoleSkills = styled.div`
+.category-name{
+    margin: 1rem 0;
+  }
+  .console-lang-skills {
+  margin: 1rem 0;
+}
+`;
 
 const Skills = ({strings}) => {
   return (
-    <div className="console-skills">
+    <StyledConsoleSkills>
       <table>
         <tbody>
           {
@@ -45,7 +55,7 @@ const Skills = ({strings}) => {
           })
         }
       </div>
-    </div>
+    </StyledConsoleSkills>
   );
 };
 

@@ -12,7 +12,7 @@ import translate from '../main/translate';
 const WorkHistory = ({scrollRef}) => {
 
   return (
-    <div className="work-history" ref={scrollRef}>
+    <div ref={scrollRef}>
       <Section
         titleId="titles.workHistory"
         maxWidth="1100px"
