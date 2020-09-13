@@ -5,8 +5,8 @@ import _ from 'lodash';
 import styled from 'styled-components/macro';
 
 const StyledSection = styled.div`
- position: relative;
-  margin: 18rem 2rem;
+  position: relative;
+  margin: 35rem 2rem;
   margin-left: 150px;
 
   max-width: 2000px;

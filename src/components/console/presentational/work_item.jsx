@@ -3,7 +3,7 @@ import DashedLine from './dashed_line';
 import styled from 'styled-components/macro';
 
 const StyledConsoleWorkItem = styled.div`
-.dates{
+  .dates{
     margin: 0.5rem 0;
   }
   .company{

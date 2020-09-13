@@ -11,7 +11,7 @@ position: relative;
   .line-dot{
     height: 0.8rem;
     width: 0.8rem;
-    background-color: ${({theme}) => theme.colors.greenTimeline};
+    background-color: ${({theme}) => theme.new.colors.black};
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -26,7 +26,7 @@ position: relative;
   .line{
     height: 100%;
     width: 4px;
-    background-color: ${({theme}) => theme.colors.greenTimeline};
+    background-color: ${({theme}) => theme.new.colors.black};
     position: absolute;
     top: 0;
     left: 50%;

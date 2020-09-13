@@ -1,10 +1,13 @@
-import {colors} from './colors';
+import {colors, newColors} from './colors';
 import {variables} from './variables';
 import {createGlobalStyle} from 'styled-components';
 
 export const theme = {
   colors,
   ...variables,
+  new: {
+    colors: newColors,
+  }
 }
 
 export const GlobalStyle = createGlobalStyle`

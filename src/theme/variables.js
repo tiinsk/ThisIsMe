@@ -21,14 +21,13 @@ export const variables = {
     fontWeightBold: '700',
   },
   fontSizes: {
-    fontSizeXXXLarge: '4rem',
-    fontSizeXXLarge: '2.3rem',
+    fontSizeXXXLarge: '3.3rem',
+    fontSizeXXLarge: '2.2rem',
     fontSizeXLarge: '2.0rem',
     fontSizeLarge: '1.8rem',
 
     fontSizeDefault: '1.5rem',
 
-    fontSizeMedium: '1.4rem',
     fontSizeSmall: '1.3rem',
     fontSizeXSmall: '1.2rem',
     fontSizeXXSmall: '1.1rem',

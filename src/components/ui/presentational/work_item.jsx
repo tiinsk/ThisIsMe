@@ -1,7 +1,9 @@
 import React from 'react';
-import translate from '../../main/translate';
-import Skill from "./skill";
 import styled from 'styled-components/macro';
+
+import translate from '../../main/translate';
+import {Paragraph, H3, H4} from '../../../theme/fonts';
+import Skill from './skill';
 
 const StyledWorkItem = styled.div`
  .company{
@@ -19,13 +21,6 @@ const StyledWorkItem = styled.div`
     font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
 
     margin: 3*${({theme}) => theme.spaces.baseSize}/4 0;
-  }
-  .work-description{
-    color: ${({theme}) => theme.colors.black};
-    font-family: ${({theme}) => theme.fonts.fontOpenSans};
-    font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
-    font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
-    line-height: 2.5rem;
   }
   .wrapper{
     margin-top: ${({theme}) => theme.spaces.baseSize};
@@ -47,14 +42,14 @@ const StyledWorkItem = styled.div`
 const WorkItem = ({strings, data, isOnLeft}) => {
   return(
     <StyledWorkItem>
-      <div className="company">
+      <H3>
         {strings.workExperience[data.key].company}
-      </div>
-      <div className="work-title">
+      </H3>
+      <H4>
         {strings.workExperience[data.key].title}
-      </div>
-      <div className="work-description">
-        {strings.workExperience[data.key].description}
+      </H4>
+      <div>
+        <Paragraph>{strings.workExperience[data.key].description}</Paragraph>
         <div className={`wrapper ${isOnLeft ? 'left' : 'right'}`}>
           { data.skillList ? data.skillList.map( (skill,i) => {
               return(
