@@ -24,7 +24,7 @@ const StyledSkill = styled.div`
   .skill-wrapper {
     border: 1px solid ${({isPeakSkill, theme}) => isPeakSkill ? theme.new.colors.greenTransparent : 'transparent'};
     border-radius: 15px;
-    padding: 4px;
+    padding: 4px 10px;
   }
 `;
 

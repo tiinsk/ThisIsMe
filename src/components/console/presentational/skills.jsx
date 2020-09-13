@@ -20,7 +20,7 @@ const Skills = ({strings}) => {
       <table>
         <tbody>
           {
-            skills.rated_skills.map((skill, i) => {
+            skills.ratedSkills.map((skill, i) => {
               return (
                 <SkillMeter
                   key={i}

@@ -8,7 +8,7 @@ const MAX_RATE = 10;
 
 const StyledSkillMeter = styled.div`
   position: relative;
-  margin-bottom: ${({theme}) => theme.spaces.baseSize}*2;
+  margin-bottom: ${({theme}) => theme.spaces.baseSize};
 
   display: flex;
   align-items: stretch;
@@ -34,17 +34,20 @@ const StyledSkillMeter = styled.div`
     flex-direction: column;
     justify-content: space-around;
 
-    margin-left: ${({theme}) => theme.spaces.baseSize}/2;
+    margin-left: ${({theme}) => theme.spaces.base(0.5)};
 
     .skill-name {
       font-family: ${({theme}) => theme.fonts.fontQuicksand};
       font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
+      color: ${({theme}) => theme.new.colors.grey};
     }
 
     .skill-rate {
       position: absolute;
-      padding-left: 5px;
-      padding-top: 1px;
+      right: 0;
+      
+      padding-right: 5px;
+      padding-bottom: 3px;
 
       font-family: ${({theme}) => theme.fonts.fontLato};
       font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
@@ -59,7 +62,8 @@ const StyledSkillMeter = styled.div`
       height: 15px;
       border-radius: 15px;
 
-      background: ${({theme}) => theme.colors.lightGreyBackground};
+      background: ${({theme}) => theme.new.colors.superLightGrey};
+      box-shadow: ${({theme}) => theme.new.colors.insetShadow};
 
       overflow: hidden;
 
@@ -72,32 +76,27 @@ const StyledSkillMeter = styled.div`
   }
 `;
 
-const SkillMeter = ({strings, icon, color, textColor, rate, entered}) => {
+const SkillMeter = ({strings, icon, color, rate, entered}) => {
   return(
     <StyledSkillMeter>
       <div className="icon" style={
         {
-          backgroundImage: `url(${require(`../../../assets/${icon}.svg`)}`
+          backgroundImage: `url(${require(`../../../assets/skills/${icon}.svg`)}`
         }
       }/>
       <div className="skill-bar-wrapper">
-        <div className="skill-name" style={{
-          color: textColor
-        }}>{strings.skills.skillNames[icon] || icon}</div>
+        <div className="skill-name">{strings.skills.skillNames[icon] || icon}</div>
+        <div
+          className="skill-rate"
+        >
+          {rate}/10
+        </div>
         <div className="skill-bar">
-          <div
-            className="skill-rate"
-            style={{
-              left: `${rate/MAX_RATE*100}%`
-            }}
-          >
-            {rate}/10
-          </div>
           <div
             className={`fill ${entered ? "animated slideInLeft" : ""}`}
             style={{
               width: `${rate/MAX_RATE*100}%`,
-              backgroundColor: color
+              background: color
             }}
           />
         </div>
