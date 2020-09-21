@@ -1,20 +1,13 @@
 import React from 'react';
+import styled from 'styled-components/macro';
 
 import Section from './presentational/section';
 import Project from './presentational/project';
-
-import skills from '../../data/skills';
-
+import projects from '../../data/projects';
 import translate from '../main/translate';
 
-import styled from 'styled-components/macro';
-
 const StyledProjects = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: ${({theme}) => theme.spaces.baseSize}*2 ${({theme}) => theme.spaces.baseSize};
-  justify-items: center;
-  padding-right: ${({theme}) => theme.spaces.baseSize};
+ 
 `;
 
 const Projects = ({scrollRef}) => {
@@ -22,19 +15,21 @@ const Projects = ({scrollRef}) => {
     <div ref={scrollRef}>
       <Section
         titleId="titles.projects"
+        style={{marginRight: 0}}
       >
-        <div className="projects">
+        <StyledProjects className="projects">
           {
-            skills.projects.map((project, i) => {
+            projects.map((project, i) => {
               return (
                 <Project
                   key={i}
+                  index={i}
                   project={project}
                 />
               );
             })
           }
-        </div>
+        </StyledProjects>
       </Section>
     </div>
   )

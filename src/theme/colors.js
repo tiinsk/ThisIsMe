@@ -24,8 +24,8 @@ export const colors = {
 }
 
 export const newColors = {
-  white: 'white',
-  black: 'black',
+  white: '#ffffff',
+  black: '#000000',
   almostBlack: '#31373D',
   greyText: '#7694a7',
 

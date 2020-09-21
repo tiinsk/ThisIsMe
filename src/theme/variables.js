@@ -36,6 +36,7 @@ export const variables = {
   spaces: {
     baseSize: '25px',
     base: (x) => `${x*25}px`,
+    baseNumber: (x) => x*25,
   },
   navBarHeight: '100px',
   navBarHeightMobile: '55px',

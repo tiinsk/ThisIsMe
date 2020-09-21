@@ -13,7 +13,8 @@ const StyledSkill = styled.div`
   align-items: center;
 
   padding: 3px;
-  margin: ${({theme}) => theme.spaces.base(0.2)};
+  margin-right: ${({theme}) => theme.spaces.base(0.4)};
+  margin-bottom: ${({theme}) => theme.spaces.base(0.4)};
 
   border-radius: 15px;
   height: 30px;
