@@ -1,11 +1,12 @@
 import styled, {css} from 'styled-components';
 
-export const H1 = styled.p`
+export const H1 = css`
   color: ${({theme}) => theme.new.colors.berry};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
   letter-spacing: 4.7px;
+  text-transform: uppercase;
 `;
 
 export const H2 = styled.span`
@@ -56,4 +57,13 @@ export const TagText = css`
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXSmall};
   text-transform: uppercase;
+`;
+
+export const Anchor = css`
+  color: ${({theme}) => theme.new.colors.black};
+  font-family: ${({theme}) => theme.fonts.fontLato};
+  font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
+  font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
+  text-transform: uppercase;
+  text-decoration: none;
 `;

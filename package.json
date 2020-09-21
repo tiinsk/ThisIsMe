@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -22,6 +25,7 @@
     "redux-devtools-extension": "^1.0.0",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
+    "simple-react-lightbox": "^3.3.4-1",
     "styled-components": "^5.2.0",
     "webfontloader": "^1.6.27"
   },

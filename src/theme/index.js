@@ -1,6 +1,7 @@
 import {colors, newColors} from './colors';
 import {variables} from './variables';
 import {createGlobalStyle} from 'styled-components';
+import {Anchor} from './fonts';
 
 export const theme = {
   colors,
@@ -54,6 +55,16 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
   
     font-size: 62.5%; //1.5rem -> 15px, 1.4rem ->14px etc.
+  }
+  
+  a {
+    ${Anchor};
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
   
   *{

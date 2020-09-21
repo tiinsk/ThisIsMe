@@ -48,9 +48,9 @@ const StyledSection = styled.div`
   }
 `;
 
-const Section = ({strings, children, titleId, maxWidth}) => {
+const Section = ({strings, children, titleId, maxWidth, ...props}) => {
   return(
-    <StyledSection>
+    <StyledSection {...props}>
       <div className="title">
         {_.get(strings, titleId)}
       </div>
