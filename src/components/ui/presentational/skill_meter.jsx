@@ -8,6 +8,7 @@ const MAX_RATE = 10;
 
 const StyledSkillMeter = styled.div`
   position: relative;
+  margin: 0 ${({theme}) => theme.spaces.baseSize};
   margin-bottom: ${({theme}) => theme.spaces.baseSize};
 
   display: flex;

@@ -2,7 +2,7 @@ export default {
   name: "Name",
   phone: "Phone",
   email: "Email",
-  website: "website",
+  website: "Website",
   github: "Github",
   linkedin: "LinkedIn"
 }

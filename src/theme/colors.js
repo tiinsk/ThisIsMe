@@ -36,6 +36,7 @@ export const newColors = {
 
   // ~50 shades of grey:
   superLightGrey: '#F0F0F0',
+  lightGrey: '#f2f2f2',
   lightestGrey: '#F7F7F7',
   lightestGreyAlt: '#F1F1F1',
   grey: '#7C7C7C',

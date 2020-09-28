@@ -1,16 +1,21 @@
 import React from 'react';
 import moment from 'moment';
-import { Waypoint } from 'react-waypoint';
+import {Waypoint} from 'react-waypoint';
 import styled from 'styled-components/macro';
 
 import {H2} from '../../../theme/fonts';
 
 const StyledTimeBubble = styled.div`
-position: relative;
+  position: relative;
+  
   .content-box{
     flex: 0 0 50%;
     width: 50%;
     padding: 1rem 4rem;
+    
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    
     @media (max-width: ${({theme}) => theme.breakpoints.mdSize}) {
       width: 100%;
       padding: 2rem 4rem;
@@ -76,47 +81,46 @@ position: relative;
 
 
 class TimeBubble extends React.Component {
-    constructor(){
-        super();
-        this.state = {}
+  constructor() {
+    super();
+    this.state = {}
+  }
+
+  render() {
+    const side = (this.props.index % 2) ? "right" : "left";
+
+    const fromMoment = moment({month: this.props.from.month - 1, year: this.props.from.year});
+
+    let toMoment;
+    if (this.props.to.month || this.props.to.year) {
+      toMoment = moment({month: this.props.to.month - 1, year: this.props.to.year});
     }
 
-    render() {
-        const side = (this.props.index % 2) ? "right" : "left";
-
-        const fromMoment = moment({month: this.props.from.month - 1, year: this.props.from.year});
-
-        let toMoment;
-        if (this.props.to.month || this.props.to.year) {
-            toMoment = moment({month: this.props.to.month - 1, year: this.props.to.year});
-        }
-
-        return (
-          <StyledTimeBubble>
-              <div className={"dot" + " " + side}/>
-              <Waypoint
-                topOffset={"-50%"}
-                onEnter={() => {
-                    this.setState({entered: true})
-                }}
-              >
-                  <div className={"content-box" + " " + side + " " + (this.state.entered ? "animated fadeInUp" : "")}>
-                      <div className="time-range">
-                          <H2 className="start">{fromMoment.format("MMM ")} {fromMoment.format("YYYY")}</H2>
-                        <i className="year-line material-icons">chevron_right</i>
-                          {
-                              toMoment ? <H2 className="end">{toMoment.format("MMM ")} {toMoment.format("YYYY")}</H2> : null
-                          }
-                      </div>
-                      <div className="details">
-                          {this.props.children}
-                      </div>
-                  </div>
-              </Waypoint>
-
-          </StyledTimeBubble>
-        )
-    }
+    return (
+      <Waypoint
+        bottomOffset="100px"
+        onEnter={() => {
+          this.setState({entered: true})
+        }}
+      >
+        <StyledTimeBubble>
+          <div className={"dot" + " " + side}/>
+          <div className={"content-box" + " " + side + " " + (this.state.entered ? "animated fadeInUp" : "")}>
+            <div className="time-range">
+              <H2 className="start">{fromMoment.format("MMM ")} {fromMoment.format("YYYY")}</H2>
+              <i className="year-line material-icons">chevron_right</i>
+              {
+                toMoment ? <H2 className="end">{toMoment.format("MMM ")} {toMoment.format("YYYY")}</H2> : null
+              }
+            </div>
+            <div className="details">
+              {this.props.children}
+            </div>
+          </div>
+        </StyledTimeBubble>
+      </Waypoint>
+    )
+  }
 };
 
 export default TimeBubble;

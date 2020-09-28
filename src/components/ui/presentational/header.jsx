@@ -9,6 +9,7 @@ import translate from '../../main/translate';
 import LanguageSelector from '../containers/language_selector';
 import HoverBubble, {StyledHoverBubble} from './hover-bubble';
 import Navbar from './navbar';
+import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 
 const StyledHeader = styled.div`
   width: calc(100vw - ${({theme}) => theme.rightMenuWidth});
@@ -31,38 +32,13 @@ const StyledHeader = styled.div`
 
     position: relative;
     .title {
-      color: ${({theme}) => theme.new.colors.white};
-      font-family: ${({theme}) => theme.fonts.fontLato};
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
-      font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
-      margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
-      
-      @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
-        margin-left: 0;
-        margin-right: 0;
-      }
+      ${PageTitle};
     }
     .name {
-      color: ${({theme}) => theme.new.colors.white};
-      font-family: ${({theme}) => theme.fonts.fontPTSerif};
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
-      font-size: 9.2rem;
+      ${PageName};
     }
     .subtitle {
-      color: ${({theme}) => theme.new.colors.green};
-      font-family: ${({theme}) => theme.fonts.fontOpenSans};
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
-      font-size: ${({theme}) => theme.fontSizes.fontSizeSmall};
-      text-transform: uppercase;
-      letter-spacing: 1.9px;
-      text-align: center;
-      margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
-      
-      @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
-        text-align: left;
-        margin-left: ${({theme}) => theme.spaces.base(0.25)};
-        margin-right: ${({theme}) => theme.spaces.base(0.25)};
-      }
+      ${PageSubtitle};
     }
   }
   
