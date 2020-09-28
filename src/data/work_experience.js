@@ -10,14 +10,16 @@ export default {
         "month": 11,
         "year": 2018
       },
-      "skillList": [
+      "topSkills": [
         "vue",
-        "vuex",
         "javascript",
         "typescript",
+        "sass",
+      ],
+      "otherSkills": [
+        "vuex",
         "node",
         "css",
-        "sass",
         "hapi",
         "psql",
         "knex",
@@ -39,13 +41,15 @@ export default {
         "month": 9,
         "year": 2017
       },
-      "skillList": [
+      "topSkills": [
+        "react",
         "javascript",
         "typescript",
-        "react",
+        "sass",
+      ],
+      "otherSkills": [
         "node",
         "css",
-        "sass",
         "webpack",
         "mocha",
         "chai",
@@ -69,13 +73,15 @@ export default {
           "year": 2015
         },
         "workPercentage": 1,
-        "skillList": [
+        "topSkills": [
           "android",
           "java",
-          "c_pp",
           "open_gl",
-          "vr",
+        ],
+        "otherSkills": [
+          "c_pp",
           "computer_graphics",
+          "vr",
         ]
       },
       {
@@ -88,9 +94,11 @@ export default {
           "month": 6,
           "year": 2014,
         },
-        "skillList": [
-          "c_pp",
+        "topSkills": [
           "matlab",
+        ],
+        "otherSkills": [
+          "c_pp",
           "image_processing",
           "imaging_algorithms"
         ]
@@ -108,9 +116,11 @@ export default {
           "month": 8,
           "year": 2013,
         },
-        "skillList": [
-          "c_pp",
+        "topSkills": [
           "matlab",
+        ],
+        "otherSkills": [
+          "c_pp",
           "image_processing",
           "imaging_algorithms"
         ]

@@ -29,11 +29,11 @@ const RatelessSkills = ({strings}) => {
           })
         }
       </div>
-      <H3>{strings.skills.ratelessSkills.bottomSkills.title}</H3>
-      <Paragraph>{strings.skills.ratelessSkills.bottomSkills.subtitle}</Paragraph>
+      <H3>{strings.skills.ratelessSkills.otherSkills.title}</H3>
+      <Paragraph>{strings.skills.ratelessSkills.otherSkills.subtitle}</Paragraph>
       <div className="rateless-skills">
         {
-          skills.ratelessSkills.bottomSkills.map((skill, i) => {
+          skills.ratelessSkills.otherSkills.map((skill, i) => {
             return (
               <Skill key={i} skill={skill}/>
             )
