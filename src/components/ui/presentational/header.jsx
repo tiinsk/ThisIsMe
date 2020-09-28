@@ -111,7 +111,7 @@ const StyledHeader = styled.div`
       }
     }
   }
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     width: 100vw;
     .right-menu {
       display: none;

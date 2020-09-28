@@ -1,10 +1,9 @@
 export const variables = {
   breakpoints: {
+    lgSize: '1200px',
     mdSize: '999px',
     smSize: '799px',
     xsSize: '499px',
-    breakpointSmallWindow: '1200px',
-    breakpointMobile: '750px',
   },
   fonts: {
     fontLato: 'Lato, sans-serif',

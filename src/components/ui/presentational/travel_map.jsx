@@ -10,7 +10,7 @@ const dots = travels;
 const StyledTravelMap = styled.div`
   flex: 1 0 60%;
   
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointSmallWindow}){
+  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}){
     flex: 0 0 100%;
   }
 
@@ -121,7 +121,7 @@ const StyledTravelMap = styled.div`
       }
     }
   }
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     padding: 0;
     .visit-dots {
       .dot {

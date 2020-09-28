@@ -52,7 +52,7 @@ const StyledLanguageSelector = styled.div`
       top: 50%;
     }
   }
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     display: none;
   }
 `;

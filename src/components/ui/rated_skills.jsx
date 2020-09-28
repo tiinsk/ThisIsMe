@@ -25,7 +25,7 @@ const StyledRatedSkills = styled.div`
     }
   }
 
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     .rated-skills {
       .skill-column {
         flex: 1 0 100%;
