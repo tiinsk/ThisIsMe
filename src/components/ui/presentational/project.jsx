@@ -46,7 +46,7 @@ const StyledProject = styled.div`
           display: inline-flex;
           align-items: center;
           
-           &:hover span {
+          &:hover span {
             text-decoration: underline;
           }
           

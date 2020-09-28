@@ -1,200 +1,120 @@
 import React from 'react';
-
-import LanguageSelector from '../containers/language_selector';
-import translate from '../../main/translate';
-import Introduction from '../introduction';
-import nameFirst from '../../../assets/name_outline_first.svg';
-import nameLast from '../../../assets/name_outline_last.svg';
-import palms from '../../../assets/palms.jpg';
-import Navbar from "./navbar";
-import contacts from '../../../data/contacts';
-import HoverBubble from "./hover_bubble";
 import styled from 'styled-components/macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+import background from '../../../assets/background.png';
+import contacts from '../../../data/contacts';
+import translate from '../../main/translate';
+import LanguageSelector from '../containers/language_selector';
+import HoverBubble, {StyledHoverBubble} from './hover-bubble';
+import Navbar from './navbar';
 
 const StyledHeader = styled.div`
+  width: calc(100vw - ${({theme}) => theme.rightMenuWidth});
   height: 100vh;
-  min-height: 885px;
-
-  .header-content {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    margin-bottom: ${({theme}) => theme.spaces.baseSize};
-
-    min-height: 775px;
-    height: calc(100vh - #{${({theme}) => theme.navBarHeight}} - #{${({theme}) => theme.spaces.baseSize}});
-
+  background-image: url(${background});
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .name-titles {
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
 
-    .left-side-wrapper {
-      display: flex;
-      max-width: 60%;
-      .titles {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    padding: ${({theme}) => theme.spaces.baseSize};
 
-        padding: ${({theme}) => theme.spaces.baseSize};
-
-        position: relative;
-        overflow: hidden;
-
-        .palms-container {
-          max-width: 100%;
-          overflow: hidden;
-          height: 100%;
-          display: flex;
-          justify-content: flex-end;
-
-          .palms {
-            width: auto;
-            min-height: 725px;
-            height: calc(100vh - #{${({theme}) => theme.navBarHeight}} - #{${({theme}) => theme.spaces.baseSize}*3});
-          }
-        }
-
-        .links {
-          display: flex;
-          justify-content: flex-end;
-
-          .link {
-            margin-left: ${({theme}) => theme.spaces.baseSize}/4;
-
-            position: relative;
-
-            background: url("../assets/button_border.svg");
-            background-size: cover;
-            height: 35px;
-            width: 35px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            color: rgba(white, 0.75);
-            font-size: 1.7rem;
-            font-family: ${({theme}) => theme.fonts.fontLato};
-            font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
-
-            cursor: pointer;
-
-            text-decoration: none;
-
-            &:hover {
-              color: white;
-              background: url("../assets/button_border_hover.svg");
-              .hover-bubble {
-                display: initial;
-              }
-            }
-
-            .material-icons {
-              font-size: 1.7rem;
-            }
-          }
-        }
-
-        .corner {
-          position: absolute;
-
-          height: 85px;
-          width: 85px;
-
-          &.top {
-            top: 0;
-            left: 0;
-            border-left: 7px solid ${({theme}) => theme.colors.greenNEW};
-            border-top: 7px solid ${({theme}) => theme.colors.greenNEW};
-          }
-
-          &.bottom {
-            bottom: 0;
-            right: 0;
-            border-right: 7px solid ${({theme}) => theme.colors.greenNEW};
-            border-bottom: 7px solid ${({theme}) => theme.colors.greenNEW};
-          }
-        }
-      }
-      .content-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-
-        font-family: ${({theme}) => theme.fonts.fontLato};
-        font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
-        .name-titles {
-          margin: ${({theme}) => theme.spaces.baseSize}*2;
-          .title {
-            font-size: 20px;
-            color: white;
-
-            @media (max-width: ${({theme}) => theme.breakpoints.xsSize}) {
-              font-size: 1.5rem;
-            }
-          }
-          .name {
-            font-size: 40px;
-          }
-        }
+    position: relative;
+    .title {
+      color: ${({theme}) => theme.new.colors.white};
+      font-family: ${({theme}) => theme.fonts.fontLato};
+      font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
+      font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
+      margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
+      
+      @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
+        margin-left: 0;
+        margin-right: 0;
       }
     }
-    .header-introduction {
-      display: flex;
-      align-items: flex-start;
-      flex-grow: 1;
-      justify-content: center;
+    .name {
+      color: ${({theme}) => theme.new.colors.white};
+      font-family: ${({theme}) => theme.fonts.fontPTSerif};
+      font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
+      font-size: 9.2rem;
+    }
+    .subtitle {
+      color: ${({theme}) => theme.new.colors.green};
+      font-family: ${({theme}) => theme.fonts.fontOpenSans};
+      font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
+      font-size: ${({theme}) => theme.fontSizes.fontSizeSmall};
+      text-transform: uppercase;
+      letter-spacing: 1.9px;
+      text-align: center;
+      margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
+      
+      @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
+        text-align: left;
+        margin-left: ${({theme}) => theme.spaces.base(0.25)};
+        margin-right: ${({theme}) => theme.spaces.base(0.25)};
+      }
     }
   }
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointSmallWindow}){
-    height: initial;
-    min-height: initial;
-    margin-bottom: -8rem;
+  
+  .right-menu {
+    background: ${({theme}) => theme.new.colors.white};
+    width: ${({theme}) => theme.rightMenuWidth};
+    height: 100vh;
+    
+    position: absolute;
+    top: 0;
+    right: -${({theme}) => theme.rightMenuWidth};
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    .links {
+      margin: ${({theme}) => theme.spaces.base(1)} 0;
+    
+      .link {
+        position: relative;
 
-    .header-content {
-      flex-wrap: wrap;
-      height: initial;
-      margin-bottom: 0;
-
-      .left-side-wrapper {
-        max-width: initial;
-        width: 100%;
-        height: calc(100vh - #{${({theme}) => theme.navBarHeight}} - #{${({theme}) => theme.spaces.baseSize}});
-        .titles {
-          flex-grow: 1;
-          margin-right: ${({theme}) => theme.spaces.baseSize}*2;
-          .palms-container .palms {
-            width: 100%;
+        .link-anchor {
+          display: block;
+          
+          padding: ${({theme}) => theme.spaces.baseSize};
+        
+          color: rgba(white, 0.75);
+          font-size: 1.7rem;
+          font-family: ${({theme}) => theme.fonts.fontLato};
+          font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
+  
+          text-decoration: none;
+  
+          .material-icons {
+            font-size: 1.7rem;
           }
         }
-      }
-      .header-introduction {
-        display: none;
+        
+        :hover {
+          ${StyledHoverBubble} {
+            display: flex;
+          }
+        }
       }
     }
   }
   @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
-    .header-content {
-      .left-side-wrapper {
-        .titles {
-          margin-right: 0;
-
-          .palms-container {
-            .palms {
-              width: auto;
-            }
-          }
-        }
-      }
+    width: 100vw;
+    .right-menu {
+      display: none;
     }
   }
 `;
@@ -203,49 +123,45 @@ const Header = ({strings, onScrollToRef}) => {
   return (
     <StyledHeader>
       <Navbar onScrollToRef={onScrollToRef}/>
-      <div className="header-content">
-        <div className="left-side-wrapper">
-          <LanguageSelector/>
-          <div className="titles">
-            <div className="palms-container">
-              <img className="palms" src={palms} alt=""/>
-            </div>
-            <div className="content-wrapper">
-              <div className="corner top"/>
-              <div className="name-titles">
-                <div className="title">
-                  {strings.titles.introduction}
-                </div>
-                <div className="name">
-                  <img src={nameFirst} alt="Tiina" style={{marginRight: "10px"}}/>
-                  <img src={nameLast} alt="Koskiranta"/>
-                </div>
-                <div className="links">
-                  <a className="link" href={contacts.github} target="_blank">
-                    <i className="fa fa-github"/>
-                    <HoverBubble text={contacts.github}/>
-                  </a>
-                  <a className="link"  href={contacts.linkedin} target="_blank">
-                    <i className="fa fa-linkedin"/>
-                    <HoverBubble text={contacts.linkedin}/>
-                  </a>
-                  <a className="link" href={`mailto:${contacts.email}`} >
-                    <span>@</span>
-                    <HoverBubble text={contacts.email}/>
-                  </a>
-                  <a className="link" href={`tel:${contacts.phone}`}>
-                    <i className="material-icons">phone</i>
-                    <HoverBubble text={contacts.phone}/>
-                  </a>
-                </div>
-              </div>
-              <div className="corner bottom"/>
-            </div>
+      <div className="name-titles">
+        <div className="title">
+          {strings.titles.introduction}
+        </div>
+        <div className="name">
+          {contacts.name}
+        </div>
+        <div className="subtitle">
+          {strings.summary.title}
+        </div>
+      </div>
+      <div className="right-menu">
+        <div className="links">
+          <div className="link">
+            <a className="link-anchor" href={contacts.github} target="_blank">
+              <FontAwesomeIcon icon={faGithub}/>
+            </a>
+            <HoverBubble text={contacts.github} href={contacts.github} target="_blank"/>
+          </div>
+          <div className="link">
+            <a className="link-anchor"  href={contacts.linkedin} target="_blank">
+              <FontAwesomeIcon icon={faLinkedin}/>
+            </a>
+            <HoverBubble text={contacts.linkedin} href={contacts.linkedin} target="_blank"/>
+          </div>
+          <div className="link">
+            <a className="link-anchor" href={`mailto:${contacts.email}`} >
+              <span>@</span>
+            </a>
+            <HoverBubble text={contacts.email} href={`mailto:${contacts.email}`}/>
+          </div>
+          <div className="link">
+            <a className="link-anchor" href={`tel:${contacts.phone}`}>
+              <i className="material-icons">phone</i>
+            </a>
+            <HoverBubble text={contacts.phone} href={`tel:${contacts.phone}`}/>
           </div>
         </div>
-        <div className="header-introduction">
-          <Introduction/>
-        </div>
+        <LanguageSelector/>
       </div>
     </StyledHeader>
   )

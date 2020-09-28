@@ -12,6 +12,7 @@ export const variables = {
     fontQuicksand: 'Quicksand, sans-serif',
     fontOpenSans: 'Open sans, sans-serif',
     fontSpace: 'Space Mono, monospace',
+    fontPTSerif: 'PT Serif, serif',
   },
 
   fontWeights: {
@@ -39,6 +40,7 @@ export const variables = {
     baseNumber: (x) => x*25,
   },
   navBarHeight: '100px',
+  rightMenuWidth: '100px',
   navBarHeightMobile: '55px',
   langSelectionWidth: '85px',
 }
