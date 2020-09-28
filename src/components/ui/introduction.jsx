@@ -1,15 +1,15 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import styled from 'styled-components/macro';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React from 'react';
+import {connect} from 'react-redux';
+import styled from 'styled-components/macro';
 
-import translate from '../../components/main/translate';
 import cv_en_pdf from '../../assets/cv_en.pdf';
 import cv_fi_pdf from '../../assets/cv_fi.pdf';
 import myImage from '../../assets/me_2_0_black.png';
-import {LinkButton} from './presentational/button';
+import translate from '../../components/main/translate';
 import contacts from '../../data/contacts';
+import {LinkButton} from './presentational/button';
 
 const ImageSize = '115px';
 
@@ -69,6 +69,11 @@ const StyledIntroduction = styled.div`
   
   .image-wrapper {
     padding-left: ${({theme}) => theme.spaces.baseSize};
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+      padding-left: 0;
+      margin-bottom: ${({theme}) => theme.spaces.baseSize};
+    }
 
     .own-image {
       background-image: url(${myImage});
@@ -83,51 +88,55 @@ const StyledIntroduction = styled.div`
   @media (max-width: ${({theme}) => theme.breakpoints.lgSize}) {
     margin: 0;
   }
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+    flex-direction: column-reverse;
+  }
 `;
 
 const Introduction = ({strings, language}) => {
   return (
-      <StyledIntroduction>
-        <div className="summary">
-          <div className="summary-text" dangerouslySetInnerHTML={{__html: strings.introduction}}/>
-          <div className="links">
-            <div className="link">
-              <a className="link-anchor" href={contacts.github} target="_blank">
-                <FontAwesomeIcon icon={faGithub}/>
-                <span>{contacts.github}</span>
-              </a>
-            </div>
-            <div className="link">
-              <a className="link-anchor"  href={contacts.linkedin} target="_blank">
-                <FontAwesomeIcon icon={faLinkedin}/>
-                <span>{contacts.linkedin}</span>
-              </a>
-            </div>
-            <div className="link">
-              <a className="link-anchor" href={`mailto:${contacts.email}`} >
-                <span className="icon">@</span>
-                <span>{contacts.email}</span>
-              </a>
-            </div>
-            <div className="link">
-              <a className="link-anchor" href={`tel:${contacts.phone}`}>
-                <i className="material-icons">phone</i>
-                <span>{contacts.phone}</span>
-              </a>
-            </div>
+    <StyledIntroduction>
+      <div className="summary">
+        <div className="summary-text" dangerouslySetInnerHTML={{__html: strings.introduction}}/>
+        <div className="links">
+          <div className="link">
+            <a className="link-anchor" href={contacts.github} target="_blank">
+              <FontAwesomeIcon icon={faGithub}/>
+              <span>{strings.contacts.github}</span>
+            </a>
           </div>
-          <LinkButton
-            target="_blank"
-            href={language === "fi" ? cv_fi_pdf : cv_en_pdf}
-          >
-            <i className="material-icons">print</i>
-            {strings.summary.printBtn}
-          </LinkButton>
+          <div className="link">
+            <a className="link-anchor" href={contacts.linkedin} target="_blank">
+              <FontAwesomeIcon icon={faLinkedin}/>
+              <span>{strings.contacts.linkedin}</span>
+            </a>
+          </div>
+          <div className="link">
+            <a className="link-anchor" href={`mailto:${contacts.email}`}>
+              <span className="icon">@</span>
+              <span>{contacts.email}</span>
+            </a>
+          </div>
+          <div className="link">
+            <a className="link-anchor" href={`tel:${contacts.phone}`}>
+              <i className="material-icons">phone</i>
+              <span>{contacts.phone}</span>
+            </a>
+          </div>
         </div>
-        <div className="image-wrapper">
-          <div className="own-image"/>
-        </div>
-      </StyledIntroduction>
+        <LinkButton
+          target="_blank"
+          href={language === "fi" ? cv_fi_pdf : cv_en_pdf}
+        >
+          <i className="material-icons">print</i>
+          {strings.summary.printBtn}
+        </LinkButton>
+      </div>
+      <div className="image-wrapper">
+        <div className="own-image"/>
+      </div>
+    </StyledIntroduction>
   )
 };
 
@@ -138,5 +147,5 @@ function mapStateToProps({language}) {
   }
 }
 
-export default  connect(mapStateToProps, null)(translate(Introduction));
+export default connect(mapStateToProps, null)(translate(Introduction));
 

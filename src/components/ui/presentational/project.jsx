@@ -20,6 +20,11 @@ const StyledProject = styled.div`
   display: flex;
   align-items: center;
   
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+    padding-top: ${({theme}) => theme.spaces.base(2)};
+    flex-direction: column;
+  }
+  
   .project {
     margin-right: ${({theme}) => theme.spaces.base(1)};
     
@@ -38,6 +43,11 @@ const StyledProject = styled.div`
         left: -50px;
         top: 0;
         z-index: -1;
+        @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+          font-size: 70px;
+          top: -45px;
+          left: 0;
+        }
       }
   
       .links {
@@ -92,6 +102,11 @@ const StyledProject = styled.div`
     overflow: hidden;
     flex-shrink: 0;
     position: relative;
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+      margin-top: ${({theme}) => theme.spaces.base(1)};
+      width: 100%;
+    }
       
     .project-images {
       display: flex;

@@ -1,19 +1,19 @@
 import React from 'react';
-import translate from '../../../components/main/translate';
 import _ from 'lodash';
-
 import styled from 'styled-components/macro';
+
+import translate from '../../../components/main/translate';
 
 const StyledSection = styled.div`
   position: relative;
-  margin: 35rem 2rem;
+  margin: 20rem 2rem 35rem 2rem;
   margin-left: 150px;
 
   max-width: 2000px;
 
   .title{
     margin: 0;
-    color: ${({theme}) => theme.colors.lightGrey};
+    color: ${({theme}) => theme.new.colors.lightGrey};
     font-size: 80px;
 
     text-transform: uppercase;
@@ -36,14 +36,15 @@ const StyledSection = styled.div`
 
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     margin: 10rem 0;
-    margin-left: ${({theme}) => theme.spaces.baseSize}*3;
-    margin-right: ${({theme}) => theme.spaces.baseSize}/2;
+    margin-left: ${({theme}) => theme.spaces.base(2.5)};
+    margin-right: ${({theme}) => theme.spaces.base(0.5)};
     .title {
-      font-size: 40px;
-      padding-bottom: 3*${({theme}) => theme.spaces.baseSize}/4;
+      font-size: 45px;
+      padding-bottom: ${({theme}) => theme.spaces.base(0.2)};
     }
     .section-body {
       margin: 0;
+      margin-left: ${({theme}) => theme.spaces.base(0.5)};
     }
   }
 `;

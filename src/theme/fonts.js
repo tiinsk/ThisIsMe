@@ -1,5 +1,54 @@
 import styled, {css} from 'styled-components';
 
+export const PageTitle = css`
+  color: ${({theme}) => theme.new.colors.white};
+  font-family: ${({theme}) => theme.fonts.fontLato};
+  font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
+  font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
+  margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+    font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
+  }
+`;
+
+export const PageName = css`
+  color: ${({theme}) => theme.new.colors.white};
+  font-family: ${({theme}) => theme.fonts.fontPTSerif};
+  font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
+  font-size: 9.2rem;
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+    font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
+  }
+`;
+
+export  const PageSubtitle = css`
+  color: ${({theme}) => theme.new.colors.green};
+  font-family: ${({theme}) => theme.fonts.fontOpenSans};
+  font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
+  font-size: ${({theme}) => theme.fontSizes.fontSizeSmall};
+  text-transform: uppercase;
+  letter-spacing: 1.9px;
+  text-align: center;
+  margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
+    text-align: left;
+    margin-left: ${({theme}) => theme.spaces.base(0.25)};
+    margin-right: ${({theme}) => theme.spaces.base(0.25)};
+  }
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+    font-size: ${({theme}) => theme.fontSizes.fontSizeXSmall};
+  }
+`;
+
 export const H1 = css`
   color: ${({theme}) => theme.new.colors.berry};
   font-family: ${({theme}) => theme.fonts.fontLato};
@@ -41,6 +90,7 @@ export const Paragraph = styled.p`
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
   line-height: 2.5rem;
+  margin: ${({theme}) => theme.spaces.base(0.5)} 0 ${({theme}) => theme.spaces.base(1)} 0;
 `;
 
 export const ButtonText = css`
@@ -66,4 +116,8 @@ export const Anchor = css`
   font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
   text-transform: uppercase;
   text-decoration: none;
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+    font-size: ${({theme}) => theme.fontSizes.fontSizeXXSmall};
+  }
 `;

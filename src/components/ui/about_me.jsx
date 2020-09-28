@@ -10,7 +10,7 @@ const StyledAboutMe = styled.div`
 
 `;
 
-const AboutMe = ({strings, scrollRef}) => {
+const AboutMe = ({scrollRef}) => {
   return (
     <StyledAboutMe ref={scrollRef}>
       <Section
