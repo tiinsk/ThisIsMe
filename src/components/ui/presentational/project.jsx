@@ -206,7 +206,14 @@ const Project = ({strings, project, index}) => {
           </Paragraph>
           <div className="project-skills">
             {
-              project.skills.map( (skill,i) => {
+              project.topSkills.map( (skill,i) => {
+                return (
+                  <Skill key={i} skill={skill} isPeakSkill={true}/>
+                )
+              })
+            }
+            {
+              project.otherSkills.map( (skill,i) => {
                 return (
                   <Skill key={i} skill={skill}/>
                 )

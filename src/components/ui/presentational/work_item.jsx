@@ -51,7 +51,13 @@ const WorkItem = ({strings, data, isOnLeft}) => {
       <div>
         <Paragraph>{strings.workExperience[data.key].description}</Paragraph>
         <div className={`wrapper ${isOnLeft ? 'left' : 'right'}`}>
-          { data.skillList ? data.skillList.map( (skill,i) => {
+          { data.topSkills ? data.topSkills.map( (skill,i) => {
+            return(
+              <Skill key={i} skill={skill} isPeakSkill={true}/>
+            )
+          }) : null
+          }
+          { data.otherSkills ? data.otherSkills.map( (skill,i) => {
               return(
                 <Skill key={i} skill={skill}/>
               )

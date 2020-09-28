@@ -27,7 +27,7 @@ export default {
         color: "linear-gradient(270deg, #9ADDEA 0%, #72A9D0 50%)",
       },
     ],
-    bottomSkills: [
+    otherSkills: [
       {
         key: "node",
         value: 8,
@@ -64,7 +64,7 @@ export default {
       "git",
       "jira",
     ],
-    bottomSkills: [
+    otherSkills: [
       "mqtt",
       "webpack",
       "mocha",

@@ -46,7 +46,7 @@ class RatedSkills extends React.Component {
     super(props);
     this.state = {
       topSkillsEntered: false,
-      bottomSkillsEntered: false,
+      otherSkillsEntered: false,
     }
   }
 
@@ -91,26 +91,26 @@ class RatedSkills extends React.Component {
             </div>
           </div>
         </Waypoint>
-        <H3>{this.props.strings.skills.ratedSkills.bottomSkills.title}</H3>
-        <Paragraph>{this.props.strings.skills.ratedSkills.bottomSkills.subtitle}</Paragraph>
+        <H3>{this.props.strings.skills.ratedSkills.otherSkills.title}</H3>
+        <Paragraph>{this.props.strings.skills.ratedSkills.otherSkills.subtitle}</Paragraph>
         <Waypoint
           onEnter={() => {
-            this.setState({bottomSkillsEntered: true})
+            this.setState({otherSkillsEntered: true})
           }}
           onLeave={() => {
-            this.setState({bottomSkillsEntered: false});
+            this.setState({otherSkillsEntered: false});
           }}
         >
           <div className="rated-skills">
             {
-              skills.ratedSkills.bottomSkills.map((skill, i) => {
+              skills.ratedSkills.otherSkills.map((skill, i) => {
                 return (
                   <SkillMeter
                     key={i}
                     rate={skill.value}
                     icon={skill.key}
                     color={skill.color}
-                    entered={this.state.bottomSkillsEntered}
+                    entered={this.state.otherSkillsEntered}
                   />
                 )
               })
