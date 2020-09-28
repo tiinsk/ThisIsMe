@@ -1,18 +1,17 @@
 import React from 'react';
 import Header from './presentational/header';
 
+import translate from '../main/translate';
 import WorkHistory from './work_history';
 import Education from './education';
 import Skills from './skills';
 import Interests from './interests';
 import Projects from './projects';
-
-import translate from '../main/translate';
-import AboutMe from "./about_me";
+import AboutMe from './about_me';
 
 const SCROLL_OFFSET = 50;
 
-class UISite extends React.Component {
+class Home extends React.Component {
 
   constructor(props) {
     super(props);
@@ -51,4 +50,4 @@ class UISite extends React.Component {
   }
 }
 
-export default translate(UISite);
+export default translate(Home);

@@ -1,15 +1,14 @@
 import React from 'react';
-import {
-  Link
-} from 'react-router-dom'
-
-import translate from '../../main/translate';
-import LanguageSelectorSmall from "../containers/language_selector_small";
 import styled from 'styled-components/macro';
 
+import translate from '../../main/translate';
+import LanguageSelectorSmall from '../containers/language_selector_small';
+
 const StyledNavbar = styled.nav`
- height: ${({theme}) => theme.navBarHeight};
-  margin-left: ${({theme}) => theme.langSelectionWidth} + ${({theme}) => theme.spaces.baseSize};
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: ${({theme}) => theme.navBarHeight};
 
   .nav-list {
     height: 100%;
@@ -18,132 +17,104 @@ const StyledNavbar = styled.nav`
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     padding: 0;
-    margin: 0;
-
-    .home-icon{
-      padding: ${({theme}) => theme.spaces.baseSize};
-      margin-right: ${({theme}) => theme.spaces.baseSize};
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      text-decoration: none;
-
-      cursor: pointer;
-
-      .material-icons {
-        color: ${({theme}) => theme.colors.black};
-        font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
-      }
-    }
+    margin: 0 ${({theme}) => theme.spaces.base(2)};
 
     .nav-item {
       font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
       text-transform: uppercase;
       font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
-      color: ${({theme}) => theme.colors.black};
+      color: ${({theme}) => theme.new.colors.white};
       text-align: center;
 
       cursor: pointer;
     }
+  }
+ 
 
-    &.nav-mobile {
+  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+    .nav-list {
       display: none;
+    }
+  }
+`;
 
-      .home-icon{
-        padding: ${({theme}) => theme.spaces.baseSize}/2;
-        margin-bottom: -${({theme}) => theme.spaces.baseSize};
-      }
+const StyledMobileNavbar = styled.div`
+  display: none;
+  justify-content: flex-end;
 
-      .mobile-nav-items {
-        display: none;
+  .home-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    padding: ${({theme}) => theme.spaces.baseSize};
+    
+    .material-icons {
+      color: ${({theme}) => theme.new.colors.white};
+      font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
+    }
+  }
 
-        &.open {
-          display: flex;
-        }
+  .mobile-nav-items {
+    display: none;
 
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
+    &.open {
+      display: flex;
+    }
 
-        background: ${({theme}) => theme.colors.almostBlack};
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    
+    margin: 0;
 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    background: ${({theme}) => theme.new.colors.white};
 
-        .nav-item {
-          display: block;
-          font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
-          margin-bottom: ${({theme}) => theme.spaces.baseSize};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .mobile-nav-item {
+      display: block;
+      font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
+      margin-bottom: ${({theme}) => theme.spaces.baseSize};
+      color: ${({theme}) => theme.new.colors.black};
+      
+      text-transform: uppercase;
+      font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
+      cursor: pointer;
+    }
+
+    .close {
+      color: ${({theme}) => theme.new.colors.black};
+      padding: ${({theme}) => theme.spaces.baseSize};
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      cursor: pointer;
+
+      font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
+    }
+    .language-selector-small {
+      .lang {
+        color: $${({theme}) => theme.colors.greyLangSelection};
+        border-color: $${({theme}) => theme.colors.greyLangSelection};
+        &.selected {
           color: white;
-        }
-
-        .close {
-          color: white;
-          padding: ${({theme}) => theme.spaces.baseSize};
-          position: absolute;
-          top: 0;
-          right: 0;
-
-          cursor: pointer;
-
-          font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
-        }
-        .language-selector-small {
-          .lang {
-            color: $${({theme}) => theme.colors.greyLangSelection};
-            border-color: $${({theme}) => theme.colors.greyLangSelection};
-            &.selected {
-              color: white;
-            }
-          }
         }
       }
     }
   }
+  
   @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
-    height: ${({theme}) => theme.navBarHeight}-mobile;
-    .nav-list {
-      display: none;
-
-      &.nav-mobile {
-        display: flex;
-      }
-
-      justify-content: flex-end;
-
-      .nav-item {
-        display: none;
-        a {
-          display: block;
-          color: white;
-          text-decoration: none;
-          padding-bottom: ${({theme}) => theme.spaces.baseSize};
-
-          position: relative;
-          
-          &:after {
-            content: '';
-            height: 8px;
-            width: 8px;
-            background: $${({theme}) => theme.colors.greyLangSelection};
-            margin: 0;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
-          }
-        }
-      }
-    }
+    display: flex;
   }
 `;
 
@@ -176,85 +147,78 @@ class Navbar extends React.Component {
 
   render () {
     return (
-      <StyledNavbar>
-        <ul className="nav-list">
-          <li
-            className="nav-item"
-            onClick={() => this.props.onScrollToRef('workHistory')}
-          >
-            {this.props.strings.titles.workHistory}
-          </li>
-          <li
-            className="nav-item"
-            onClick={() => this.props.onScrollToRef('education')}
-          >
-            {this.props.strings.titles.education}
-          </li>
-          <li
-            className="nav-item"
-            onClick={() => this.props.onScrollToRef('skills')}
-          >
-            {this.props.strings.titles.skills}
-          </li>
-          <li
-            className="nav-item"
-            onClick={() => this.props.onScrollToRef('projects')}
-          >
-            {this.props.strings.titles.projects}
-          </li>
-          <li
-            className="nav-item"
-            onClick={() => this.props.onScrollToRef('interests')}
-          >
-            {this.props.strings.titles.interests}
-          </li>
-          <li>
-            <Link className="home-icon" to="/">
-              <i className="material-icons">menu</i>
-            </Link>
-          </li>
-        </ul>
-        <div className="nav-list nav-mobile">
-          <div className={`mobile-nav-items ${this.state.openMenu ? 'open': ''}`}>
+      <>
+        <StyledNavbar>
+          <ul className="nav-list">
             <li
               className="nav-item"
-            >
-              <Link onClick={() => this.toggleMenu()} to="/">
-                {this.props.strings.titles.home}
-              </Link>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => this.onMobileNavItemClick('description')}
-            >
-              {this.props.strings.titles.aboutMe}
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => this.onMobileNavItemClick('workHistory')}
+              onClick={() => this.props.onScrollToRef('workHistory')}
             >
               {this.props.strings.titles.workHistory}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.onMobileNavItemClick('education')}
+              onClick={() => this.props.onScrollToRef('education')}
             >
               {this.props.strings.titles.education}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.onMobileNavItemClick('skills')}
+              onClick={() => this.props.onScrollToRef('skills')}
             >
               {this.props.strings.titles.skills}
             </li>
             <li
               className="nav-item"
-              onClick={() => this.onMobileNavItemClick('projects')}
+              onClick={() => this.props.onScrollToRef('projects')}
             >
               {this.props.strings.titles.projects}
             </li>
             <li
               className="nav-item"
+              onClick={() => this.props.onScrollToRef('interests')}
+            >
+              {this.props.strings.titles.interests}
+            </li>
+          </ul>
+        </StyledNavbar>
+        <StyledMobileNavbar>
+          <button className="home-icon" onClick={() => this.toggleMenu()}>
+            <i className="material-icons">menu</i>
+          </button>
+          <ul className={`mobile-nav-items ${this.state.openMenu ? 'open': ''}`}>
+            <li
+              className="mobile-nav-item"
+              onClick={() => this.onMobileNavItemClick('description')}
+            >
+              {this.props.strings.titles.aboutMe}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onClick={() => this.onMobileNavItemClick('workHistory')}
+            >
+              {this.props.strings.titles.workHistory}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onClick={() => this.onMobileNavItemClick('education')}
+            >
+              {this.props.strings.titles.education}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onClick={() => this.onMobileNavItemClick('skills')}
+            >
+              {this.props.strings.titles.skills}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onClick={() => this.onMobileNavItemClick('projects')}
+            >
+              {this.props.strings.titles.projects}
+            </li>
+            <li
+              className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('interests')}
             >
               {this.props.strings.titles.interests}
@@ -264,12 +228,9 @@ class Navbar extends React.Component {
               className="close material-icons"
               onClick={() => this.toggleMenu()}
             >clear</i>
-          </div>
-          <li className="home-icon" onClick={() => this.toggleMenu()}>
-            <i className="material-icons">menu</i>
-          </li>
-        </div>
-      </StyledNavbar>
+          </ul>
+        </StyledMobileNavbar>
+      </>
     )
   }
 };

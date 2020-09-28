@@ -41,4 +41,5 @@ export const newColors = {
   grey: '#7C7C7C',
   mediumGrey: '#818181',
   insetShadow: 'inset 1px 1px 3px 0 #27332B40',
+  transparentBluishGrey: '#21272E66',
 }
