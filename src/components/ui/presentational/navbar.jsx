@@ -34,7 +34,7 @@ const StyledNavbar = styled.nav`
   }
  
 
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     .nav-list {
       display: none;
     }
@@ -113,7 +113,7 @@ const StyledMobileNavbar = styled.div`
     }
   }
   
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     display: flex;
   }
 `;

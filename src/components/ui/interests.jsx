@@ -22,7 +22,7 @@ const StyledInterests = styled.div`
       margin-bottom: ${({theme}) => theme.spaces.baseSize}/2;
     }
   }
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointSmallWindow}){
+  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}){
     flex-wrap: wrap;
     .travel-map {
       flex: 0 0 100%;

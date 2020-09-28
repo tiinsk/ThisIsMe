@@ -34,7 +34,7 @@ const StyledSection = styled.div`
     max-width: 1200px;
   }
 
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     margin: 10rem 0;
     margin-left: ${({theme}) => theme.spaces.baseSize}*3;
     margin-right: ${({theme}) => theme.spaces.baseSize}/2;

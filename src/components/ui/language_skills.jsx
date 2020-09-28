@@ -40,7 +40,7 @@ const StyledLangSkills = styled.div`
     }
   }
 
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}){
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     .lang-skills {
       flex-wrap: wrap;
       .language {

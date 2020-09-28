@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
   
-    @media (max-width: ${({theme}) => theme.breakpoints.breakpointMobile}) {
+    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
       &.mobile-menu-open {
         max-height: 100vh;
         overflow: hidden;

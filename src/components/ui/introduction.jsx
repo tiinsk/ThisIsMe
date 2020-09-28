@@ -80,7 +80,7 @@ const StyledIntroduction = styled.div`
     }
   }
   
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointSmallWindow}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}) {
     margin: 0;
   }
 `;

@@ -6,7 +6,7 @@ const StyledConsoleMap = styled.div`
   font-size: 7px;
   font-family: Consolas, monospace;
 
-  @media (max-width: ${({theme}) => theme.breakpoints.breakpointSmallWindow}){
+  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}){
     font-size: 6px;
   }
 
