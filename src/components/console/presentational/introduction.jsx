@@ -1,17 +1,19 @@
 import React from 'react';
-
 import styled from 'styled-components/macro';
 
 const StyledConsoleIntroduction = styled.div`
-color: ${({theme}) => theme.colors.greyText};
-  .highlight{
-    color: white;
-  }
+  color: ${({theme}) => theme.console.colors.grey};
 `;
 
 const Introduction = ({strings}) => {
   return(
-    <StyledConsoleIntroduction dangerouslySetInnerHTML={{__html: strings.introduction}}>
+    <StyledConsoleIntroduction>
+      <p>
+        {strings.summary.title}
+      </p>
+      <p>
+        {strings.introduction}
+      </p>
     </StyledConsoleIntroduction>
   )
 };

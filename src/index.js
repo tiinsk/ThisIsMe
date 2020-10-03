@@ -11,6 +11,7 @@ WebFont.load({
       'Quicksand:300,400,500,700',
       'Space+Mono:400,400i,700,700i',
       'PT+Serif:700',
+      'Source+Code+Pro:400',
     ],
   },
 });

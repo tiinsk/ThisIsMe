@@ -23,10 +23,17 @@ export const colors = {
   almostBlack: '#1f2a35',
 }
 
+export const consoleColors = {
+  magenta: '#ff2086',
+  green: '#10ffd4',
+  yellow: '#f4f700',
+  grey: '#7d7d7d',
+};
+
 export const newColors = {
   white: '#ffffff',
   black: '#000000',
-  almostBlack: '#31373D',
+  almostBlack: '#222223',
   greyText: '#7694a7',
 
   green: '#457A64',

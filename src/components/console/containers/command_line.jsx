@@ -6,8 +6,7 @@ import {parseCommand} from '../../../actions/console_actions';
 import styled from 'styled-components/macro';
 
 const StyledConsoleCommandLine = styled.div`
- width: 100%;
-  //font-size: 1.2rem;
+  width: 100%;
   display: flex;
   margin-top: 1rem;
   .line-icon{
@@ -32,11 +31,11 @@ const StyledConsoleCommandLine = styled.div`
     .cursor{
       height: 100%;
       width: 1rem;
-      background-color: ${({theme}) => theme.colors.green}
+      background-color: ${({theme}) => theme.console.colors.green};
       display: inline-block;
       margin: 0 0.2rem;
       animation: blinker 1.5s steps(1, start) infinite;
-      @-webkit-keyframes blinker {
+      @keyframes blinker {
         0% { opacity: 1; }
         50% { opacity: 1; }
         100% { opacity: 0; }
@@ -90,8 +89,8 @@ class CommandLine extends React.Component {
   };
   render(){
     return(
-      <div className="command-line">
-        <i className="fa fa-angle-right line-icon"/>
+      <StyledConsoleCommandLine>
+        <i className="material-icons line-icon">keyboard_arrow_right</i>
         <input
           className="command-input"
           id="command-input"
@@ -111,7 +110,7 @@ class CommandLine extends React.Component {
           <div className="cursor"/>
           <div>{this.state.input.slice(this.state.cursorPosition)}</div>
         </div>
-      </div>
+      </StyledConsoleCommandLine>
     )
   }
 }

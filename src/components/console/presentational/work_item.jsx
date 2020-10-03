@@ -12,10 +12,10 @@ const StyledConsoleWorkItem = styled.div`
   }
   .work-title{
     margin: 1rem 0;
-    color: ${({theme}) => theme.colors.magenta};
+    color: ${({theme}) => theme.console.colors.magenta};
   }
   .work-description {
-    color: ${({theme}) => theme.colors.greyText};
+    color: ${({theme}) => theme.console.colors.grey};
   }
 `;
 
@@ -35,7 +35,15 @@ const WorkItem = ({strings, data}) => {
       <div className="work-description">
         {strings.workExperience[data.key].description}
         <div className="rateless-skills">
-          { data.skillList ? data.skillList.map( (skill,i) => {
+          { data.topSkills ? data.topSkills.map( (skill,i) => {
+            return(
+              <div key={i} className="rateless-skill">
+                <span className="line">/</span><span className="asterix">*</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>
+              </div>
+            )
+          }) : null
+          }
+          { data.otherSkills ? data.otherSkills.map( (skill,i) => {
             return(
               <div key={i} className="rateless-skill">
                 <span className="line">/</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>

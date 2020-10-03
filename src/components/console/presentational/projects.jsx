@@ -1,20 +1,13 @@
 import React from 'react';
 
 import Project from './project';
-
-import skills from '../../../data/skills';
-import styled from 'styled-components/macro';
-
-const StyledConsoleProjects = styled.div`
-
-`;
-
+import projects from '../../../data/projects';
 
 const Projects = ({strings}) => {
   return(
-    <StyledConsoleProjects>
+    <div>
       {
-        skills.projects.map( (project, i) => {
+        projects.map( (project, i) => {
           return (
             <Project
               key={i}
@@ -24,7 +17,7 @@ const Projects = ({strings}) => {
           );
         })
       }
-    </StyledConsoleProjects>
+    </div>
   )
 };
 

@@ -18,7 +18,7 @@ const StyledConsoleContacts = styled.div`
       color: ${({theme}) => theme.colors.green}
     }
     a{
-      color: ${({theme}) => theme.colors.magenta};
+      color: ${({theme}) => theme.console.colors.magenta};
     }
   }
 `;

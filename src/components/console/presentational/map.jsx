@@ -1,8 +1,7 @@
 import React from 'react';
-
 import styled from 'styled-components/macro';
 
-const StyledConsoleMap = styled.div`
+export const StyledConsoleMap = styled.div`
   font-size: 7px;
   font-family: Consolas, monospace;
 
@@ -30,9 +29,9 @@ const StyledConsoleMap = styled.div`
     font-size: 4px;
   }
 
-  color: ${({theme}) => theme.colors.greyText};
+  color: ${({theme}) => theme.console.colors.grey};
   .highlight{
-    color: ${({theme}) => theme.colors.magenta};
+    color: ${({theme}) => theme.console.colors.magenta};
     font-weight: bold;
     animation: blinker 1.5s steps(1, start) infinite;
   }

@@ -11,7 +11,7 @@ const StyledConsoleHelp = styled.div`
     width: 100%;
   }
   .command-col{
-    width: 19rem;
+    width: 24rem;
   }
 `;
 
