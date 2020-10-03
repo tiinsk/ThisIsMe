@@ -1,4 +1,4 @@
-import {colors, newColors} from './colors';
+import {colors, consoleColors, newColors} from './colors';
 import {variables} from './variables';
 import {createGlobalStyle} from 'styled-components';
 import {Anchor} from './fonts';
@@ -8,6 +8,9 @@ export const theme = {
   ...variables,
   new: {
     colors: newColors,
+  },
+  console: {
+    colors: consoleColors,
   }
 }
 

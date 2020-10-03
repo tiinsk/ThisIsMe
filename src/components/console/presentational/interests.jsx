@@ -7,7 +7,7 @@ const SM_WINDOW_LIMIT = 800;
 
 const StyledConsoleInterests = styled.div`
 .interests-title{
-    color: ${({theme}) => theme.colors.magenta};
+    color: ${({theme}) => theme.console.colors.magenta};
   }
 `;
 

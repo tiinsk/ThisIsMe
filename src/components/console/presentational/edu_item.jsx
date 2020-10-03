@@ -8,14 +8,14 @@ const StyledConsoleEduItem = styled.div`
     margin: 0.5rem 0;
   }
   .edu-title{
-    color: ${({theme}) => theme.colors.magenta};
+    color: ${({theme}) => theme.console.colors.magenta};
   }
   .school{
     color: white;
   }
   .edu-description{
     margin: 1rem 0;
-    color: ${({theme}) => theme.colors.greyText};
+    color: ${({theme}) => theme.console.colors.grey};
   }
 `;
 

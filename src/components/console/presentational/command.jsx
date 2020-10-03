@@ -1,7 +1,7 @@
 import React from 'react';
 import AsciiFont from './ascii_font';
 
-import {addAllTranslations, translateToLanguage} from '../../main/translate';
+import {addAllTranslations} from '../../main/translate';
 import {commands, helpCommand, allCommand} from '../../../actions/console_actions';
 
 import Introduction from './introduction';

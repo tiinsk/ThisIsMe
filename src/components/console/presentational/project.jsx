@@ -17,11 +17,11 @@ const StyledConsoleProject = styled.div`
   }
   .project-description{
     margin-bottom: 1rem;
-    color: ${({theme}) => theme.colors.greyText};
+    color: ${({theme}) => theme.console.colors.grey};
   }
   .links{
     a{
-      color: ${({theme}) => theme.colors.magenta};
+      color: ${({theme}) => theme.console.colors.magenta};
     }
   }
 `;
@@ -39,7 +39,18 @@ const Project = ({strings, project}) => {
         <div className="skill-title">{strings.titles.skills}:</div>
         <div className="rateless-skills">
           {
-            project.skills.map( (skill,i) => {
+            project.topSkills.map( (skill,i) => {
+              return (
+                <div key={i} className="rateless-skill">
+                  <span className="line">/</span><span className="asterix">*</span>
+                  {strings.skills.skillNames[skill] || skill}
+                  <span className="line">/</span>
+                </div>
+              )
+            })
+          }
+          {
+            project.otherSkills.map( (skill,i) => {
               return (
                 <div key={i} className="rateless-skill">
                   <span className="line">/</span>

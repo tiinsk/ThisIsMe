@@ -6,10 +6,10 @@ const StyledConsoleLangSkill = styled.div`
     color: white;
   }
   .level {
-    color: ${({theme}) => theme.colors.magenta};
+    color: ${({theme}) => theme.console.colors.magenta};
   }
   .text {
-    color: ${({theme}) => theme.colors.greyText};
+    color: ${({theme}) => theme.console.colors.grey};
   }
 `;
 

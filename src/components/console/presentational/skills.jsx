@@ -1,9 +1,9 @@
 import React from 'react';
 import SkillMeter from './skill_meter';
+import styled from 'styled-components/macro';
 
 import skills from '../../../data/skills';
 import LangSkill from "./lang_skill";
-import styled from 'styled-components/macro';
 
 const StyledConsoleSkills = styled.div`
 .category-name{
@@ -19,8 +19,23 @@ const Skills = ({strings}) => {
     <StyledConsoleSkills>
       <table>
         <tbody>
+          <SkillMeter
+            rate={skills.ratedSkills.highestSkill.value}
+            name={strings.skills.skillNames[skills.ratedSkills.highestSkill.key]}
+          />
           {
-            skills.ratedSkills.map((skill, i) => {
+            skills.ratedSkills.topSkills.map((skill, i) => {
+              return (
+                <SkillMeter
+                  key={i}
+                  rate={skill.value}
+                  name={strings.skills.skillNames[skill.key]}
+                />
+              )
+            })
+          }
+          {
+            skills.ratedSkills.otherSkills.map((skill, i) => {
               return (
                 <SkillMeter
                   key={i}
@@ -34,7 +49,16 @@ const Skills = ({strings}) => {
       </table>
       <div className="rateless-skills">
         {
-          skills.otherSkills.map( (skill, i) => {
+          skills.ratelessSkills.topSkills.map( (skill, i) => {
+            return(
+              <div key={i} className="rateless-skill">
+                <span className="line">/</span><span className="asterix">*</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>
+              </div>
+            )
+          })
+        }
+        {
+          skills.ratelessSkills.otherSkills.map( (skill, i) => {
             return(
               <div key={i} className="rateless-skill">
                 <span className="line">/</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>

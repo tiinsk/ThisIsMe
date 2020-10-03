@@ -10,14 +10,14 @@ import {helpCommand} from '../../actions/console_actions';
 import styled from 'styled-components/macro';
 
 const StyledConsoleSite = styled.div`
-background: ${({theme}) => theme.colors.almostBlack};
+  background: ${({theme}) => theme.new.colors.almostBlack};
   min-height: 100vh;
 
   .console-site {
     max-width: 1200px;
 
-    color: ${({theme}) => theme.colors.green}
-    font-family: ${({theme}) => theme.fonts.fontSpaceMono};
+    color: ${({theme}) => theme.console.colors.green};
+    font-family: ${({theme}) => theme.fonts.fontSourceCode};
     padding: 2rem 1rem;
     padding-bottom: 2rem;
 
@@ -38,9 +38,18 @@ background: ${({theme}) => theme.colors.almostBlack};
     }
 
     ::-moz-selection {
-      background: ${({theme}) => theme.colors.green}
+      background: ${({theme}) => theme.colors.green};
       color: white;
     }
+    
+    a {
+      text-transform: none;
+      font-family: ${({theme}) => theme.fonts.fontSourceCode};
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
     .rateless-skills {
       display: flex;
       margin: 1rem 0;
@@ -49,9 +58,11 @@ background: ${({theme}) => theme.colors.almostBlack};
         color: white;
         margin-right: 1rem;
         .line {
-          color: ${({theme}) => theme.colors.magenta};
+          color: ${({theme}) => theme.console.colors.magenta};
         }
-      }
+        .asterix {
+          color: ${({theme}) => theme.console.colors.yellow};
+        }
     }
   }
 `;

@@ -13,7 +13,7 @@ const StyledConsoleSkillMeter = styled.tr`
     color: ${({theme}) => theme.colors.yellow}
   }
   .unrated{
-    color: ${({theme}) => theme.colors.greyText};
+    color: ${({theme}) => theme.console.colors.grey};
   }
 `;
 

@@ -7,11 +7,10 @@ export const variables = {
   },
   fonts: {
     fontLato: 'Lato, sans-serif',
-    fontHindi: 'Hindi, sans-serif',
     fontQuicksand: 'Quicksand, sans-serif',
     fontOpenSans: 'Open sans, sans-serif',
-    fontSpace: 'Space Mono, monospace',
     fontPTSerif: 'PT Serif, serif',
+    fontSourceCode: 'Source Code Pro, monospace',
   },
 
   fontWeights: {
