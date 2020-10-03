@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 
 import translate from '../../../components/main/translate';
 
-const StyledSection = styled.div`
+export const StyledSection = styled.div`
   position: relative;
   margin: 20rem 2rem 35rem 2rem;
   margin-left: 150px;
@@ -31,7 +31,7 @@ const StyledSection = styled.div`
   .section-body{
     position: relative;
     margin-left: 10%;
-    max-width: 1200px;
+    max-width: 1400px;
   }
 
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
@@ -49,14 +49,14 @@ const StyledSection = styled.div`
   }
 `;
 
-const Section = ({strings, children, titleId, maxWidth, ...props}) => {
+const Section = ({strings, children, titleId, maxWidth, bodyStyle = {}, ...props}) => {
   return(
     <StyledSection {...props}>
+      <div className="section-body" style={{maxWidth, ...bodyStyle}}>
+        {children}
+      </div>
       <div className="title">
         {_.get(strings, titleId)}
-      </div>
-      <div className="section-body" style={{maxWidth}}>
-        {children}
       </div>
     </StyledSection>
   )
