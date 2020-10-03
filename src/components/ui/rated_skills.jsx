@@ -11,16 +11,13 @@ const StyledRatedSkills = styled.div`
   .rated-skills {
     display: grid;
     padding-right: ${({theme}) => theme.spaces.baseSize};
-    grid-template-columns: repeat(auto-fit, 50%);
-    
-    margin-bottom: ${({theme}) => theme.spaces.base(2)};
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
   }
   
   .first-skill-wrapper {
     .rated-skills {
       margin-bottom: 0;
-      grid-template-columns: repeat(auto-fit, 50%);
-      justify-content: center;
     }
   }
 
@@ -32,10 +29,7 @@ const StyledRatedSkills = styled.div`
     }
     .rated-skills {
       grid-template-columns: repeat(auto-fit, 100%);
-      .skill-column {
-        flex: 1 0 100%;
-        justify-content: center;
-      }
+      padding: 0;
     }
   }
 `;
@@ -64,7 +58,7 @@ class RatedSkills extends React.Component {
           }}
         >
           <div>
-            <div className="first-skill-wrapper">
+           <div className="first-skill-wrapper">
               <div className="rated-skills">
                 <SkillMeter
                   rate={skills.ratedSkills.highestSkill.value}

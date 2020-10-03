@@ -13,6 +13,13 @@ const StyledSkillMeter = styled.div`
 
   display: flex;
   align-items: stretch;
+  
+  max-width: 100%;
+  min-width: 300px;
+  
+  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+    margin: 0;
+  }
 
   .icon{
     flex-shrink: 0;
@@ -22,10 +29,6 @@ const StyledSkillMeter = styled.div`
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
-    @media (max-width: ${({theme}) => theme.breakpoints.xsSize}){
-
-    }
   }
   .skill-bar-wrapper {
     flex-grow: 1;
