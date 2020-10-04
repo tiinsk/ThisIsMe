@@ -1,31 +1,44 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
+import styled from 'styled-components/macro';
 
 import translate from '../../main/translate';
 import {languageOptions} from '../../../i18n/languages';
 import {chooseLanguage} from '../../../actions/language_actions';
-import styled from 'styled-components/macro';
+import {ConsoleIcon} from './console-icon';
 
 const StyledLanguageSelectorSmall = styled.div`
- position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   color: ${({theme}) => theme.colors.greyUnselectedText};
   z-index: 2;
+  
+  display: flex;
+  align-items: center;
 
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
 
   .lang{
     display: inline-block;
-    margin: ${({theme}) => theme.spaces.baseSize};
+    margin: ${({theme}) => theme.spaces.baseSize} 0;
     cursor: pointer;
+    padding: 0 ${({theme}) => theme.spaces.baseSize};
+    
+    &:not(:first-of-type) {
+      //margin-left: 0;
+    }
 
-    &:first-of-type {
-      padding-right: ${({theme}) => theme.spaces.baseSize};
-      margin-right: 0;
-      border-right: 1px solid ${({theme}) => theme.colors.greyUnselectedText};
+    &:not(:first-of-type):before {
+      content: '';
+      height: 15px;
+      width: 1px;
+      background: ${({theme}) => theme.colors.black};
+      display: inline-block;
+      margin-right: ${({theme}) => theme.spaces.baseSize};
     }
 
     &.selected{
@@ -42,6 +55,11 @@ const LanguageSelectorSmall = ({chooseLanguage, language}) => {
       </div>
       <div className={"lang" + (language === "en" ? " selected": "")} onClick={() => chooseLanguage("en")}>
         {languageOptions.en}
+      </div>
+      <div className="lang" style={{display: 'flex', alignItems: 'center'}}>
+        <Link to="/console">
+          <ConsoleIcon/>
+        </Link>
       </div>
     </StyledLanguageSelectorSmall>
   )
