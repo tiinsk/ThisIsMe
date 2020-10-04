@@ -1,5 +1,5 @@
 import React from 'react';
-import DashedLine from './dashed_line';
+import DashedLine from './dashed-line';
 import styled from 'styled-components/macro';
 
 const StyledConsoleWorkItem = styled.div`

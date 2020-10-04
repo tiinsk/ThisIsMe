@@ -1,15 +1,15 @@
+import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components/macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import background from '../../../assets/background.png';
 import contacts from '../../../data/contacts';
+import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 import translate from '../../main/translate';
-import LanguageSelector from '../containers/language_selector';
+import LanguageSelector from '../containers/language-selector';
 import HoverBubble, {StyledHoverBubble} from './hover-bubble';
 import Navbar from './navbar';
-import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 
 const StyledHeader = styled.div`
   width: calc(100vw - ${({theme}) => theme.rightMenuWidth});
@@ -113,19 +113,19 @@ const Header = ({strings, onScrollToRef}) => {
       <div className="right-menu">
         <div className="links">
           <div className="link">
-            <a className="link-anchor" href={contacts.github} target="_blank">
+            <a className="link-anchor" href={contacts.github} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub}/>
             </a>
             <HoverBubble text={contacts.github} href={contacts.github} target="_blank"/>
           </div>
           <div className="link">
-            <a className="link-anchor"  href={contacts.linkedin} target="_blank">
+            <a className="link-anchor" href={contacts.linkedin} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin}/>
             </a>
-            <HoverBubble text={contacts.linkedin} href={contacts.linkedin} target="_blank"/>
+            <HoverBubble text={contacts.linkedin} href={contacts.linkedin} target="_blank" rel="noopener noreferrer"/>
           </div>
           <div className="link">
-            <a className="link-anchor" href={`mailto:${contacts.email}`} >
+            <a className="link-anchor" href={`mailto:${contacts.email}`}>
               <span>@</span>
             </a>
             <HoverBubble text={contacts.email} href={`mailto:${contacts.email}`}/>

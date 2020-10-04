@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import styled from 'styled-components/macro';
 
 import {parseCommand} from '../../../actions/console_actions';
-import styled from 'styled-components/macro';
 
 const StyledConsoleCommandLine = styled.div`
   width: 100%;
   display: flex;
   margin-top: 1rem;
+  
   .line-icon{
     padding: 0 ${({theme}) => theme.spaces.baseSize}/2;
     font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
@@ -25,7 +26,6 @@ const StyledConsoleCommandLine = styled.div`
     position: relative;
     white-space: pre;
     z-index: 1;
-
     height: 22px;
 
     .cursor{
@@ -35,6 +35,7 @@ const StyledConsoleCommandLine = styled.div`
       display: inline-block;
       margin: 0 0.2rem;
       animation: blinker 1.5s steps(1, start) infinite;
+      
       @keyframes blinker {
         0% { opacity: 1; }
         50% { opacity: 1; }
@@ -58,7 +59,7 @@ class CommandLine extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      input: "",
+      input: '',
       cursorPosition: 0,
     }
   }
@@ -67,7 +68,7 @@ class CommandLine extends React.Component {
     if(keyCode === 13){
       this.props.parseCommand(value);
       this.setState({
-        input: ""
+        input: ''
       });
     }
     //back <-

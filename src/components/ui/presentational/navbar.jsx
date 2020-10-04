@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import translate from '../../main/translate';
-import LanguageSelectorSmall from '../containers/language_selector_small';
+import LanguageSelectorSmall from '../containers/language-selector-small';
 
 const StyledNavbar = styled.nav`
   position: absolute;
@@ -127,8 +127,9 @@ class Navbar extends React.Component {
       openMenu: false
     }
   }
-  toggleMenu () {
-    if(this.state.openMenu) {
+
+  toggleMenu() {
+    if (this.state.openMenu) {
       document.body.classList.remove('mobile-menu-open');
     } else {
       document.body.classList.add('mobile-menu-open');
@@ -145,7 +146,7 @@ class Navbar extends React.Component {
   }
 
 
-  render () {
+  render() {
     return (
       <>
         <StyledNavbar>
@@ -186,7 +187,7 @@ class Navbar extends React.Component {
           <button className="home-icon" onClick={() => this.toggleMenu()}>
             <i className="material-icons">menu</i>
           </button>
-          <ul className={`mobile-nav-items ${this.state.openMenu ? 'open': ''}`}>
+          <ul className={`mobile-nav-items ${this.state.openMenu ? 'open' : ''}`}>
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('description')}

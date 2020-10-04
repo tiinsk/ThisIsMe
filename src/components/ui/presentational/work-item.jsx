@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import {H3, H4, Paragraph} from '../../../theme/fonts';
 import translate from '../../main/translate';
-import {Paragraph, H3, H4} from '../../../theme/fonts';
 import Skill from './skill';
 
 const StyledWorkItem = styled.div`
@@ -40,7 +40,7 @@ const StyledWorkItem = styled.div`
 
 
 const WorkItem = ({strings, data, isOnLeft}) => {
-  return(
+  return (
     <StyledWorkItem>
       <H3>
         {strings.workExperience[data.key].company}
@@ -51,17 +51,17 @@ const WorkItem = ({strings, data, isOnLeft}) => {
       <div>
         <Paragraph>{strings.workExperience[data.key].description}</Paragraph>
         <div className={`wrapper ${isOnLeft ? 'left' : 'right'}`}>
-          { data.topSkills ? data.topSkills.map( (skill,i) => {
-            return(
+          {data.topSkills ? data.topSkills.map((skill, i) => {
+            return (
               <Skill key={i} skill={skill} isPeakSkill={true}/>
             )
           }) : null
           }
-          { data.otherSkills ? data.otherSkills.map( (skill,i) => {
-              return(
-                <Skill key={i} skill={skill}/>
-              )
-            }) : null
+          {data.otherSkills ? data.otherSkills.map((skill, i) => {
+            return (
+              <Skill key={i} skill={skill}/>
+            )
+          }) : null
           }
         </div>
       </div>

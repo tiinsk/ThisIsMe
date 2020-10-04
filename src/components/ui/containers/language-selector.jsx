@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import styled from 'styled-components/macro';
 
-import translate from '../../main/translate';
-import {languageOptions} from '../../../i18n/languages';
 import {chooseLanguage} from '../../../actions/language_actions';
+import {languageOptions} from '../../../i18n/languages';
+import translate from '../../main/translate';
 import {ConsoleIcon} from './console-icon';
 
 
@@ -25,7 +25,7 @@ const StyledLanguageSelector = styled.div`
   align-items: center;
 
   .lang{
-    height: 150px;
+    height: 100px;
 
     cursor: pointer;
 
@@ -60,14 +60,14 @@ const StyledLanguageSelector = styled.div`
 `;
 
 const LanguageSelector = ({chooseLanguage, language}) => {
-  return(
+  return (
     <StyledLanguageSelector>
-      <div className={"lang" + (language === "fi" ? " selected": "")} onClick={() => chooseLanguage("fi")}>
+      <div className={'lang' + (language === 'fi' ? ' selected' : '')} onClick={() => chooseLanguage('fi')}>
         <div className="text-wrapper">
           {languageOptions.fi}
         </div>
       </div>
-      <div className={"lang" + (language === "en" ? " selected": "")} onClick={() => chooseLanguage("en")}>
+      <div className={'lang' + (language === 'en' ? ' selected' : '')} onClick={() => chooseLanguage('en')}>
         <div className="text-wrapper">
           {languageOptions.en}
         </div>
@@ -90,4 +90,5 @@ function mapStateToProps({language}) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({chooseLanguage}, dispatch);
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(translate(LanguageSelector));

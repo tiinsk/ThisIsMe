@@ -9,7 +9,7 @@ import cv_fi_pdf from '../../assets/cv_fi.pdf';
 import myImage from '../../assets/me_2_0_black.png';
 import translate from '../../components/main/translate';
 import contacts from '../../data/contacts';
-import {Paragraph} from "../../theme/fonts";
+import {Paragraph} from '../../theme/fonts';
 import {LinkButton} from './presentational/button';
 
 const ImageSize = '115px';
@@ -97,13 +97,13 @@ const Introduction = ({strings, language}) => {
         <Paragraph className="summary-text">{strings.introduction}</Paragraph>
         <div className="links">
           <div className="link">
-            <a className="link-anchor" href={contacts.github} target="_blank">
+            <a className="link-anchor" href={contacts.github} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub}/>
               <span>{strings.contacts.github}</span>
             </a>
           </div>
           <div className="link">
-            <a className="link-anchor" href={contacts.linkedin} target="_blank">
+            <a className="link-anchor" href={contacts.linkedin} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin}/>
               <span>{strings.contacts.linkedin}</span>
             </a>
@@ -123,7 +123,7 @@ const Introduction = ({strings, language}) => {
         </div>
         <LinkButton
           target="_blank"
-          href={language === "fi" ? cv_fi_pdf : cv_en_pdf}
+          href={language === 'fi' ? cv_fi_pdf : cv_en_pdf}
         >
           <i className="material-icons">print</i>
           {strings.summary.printBtn}

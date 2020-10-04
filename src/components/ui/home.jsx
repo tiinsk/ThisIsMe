@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './presentational/header';
 
 import translate from '../main/translate';
-import WorkHistory from './work_history';
+import AboutMe from './about-me';
 import Education from './education';
-import Skills from './skills';
 import Interests from './interests';
+import Header from './presentational/header';
 import Projects from './projects';
-import AboutMe from './about_me';
+import Skills from './skills';
+import WorkHistory from './work_history';
 
 const SCROLL_OFFSET = 50;
 
@@ -16,13 +16,13 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.scrollRefs = {
-        aboutMe: React.createRef(),
-        workHistory: React.createRef(),
-        education: React.createRef(),
-        skills: React.createRef(),
-        projects: React.createRef(),
-        interests: React.createRef(),
-      };
+      aboutMe: React.createRef(),
+      workHistory: React.createRef(),
+      education: React.createRef(),
+      skills: React.createRef(),
+      projects: React.createRef(),
+      interests: React.createRef(),
+    };
   }
 
   onScrollToRef(section) {

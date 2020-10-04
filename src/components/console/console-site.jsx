@@ -1,13 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-import translate from '../main/translate';
-import CommandLine from './containers/command_line';
-import Typewriter from './presentational/typewriter';
-import Command from './presentational/command';
-import {helpCommand} from '../../actions/console_actions';
-
+import {connect} from 'react-redux';
 import styled from 'styled-components/macro';
+
+import {helpCommand} from '../../actions/console_actions';
+import translate from '../main/translate';
+import CommandLine from './containers/command-line';
+import Command from './presentational/command';
+import Typewriter from './presentational/typewriter';
 
 const StyledConsoleSite = styled.div`
   background: ${({theme}) => theme.new.colors.almostBlack};
@@ -67,26 +66,26 @@ const StyledConsoleSite = styled.div`
   }
 `;
 
-class ConsoleSite extends React.Component{
+class ConsoleSite extends React.Component {
 
-  componentDidMount(){
-    document.getElementById("command-input").focus();
+  componentDidMount() {
+    document.getElementById('command-input').focus();
   }
 
   render() {
     return (
       <StyledConsoleSite>
         <div className="console-site"
-          onClick={() => {
-            document.getElementById("command-input").focus();
-          }}
+             onClick={() => {
+               document.getElementById('command-input').focus();
+             }}
         >
-          <div style={{margin: "0 1rem 1rem 1rem"}}>
+          <div style={{margin: '0 1rem 1rem 1rem'}}>
             <Typewriter text={`Hi there and welcome. You should try typing "${helpCommand}".`}/>
           </div>
           {
             this.props.commands.map((cmd, i) => {
-              return(
+              return (
                 <Command
                   key={i}
                   command={cmd}
@@ -108,6 +107,6 @@ function mapStateToProps({commands}) {
 }
 
 
-export default connect(mapStateToProps, null)( translate(ConsoleSite));
+export default connect(mapStateToProps, null)(translate(ConsoleSite));
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from 'styled-components/macro';
 import {Waypoint} from 'react-waypoint';
+import styled from 'styled-components/macro';
 
-import SkillMeter from './presentational/skill_meter';
 import skills from '../../data/skills';
-import translate from '../main/translate';
 import {H3, Paragraph} from '../../theme/fonts';
+import translate from '../main/translate';
+import SkillMeter from './presentational/skill-meter';
 
 const StyledRatedSkills = styled.div`
   .rated-skills {
@@ -58,7 +58,7 @@ class RatedSkills extends React.Component {
           }}
         >
           <div>
-           <div className="first-skill-wrapper">
+            <div className="first-skill-wrapper">
               <div className="rated-skills">
                 <SkillMeter
                   rate={skills.ratedSkills.highestSkill.value}

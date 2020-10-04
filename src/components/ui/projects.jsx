@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import Section from './presentational/section';
-import Project from './presentational/project';
 import projects from '../../data/projects';
 import translate from '../main/translate';
+import Project from './presentational/project';
+import Section from './presentational/section';
 
 const StyledProjects = styled.div`
  

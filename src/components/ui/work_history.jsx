@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Section from './presentational/section';
-import WorkItem from './presentational/work_item';
-
 import workExperience from '../../data/work_experience';
-import TimeLine from './presentational/time_line';
-import TimeBubble from './presentational/time_bubble';
-
 import translate from '../main/translate';
+import Section from './presentational/section';
+import TimeBubble from './presentational/time-bubble';
+import TimeLine from './presentational/time-line';
+import WorkItem from './presentational/work-item';
 
 const WorkHistory = ({scrollRef}) => {
 

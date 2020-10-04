@@ -1,165 +1,165 @@
 export default {
-  "workexp": [
+  'workexp': [
     {
-      "key": "gofore",
-      "from": {
-        "month": 9,
-        "year": 2017
+      'key': 'gofore',
+      'from': {
+        'month': 9,
+        'year': 2017
       },
-      "to": {
-        "month": 11,
-        "year": 2018
+      'to': {
+        'month': 11,
+        'year': 2018
       },
-      "topSkills": [
-        "vue",
-        "javascript",
-        "typescript",
-        "sass",
+      'topSkills': [
+        'vue',
+        'javascript',
+        'typescript',
+        'sass',
       ],
-      "otherSkills": [
-        "vuex",
-        "node",
-        "css",
-        "hapi",
-        "psql",
-        "knex",
-        "git",
-        "docker",
-        "jira",
-        "jenkins",
-        "aws",
-        "kanban"
+      'otherSkills': [
+        'vuex',
+        'node',
+        'css',
+        'hapi',
+        'psql',
+        'knex',
+        'git',
+        'docker',
+        'jira',
+        'jenkins',
+        'aws',
+        'kanban'
       ]
     },
     {
-      "key": "wapice",
-      "from": {
-        "month": 12,
-        "year": 2015
+      'key': 'wapice',
+      'from': {
+        'month': 12,
+        'year': 2015
       },
-      "to": {
-        "month": 9,
-        "year": 2017
+      'to': {
+        'month': 9,
+        'year': 2017
       },
-      "topSkills": [
-        "react",
-        "javascript",
-        "typescript",
-        "sass",
+      'topSkills': [
+        'react',
+        'javascript',
+        'typescript',
+        'sass',
       ],
-      "otherSkills": [
-        "node",
-        "css",
-        "webpack",
-        "mocha",
-        "chai",
-        "enzyme",
-        "bluemix",
-        "mqtt",
-        "c_sharp",
-        "git",
-        "tfs",
-        "customer_service"
+      'otherSkills': [
+        'node',
+        'css',
+        'webpack',
+        'mocha',
+        'chai',
+        'enzyme',
+        'bluemix',
+        'mqtt',
+        'c_sharp',
+        'git',
+        'tfs',
+        'customer_service'
       ]
     },
       {
-        "key": "nokia_android",
-        "from": {
-          "month": 5,
-          "year": 2015
+        'key': 'nokia_android',
+        'from': {
+          'month': 5,
+          'year': 2015
         },
-        "to": {
-          "month": 8,
-          "year": 2015
+        'to': {
+          'month': 8,
+          'year': 2015
         },
-        "workPercentage": 1,
-        "topSkills": [
-          "android",
-          "java",
-          "open_gl",
+        'workPercentage': 1,
+        'topSkills': [
+          'android',
+          'java',
+          'open_gl',
         ],
-        "otherSkills": [
-          "c_pp",
-          "computer_graphics",
-          "vr",
+        'otherSkills': [
+          'c_pp',
+          'computer_graphics',
+          'vr',
         ]
       },
       {
-        "key": "microsoft_msthesis",
-        "from": {
-          "month": 1,
-          "year": 2014
+        'key': 'microsoft_msthesis',
+        'from': {
+          'month': 1,
+          'year': 2014
         },
-        "to": {
-          "month": 6,
-          "year": 2014,
+        'to': {
+          'month': 6,
+          'year': 2014,
         },
-        "topSkills": [
-          "matlab",
+        'topSkills': [
+          'matlab',
         ],
-        "otherSkills": [
-          "c_pp",
-          "image_processing",
-          "imaging_algorithms"
+        'otherSkills': [
+          'c_pp',
+          'image_processing',
+          'imaging_algorithms'
         ]
       },
 
 
       {
-        "key": "nokia",
-        "from": {
-          "month": 6,
-          "year": 2013
+        'key': 'nokia',
+        'from': {
+          'month': 6,
+          'year': 2013
         },
-        "to":
+        'to':
         {
-          "month": 8,
-          "year": 2013,
+          'month': 8,
+          'year': 2013,
         },
-        "topSkills": [
-          "matlab",
+        'topSkills': [
+          'matlab',
         ],
-        "otherSkills": [
-          "c_pp",
-          "image_processing",
-          "imaging_algorithms"
+        'otherSkills': [
+          'c_pp',
+          'image_processing',
+          'imaging_algorithms'
         ]
       },
       {
-        "key": "tty_advisor",
-        "from": {
-          "month": 1,
-          "year": 2012
+        'key': 'tty_advisor',
+        'from': {
+          'month': 1,
+          'year': 2012
         },
-        "to":
+        'to':
         {
-          "month": 2,
-          "year": 2013,
+          'month': 2,
+          'year': 2013,
         },
       }
   ],
-  "positiontrust": [
+  'positiontrust': [
       {
-        "key": "guild",
-        "from": {
-          "month": 1,
-          "year": 2011
+        'key': 'guild',
+        'from': {
+          'month': 1,
+          'year': 2011
         },
-        "to": {
-          "month": 12,
-          "year": 2012
+        'to': {
+          'month': 12,
+          'year': 2012
         },
       },
 
       {
-        "key": "tutoring",
-        "from": {
-          "month": 1,
-          "year": 2010
+        'key': 'tutoring',
+        'from': {
+          'month': 1,
+          'year': 2010
         },
-        "to": {
-          "month": 12,
-          "year": 2011
+        'to': {
+          'month': 12,
+          'year': 2011
         },
       },
   ]

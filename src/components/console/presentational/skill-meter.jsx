@@ -25,12 +25,12 @@ const SkillMeter = ({rate, name}) => {
         <td className="metrics">
           <span className="rates">
           {
-            _.range(rate).map(rateNum => " * " )
+            _.range(rate).map(() => ' * ' )
           }
           </span>
           <span className="unrated">
             {
-              _.range(MAX_RATE-rate).map(rateNum => " * " )
+              _.range(MAX_RATE-rate).map(() => ' * ' )
             }
           </span>
         </td>

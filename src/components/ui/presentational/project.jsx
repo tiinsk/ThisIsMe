@@ -5,9 +5,8 @@ import SimpleReactLightbox, {SRLWrapper} from 'simple-react-lightbox';
 import styled from 'styled-components/macro';
 
 import translate from '../../../components/main/translate';
-import {theme} from "../../../theme";
+import {theme} from '../../../theme';
 import {H1, Paragraph} from '../../../theme/fonts';
-import {variables} from "../../../theme/variables";
 import Skill from './skill';
 
 const IMAGE_WIDTH = 450;
@@ -104,13 +103,13 @@ const StyledProject = styled.div`
     --imageHeight: ${IMAGE_HEIGHT}px;
     
     @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
-      --imageWidth: ${IMAGE_WIDTH*0.75}px;
-      --imageHeight: ${IMAGE_HEIGHT*0.75}px;
+      --imageWidth: ${IMAGE_WIDTH * 0.75}px;
+      --imageHeight: ${IMAGE_HEIGHT * 0.75}px;
     }
     
     @media (max-width: ${({theme}) => theme.breakpoints.xsSize}) {
-      --imageWidth: ${IMAGE_WIDTH*0.6}px;
-      --imageHeight: ${IMAGE_HEIGHT*0.6}px;
+      --imageWidth: ${IMAGE_WIDTH * 0.6}px;
+      --imageHeight: ${IMAGE_HEIGHT * 0.6}px;
     }
     
     width: calc(var(--imageWidth) * 1.5 + ${({theme}) => theme.spaces.base(2)});
@@ -220,9 +219,10 @@ const Project = ({strings, project, index}) => {
             <div className="links">
               {
                 project.link &&
-                <a href={project.github} target="_blank"><FontAwesomeIcon icon={faGithub}/><span>{strings.github}</span></a>
+                <a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
+                  icon={faGithub}/><span>{strings.github}</span></a>
               }
-              <a href={project.link} target="_blank"><i
+              <a href={project.link} target="_blank" rel="noopener noreferrer"><i
                 className="material-icons">public</i><span>{strings.website}</span></a>
             </div>
           </div>
@@ -252,7 +252,7 @@ const Project = ({strings, project, index}) => {
               {
                 images.map(image => (
                   <a href={image} data-attribute="SRL">
-                    <img className="project-image" src={image} alt="Project image"/>
+                    <img className="project-image" src={image} alt="Project"/>
                   </a>
                 ))
               }

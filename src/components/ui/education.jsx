@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Section from './presentational/section';
-import EduItem from './presentational/edu_item';
-import TimeLine from './presentational/time_line';
-import TimeBubble from './presentational/time_bubble';
+import EduItem from './presentational/edu-item';
+import TimeLine from './presentational/time-line';
+import TimeBubble from './presentational/time-bubble';
 
 import education from '../../data/education';
 

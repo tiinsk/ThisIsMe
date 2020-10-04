@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import Section from './presentational/section';
-import translate from '../main/translate';
-import travelPlanet from '../../assets/travel-planet.png';
 import travelPlane from '../../assets/travel-plane.png';
+import travelPlanet from '../../assets/travel-planet.png';
+import translate from '../main/translate';
+import Section from './presentational/section';
 
 const StyledInterests = styled.div`
   min-height: 575px;

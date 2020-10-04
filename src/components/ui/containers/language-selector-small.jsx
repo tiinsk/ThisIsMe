@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import styled from 'styled-components/macro';
 
-import translate from '../../main/translate';
-import {languageOptions} from '../../../i18n/languages';
 import {chooseLanguage} from '../../../actions/language_actions';
+import {languageOptions} from '../../../i18n/languages';
+import translate from '../../main/translate';
 import {ConsoleIcon} from './console-icon';
 
 const StyledLanguageSelectorSmall = styled.div`
@@ -48,12 +48,12 @@ const StyledLanguageSelectorSmall = styled.div`
 `;
 
 const LanguageSelectorSmall = ({chooseLanguage, language}) => {
-  return(
+  return (
     <StyledLanguageSelectorSmall>
-      <div className={"lang" + (language === "fi" ? " selected": "")} onClick={() => chooseLanguage("fi")}>
+      <div className={'lang' + (language === 'fi' ? ' selected' : '')} onClick={() => chooseLanguage('fi')}>
         {languageOptions.fi}
       </div>
-      <div className={"lang" + (language === "en" ? " selected": "")} onClick={() => chooseLanguage("en")}>
+      <div className={'lang' + (language === 'en' ? ' selected' : '')} onClick={() => chooseLanguage('en')}>
         {languageOptions.en}
       </div>
       <div className="lang" style={{display: 'flex', alignItems: 'center'}}>
@@ -74,4 +74,5 @@ function mapStateToProps({language}) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({chooseLanguage}, dispatch);
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(translate(LanguageSelectorSmall));

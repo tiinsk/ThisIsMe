@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import translate from '../main/translate';
 import {H2, H3, Paragraph} from '../../theme/fonts';
+import translate from '../main/translate';
 
 const StyledLangSkills = styled.div`
   .lang-skills {

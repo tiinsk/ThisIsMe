@@ -3,7 +3,7 @@ import React from 'react';
 import Section from './presentational/section';
 
 import translate from '../main/translate';
-import Introduction from "../ui/introduction";
+import Introduction from '../ui/introduction';
 import styled from 'styled-components/macro';
 
 const StyledAboutMe = styled.div`
