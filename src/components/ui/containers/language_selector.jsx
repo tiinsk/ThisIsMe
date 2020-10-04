@@ -1,12 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
+import styled from 'styled-components/macro';
 
 import translate from '../../main/translate';
 import {languageOptions} from '../../../i18n/languages';
 import {chooseLanguage} from '../../../actions/language_actions';
+import {ConsoleIcon} from './console-icon';
 
-import styled from 'styled-components/macro';
 
 const StyledLanguageSelector = styled.div`
  width: ${({theme}) => theme.langSelectionWidth};
@@ -69,6 +71,11 @@ const LanguageSelector = ({chooseLanguage, language}) => {
         <div className="text-wrapper">
           {languageOptions.en}
         </div>
+      </div>
+      <div className="lang" style={{cursor: 'default'}}>
+        <Link className="text-wrapper" to="/console">
+          <ConsoleIcon/>
+        </Link>
       </div>
     </StyledLanguageSelector>
   )
