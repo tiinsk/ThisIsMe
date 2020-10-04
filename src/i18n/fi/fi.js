@@ -13,7 +13,6 @@ export default {
   links: "Linkit",
   github: "Github",
   website: "Nettisivut",
-  downloadPDF: "Haluatko ladata tulostaa CV:ni?",
   introduction: 'Olen full-stack web-kehittäjä, joka on innostunut front-end kehityksestä ja UX-suunnittelusta. Koen itseni luovaksi henkilöksi, joka on aina kiinnostunut kehittämään jotain uutta. Työskentely asiaksprojekteissa sai minut ymmärtämään käytettävyyden ja palvelumuotoilun tärkeyden ohjelmistoprojekteissa arkkitehtuurin lisäksi.',
   summary: {
     title: "Olen ohjelmistosuunnittelija ja web-kehittäjä",

@@ -10,7 +10,6 @@ export default {
   chooseSide: "Choose your side",
   useUI: "UI",
   useConsole: "Console",
-  downloadPDF: "Want to print my resume?",
   links: "Links",
   github: "Github",
   website: "Website",

@@ -52,6 +52,27 @@ export default {
     android: "Android",
     kanban: "Kanban",
   },
+  ratedSkills: {
+    topSkills: {
+      title: 'Taidot joita käytän usein',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+    },
+    otherSkills: {
+      title: 'Taidot jotka tukevat päivittäistä työtäni',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    }
+  },
+  ratelessSkills: {
+    topSkills: {
+      title: 'Työkalut jotka auttavat minua menestymään',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    },
+    otherSkills: {
+      title: 'Työkalut jotka tukevat työtäni',
+      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    },
+  },
+  langSkills: 'Kielitaito',
   languages: [
     {
       language: "Fi",
