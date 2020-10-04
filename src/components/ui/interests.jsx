@@ -1,34 +1,64 @@
 import React from 'react';
-
-import Section from './presentational/section';
-import TravelMap from './presentational/travel_map';
-import translate from '../main/translate';
 import styled from 'styled-components/macro';
 
+import Section from './presentational/section';
+import translate from '../main/translate';
+import travelPlanet from '../../assets/travel-planet.png';
+import travelPlane from '../../assets/travel-plane.png';
+
 const StyledInterests = styled.div`
- display: flex;
-  width: 100%;
+  min-height: 575px;
+
+  .planet {
+    width: 50%;
+    position: relative;
+    
+    img {
+      position: absolute;
+      height: 1200px;
+      top: -70px;
+      left: -600px;
+      z-index: -1;
+      @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+        height: 800px;
+        top: 20px;
+        left: -400px;
+      }
+      @media (max-width: ${({theme}) => theme.breakpoints.xsSize}){
+        height: 700px;
+        top: 0;
+        left: -350px;
+      }
+    }
+    
+    @keyframes rotating {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    
+    .plane {
+      animation: rotating 7s linear infinite;
+      will-change: transform;
+    }
+  }
 
   .interest-list {
-    padding: 0 ${({theme}) => theme.spaces.baseSize}*3 0 ${({theme}) => theme.spaces.baseSize};
+    margin-left: 50%;
+    padding:  ${({theme}) => theme.spaces.base(3)};
+    padding-top: 0;
 
     color: ${({theme}) => theme.colors.black};
     font-family: ${({theme}) => theme.fonts.fontLato};
     font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
     font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
     text-transform: uppercase;
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
+      margin-left: 0;
+    }
 
     .interest {
-      margin-bottom: ${({theme}) => theme.spaces.baseSize}/2;
-    }
-  }
-  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}){
-    flex-wrap: wrap;
-    .travel-map {
-      flex: 0 0 100%;
-    }
-    .interest-list {
-      margin-top: ${({theme}) => theme.spaces.baseSize};
+      margin-bottom: ${({theme}) => theme.spaces.base(0.5)};
     }
   }
 `;
@@ -40,7 +70,10 @@ const Interests = ({strings, scrollRef}) => {
         titleId="titles.interests"
       >
         <StyledInterests>
-          <TravelMap/>
+          <div className="planet">
+            <img src={travelPlanet} alt="Travel planet"/>
+            <img className="plane" src={travelPlane} alt="Plane"/>
+          </div>
           <div className="interest-list">
             {
               strings.interests.interest_list.map(interest => (

@@ -14,7 +14,7 @@ export const theme = {
   }
 }
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`  
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -86,8 +86,8 @@ export const GlobalStyle = createGlobalStyle`
     color: white;
   }
   
-  #app{
-    min-height: 100vh;
+  #root {
+    overflow: hidden;
   }
   
   .white-box{
