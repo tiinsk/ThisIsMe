@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import background from '../../../assets/background.png';
+import background from '../../../assets/background.jpg';
 import contacts from '../../../data/contacts';
 import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 import translate from '../../main/translate';

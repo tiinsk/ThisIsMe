@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import travelPlane from '../../assets/travel-plane.png';
+import {TravelPlane} from './presentational/plane';
 import travelPlanet from '../../assets/travel-planet.png';
 import translate from '../main/translate';
 import Section from './presentational/section';
@@ -29,16 +29,6 @@ const StyledInterests = styled.div`
         top: 0;
         left: -350px;
       }
-    }
-    
-    @keyframes rotating {
-      from { transform: rotate(360deg); }
-      to { transform: rotate(0deg); }
-    }
-    
-    .plane {
-      animation: rotating 7s linear infinite;
-      will-change: transform;
     }
   }
 
@@ -72,7 +62,7 @@ const Interests = ({strings, scrollRef}) => {
         <StyledInterests>
           <div className="planet">
             <img src={travelPlanet} alt="Travel planet"/>
-            <img className="plane" src={travelPlane} alt="Plane"/>
+            <TravelPlane/>
           </div>
           <div className="interest-list">
             {
