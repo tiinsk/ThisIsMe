@@ -10,7 +10,6 @@ export const LinkButton = styled.a`
   padding: ${({theme}) => theme.spaces.base(0.5)} ${({theme}) => theme.spaces.baseSize};
 
   user-select: none;
-
   cursor: pointer;
   
   display: inline-flex;

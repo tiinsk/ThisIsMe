@@ -1,8 +1,8 @@
 import React from 'react';
-import getAsciiFont from "../../../utils/asciifonts";
-
-import translate from '../../main/translate';
 import styled from 'styled-components/macro';
+
+import getAsciiFont from '../../../utils/asciifonts';
+import translate from '../../main/translate';
 
 const StyledAsciiFont = styled.div`
 font-size: 1.2rem;
@@ -17,10 +17,10 @@ font-size: 1.2rem;
   }
 `;
 
-const AsciiFont = ({strings, text}) => {
+const AsciiFont = ({text}) => {
 
-  return(
-    <StyledAsciiFont style={{whiteSpace: "pre"}}>
+  return (
+    <StyledAsciiFont style={{whiteSpace: 'pre'}}>
       {getAsciiFont(text)}
     </StyledAsciiFont>
   )

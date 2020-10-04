@@ -5,7 +5,6 @@ import translate from '../../main/translate';
 
 const MAX_RATE = 10;
 
-
 const StyledSkillMeter = styled.div`
   position: relative;
   margin: 0 ${({theme}) => theme.spaces.baseSize};
@@ -97,7 +96,7 @@ const SkillMeter = ({strings, icon, color, rate, entered}) => {
         </div>
         <div className="skill-bar">
           <div
-            className={`fill ${entered ? "animated slideInLeft" : ""}`}
+            className={`fill ${entered ? 'animated slideInLeft' : ''}`}
             style={{
               width: `${rate/MAX_RATE*100}%`,
               background: color

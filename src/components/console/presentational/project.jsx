@@ -1,5 +1,5 @@
 import React from 'react';
-import DashedLine from './dashed_line';
+import DashedLine from './dashed-line';
 import styled from 'styled-components/macro';
 
 const StyledConsoleProject = styled.div`
@@ -27,7 +27,6 @@ const StyledConsoleProject = styled.div`
 `;
 
 const Project = ({strings, project}) => {
-
   return(
     <StyledConsoleProject>
       <DashedLine/>
@@ -64,12 +63,12 @@ const Project = ({strings, project}) => {
         <div className="links">
           <div className="link-title">{strings.links}:</div>
           <div>
-            <a href={project.link} target="_blank">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
               {project.link}
             </a>
           </div>
           <div>
-            <a href={project.github} target="_blank">
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
               {project.github}
             </a>
           </div>

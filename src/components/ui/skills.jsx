@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import Section, {StyledSection} from './presentational/section';
-import translate from '../main/translate';
 import {H3, Paragraph} from '../../theme/fonts';
-import LanguageSkills from './language_skills';
+import translate from '../main/translate';
+import iceberg from './../../assets/iceberg.png';
+import LanguageSkills from './language-skills';
+import Section, {StyledSection} from './presentational/section';
 import RatedSkills from './rated_skills';
 import RatelessSkills from './rateless_skills';
-import iceberg from './../../assets/iceberg.png';
 
 const StyledSkills = styled.div`
   ${H3} {

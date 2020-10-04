@@ -87,7 +87,7 @@ class TimeBubble extends React.Component {
   }
 
   render() {
-    const side = (this.props.index % 2) ? "right" : "left";
+    const side = (this.props.index % 2) ? 'right' : 'left';
 
     const fromMoment = moment({month: this.props.from.month - 1, year: this.props.from.year});
 
@@ -104,13 +104,13 @@ class TimeBubble extends React.Component {
         }}
       >
         <StyledTimeBubble>
-          <div className={"dot" + " " + side}/>
-          <div className={"content-box" + " " + side + " " + (this.state.entered ? "animated fadeInUp" : "")}>
+          <div className={`dot ${side}`}/>
+          <div className={`content-box ${side} ${(this.state.entered ? 'animated fadeInUp' : '')}`}>
             <div className="time-range">
-              <H2 className="start">{fromMoment.format("MMM ")} {fromMoment.format("YYYY")}</H2>
+              <H2 className="start">{fromMoment.format('MMM ')} {fromMoment.format('YYYY')}</H2>
               <i className="year-line material-icons">chevron_right</i>
               {
-                toMoment ? <H2 className="end">{toMoment.format("MMM ")} {toMoment.format("YYYY")}</H2> : null
+                toMoment ? <H2 className="end">{toMoment.format('MMM ')} {toMoment.format('YYYY')}</H2> : null
               }
             </div>
             <div className="details">

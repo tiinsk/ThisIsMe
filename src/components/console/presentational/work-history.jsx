@@ -1,16 +1,11 @@
 import React from 'react';
-import WorkItem from './work_item';
 
 import workExperience from '../../../data/work_experience';
-import styled from 'styled-components/macro';
-
-const StyledConsoleWorkHistory = styled.div`
-
-`;
+import WorkItem from './work-item';
 
 const WorkHistory = ({strings}) => {
-  return(
-    <StyledConsoleWorkHistory>
+  return (
+    <div>
       {
         workExperience.workexp.map((workitem, i) => {
           return (
@@ -22,7 +17,7 @@ const WorkHistory = ({strings}) => {
           )
         })
       }
-    </StyledConsoleWorkHistory>
+    </div>
   )
 };
 

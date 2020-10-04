@@ -1,19 +1,14 @@
 import React from 'react';
-import EduItem from './edu_item';
 
 import education from '../../../data/education';
-import styled from 'styled-components/macro';
-
-const StyledConsoleEducation = styled.div`
-
-`;
+import EduItem from './edu-item';
 
 const Education = ({strings}) => {
-  return(
-    <StyledConsoleEducation>
+  return (
+    <div>
       {
         education.educationList.map((school, i) => {
-          return(
+          return (
             <EduItem
               key={i}
               strings={strings}
@@ -22,7 +17,7 @@ const Education = ({strings}) => {
           );
         })
       }
-    </StyledConsoleEducation>
+    </div>
   )
 };
 

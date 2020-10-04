@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import Skill from './presentational/skill';
 import skills from '../../data/skills';
-import translate from '../main/translate';
 import {H3, Paragraph} from '../../theme/fonts';
+import translate from '../main/translate';
+import Skill from './presentational/skill';
 
 const StyledRatelessSkills = styled.div`
   .rateless-skills {

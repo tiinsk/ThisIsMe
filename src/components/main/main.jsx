@@ -5,12 +5,12 @@ import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 import {ThemeProvider} from 'styled-components';
 
-import configureStore from '../../configure_store';
-import routes from './routes';
+import configureStore from '../../configure-store';
 import {
   GlobalStyle,
   theme,
 } from '../../theme';
+import routes from './routes';
 
 const store = configureStore();
 

@@ -1,21 +1,20 @@
 import React from 'react';
-import AsciiFont from './ascii_font';
 
+import {allCommand, commands, helpCommand} from '../../../actions/console_actions';
 import {addAllTranslations} from '../../main/translate';
-import {commands, helpCommand, allCommand} from '../../../actions/console_actions';
-
-import Introduction from './introduction';
-import Education from './education';
-import WorkHistory from './work_history';
-import Skills from './skills';
-import Projects from './projects';
+import AsciiFont from './ascii-font';
 import Contacts from './contacts';
-import Interests from './interests';
+import Education from './education';
 import Help from './help';
+import Interests from './interests';
+import Introduction from './introduction';
+import Projects from './projects';
+import Skills from './skills';
+import WorkHistory from './work-history';
 
 const Command = ({command, allStrings}) => {
   let CommandBody = undefined;
-  switch (command.command){
+  switch (command.command) {
     case helpCommand:
       return <Help/>;
     case allCommand:
@@ -52,10 +51,10 @@ const Command = ({command, allStrings}) => {
       return (
         <div>
           {
-            allCommands.map((cmd,i) => {
+            allCommands.map((cmd, i) => {
               return (
                 <div key={i}>
-                  { getCommand(cmd.body, allStrings, {command: cmd.command, language: command.language}) }
+                  {getCommand(cmd.body, allStrings, {command: cmd.command, language: command.language})}
                 </div>
               );
             })
@@ -85,7 +84,7 @@ const Command = ({command, allStrings}) => {
       break;
     default:
       return (
-        <div style={{margin: "1rem"}}>command not recognized, try typing "{helpCommand}"</div>
+        <div style={{margin: '1rem'}}>command not recognized, try typing "{helpCommand}"</div>
       );
   }
 
@@ -93,10 +92,10 @@ const Command = ({command, allStrings}) => {
 };
 
 const getCommand = (CommandBody, allStrings, command) => {
-  return(
+  return (
     <div>
       <AsciiFont text={allStrings[command.language].titles[command.command]}/>
-      <div style={{marginLeft: "1rem"}}>
+      <div style={{marginLeft: '1rem'}}>
         <CommandBody
           strings={allStrings[command.language]}
         />

@@ -30,6 +30,7 @@ export const StyledConsoleMap = styled.div`
   }
 
   color: ${({theme}) => theme.console.colors.grey};
+  
   .highlight{
     color: ${({theme}) => theme.console.colors.magenta};
     font-weight: bold;

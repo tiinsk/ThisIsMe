@@ -1,7 +1,8 @@
 import React from 'react';
-import Map from './map';
-import SmallMap from './small_map';
 import styled from 'styled-components/macro';
+
+import Map from './map';
+import SmallMap from './small-map';
 
 const SM_WINDOW_LIMIT = 800;
 
@@ -16,7 +17,7 @@ class Interests extends React.Component {
   constructor(){
     super();
     this.state = {
-      windowWidth: "MD"
+      windowWidth: 'MD'
     };
     this.updateDimensions = this.updateDimensions.bind(this);
   }
@@ -25,7 +26,7 @@ class Interests extends React.Component {
     const isSmallWindow= window.innerWidth <= SM_WINDOW_LIMIT;
 
     this.setState({
-      windowWidth: isSmallWindow ? "SM" : "MD"
+      windowWidth: isSmallWindow ? 'SM' : 'MD'
     });
   }
 
@@ -35,11 +36,11 @@ class Interests extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
+    window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
+    window.removeEventListener('resize', this.updateDimensions);
   }
 
   render() {
@@ -47,7 +48,7 @@ class Interests extends React.Component {
       <StyledConsoleInterests>
         <div className="interests-title">{this.props.strings.interests.travelling}</div>
         {
-          this.state.windowWidth !== "MD" ?
+          this.state.windowWidth !== 'MD' ?
             <SmallMap/> :
             <Map/>
         }

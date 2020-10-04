@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import {ReactComponent as PeakIcon} from '../icons/peakIcon.svg';
 
-import translate from '../../main/translate';
+import {ReactComponent as PeakIcon} from '../../../assets/peakIcon.svg';
 import {TagText} from '../../../theme/fonts';
+import translate from '../../main/translate';
 
 const StyledSkill = styled.div`
   ${TagText};
@@ -36,7 +36,7 @@ const StyledPeakIcon = styled(PeakIcon)`
 `;
 
 const Skill = ({strings, skill, isPeakSkill = false}) => {
-  return(
+  return (
     <StyledSkill isPeakSkill={isPeakSkill}>
       <div className="skill-wrapper">
         {isPeakSkill && <StyledPeakIcon/>}

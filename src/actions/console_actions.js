@@ -4,17 +4,17 @@ import {languageOptions} from '../i18n/languages';
 export const ADD_COMMAND = 'ADD_COMMAND';
 
 export const commands = {
-  Introduction: "introduction",
-  Education: "education",
-  WorkHistory: "workHistory",
-  Skills: "skills",
-  Projects: "projects",
-  Interests: "interests",
-  Contacts: "contacts",
+  Introduction: 'introduction',
+  Education: 'education',
+  WorkHistory: 'workHistory',
+  Skills: 'skills',
+  Projects: 'projects',
+  Interests: 'interests',
+  Contacts: 'contacts',
 };
 
-export const helpCommand = "help";
-export const allCommand = "all";
+export const helpCommand = 'help';
+export const allCommand = 'all';
 
 export function addCommand(command){
   return{
@@ -27,7 +27,7 @@ export function addErrorCommand(){
   return{
     type: ADD_COMMAND,
     command: {
-      command: "error"
+      command: 'error'
     }
   }
 }
@@ -42,9 +42,9 @@ export function parseCommand(command){
     if(_.some({...commands, helpCommand, allCommand}, cmnd => cmnd === mainCommand)){
       const command = {
         command: mainCommand,
-        language: "en"
+        language: 'en'
       };
-      if(commandArray[1] === "-l" && commandArray[2] && Object.keys(languageOptions).some(lang => lang === commandArray[2])){
+      if(commandArray[1] === '-l' && commandArray[2] && Object.keys(languageOptions).some(lang => lang === commandArray[2])){
         command.language = commandArray[2];
       }
       else if(commandArray[1]){

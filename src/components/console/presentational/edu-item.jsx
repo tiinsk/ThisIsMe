@@ -1,9 +1,11 @@
 import React from 'react';
-import DashedLine from './dashed_line';
 import styled from 'styled-components/macro';
 
+import DashedLine from './dashed-line';
+
 const StyledConsoleEduItem = styled.div`
- margin: 0.5rem 0;
+  margin: 0.5rem 0;
+  
   .dates{
     margin: 0.5rem 0;
   }
@@ -28,7 +30,7 @@ const EduItem = ({strings, data}) => {
         <span>{`${data.from.month}/${data.from.year}`} - </span>{data.to ? <span>{`${data.to.month}/${data.to.year}`}</span> : null }
       </div>
       <div>
-        <span className="school">{translations.school}</span> - <span className="edu-title">{`${translations.title}${translations.program ? " - ": ""}`}</span> { translations.program ?
+        <span className="school">{translations.school}</span> - <span className="edu-title">{`${translations.title}${translations.program ? ' - ': ''}`}</span> { translations.program ?
           <span className="program">{translations.program}</span> : null
         }
       </div>

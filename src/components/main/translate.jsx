@@ -4,10 +4,6 @@ import {getTranslations, translations} from '../../i18n/languages';
 
 const translate = (Component) => connect(mapStateToProps, null)(
   class extends React.Component {
-    constructor(props){
-      super(props);
-    }
-
     render() {
       return (
         <Component {...this.props} strings={getTranslations(this.props.language)}/>
@@ -16,10 +12,6 @@ const translate = (Component) => connect(mapStateToProps, null)(
 });
 
 export const addAllTranslations = (Component) => class extends React.Component {
-    constructor(props){
-      super(props);
-    }
-
     render() {
       return (
         <Component {...this.props} allStrings={translations}/>
