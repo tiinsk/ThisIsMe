@@ -10,10 +10,10 @@ import Typewriter from './presentational/typewriter';
 
 const StyledConsoleSite = styled.div`
   background: ${({theme}) => theme.new.colors.almostBlack};
-  min-height: 100vh;
 
   .console-site {
     max-width: 1200px;
+    min-height: 100vh;
 
     color: ${({theme}) => theme.console.colors.green};
     font-family: ${({theme}) => theme.fonts.fontSourceCode};
@@ -44,6 +44,7 @@ const StyledConsoleSite = styled.div`
     a {
       text-transform: none;
       font-family: ${({theme}) => theme.fonts.fontSourceCode};
+      font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
       &:hover {
         text-decoration: underline;
       }
