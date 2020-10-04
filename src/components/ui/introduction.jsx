@@ -9,6 +9,7 @@ import cv_fi_pdf from '../../assets/cv_fi.pdf';
 import myImage from '../../assets/me_2_0_black.png';
 import translate from '../../components/main/translate';
 import contacts from '../../data/contacts';
+import {Paragraph} from "../../theme/fonts";
 import {LinkButton} from './presentational/button';
 
 const ImageSize = '115px';
@@ -33,8 +34,7 @@ const StyledIntroduction = styled.div`
       border-bottom: 2px solid ${({theme}) => theme.colors.blueNEW};
     }
     .summary-text {
-      font-family: ${({theme}) => theme.fonts.fontOpenSans};
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
+      margin-top: 0;
       margin-bottom: ${({theme}) => theme.spaces.base(2)};
     }
     
@@ -85,10 +85,6 @@ const StyledIntroduction = styled.div`
     }
   }
   
-  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}) {
-    margin: 0;
-  }
-  
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     flex-direction: column-reverse;
   }
@@ -98,7 +94,7 @@ const Introduction = ({strings, language}) => {
   return (
     <StyledIntroduction>
       <div className="summary">
-        <div className="summary-text" dangerouslySetInnerHTML={{__html: strings.introduction}}/>
+        <Paragraph className="summary-text">{strings.introduction}</Paragraph>
         <div className="links">
           <div className="link">
             <a className="link-anchor" href={contacts.github} target="_blank">

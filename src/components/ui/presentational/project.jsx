@@ -1,13 +1,14 @@
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {useState} from 'react';
+import SimpleReactLightbox, {SRLWrapper} from 'simple-react-lightbox';
 import styled from 'styled-components/macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 import translate from '../../../components/main/translate';
-import Skill from './skill';
-import {H1, Paragraph} from '../../../theme/fonts';
 import {theme} from "../../../theme";
+import {H1, Paragraph} from '../../../theme/fonts';
+import {variables} from "../../../theme/variables";
+import Skill from './skill';
 
 const IMAGE_WIDTH = 450;
 const IMAGE_HEIGHT = 400;
@@ -18,9 +19,9 @@ const StyledProject = styled.div`
   margin-bottom: ${({theme}) => theme.spaces.base(3)};
   
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   
-  @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.lgSize}) {
     padding-top: ${({theme}) => theme.spaces.base(2)};
     flex-direction: column;
   }
@@ -61,8 +62,8 @@ const StyledProject = styled.div`
           }
           
           svg {
-            height: 24px;
-            width: 24px;
+            height: 15px;
+            width: 15px;
             margin-right: ${({theme}) => theme.spaces.base(0.5)};
           }
           
@@ -70,6 +71,7 @@ const StyledProject = styled.div`
             margin-right: ${({theme}) => theme.spaces.base(0.5)};
             text-decoration: none !important;
             display: inline-block;
+            font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
           }
           
           &:not(:first-of-type):before {
@@ -98,12 +100,25 @@ const StyledProject = styled.div`
     }
   }
   .project-images-wrapper {
-    width: 550px;
+    --imageWidth: ${IMAGE_WIDTH}px;
+    --imageHeight: ${IMAGE_HEIGHT}px;
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+      --imageWidth: ${IMAGE_WIDTH*0.75}px;
+      --imageHeight: ${IMAGE_HEIGHT*0.75}px;
+    }
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.xsSize}) {
+      --imageWidth: ${IMAGE_WIDTH*0.6}px;
+      --imageHeight: ${IMAGE_HEIGHT*0.6}px;
+    }
+    
+    width: calc(var(--imageWidth) * 1.5 + ${({theme}) => theme.spaces.base(2)});
     overflow: hidden;
     flex-shrink: 0;
     position: relative;
     
-    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+    @media (max-width: ${({theme}) => theme.breakpoints.lgSize}) {
       margin-top: ${({theme}) => theme.spaces.base(1)};
       width: 100%;
     }
@@ -115,8 +130,8 @@ const StyledProject = styled.div`
       transition: left ease-in 0.5s;
     
       .project-image {
-        height: ${IMAGE_HEIGHT}px;
-        width: ${IMAGE_WIDTH}px;
+        height: var(--imageHeight);
+        width: var(--imageWidth);
         background-size: cover;
         flex-shrink: 0;
         margin-right: ${({theme}) => theme.spaces.base(1)};
@@ -141,12 +156,20 @@ const StyledProject = styled.div`
       left: 0;
     }
     .arrow-forward {
-      right: 0;
+      right: ${({theme}) => theme.spaces.base(1)};
+      
+      @media (max-width: ${({theme}) => theme.breakpoints.xlgSize}) {
+        right: 0;
+      }
     }
     
     &:hover {
-      .arrow {
-        display: initial;
+      .arrow-back {
+        display: ${({currentImageIndex}) => currentImageIndex > 0 ? 'initial' : 'none'};
+      }
+    
+      .arrow-forward {
+        display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 1) ? 'initial' : 'none'};
       }
     }
   }
@@ -171,23 +194,24 @@ const Project = ({strings, project, index}) => {
   const images = project.images.map(image => require(`../../../assets/projects/${project.key}/${image}`));
 
   const onBack = () => {
-    if(imageIndex > 0) {
-      console.log(imageIndex -1);
+    if (imageIndex > 0) {
       setImageIndex(imageIndex - 1);
     }
   }
 
   const onForward = () => {
-    if(imageIndex < project.images.length -1) {
-      console.log(imageIndex +1);
+    if (imageIndex < project.images.length - 1) {
       setImageIndex(imageIndex + 1);
     }
   }
 
   const imageLeft = -imageIndex * (IMAGE_WIDTH + theme.spaces.baseNumber(1));
 
-  return(
-    <StyledProject>
+  return (
+    <StyledProject
+      currentImageIndex={imageIndex}
+      totalImages={project.images.length}
+    >
       <SimpleReactLightbox>
         <div className="project">
           <div className="project-name">
@@ -198,7 +222,8 @@ const Project = ({strings, project, index}) => {
                 project.link &&
                 <a href={project.github} target="_blank"><FontAwesomeIcon icon={faGithub}/><span>{strings.github}</span></a>
               }
-              <a href={project.link} target="_blank"><i className="material-icons">public</i><span>{strings.website}</span></a>
+              <a href={project.link} target="_blank"><i
+                className="material-icons">public</i><span>{strings.website}</span></a>
             </div>
           </div>
           <Paragraph className="project-description">
@@ -206,14 +231,14 @@ const Project = ({strings, project, index}) => {
           </Paragraph>
           <div className="project-skills">
             {
-              project.topSkills.map( (skill,i) => {
+              project.topSkills.map((skill, i) => {
                 return (
                   <Skill key={i} skill={skill} isPeakSkill={true}/>
                 )
               })
             }
             {
-              project.otherSkills.map( (skill,i) => {
+              project.otherSkills.map((skill, i) => {
                 return (
                   <Skill key={i} skill={skill}/>
                 )
@@ -235,14 +260,12 @@ const Project = ({strings, project, index}) => {
           </SRLWrapper>
           <button
             className="arrow arrow-back"
-            style={{...(imageIndex === 0 ? {display: 'none'} : {})}}
             onClick={onBack}
           >
             <i className="material-icons">arrow_back</i>
           </button>
           <button
             className="arrow arrow-forward"
-            style={{...(imageIndex === project.images.length - 1 ? {display: 'none'} : {})}}
             onClick={onForward}
           >
             <i className="material-icons">arrow_forward</i>
