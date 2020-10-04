@@ -6,10 +6,16 @@ import translate from '../../main/translate';
 
 const StyledEduItem = styled.div`
   .degree {
+    margin-top: ${({theme}) => theme.spaces.base(0.5)};
     margin-bottom: 0;
   }
   .program {
     margin-top: 0;
+    margin-bottom: ${({theme}) => theme.spaces.base(0.5)};
+  }
+  p {
+    margin-top: ${({theme}) => theme.spaces.base(0.25)};
+    margin-bottom: 0;
   }
 `;
 
@@ -24,20 +30,20 @@ const EduItem = ({strings, data}) => {
           <H4 className="program">{translations.program}</H4> : null
       }
       {translations.major || translations.minor || translations.thesis ?
-        <Paragraph>
+        <>
           {
             translations.major ?
-              <div>{strings.education.major}: {translations.major}</div> : null
+              <Paragraph>{strings.education.major}: {translations.major}</Paragraph> : null
           }
           {
             translations.minor ?
-              <div>{strings.education.minor}: {translations.minor}</div> : null
+              <Paragraph>{strings.education.minor}: {translations.minor}</Paragraph> : null
           }
           {
             translations.thesis ?
-              <div>{strings.education.thesis}: {translations.thesis}</div> : null
+              <Paragraph>{strings.education.thesis}: {translations.thesis}</Paragraph> : null
           }
-        </Paragraph> : null
+        </> : null
       }
     </StyledEduItem>
   )

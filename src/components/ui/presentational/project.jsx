@@ -251,7 +251,7 @@ const Project = ({strings, project, index}) => {
             <div className="project-images" style={{left: imageLeft}}>
               {
                 images.map(image => (
-                  <a href={image} data-attribute="SRL">
+                  <a key={image} href={image} data-attribute="SRL">
                     <img className="project-image" src={image} alt="Project"/>
                   </a>
                 ))
