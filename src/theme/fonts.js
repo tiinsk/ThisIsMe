@@ -5,7 +5,7 @@ export const PageTitle = css`
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
-  margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
+  margin: ${({theme}) => theme.spaces.base(0.25)} 7rem;
   
   @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
     margin-left: 0;
@@ -85,7 +85,7 @@ export const H4 = styled.p`
 `;
 
 export const Paragraph = styled.p`
-  color: ${({theme}) => theme.new.colors.black};
+  color: ${({theme}) => theme.new.colors.darkGrey};
   font-family: ${({theme}) => theme.fonts.fontOpenSans};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
@@ -113,7 +113,7 @@ export const Anchor = css`
   color: ${({theme}) => theme.new.colors.black};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
-  font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
+  font-size: ${({theme}) => theme.fontSizes.fontSizeXSmall};
   text-transform: uppercase;
   text-decoration: none;
   

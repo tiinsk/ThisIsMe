@@ -1,5 +1,6 @@
 export const variables = {
   breakpoints: {
+    xlgSize: '1600px',
     lgSize: '1200px',
     mdSize: '999px',
     smSize: '799px',
@@ -20,7 +21,7 @@ export const variables = {
     fontWeightBold: '700',
   },
   fontSizes: {
-    fontSizeXXXLarge: '3.3rem',
+    fontSizeXXXLarge: '3rem',
     fontSizeXXLarge: '2.2rem',
     fontSizeXLarge: '2.0rem',
     fontSizeLarge: '1.8rem',

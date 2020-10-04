@@ -6,14 +6,14 @@ import translate from '../../../components/main/translate';
 
 export const StyledSection = styled.div`
   position: relative;
-  margin: 20rem 2rem 35rem 2rem;
+  margin: 20rem 2rem 25rem 2rem;
   margin-left: 150px;
 
   max-width: 2000px;
 
   .title{
     margin: 0;
-    color: ${({theme}) => theme.new.colors.lightGrey};
+    color: ${({theme}) => theme.new.colors.darkGrey};
     font-size: 80px;
 
     text-transform: uppercase;

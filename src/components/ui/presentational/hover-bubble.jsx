@@ -19,6 +19,9 @@ export const StyledHoverBubble = styled.div`
     font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
     font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
     text-transform: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   display: none;

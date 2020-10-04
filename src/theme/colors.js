@@ -48,6 +48,7 @@ export const newColors = {
   lightestGreyAlt: '#F1F1F1',
   grey: '#7C7C7C',
   mediumGrey: '#818181',
+  darkGrey: '#505050',
   insetShadow: 'inset 1px 1px 3px 0 #27332B40',
   transparentBluishGrey: '#21272E66',
 }
