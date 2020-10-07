@@ -43,6 +43,18 @@ export default [
     ]
   },
   {
+    key: 'gymApp',
+    images: ['home1.jpg', 'home2.jpg', 'home3.jpg'],
+    topSkills: [
+      'ui_design',
+      'sketch',
+    ],
+    otherSkills: [
+      'mobile_design',
+      'interaction_design'
+    ]
+  },
+  {
     key: 'cottagePage',
     github: 'https://github.com/tiinsk/tammaniemi_3.0',
     link: null,

@@ -1,13 +1,18 @@
 export default {
+  'vincit': {
+    'title': 'Software Engineer',
+    'company': 'Vincit California',
+    'description': "I work in a project team, which develops a community application for a network of successful women. Our team develops the web application with React, Javascript, and GraphQL, and the mobile application with React Native. I have been mainly working on the web front-end side. We have been using PubNub for the application's instant messaging features. Previously, I also worked on a project, which developed a C# desktop application."
+  },
   'gofore': {
-    'title': 'Software Designer',
+    'title': 'Software Engineer',
     'company': 'Gofore',
-    'description': 'I worked as part of an internal development project. The project focused on developing tools for sales, resourcing and, competence management. I developed both the front-end and the back-end of the application using Vue, Javascript, Typescript, and other related technologies. I was responsible for certain areas of the application, and I made major architectural decisions related to the application. I also worked closely with UX-team.'
+    'description': 'I worked as part of an internal development project. The project focused on developing tools for sales, resourcing, and competence management. I developed both the front-end and the back-end of the application using Vue, Javascript, Typescript, and other related technologies. I was responsible for certain areas of the application, and I made major architectural decisions related to the application. I also worked closely with the UX team.'
   },
   'wapice': {
-    'title': 'Software Designer',
+    'title': 'Software Engineer',
     'company': 'Wapice',
-    'description': 'I was a part of multiple project teams, which developed web software products and services directly to customers. I worked as a full-stack developer using React, JavaScript, Typescript, and C#. In one of the projects, I was the main responsible for web development and web development architecture.'
+    'description': 'I was a part of multiple project teams, which developed web software products and services directly to clients. I worked as a full-stack developer using React, JavaScript, Typescript, and C#. In one of the projects, I was the main responsible for web development and web development architecture.'
   },
   'nokia_android': {
     'title': 'Summer Trainee, Imaging Software',

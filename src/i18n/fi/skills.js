@@ -37,6 +37,7 @@ export default {
     svn: 'SVN',
     opengl: 'Open GL',
     styled_components: 'Styled Components',
+    styled_systems: 'Styled Systems',
     ble: 'Bluetooth LE',
     noble: 'Noble',
     raspberry: 'Raspberry Pi',
@@ -51,14 +52,19 @@ export default {
     open_gl: 'Open GL',
     android: 'Android',
     kanban: 'Kanban',
+    graphql: 'GraphQL',
+    apollo: 'Apollo',
+    pubnub: 'PubNub',
+    mobile_design: 'Mobiili Design',
+    interaction_design: 'Interaktiosuunnittelu',
   },
   ratedSkills: {
     topSkills: {
-      title: 'Taidot joita käytän usein',
+      title: 'Taidot joita käytän eniten',
       subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
     },
     otherSkills: {
-      title: 'Taidot jotka tukevat päivittäistä työtäni',
+      title: 'Taidot jotka tukevat työtäni',
       subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     }
   },

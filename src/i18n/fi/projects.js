@@ -14,5 +14,9 @@ export default {
   homeMonitor: {
     name: 'Kodin tarkkailujärjestelmä',
     description: 'Tein kodin tarkkailujärjestelmän jolla voin tarkkailla lämpötilanvaihteluita asunnossani ja asuntoni ulkopuolella. Tämä projekti koostuukin useasta osasta: kahdesta lämpötila-anturista (joista toinene tarkkailee lämpötilaa ja toinen myös ilman kosteutta, painetta ja valoa), Raspberry Pi:stä joka lähettää sensorin datan pilveen, pilvi-API:sta joka tallentaa sensorin datan tietokantaan, sekä front-end palvelusta. Kaikki projektin eri osat on kirjoitettu JavaScriptillä.'
-  }
+  },
+  gymApp: {
+    name: 'Kuntosali-sovellus',
+    description: 'Aloitin työstämään tätä projektia yhdessä mieheni kanssa. Tarkoituksenamme on, että minä teen sovelluksen designit ja hän hoitaa sovelluskehityksen. Tämä on ensimmäinen täysin design projektini ja siksi projekti onkin opettanut minulle paljon. Projekti on vielä kesken, ja minulle on vielä designit viimeistelemättä. Mieheni on kuitenkin jo aloittanut sovelluskehityksen käyttäen Flutteria ja Hasuraa.'
+  },
 }

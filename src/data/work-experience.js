@@ -1,6 +1,35 @@
 export default {
   'workexp': [
     {
+      'key': 'vincit',
+      'from': {
+        'month': 10,
+        'year': 2019
+      },
+      'to': {
+        'month': null,
+        'year': null
+      },
+      'topSkills': [
+        'javascript',
+        'react',
+        'typescript',
+        'css',
+        'pubnub',
+      ],
+      'otherSkills': [
+        'redux',
+        'graphql',
+        'apollo',
+        'styled_components',
+        'styled_systems',
+        'git',
+        'jira',
+        'scrum',
+        'kanban'
+      ]
+    },
+    {
       'key': 'gofore',
       'from': {
         'month': 9,

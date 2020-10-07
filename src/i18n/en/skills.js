@@ -37,6 +37,7 @@ export default {
     svn: 'SVN',
     opengl: 'Open GL',
     styled_components: 'Styled Components',
+    styled_systems: 'Styled Systems',
     ble: 'Bluetooth LE',
     noble: 'Noble',
     raspberry: 'Raspberry Pi',
@@ -50,26 +51,31 @@ export default {
     nginx: 'NGINX',
     open_gl: 'Open GL',
     android: 'Android',
-    kanban: 'Kanban'
+    kanban: 'Kanban',
+    graphql: 'GraphQL',
+    apollo: 'Apollo',
+    pubnub: 'PubNub',
+    mobile_design: 'Mobile Design',
+    interaction_design: 'Interaction Design',
   },
   ratedSkills: {
     topSkills: {
-      title: 'Skills that I use most',
-      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+      title: 'Skills that I use the most',
+      subtitle: 'Skills that play the most important role in almost every project that I have worked on.',
     },
     otherSkills: {
-      title: 'Skills that support my daily work',
-      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      title: 'Skills that support my work',
+      subtitle: 'Skills that I have learned at school or that I have used in some projects. Skills that help me understand software development more thoroughly.',
     }
   },
   ratelessSkills: {
     topSkills: {
       title: 'Tools that help me success every day',
-      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      subtitle: 'Tools that I have used in many projects. Tools that have had an important role in successful projects.',
     },
     otherSkills: {
-      title: 'Tools that support my daily work',
-      subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      title: 'Tools that support my work',
+      subtitle: 'Tools that I have not necessarily used in every project, but understanding these tools still have helped me succeed.',
     },
   },
   langSkills: 'Language Skills',

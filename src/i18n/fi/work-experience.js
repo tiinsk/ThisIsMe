@@ -1,4 +1,9 @@
 export default {
+  'vincit': {
+    'title': 'Ohjelmistosuunnittelija',
+    'company': 'Vincit California',
+    'description': 'Työskentelen projektissa, joka kehittää yhteisösovellusta menestyvien naisten yhteisölle. Tiimimme kehittää web sovellusta käyttäen Reactia, JavaScriptiä ja GrapgQLää sekä mobiilisovellusta käyttäen React Nativea. Olen itse työskennellyt pääsäntöisesti web front-end kehityksen parissa. Olemme toteuttaneet sovelluksen viestintäominaisuudet PubNubilla. Aikaisemmin työskentelin projektissa, jossa kehitettiin C# työpöytäsovellusta.'
+  },
   'gofore': {
     'title': 'Ohjelmistosuunnittelija',
     'company': 'Gofore Oyj',

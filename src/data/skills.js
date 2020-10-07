@@ -2,7 +2,7 @@ export default {
   ratedSkills: {
     highestSkill: {
       key: 'javascript',
-      value: 9,
+      value: 10,
       color: 'linear-gradient(270deg, #FED19D 0%, #FFDE83 62%)',
     },
     topSkills: [
@@ -30,7 +30,7 @@ export default {
     otherSkills: [
       {
         key: 'node',
-        value: 8,
+        value: 5,
         color: 'linear-gradient(90deg, #DCEEC2 50%, #E6E3B2 100%)',
       },
       {
@@ -45,7 +45,7 @@ export default {
       },
       {
         key: 'java',
-        value: 3,
+        value: 2,
         color: 'linear-gradient(90deg, #A6C5DB 50%, #8AA2C9 100%)',
       },
     ],
@@ -57,14 +57,18 @@ export default {
       'html',
       'css',
       'sass',
-      'hapi',
-      'express',
       'knex',
       'styled_components',
+      'styled_systems',
+      'pubnub',
       'git',
       'jira',
     ],
     otherSkills: [
+      'graphql',
+      'apollo',
+      'hapi',
+      'express',
       'mqtt',
       'webpack',
       'mocha',
@@ -73,7 +77,6 @@ export default {
       'psql',
       'sql',
       'bluemix',
-      'svn',
       'opengl',
       'vr',
       'computer_graphics',
