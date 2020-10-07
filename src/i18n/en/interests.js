@@ -1,8 +1,9 @@
 export default {
   interest_list: [
   'Travelling',
+  'Mountain Biking',
+  'Hiking',
   'Nature',
-  'Trekking',
   'Games',
   'Baking',
   'Food',

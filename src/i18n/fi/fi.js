@@ -13,9 +13,10 @@ export default {
   links: 'Linkit',
   github: 'Github',
   website: 'Nettisivut',
-  introduction: 'Olen full-stack web-kehittäjä, joka on innostunut front-end kehityksestä ja UX-suunnittelusta. Koen itseni luovaksi henkilöksi, joka on aina kiinnostunut kehittämään jotain uutta. Työskentely asiaksprojekteissa sai minut ymmärtämään käytettävyyden ja palvelumuotoilun tärkeyden ohjelmistoprojekteissa arkkitehtuurin lisäksi.',
+  introduction: 'Olen ohjelmistosuunnittelija ja web-kehittäjä, joka on innostunut UX-suunnittelusta. Koen itseni luovaksi henkilöksi, joka on aina kiinnostunut kehittämään jotain uutta. Työskentely erilaisissa projekteissa erilaisten asiakkaiden kanssa on saanut minut ymmärtämään käytettävyyden ja palvelumuotoilun tärkeyden ohjelmistoprojekteissa itse ohjelmistokehityksen ja arkkitehtuurin lisäksi. Tulevaisuudessa haluaisinkin opiskella UX-suunnittelua lisää ja kehittyä siinä. Unelmaprojektissani, työskentelisin tiiviisti UX-suunnittelijoiden ja palvelumuotoilijoiden kanssa saavuttaakseni parhaan mahdollisen lopputuloksen. Haluaisin myös edistää UX-suunnittelun ja ohjelmistokehityksen yhteentoimivuutta.',
+  introduction2: '',
   summary: {
-    title: 'Olen ohjelmistosuunnittelija ja web-kehittäjä',
+    title: 'Olen ohjelmistosuunnittelija ja web-kehittäjä, joka on innostunut UX-suunnittelusta',
     printBtn: 'Tulosta CV'
   },
   titles:{

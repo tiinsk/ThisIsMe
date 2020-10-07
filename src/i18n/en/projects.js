@@ -13,6 +13,10 @@ export default {
   },
   homeMonitor: {
     name: 'Home Monitor',
-    description: 'I developed a home monitoring system to monitor temperature changes inside and outside my apartment. This project consists of multiple parts: two different temperature sensors (one collects only temperature data and the other collects also humidity, pressure and light data), a Raspberry Pi which sends sensor data to cloud, a cloud API, and a cloud front-end service. All of the different parts are written in JavaScript.'
-  }
+    description: 'I developed a home monitoring system to monitor temperature changes inside and outside my apartment. This project consists of multiple parts: two different temperature sensors (one collects only temperature data and the other collects also humidity, pressure and light data), a Raspberry Pi hub which sends sensor data to cloud, a cloud API, and a cloud front-end service. All of the different parts are written in JavaScript.'
+  },
+  gymApp: {
+    name: 'Gym App',
+    description: 'I started this project together with my husband. We planned that I would do the design part, and he would do the implementation part. This project is my first design only project, and it has taught me the most about design. This project is still in progress, I have still some fine-tuning to do, but my husband has already started to implement the mobile application by using Flutter and Hasura.'
+  },
 };
