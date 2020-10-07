@@ -42,7 +42,7 @@ const StyledSkillMeter = styled.div`
     .skill-name {
       font-family: ${({theme}) => theme.fonts.fontQuicksand};
       font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
-      color: ${({theme}) => theme.new.colors.grey};
+      color: ${({theme}) => theme.UI.colors.grey};
     }
 
     .skill-rate {
@@ -55,7 +55,7 @@ const StyledSkillMeter = styled.div`
       font-family: ${({theme}) => theme.fonts.fontLato};
       font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
       font-size: ${({theme}) => theme.fontSizes.fontSizeXXXSmall};
-      color: ${({theme}) => theme.colors.greyText};
+      color: ${({theme}) => theme.console.colors.grey};
     }
 
     .skill-bar {
@@ -65,8 +65,8 @@ const StyledSkillMeter = styled.div`
       height: 15px;
       border-radius: 15px;
 
-      background: ${({theme}) => theme.new.colors.superLightGrey};
-      box-shadow: ${({theme}) => theme.new.colors.insetShadow};
+      background: ${({theme}) => theme.UI.colors.superLightGrey};
+      box-shadow: ${({theme}) => theme.UI.colors.insetShadow};
 
       overflow: hidden;
 

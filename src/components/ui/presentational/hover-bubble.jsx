@@ -10,7 +10,7 @@ export const StyledHoverBubble = styled.div`
   padding: ${({theme}) => theme.spaces.base(0.5)} ${({theme}) => theme.spaces.base(1)};
   border-radius: 3px;
 
-  background: ${({theme}) => theme.new.colors.transparentBluishGrey};
+  background: ${({theme}) => theme.UI.colors.transparentBluishGrey};
   
   a {
     color: white;
@@ -38,7 +38,7 @@ export const StyledHoverBubble = styled.div`
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 
-    border-left: 10px solid ${({theme}) => theme.new.colors.transparentBluishGrey};
+    border-left: 10px solid ${({theme}) => theme.UI.colors.transparentBluishGrey};
   }
 `;
 

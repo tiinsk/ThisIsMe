@@ -9,10 +9,10 @@ const StyledConsoleProject = styled.div`
   }
   .skill-title{
     margin-top: 1rem;
-    color: ${({theme}) => theme.colors.green}
+    color: ${({theme}) => theme.console.colors.green};
   }
   .link-title{
-    color: ${({theme}) => theme.colors.green}
+    color: ${({theme}) => theme.console.colors.green};
     margin-bottom: 1rem;
   }
   .project-description{
@@ -61,17 +61,21 @@ const Project = ({strings, project}) => {
           }
         </div>
         <div className="links">
-          <div className="link-title">{strings.links}:</div>
-          <div>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              {project.link}
-            </a>
-          </div>
-          <div>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              {project.github}
-            </a>
-          </div>
+          {(project.link || project.github) && <div className="link-title">{strings.links}:</div>}
+          {project.link &&
+            <div>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.link}
+              </a>
+            </div>
+          }
+          { project.github &&
+            <div>
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                {project.github}
+              </a>
+            </div>
+          }
         </div>
       </div>
     </StyledConsoleProject>

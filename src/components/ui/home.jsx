@@ -7,7 +7,7 @@ import Interests from './interests';
 import Header from './presentational/header';
 import Projects from './projects';
 import Skills from './skills';
-import WorkHistory from './work_history';
+import WorkHistory from './work-history';
 
 const SCROLL_OFFSET = 50;
 

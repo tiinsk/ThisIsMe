@@ -37,7 +37,7 @@ const StyledInterests = styled.div`
     padding:  ${({theme}) => theme.spaces.base(3)};
     padding-top: 0;
 
-    color: ${({theme}) => theme.colors.black};
+    color: ${({theme}) => theme.UI.colors.black};
     font-family: ${({theme}) => theme.fonts.fontLato};
     font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
     font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};

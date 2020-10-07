@@ -6,8 +6,8 @@ import translate from '../main/translate';
 import iceberg from './../../assets/iceberg.png';
 import LanguageSkills from './language-skills';
 import Section, {StyledSection} from './presentational/section';
-import RatedSkills from './rated_skills';
-import RatelessSkills from './rateless_skills';
+import RatedSkills from './rated-skills';
+import RatelessSkills from './rateless-skills';
 
 const StyledSkills = styled.div`
   ${H3} {
@@ -16,7 +16,7 @@ const StyledSkills = styled.div`
   
   ${Paragraph} {
     text-align: center;
-    color: ${({theme}) => theme.new.colors.mediumGrey};
+    color: ${({theme}) => theme.UI.colors.mediumGrey};
   }
   ${StyledSection} {
     @media (min-width: ${({theme}) => theme.breakpoints.smSize}) and (max-width: ${({theme}) => theme.breakpoints.mdSize}){

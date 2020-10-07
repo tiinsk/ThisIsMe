@@ -1,5 +1,6 @@
 export const variables = {
   breakpoints: {
+    xxlgSize: '1700px',
     xlgSize: '1600px',
     lgSize: '1200px',
     mdSize: '999px',

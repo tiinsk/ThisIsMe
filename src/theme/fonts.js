@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 
 export const PageTitle = css`
-  color: ${({theme}) => theme.new.colors.white};
+  color: ${({theme}) => theme.UI.colors.white};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
@@ -18,25 +18,28 @@ export const PageTitle = css`
 `;
 
 export const PageName = css`
-  color: ${({theme}) => theme.new.colors.white};
+  color: ${({theme}) => theme.UI.colors.white};
   font-family: ${({theme}) => theme.fonts.fontPTSerif};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
   font-size: 9.2rem;
+  text-align: center;
   
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
+    text-align: left;
   }
 `;
 
 export  const PageSubtitle = css`
-  color: ${({theme}) => theme.new.colors.green};
+  color: ${({theme}) => theme.UI.colors.green};
   font-family: ${({theme}) => theme.fonts.fontOpenSans};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeSmall};
   text-transform: uppercase;
   letter-spacing: 1.9px;
   text-align: center;
-  margin: ${({theme}) => theme.spaces.base(0.5)} 7rem;
+  margin: ${({theme}) => theme.spaces.base(0.5)} auto;
+  max-width: 500px;
   
   @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
     text-align: left;
@@ -50,7 +53,7 @@ export  const PageSubtitle = css`
 `;
 
 export const H1 = css`
-  color: ${({theme}) => theme.new.colors.berry};
+  color: ${({theme}) => theme.UI.colors.berry};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXXXLarge};
@@ -59,7 +62,7 @@ export const H1 = css`
 `;
 
 export const H2 = styled.span`
-  color: ${({theme}) => theme.new.colors.berry};
+  color: ${({theme}) => theme.UI.colors.berry};
   font-family: ${({theme}) => theme.fonts.fontQuicksand};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
@@ -68,7 +71,7 @@ export const H2 = styled.span`
 `;
 
 export const H3 = styled.p`
-  color: ${({theme}) => theme.new.colors.black};
+  color: ${({theme}) => theme.UI.colors.black};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
@@ -77,7 +80,7 @@ export const H3 = styled.p`
 `;
 
 export const H4 = styled.p`
-  color: ${({theme}) => theme.new.colors.black};
+  color: ${({theme}) => theme.UI.colors.black};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
@@ -85,7 +88,7 @@ export const H4 = styled.p`
 `;
 
 export const Paragraph = styled.p`
-  color: ${({theme}) => theme.new.colors.darkGrey};
+  color: ${({theme}) => theme.UI.colors.darkGrey};
   font-family: ${({theme}) => theme.fonts.fontOpenSans};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
@@ -94,7 +97,7 @@ export const Paragraph = styled.p`
 `;
 
 export const ButtonText = css`
-  color: ${({theme}) => theme.new.colors.green};
+  color: ${({theme}) => theme.UI.colors.green};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
   font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
@@ -102,7 +105,7 @@ export const ButtonText = css`
 `;
 
 export const TagText = css`
-  color: ${({theme}) => theme.new.colors.green};
+  color: ${({theme}) => theme.UI.colors.green};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXSmall};
@@ -110,7 +113,7 @@ export const TagText = css`
 `;
 
 export const Anchor = css`
-  color: ${({theme}) => theme.new.colors.black};
+  color: ${({theme}) => theme.UI.colors.black};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXSmall};

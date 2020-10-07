@@ -4,8 +4,8 @@ import styled from 'styled-components/macro';
 import contacts from '../../../data/contacts';
 
 const StyledConsoleContacts = styled.div`
-  border-top:  2px solid ${({theme}) => theme.colors.green};
-  border-bottom: 2px solid ${({theme}) => theme.colors.green};
+  border-top:  2px solid ${({theme}) => theme.console.colors.green};
+  border-bottom: 2px solid ${({theme}) => theme.console.colors.green};
   width: 450px;
   max-width: 100%;
   .detail{
@@ -15,7 +15,7 @@ const StyledConsoleContacts = styled.div`
     justify-content: space-between;
     color: white;
     span{
-      color: ${({theme}) => theme.colors.green};
+      color: ${({theme}) => theme.console.colors.green};
     }
     a{
       color: ${({theme}) => theme.console.colors.magenta};
