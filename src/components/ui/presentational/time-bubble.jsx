@@ -28,7 +28,7 @@ const StyledTimeBubble = styled.div`
       display: inline-flex;
       align-items: center;
       i {
-        color: ${({theme}) => theme.new.colors.greyText};
+        color: ${({theme}) => theme.UI.colors.greyText};
         font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
         margin: 0 ${({theme}) => theme.spaces.base(0.2)};
       }
@@ -60,7 +60,7 @@ const StyledTimeBubble = styled.div`
     top: 0;
     height: 1rem;
     width: 1rem;
-    background: ${({theme}) => theme.new.colors.black};
+    background: ${({theme}) => theme.UI.colors.black};
     border-radius: 50%;
     z-index: 1;
     

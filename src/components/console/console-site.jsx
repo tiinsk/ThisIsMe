@@ -9,7 +9,7 @@ import Command from './presentational/command';
 import Typewriter from './presentational/typewriter';
 
 const StyledConsoleSite = styled.div`
-  background: ${({theme}) => theme.new.colors.almostBlack};
+  background: ${({theme}) => theme.UI.colors.almostBlack};
 
   .console-site {
     max-width: 1200px;
@@ -32,12 +32,12 @@ const StyledConsoleSite = styled.div`
       font-size: 0.8rem;
     }
     ::selection {
-      background: ${({theme}) => theme.colors.green}
+      background: ${({theme}) => theme.console.colors.green};
       color: white;
     }
 
     ::-moz-selection {
-      background: ${({theme}) => theme.colors.green};
+      background: ${({theme}) => theme.console.colors.green};
       color: white;
     }
     

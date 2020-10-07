@@ -3,7 +3,7 @@ import {ButtonText} from '../../../theme/fonts';
 
 export const LinkButton = styled.a`
   ${ButtonText};
-  background: ${({theme}) => theme.new.colors.lightestGrey};
+  background: ${({theme}) => theme.UI.colors.lightestGrey};
   text-decoration: none;
 
   border: none;
@@ -21,6 +21,6 @@ export const LinkButton = styled.a`
   }
   
   &:hover {
-    background: ${({theme}) => theme.new.colors.lightestGreyAlt};
+    background: ${({theme}) => theme.UI.colors.lightestGreyAlt};
   }
 `;

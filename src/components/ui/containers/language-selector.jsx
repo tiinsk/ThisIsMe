@@ -14,7 +14,7 @@ const StyledLanguageSelector = styled.div`
  width: ${({theme}) => theme.langSelectionWidth};
   flex-shrink: 0;
 
-  color: ${({theme}) => theme.colors.greyUnselectedText};
+  color: ${({theme}) => theme.UI.colors.bluishGrey};
 
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
@@ -38,12 +38,12 @@ const StyledLanguageSelector = styled.div`
       content: "";
       height: 1px;
       width: 15px;
-      background: ${({theme}) => theme.colors.black};
+      background: ${({theme}) => theme.UI.colors.black};
       margin: 0 auto;
     }
 
     &.selected{
-      color: ${({theme}) => theme.colors.black};
+      color: ${({theme}) => theme.UI.colors.black};
     }
 
     .text-wrapper {

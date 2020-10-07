@@ -19,11 +19,11 @@ const StyledSkill = styled.div`
   border-radius: 15px;
   height: 30px;
   
-  background: ${({theme}) => theme.new.colors.white};
+  background: ${({theme}) => theme.UI.colors.white};
   box-shadow: 0 2px 5px 0 rgba(33,41,32,0.17);
   
   .skill-wrapper {
-    border: 1px solid ${({isPeakSkill, theme}) => isPeakSkill ? theme.new.colors.greenTransparent : 'transparent'};
+    border: 1px solid ${({isPeakSkill, theme}) => isPeakSkill ? theme.UI.colors.greenTransparent : 'transparent'};
     border-radius: 15px;
     padding: 4px 10px;
     display: flex;

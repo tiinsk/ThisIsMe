@@ -1,6 +1,6 @@
 import React from 'react';
 
-import workExperience from '../../data/work_experience';
+import workExperience from '../../data/work-experience';
 import translate from '../main/translate';
 import Section from './presentational/section';
 import TimeBubble from './presentational/time-bubble';

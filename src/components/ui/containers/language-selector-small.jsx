@@ -13,7 +13,7 @@ const StyledLanguageSelectorSmall = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  color: ${({theme}) => theme.colors.greyUnselectedText};
+  color: ${({theme}) => theme.UI.colors.bluishGrey};
   z-index: 2;
   
   display: flex;
@@ -23,26 +23,26 @@ const StyledLanguageSelectorSmall = styled.div`
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
 
   .lang{
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin: ${({theme}) => theme.spaces.baseSize} 0;
     cursor: pointer;
-    padding: 0 ${({theme}) => theme.spaces.baseSize};
     
-    &:not(:first-of-type) {
-      //margin-left: 0;
+    span, a {
+      padding: 0 ${({theme}) => theme.spaces.baseSize};
     }
+    
 
     &:not(:first-of-type):before {
       content: '';
       height: 15px;
       width: 1px;
-      background: ${({theme}) => theme.colors.black};
+      background: ${({theme}) => theme.UI.colors.black};
       display: inline-block;
-      margin-right: ${({theme}) => theme.spaces.baseSize};
     }
 
     &.selected{
-      color: ${({theme}) => theme.colors.black};
+      color: ${({theme}) => theme.UI.colors.black};
     }
   }
 `;
@@ -51,13 +51,13 @@ const LanguageSelectorSmall = ({chooseLanguage, language}) => {
   return (
     <StyledLanguageSelectorSmall>
       <div className={'lang' + (language === 'fi' ? ' selected' : '')} onClick={() => chooseLanguage('fi')}>
-        {languageOptions.fi}
+        <span>{languageOptions.fi}</span>
       </div>
       <div className={'lang' + (language === 'en' ? ' selected' : '')} onClick={() => chooseLanguage('en')}>
-        {languageOptions.en}
+        <span>{languageOptions.en}</span>
       </div>
-      <div className="lang" style={{display: 'flex', alignItems: 'center'}}>
-        <Link to="/console">
+      <div className="lang">
+        <Link to="/console" style={{height: '26px'}}>
           <ConsoleIcon/>
         </Link>
       </div>

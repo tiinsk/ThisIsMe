@@ -35,7 +35,7 @@ const StyledProject = styled.div`
         font-size: 140px;
         font-family: ${({theme}) => theme.fonts.fontOpenSans};
         font-weight: ${({theme}) => theme.fontWeights.fontWeightBold};
-        color: ${({theme}) => theme.new.colors.black};
+        color: ${({theme}) => theme.UI.colors.black};
         line-height: 120px;
         
         opacity: 0.03;
@@ -52,6 +52,8 @@ const StyledProject = styled.div`
   
       .links {
         display: flex;
+        margin: ${({theme}) => theme.spaces.base(0.5)} 0;
+        
         a { 
           display: inline-flex;
           align-items: center;
@@ -75,9 +77,9 @@ const StyledProject = styled.div`
           
           &:not(:first-of-type):before {
             content: '';
-            border-left: 1px solid ${({theme}) => theme.new.colors.black};
+            border-left: 1px solid ${({theme}) => theme.UI.colors.black};
             height: 20px;
-            margin: ${({theme}) => theme.spaces.base(0.5)};
+            margin: 0 ${({theme}) => theme.spaces.base(0.5)};
           }
         }
       }
@@ -121,6 +123,10 @@ const StyledProject = styled.div`
       margin-top: ${({theme}) => theme.spaces.base(1)};
       width: 100%;
     }
+    
+    @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
+      width: calc(var(--imageWidth) * 2 + ${({theme}) => theme.spaces.base(2)});
+    }
       
     .project-images {
       display: flex;
@@ -144,11 +150,11 @@ const StyledProject = styled.div`
       padding: ${({theme}) => theme.spaces.base(0.5)};
       margin: 0 ${({theme}) => theme.spaces.base(0.5)};
       
-      color: ${({theme}) => theme.new.colors.white};
-      background: ${({theme}) => `${theme.new.colors.black}4D`};
+      color: ${({theme}) => theme.UI.colors.white};
+      background: ${({theme}) => `${theme.UI.colors.black}4D`};
       border-radius: 5px;
       &:hover {
-        background: ${({theme}) => `${theme.new.colors.black}66`};
+        background: ${({theme}) => `${theme.UI.colors.black}66`};
       }
     }
     .arrow-back {
@@ -169,6 +175,9 @@ const StyledProject = styled.div`
     
       .arrow-forward {
         display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 1) ? 'initial' : 'none'};
+        @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
+          display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 2) ? 'initial' : 'none'};
+        }
       }
     }
   }
@@ -218,12 +227,14 @@ const Project = ({strings, project, index}) => {
             <div>{strings.projects[project.key].name}</div>
             <div className="links">
               {
-                project.link &&
+                project.github &&
                 <a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
                   icon={faGithub}/><span>{strings.github}</span></a>
               }
-              <a href={project.link} target="_blank" rel="noopener noreferrer"><i
+              { project.link &&
+                <a href={project.link} target="_blank" rel="noopener noreferrer"><i
                 className="material-icons">public</i><span>{strings.website}</span></a>
+              }
             </div>
           </div>
           <Paragraph className="project-description">

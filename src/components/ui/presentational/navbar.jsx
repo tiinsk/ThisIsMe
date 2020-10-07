@@ -26,7 +26,7 @@ const StyledNavbar = styled.nav`
       font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
       text-transform: uppercase;
       font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
-      color: ${({theme}) => theme.new.colors.white};
+      color: ${({theme}) => theme.UI.colors.white};
       text-align: center;
 
       cursor: pointer;
@@ -53,7 +53,7 @@ const StyledMobileNavbar = styled.div`
     padding: ${({theme}) => theme.spaces.baseSize};
     
     .material-icons {
-      color: ${({theme}) => theme.new.colors.white};
+      color: ${({theme}) => theme.UI.colors.white};
       font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
     }
   }
@@ -74,7 +74,7 @@ const StyledMobileNavbar = styled.div`
     
     margin: 0;
 
-    background: ${({theme}) => theme.new.colors.white};
+    background: ${({theme}) => theme.UI.colors.white};
 
     flex-direction: column;
     justify-content: center;
@@ -84,7 +84,7 @@ const StyledMobileNavbar = styled.div`
       display: block;
       font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
       margin-bottom: ${({theme}) => theme.spaces.baseSize};
-      color: ${({theme}) => theme.new.colors.black};
+      color: ${({theme}) => theme.UI.colors.black};
       
       text-transform: uppercase;
       font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
@@ -92,7 +92,7 @@ const StyledMobileNavbar = styled.div`
     }
 
     .close {
-      color: ${({theme}) => theme.new.colors.black};
+      color: ${({theme}) => theme.UI.colors.black};
       padding: ${({theme}) => theme.spaces.baseSize};
       position: absolute;
       top: 0;
@@ -104,8 +104,8 @@ const StyledMobileNavbar = styled.div`
     }
     .language-selector-small {
       .lang {
-        color: $${({theme}) => theme.colors.greyLangSelection};
-        border-color: $${({theme}) => theme.colors.greyLangSelection};
+        color: $${({theme}) => theme.UI.colors.lightGrey};
+        border-color: $${({theme}) => theme.UI.colors.lightGrey};
         &.selected {
           color: white;
         }

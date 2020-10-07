@@ -7,7 +7,7 @@ import Skill from './skill';
 
 const StyledWorkItem = styled.div`
  .company{
-    color: ${({theme}) => theme.colors.black};
+    color: ${({theme}) => theme.UI.colors.black};
     font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
     text-transform: uppercase;
     font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
@@ -16,7 +16,7 @@ const StyledWorkItem = styled.div`
     margin: ${({theme}) => theme.spaces.baseSize}/2 0 ${({theme}) => theme.spaces.baseSize}/2 0;
   }
   .work-title{
-    color: ${({theme}) => theme.colors.black};
+    color: ${({theme}) => theme.UI.colors.black};
     font-family: ${({theme}) => theme.fonts.fontLato};
     font-size: ${({theme}) => theme.fontSizes.fontSizeLarge};
 

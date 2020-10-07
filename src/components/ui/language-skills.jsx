@@ -14,7 +14,7 @@ const StyledLangSkills = styled.div`
       
       ${Paragraph} {
         text-align: left;
-        color: ${({theme}) => theme.new.colors.black};
+        color: ${({theme}) => theme.UI.colors.black};
       }
 
       .lang-title {

@@ -43,7 +43,7 @@ const StyledHeader = styled.div`
   }
   
   .right-menu {
-    background: ${({theme}) => theme.new.colors.white};
+    background: ${({theme}) => theme.UI.colors.white};
     width: ${({theme}) => theme.rightMenuWidth};
     height: 100vh;
     

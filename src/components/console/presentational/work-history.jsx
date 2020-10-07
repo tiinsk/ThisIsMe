@@ -1,6 +1,6 @@
 import React from 'react';
 
-import workExperience from '../../../data/work_experience';
+import workExperience from '../../../data/work-experience';
 import WorkItem from './work-item';
 
 const WorkHistory = ({strings}) => {

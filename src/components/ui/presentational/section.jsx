@@ -10,10 +10,11 @@ export const StyledSection = styled.div`
   margin-left: 150px;
 
   max-width: 2000px;
+  
 
   .title{
     margin: 0;
-    color: ${({theme}) => theme.new.colors.darkGrey};
+    color: ${({theme}) => theme.UI.colors.darkGrey};
     font-size: 80px;
 
     text-transform: uppercase;
@@ -45,6 +46,14 @@ export const StyledSection = styled.div`
     .section-body {
       margin: 0;
       margin-left: ${({theme}) => theme.spaces.base(0.5)};
+    }
+  }
+  @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
+    margin-right: 150px;
+    
+    .section-body {
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
   }
 `;

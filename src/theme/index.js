@@ -1,14 +1,13 @@
 import {createGlobalStyle} from 'styled-components/macro';
 
-import {colors, consoleColors, newColors} from './colors';
+import {consoleColors, uiColors} from './colors';
 import {variables} from './variables';
 import {Anchor} from './fonts';
 
 export const theme = {
-  colors,
   ...variables,
-  new: {
-    colors: newColors,
+  UI: {
+    colors: uiColors,
   },
   console: {
     colors: consoleColors,
