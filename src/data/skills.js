@@ -54,7 +54,6 @@ export default {
     topSkills: [
       'redux',
       'vuex',
-      'html',
       'css',
       'sass',
       'knex',
