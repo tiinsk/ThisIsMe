@@ -13,8 +13,8 @@ export default {
   links: 'Linkit',
   github: 'Github',
   website: 'Nettisivut',
-  introduction: 'Olen ohjelmistosuunnittelija ja web-kehittäjä, joka on innostunut UX-suunnittelusta. Koen itseni luovaksi henkilöksi, joka on aina kiinnostunut kehittämään jotain uutta. Työskentely erilaisissa projekteissa erilaisten asiakkaiden kanssa on saanut minut ymmärtämään käytettävyyden ja palvelumuotoilun tärkeyden ohjelmistoprojekteissa itse ohjelmistokehityksen ja arkkitehtuurin lisäksi. Tulevaisuudessa haluaisinkin opiskella UX-suunnittelua lisää ja kehittyä siinä. Unelmaprojektissani, työskentelisin tiiviisti UX-suunnittelijoiden ja palvelumuotoilijoiden kanssa saavuttaakseni parhaan mahdollisen lopputuloksen. Haluaisin myös edistää UX-suunnittelun ja ohjelmistokehityksen yhteentoimivuutta.',
-  introduction2: '',
+  introduction: 'Olen ohjelmistosuunnittelija ja web-kehittäjä, joka on innostunut UX-suunnittelusta. Koen itseni luovaksi henkilöksi, joka on aina kiinnostunut kehittämään jotain uutta. Työskentely erilaisissa projekteissa erilaisten asiakkaiden kanssa on saanut minut ymmärtämään käytettävyyden ja palvelumuotoilun tärkeyden ohjelmistoprojekteissa itse ohjelmistokehityksen ja arkkitehtuurin lisäksi. Tulevaisuudessa haluaisinkin opiskella UX-suunnittelua lisää ja kehittyä siinä. Unelmaprojektissani työskentelisin tiiviisti UX-suunnittelijoiden ja palvelumuotoilijoiden kanssa ja pääsisin edistämään UX- ja ohjelmistosuunnittelijoiden yhteistyötä.',
+  introduction2: 'Käy toki työhistoriani, koulutukseni, taitoni, projektini ja kiinnostuksenkohteeni rauhassa läpi. Löydät yhteystietoni alta, ja voit myös tulostaa CV:ni alla olevasta napista.',
   summary: {
     title: 'Olen ohjelmistosuunnittelija ja web-kehittäjä, joka on innostunut UX-suunnittelusta',
     printBtn: 'Tulosta CV'

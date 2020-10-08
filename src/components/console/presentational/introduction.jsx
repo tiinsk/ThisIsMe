@@ -17,9 +17,6 @@ const Introduction = ({strings}) => {
       <p>
         {strings.introduction}
       </p>
-      <p>
-        {strings.introduction2}
-      </p>
     </StyledConsoleIntroduction>
   )
 };

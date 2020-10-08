@@ -4,8 +4,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components/macro';
 
-import cv_en_pdf from '../../assets/cv_en.pdf';
-import cv_fi_pdf from '../../assets/cv_fi.pdf';
+import cv_en_pdf from '../../assets/resume-EN.pdf';
+import cv_fi_pdf from '../../assets/resume-FI.pdf';
 import myImage from '../../assets/me_2_0_black.png';
 import translate from '../../components/main/translate';
 import contacts from '../../data/contacts';

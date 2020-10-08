@@ -2,7 +2,7 @@ export default [
   {
     key: 'homeMonitor',
     github: 'https://github.com/tiinsk/sensor-frontend',
-    link: 'https://home.koskiranta.fi',
+    link: 'https://home.tiina.dev',
     images: ['home1.jpg', 'home2.jpg', 'home3.jpg'],
     topSkills: [
       'react',
@@ -26,7 +26,7 @@ export default [
   {
     key: 'thisIsMe',
     github: 'https://github.com/tiinsk/ThisIsMe',
-    link: 'https://tiina.koskiranta.fi',
+    link: 'https://tiina.dev',
     images: ['this1.jpg', 'this2.jpg', 'this3.jpg'],
     topSkills: [
       'react',
@@ -75,7 +75,7 @@ export default [
   {
     key: 'travelPics',
     github: 'https://github.com/tiinsk/travel-pictures',
-    link: 'https://koskiranta.fi',
+    link: 'https://travel.tiina.dev',
     images: ['travel1.jpg', 'travel2.jpg', 'travel3.jpg'],
     topSkills: [
       'angular',
