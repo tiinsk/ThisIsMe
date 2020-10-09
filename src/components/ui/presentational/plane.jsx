@@ -9,11 +9,13 @@ const StyledConsoleIcon = styled.svg`
   z-index: -1;
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     height: 800px;
+    width: 800px;
     top: 20px;
     left: -400px;
   }
   @media (max-width: ${({theme}) => theme.breakpoints.xsSize}){
     height: 700px;
+    width: 700px;
     top: 0;
     left: -350px;
   }

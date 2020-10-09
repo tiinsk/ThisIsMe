@@ -4,20 +4,33 @@ import styled from 'styled-components/macro';
 import projects from '../../data/projects';
 import translate from '../main/translate';
 import Project from './presentational/project';
-import Section from './presentational/section';
+import Section, {StyledSection} from './presentational/section';
 
 const StyledProjects = styled.div`
- 
+  ${StyledSection} {
+    .section-body {
+      max-width: none;
+      
+      @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
+        margin-left: 13% !important;
+        max-width: none;
+      }
+    }
+    
+    @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
+      max-width: none;
+    }
+  }
 `;
 
 const Projects = ({scrollRef}) => {
   return (
-    <div ref={scrollRef}>
+    <StyledProjects ref={scrollRef}>
       <Section
         titleId="titles.projects"
         style={{marginRight: 0}}
       >
-        <StyledProjects className="projects">
+        <div className="projects">
           {
             projects.map((project, i) => {
               return (
@@ -29,9 +42,9 @@ const Projects = ({scrollRef}) => {
               );
             })
           }
-        </StyledProjects>
+        </div>
       </Section>
-    </div>
+    </StyledProjects>
   )
 };
 

@@ -125,7 +125,7 @@ const StyledProject = styled.div`
     }
     
     @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
-      width: calc(var(--imageWidth) * 2 + ${({theme}) => theme.spaces.base(2)});
+      width: calc(var(--imageWidth) * 2.5 + ${({theme}) => theme.spaces.base(2)});
     }
       
     .project-images {
@@ -155,6 +155,10 @@ const StyledProject = styled.div`
       border-radius: 5px;
       &:hover {
         background: ${({theme}) => `${theme.UI.colors.black}66`};
+      }
+      
+      @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+        display: none !important;
       }
     }
     .arrow-back {
