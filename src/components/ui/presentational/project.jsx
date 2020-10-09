@@ -199,7 +199,10 @@ const lightBoxOptions = {
 const Project = ({strings, project, index}) => {
   const [imageIndex, setImageIndex] = useState(0);
 
-  const images = project.images.map(image => require(`../../../assets/projects/${project.key}/${image}`));
+  const images = project.images.map(image => ({
+    img: require(`../../../assets/projects/${project.key}/${image.img}`),
+    thumb: require(`../../../assets/projects/${project.key}/${image.thumb}`)
+  }));
 
   const onBack = () => {
     if (imageIndex > 0) {
@@ -262,8 +265,8 @@ const Project = ({strings, project, index}) => {
             <div className="project-images" style={{left: imageLeft}}>
               {
                 images.map(image => (
-                  <a key={image} href={image} data-attribute="SRL">
-                    <img className="project-image" src={image} alt="Project"/>
+                  <a key={image.img} href={image.img} data-attribute="SRL">
+                    <img className="project-image" src={image.thumb} alt="Project"/>
                   </a>
                 ))
               }

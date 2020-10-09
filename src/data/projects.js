@@ -3,7 +3,16 @@ export default [
     key: 'homeMonitor',
     github: 'https://github.com/tiinsk/sensor-frontend',
     link: 'https://home.tiina.dev',
-    images: ['home1.jpg', 'home2.jpg', 'home3.jpg'],
+    images: [{
+      img: 'img_1.jpg',
+      thumb: 'thumb_1.jpg',
+    }, {
+      img: 'img_2.jpg',
+      thumb: 'thumb_2.jpg',
+    }, {
+      img: 'img_3.jpg',
+      thumb: 'thumb_3.jpg',
+    }],
     topSkills: [
       'react',
       'javascript',
@@ -27,7 +36,16 @@ export default [
     key: 'thisIsMe',
     github: 'https://github.com/tiinsk/ThisIsMe',
     link: 'https://tiina.dev',
-    images: ['this1.jpg', 'this2.jpg', 'this3.jpg'],
+    images: [{
+      img: 'img_1.jpg',
+      thumb: 'thumb_1.jpg',
+    }, {
+      img: 'img_2.jpg',
+      thumb: 'thumb_2.jpg',
+    }, {
+      img: 'img_3.jpg',
+      thumb: 'thumb_3.jpg',
+    }],
     topSkills: [
       'react',
       'javascript',
@@ -44,7 +62,19 @@ export default [
   },
   {
     key: 'gymApp',
-    images: ['home1.jpg', 'home2.jpg', 'home3.jpg'],
+    images: [{
+      img: 'img_1.jpg',
+      thumb: 'thumb_1.jpg',
+    }, {
+      img: 'img_2.jpg',
+      thumb: 'thumb_2.jpg',
+    }, {
+      img: 'img_3.jpg',
+      thumb: 'thumb_3.jpg',
+    }, {
+      img: 'img_4.jpg',
+      thumb: 'thumb_4.jpg',
+    }],
     topSkills: [
       'ui_design',
       'sketch',
@@ -58,7 +88,10 @@ export default [
     key: 'cottagePage',
     github: 'https://github.com/tiinsk/tammaniemi_3.0',
     link: null,
-    images: ['cottage1.jpg', 'cottage2.jpg', 'cottage3.jpg'],
+    images: [{
+      img: 'img_1.jpg',
+      thumb: 'thumb_1.jpg',
+    }],
     topSkills: [
       'react',
       'javascript',
@@ -76,7 +109,16 @@ export default [
     key: 'travelPics',
     github: 'https://github.com/tiinsk/travel-pictures',
     link: 'https://travel.tiina.dev',
-    images: ['travel1.jpg', 'travel2.jpg', 'travel3.jpg'],
+    images: [{
+      img: 'img_1.jpg',
+      thumb: 'thumb_1.jpg',
+    }, {
+      img: 'img_2.jpg',
+      thumb: 'thumb_2.jpg',
+    }, {
+      img: 'img_3.jpg',
+      thumb: 'thumb_3.jpg',
+    }],
     topSkills: [
       'angular',
       'javascript',
