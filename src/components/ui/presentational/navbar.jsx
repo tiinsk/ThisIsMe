@@ -225,7 +225,7 @@ class Navbar extends React.Component {
             >
               {this.props.strings.titles.interests}
             </li>
-            <LanguageSelectorSmall/>
+            <LanguageSelectorSmall onCloseMenu={() => this.toggleMenu()}/>
             <i
               className="close material-icons"
               onClick={() => this.toggleMenu()}
