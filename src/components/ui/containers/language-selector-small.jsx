@@ -47,7 +47,7 @@ const StyledLanguageSelectorSmall = styled.div`
   }
 `;
 
-const LanguageSelectorSmall = ({chooseLanguage, language}) => {
+const LanguageSelectorSmall = ({chooseLanguage, language, onCloseMenu}) => {
   return (
     <StyledLanguageSelectorSmall>
       <div className={'lang' + (language === 'fi' ? ' selected' : '')} onClick={() => chooseLanguage('fi')}>
@@ -57,7 +57,7 @@ const LanguageSelectorSmall = ({chooseLanguage, language}) => {
         <span>{languageOptions.en}</span>
       </div>
       <div className="lang">
-        <Link to="/console" style={{height: '26px'}}>
+        <Link to="/console" style={{height: '26px'}} onClick={onCloseMenu}>
           <ConsoleIcon/>
         </Link>
       </div>
