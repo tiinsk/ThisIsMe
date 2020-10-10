@@ -35,6 +35,7 @@ export  const PageSubtitle = css`
   font-family: ${({theme}) => theme.fonts.fontOpenSans};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
   font-size: ${({theme}) => theme.fontSizes.fontSizeSmall};
+  line-height: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
   text-transform: uppercase;
   letter-spacing: 1.9px;
   text-align: center;

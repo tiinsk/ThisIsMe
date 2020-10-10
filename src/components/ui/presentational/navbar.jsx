@@ -73,6 +73,7 @@ const StyledMobileNavbar = styled.div`
     z-index: 1;
     
     margin: 0;
+    padding: 0;
 
     background: ${({theme}) => theme.UI.colors.white};
 

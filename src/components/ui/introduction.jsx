@@ -12,12 +12,12 @@ import contacts from '../../data/contacts';
 import {Paragraph} from '../../theme/fonts';
 import {LinkButton} from './presentational/button';
 
-const ImageSize = '150px';
+const ImageSize = '180px';
 
 const StyledIntroduction = styled.div`
   position: relative;
   display: flex;
-  max-width: 750px;
+  max-width: 860px;
 
   .summary {
     .summary-text {
@@ -55,7 +55,7 @@ const StyledIntroduction = styled.div`
   }
   
   .image-wrapper {
-    padding-left: ${({theme}) => theme.spaces.base(2)};
+    padding-left: ${({theme}) => theme.spaces.base(4)};
     
     @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
       padding-left: 0;
@@ -67,7 +67,7 @@ const StyledIntroduction = styled.div`
       width: ${ImageSize};
       height: ${ImageSize};
       border-radius: 50%;
-      background-size: 165px;
+      background-size: 200px;
       background-position: left top;
     }
   }

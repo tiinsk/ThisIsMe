@@ -8,6 +8,7 @@ import {parseCommand} from '../../../actions/console_actions';
 const StyledConsoleCommandLine = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
   margin-top: 1rem;
   
   .line-icon{
@@ -40,6 +41,14 @@ const StyledConsoleCommandLine = styled.div`
         0% { opacity: 1; }
         50% { opacity: 1; }
         100% { opacity: 0; }
+      }
+    }
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+      height: 14px;
+      line-height: 14px;
+      .cursor {
+        width: 7px;
       }
     }
   }

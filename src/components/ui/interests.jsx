@@ -19,6 +19,11 @@ const StyledInterests = styled.div`
       top: -70px;
       left: -600px;
       z-index: -1;
+      @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}){
+        height: 1400px;
+        top: -270px;
+        left: -700px;
+      }
       @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
         height: 800px;
         top: 20px;
