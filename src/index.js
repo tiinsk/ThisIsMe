@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
 import {App} from './components/main/main';
 import WebFont from 'webfontloader';
 
@@ -16,10 +17,11 @@ WebFont.load({
   },
 });
 console.log(process.env.NODE_ENV);
-/*if (process.env.NODE_ENV === 'production') {
-  ga('create', 'UA-54768362-3', 'auto');
-  ga('send', 'pageview');
-}*/
+if (process.env.NODE_ENV === 'production') {
+  ReactGA.initialize('UA-54768362-3');
+  ReactGA.pageview(window.location.pathname);
+}
+
 
 ReactDOM.render(
   <React.StrictMode>
