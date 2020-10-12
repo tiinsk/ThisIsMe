@@ -10,7 +10,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^3.5.2",
-    "axios": "^0.15.3",
+    "axios": "^0.18.1",
     "figlet": "^1.5.0",
     "lodash": "^4.17.20",
     "material-design-icons": "^3.0.1",
