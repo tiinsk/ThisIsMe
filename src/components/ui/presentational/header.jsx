@@ -17,6 +17,7 @@ const StyledHeader = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom left;
   
   position: relative;
   
