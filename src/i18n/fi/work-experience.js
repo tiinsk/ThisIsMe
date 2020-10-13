@@ -2,7 +2,7 @@ export default {
   'vincit': {
     'title': 'Ohjelmistosuunnittelija',
     'company': 'Vincit California',
-    'description': 'Työskentelen projektissa, joka kehitämme yhteisösovellusta menestyvien naisten yhteisölle. Tiimimme kehittää web sovellusta käyttäen Reactia, JavaScriptiä ja GraphQLää, sekä mobiilisovellusta käyttäen React Nativea. Olen itse työskennellyt pääsäntöisesti web front-end kehityksen parissa. Olemme toteuttaneet sovelluksen viestintäominaisuudet PubNubilla. Aikaisemmin työskentelin projektissa, jossa kehitimme C# työpöytäsovellusta.'
+    'description': 'Työskentelen projektissa, jossa kehitämme yhteisösovellusta menestyvien naisten yhteisölle. Tiimimme kehittää web sovellusta käyttäen Reactia, JavaScriptiä ja GraphQL:ä, sekä mobiilisovellusta käyttäen React Nativea. Olen itse työskennellyt pääsäntöisesti web front-end kehityksen parissa. Olemme toteuttaneet sovelluksen viestintäominaisuudet PubNubilla. Aikaisemmin työskentelin projektissa, jossa kehitimme C# työpöytäsovellusta.'
   },
   'gofore': {
     'title': 'Ohjelmistosuunnittelija',
@@ -17,7 +17,7 @@ export default {
   'nokia_android': {
     'title': 'Harjoittelija, Imaging Software',
     'company': 'Nokia Technologies',
-    'description': 'Työskentelin yhden kesän ajan Imaging Software -tiimissä Nokia Technologiesilla. Päätehtävänäni oli Android-tuotekehitys käyttäen Javaa ja OpenGL:ää. Suurimpana yhtenäisenä tehtävänä toteutin 360° VR videon toisto sovelluksen Google Cardboardille. Osaillistuin myös muiden Android sovellusten kehittämiseen.'
+    'description': 'Työskentelin yhden kesän ajan Imaging Software -tiimissä Nokia Technologiesilla. Päätehtävänäni oli Android-tuotekehitys käyttäen Javaa ja OpenGL:ää. Suurimpana yhtenäisenä tehtävänä toteutin 360° VR videontoistosovelluksen Google Cardboardille. Osaillistuin myös muiden Android sovellusten kehittämiseen.'
   },
   'microsoft_msthesis': {
     'title': 'Diplomityöntekijä, Imaging Algorithms and Middleware',

@@ -9,9 +9,6 @@ export const StyledSection = styled.div`
   margin: 20rem 2rem 25rem 2rem;
   margin-left: 150px;
 
-  max-width: 2000px;
-  
-
   .title{
     margin: 0;
     color: ${({theme}) => theme.UI.colors.darkGrey};

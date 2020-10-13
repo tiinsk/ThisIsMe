@@ -1,7 +1,7 @@
 export default {
   thisIsMe: {
     name: 'Tämä sivu',
-      description: 'Tämä sivu, jota tällä hetkellä selailet on tehty pääasiassa juuri sinua varten. Kun aloitin tämän projektin, olin tehnyt jo useita projekteja käyttäen niitä samoja kirjastoja ja ohjelmointikeiliä, joita tässäkin projektissa on käytössä. Joten tässä projektissa ei ollut mitään erityisen hankalaa toteutuksen kannalta. Ymmärsin kuitenkin tätä sivua tehdessäni sen kuinka paljon olen oppinut tehdessäni web-sivuja töissä ja vapaa-ajalla.'
+      description: 'Tämä sivu, jota tällä hetkellä selailet on tehty pääasiassa juuri sinua varten. Kun aloitin tämän projektin, olin tehnyt jo useita projekteja käyttäen niitä samoja kirjastoja ja ohjelmointikeiliä, joita tässäkin projektissa on käytössä. Joten tässä projektissa ei ollut mitään erityisen hankalaa toteutuksen kannalta. Ymmärsin kuitenkin tätä sivua tehdessäni sen kuinka paljon olen oppinut tehdessäni web-sivuja töissä ja vapaa-ajalla. Ensimmäisen version (vuoden 2017) jälkeen olen päivittänyt tämän sivun designit muutaman kerran (vuonna 2019 ja 2020), sekä päivittänyt joitakin komponentteja uudempiin.'
   },
   cottagePage: {
     name: 'Mökki-sivu',

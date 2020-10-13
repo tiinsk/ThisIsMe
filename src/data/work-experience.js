@@ -19,10 +19,13 @@ export default {
       ],
       'otherSkills': [
         'redux',
+        'rematch',
         'graphql',
         'apollo',
         'styled_components',
         'styled_systems',
+        'netlify',
+        'circle_ci',
         'git',
         'jira',
         'scrum',
