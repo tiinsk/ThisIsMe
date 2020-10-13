@@ -7,12 +7,12 @@ export default {
   'gofore': {
     'title': 'Software Engineer',
     'company': 'Gofore',
-    'description': 'I worked as part of an internal development project. The project focused on developing tools for sales, resourcing, and competence management. I developed both the front-end and the back-end of the application using Vue, Javascript, Typescript, and other related technologies. I was responsible for certain areas of the application, and I made major architectural decisions related to the application. I also worked closely with the UX team.'
+    'description': 'I worked as part of an internal development project. The project focused on developing tools for sales, resourcing, and competence management. I participated in developing both the front-end and the back-end of the application using Vue, Javascript, and Typescript. I was responsible for certain areas of the application, and I made major architectural decisions related to the application. I also worked closely with the UX team.'
   },
   'wapice': {
     'title': 'Software Engineer',
     'company': 'Wapice',
-    'description': 'I was a part of multiple project teams, which developed web software products and services directly to clients. I worked as a full-stack developer using React, JavaScript, Typescript, and C#. In one of the projects, I was the main responsible for web development and web development architecture.'
+    'description': 'I was part of multiple project teams, which developed web software products and services directly to clients. I worked as a full-stack developer using React, JavaScript, Typescript, and C#. In one of the projects, I was the main responsible for web development and web development architecture.'
   },
   'nokia_android': {
     'title': 'Summer Trainee, Imaging Software',

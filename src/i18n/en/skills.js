@@ -23,6 +23,7 @@ export default {
     psql: 'PostgreSQL',
     webpack: 'Webpack',
     mocha: 'Mocha',
+    jest: 'Jest',
     chai: 'Chai',
     enzyme: 'Enzyme',
     bluemix: 'IBM Bluemix',
@@ -57,6 +58,9 @@ export default {
     pubnub: 'PubNub',
     mobile_design: 'Mobile Design',
     interaction_design: 'Interaction Design',
+    rematch: 'Rematch',
+    netlify: 'Netlify',
+    circle_ci: 'Circle CI',
   },
   ratedSkills: {
     topSkills: {
@@ -88,7 +92,7 @@ export default {
     {
       language: 'En',
       level: 'Fluent',
-      text: 'I have studied English since was 7 years old. I was also in student exchange in Singapore for one semester when I studied at the university. I have worked in international project teams and I also read work related articles almost daily. I also like to read English language literature.',
+      text: 'I have studied English since I was 7 years old. I was also in student exchange in Singapore for one semester when I studied at the university. I have worked in international project teams and I also read work related articles almost daily. I also like to read English language literature.',
     },
     {
       language: 'Sv',
