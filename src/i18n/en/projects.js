@@ -1,7 +1,7 @@
 export default {
   thisIsMe: {
     name: 'This Page',
-      description: 'This page you are currently reading was created mainly because of you. When I started this project, I had already done projects with the same libraries and programming languages, so there was nothing especially hard and tricky in this page to be implemented. What I learned and realized from making this website, was how much I actually had learned about JavaScript, React, and web development from my work projects and free time projects.'
+      description: 'This page you are currently reading was created mainly because of you. When I started this project, I had already done projects with the same libraries and programming languages, so there was nothing especially hard and tricky in this project. What I learned and realized from making this website, was how much I actually had learned about JavaScript, React, and web development from my work projects and free time projects. After completing the first version of this page (in 2017), I have redesigned it couple of times (in 2019 and 2020) and updated some components.'
   },
   cottagePage: {
     name: 'Cottage home page',
