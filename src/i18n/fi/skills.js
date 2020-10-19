@@ -92,7 +92,7 @@ export default {
     {
       language: 'En',
       level: 'Sujuva',
-      text: 'Olen opiskellut englantia 7-vuotiaasta alkaen. Olin myös Singaporessa vaihto-opiskelijana yhden lukukauden yliopisto-opintojeni aikana. Olen työskennellyt kansainvälisissä projekti-tiimeissä ja luenkin työhön liittyviä artikkeleita lähes päivittäin. Tykkään myös lukea kirjoja Englanniksi ja usein luenkin kirjat alkuperäiskiellään.',
+      text: 'Olen opiskellut englantia 7-vuotiaasta alkaen. Olen asunut Yhdysvalloissa 2 vuotta (2018-2020). Olin myös Singaporessa vaihto-opiskelijana yhden lukukauden yliopisto-opintojeni aikana. Olen työskennellyt kansainvälisissä projekti-tiimeissä ja luenkin työhön liittyviä artikkeleita lähes päivittäin. Tykkään myös lukea kirjoja Englanniksi ja usein luenkin kirjat alkuperäiskiellään.',
     },
     {
       language: 'Sv',
