@@ -92,7 +92,7 @@ export default {
     {
       language: 'En',
       level: 'Fluent',
-      text: 'I have studied English since I was 7 years old. I was also in student exchange in Singapore for one semester when I studied at the university. I have worked in international project teams and I also read work related articles almost daily. I also like to read English language literature.',
+      text: 'I have studied English since I was 7 years old. I have lived in the US for two years (2018-2020), and I was also in student exchange in Singapore for one semester when I studied at the university. I have worked in international project teams, and I also read work-related articles almost daily. I also like to read English language literature.',
     },
     {
       language: 'Sv',
