@@ -7,8 +7,8 @@ export default {
         'year': 2019
       },
       'to': {
-        'month': null,
-        'year': null
+        'month': 11,
+        'year': 2020
       },
       'topSkills': [
         'javascript',
