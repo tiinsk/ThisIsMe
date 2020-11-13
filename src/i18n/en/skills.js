@@ -86,7 +86,7 @@ export default {
   languages: [
     {
       language: 'Fi',
-      level: 'Mother Tongue',
+      level: 'Native',
       text: 'Finnish is my mother Tongue. I have studied Finnish language and literature from 1-9 grade and in high school. I have also always liked to read Finnish literature a lot.',
     },
     {
