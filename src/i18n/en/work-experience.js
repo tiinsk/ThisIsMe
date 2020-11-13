@@ -2,7 +2,7 @@ export default {
   'vincit': {
     'title': 'Software Engineer',
     'company': 'Vincit California',
-    'description': "I work in a project team, which develops a community application for a network of successful women. Our team develops the web application with React, Javascript, and GraphQL, and the mobile application with React Native. I have been mainly working on the web front-end side. We have been using PubNub for the application's instant messaging features. Previously, I also worked on a project, which developed a C# desktop application."
+    'description': "I worked in a project team, which developed a community application for a network of successful women. Our team developed the web application with React, Javascript, and GraphQL, and the mobile application with React Native. We used PubNub for the application's instant messaging features. I mainly worked on the web front-end side. Previously, I also worked on a project, which developed a C# desktop application."
   },
   'gofore': {
     'title': 'Software Engineer',

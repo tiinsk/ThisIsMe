@@ -1,4 +1,5 @@
 import moment from 'moment';
+import 'moment/locale/fi';
 import { CHOOSE_LANGUAGE } from '../actions/language_actions';
 
 const locale = localStorage.getItem('language') || 'en';
