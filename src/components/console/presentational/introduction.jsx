@@ -17,6 +17,12 @@ const Introduction = ({strings}) => {
       <p>
         {strings.introduction}
       </p>
+      <p>
+        {strings.introduction2}
+      </p>
+      <p>
+        {strings.introduction3}
+      </p>
     </StyledConsoleIntroduction>
   )
 };
