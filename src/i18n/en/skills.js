@@ -38,7 +38,7 @@ export default {
     svn: 'SVN',
     opengl: 'Open GL',
     styled_components: 'Styled Components',
-    styled_systems: 'Styled Systems',
+    styled_systems: 'Styled System',
     ble: 'Bluetooth LE',
     noble: 'Noble',
     raspberry: 'Raspberry Pi',
@@ -61,6 +61,10 @@ export default {
     rematch: 'Rematch',
     netlify: 'Netlify',
     circle_ci: 'Circle CI',
+    figma: 'Figma',
+    cms: 'CMS',
+    dato_cms: 'DatoCMS',
+    gatsby: 'Gatsby',
   },
   ratedSkills: {
     topSkills: {

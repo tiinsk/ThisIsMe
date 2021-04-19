@@ -61,6 +61,10 @@ export default {
     rematch: 'Rematch',
     netlify: 'Netlify',
     circle_ci: 'Circle CI',
+    figma: 'Figma',
+    cms: 'CMS',
+    dato_cms: 'DatoCMS',
+    gatsby: 'Gatsby',
   },
   ratedSkills: {
     topSkills: {

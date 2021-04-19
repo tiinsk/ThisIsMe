@@ -22,10 +22,11 @@ const StyledIntroduction = styled.div`
   .summary {
     .summary-text {
       margin-top: 0;
-      margin-bottom: ${({theme}) => theme.spaces.base(2)};
+      margin-bottom: ${({theme}) => theme.spaces.base(1)};
     }
     
     .links {
+      margin-top: ${({theme}) => theme.spaces.base(2)};
       margin-bottom: ${({theme}) => theme.spaces.base(1)};
       a { 
         display: inline-flex;
@@ -83,6 +84,7 @@ const Introduction = ({strings, language}) => {
       <div className="summary">
         <Paragraph className="summary-text">{strings.introduction}</Paragraph>
         <Paragraph className="summary-text">{strings.introduction2}</Paragraph>
+        <Paragraph className="summary-text">{strings.introduction3}</Paragraph>
         <div className="links">
           <div className="link">
             <a className="link-anchor" href={contacts.github} target="_blank" rel="noopener noreferrer">
