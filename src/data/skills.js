@@ -57,6 +57,7 @@ export default {
       'vuex',
       'css',
       'sass',
+      'figma',
       'knex',
       'styled_components',
       'styled_systems',

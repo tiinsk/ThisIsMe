@@ -1,4 +1,9 @@
 export default {
+  'bitfactor': {
+    'title': 'Ohjelmistosuunnittelija',
+    'company': 'Bitfactor Oy',
+    'description': 'Työskentelin aiemmin UX-suunnittelijana yhdessä sisäisessä projektissa, sekä osallistuin Bitfactorin markkinointi-sivujen kehittämiseen käyttäen Gatsbyä, Javascriptia ja DatoCMS:ää. Tällä hetkellä työskentelen front-end kehittäjänä online-peliprojektissa, jossa olen vastuussa pelien hallintasovelluksen kehittämisestä.'
+  },
   'vincit': {
     'title': 'Ohjelmistosuunnittelija',
     'company': 'Vincit California',

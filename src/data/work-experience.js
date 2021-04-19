@@ -1,6 +1,38 @@
 export default {
   'workexp': [
     {
+      'key': 'bitfactor',
+      'from': {
+        'month': 12,
+        'year': 2020
+      },
+      'to': {
+        'month': null,
+        'year': null
+      },
+      'topSkills': [
+        'javascript',
+        'react',
+        'gatsby',
+        'typescript',
+        'css',
+        'cms',
+        'ui_design',
+      ],
+      'otherSkills': [
+        'figma',
+        'dato_cms',
+        'redux',
+        'rematch',
+        'styled_components',
+        'styled_systems',
+        'netlify',
+        'graphql',
+        'git',
+        'scrum'
+      ]
+    },
+    {
       'key': 'vincit',
       'from': {
         'month': 10,

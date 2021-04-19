@@ -1,4 +1,9 @@
 export default {
+  'bitfactor': {
+    'title': 'Software Engineer',
+    'company': 'Bitfactor',
+    'description': "Previously, I worked as a UX designer on an internal project and participated in the development of Bitfactor's marketing websites using Gatsby, Javascript, and DatoCMS. Currently, I work as a front-end developer on a project where I am responsible for developing a management website for the company's online games."
+  },
   'vincit': {
     'title': 'Software Engineer',
     'company': 'Vincit California',
