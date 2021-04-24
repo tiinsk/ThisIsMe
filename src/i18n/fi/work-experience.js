@@ -2,7 +2,7 @@ export default {
   'bitfactor': {
     'title': 'Ohjelmistosuunnittelija',
     'company': 'Bitfactor Oy',
-    'description': 'Työskentelin aiemmin UX-suunnittelijana yhdessä sisäisessä projektissa, sekä osallistuin Bitfactorin markkinointi-sivujen kehittämiseen käyttäen Gatsbyä, Javascriptia ja DatoCMS:ää. Tällä hetkellä työskentelen front-end kehittäjänä online-peliprojektissa, jossa olen vastuussa pelien hallintasovelluksen kehittämisestä.'
+    'description': 'Työskentelin aiemmin UX-suunnittelijana yhdessä sisäisessä projektissa, sekä osallistuin Bitfactorin markkinointi-sivujen kehittämiseen käyttäen Gatsbyä, Javascriptia ja DatoCMS:ää. Tällä hetkellä työskentelen front-end konsulttina online-peliprojektissa, jossa olen vastuussa pelien hallintasovelluksen kehittämisestä.'
   },
   'vincit': {
     'title': 'Ohjelmistosuunnittelija',
@@ -12,7 +12,7 @@ export default {
   'gofore': {
     'title': 'Ohjelmistosuunnittelija',
     'company': 'Gofore Oyj',
-    'description': 'Työskentelin osana sisäistä tuotekehitysprojektia. Kehitettävä tuotteen tarkoitus oli avustaa myyntiä, resursointia ja osaamisenhallintaa. Osallistuin sekä front-endin että back-endin kehittämiseen Vuella, JavaScriptillä ja TypeScriptillä. Olin vastuussa sovelluksen tiettyjen osien kehittämisestä ja tein suuria arkkitehtuurisia päätöksiä sovellukseen liittyen. Työskentelin läheisesti myös UX-tiimin kanssa.'
+    'description': 'Työskentelin osana sisäistä tuotekehitysprojektia. Kehitettävän tuotteen tarkoitus oli avustaa myyntiä, resursointia ja osaamisenhallintaa. Osallistuin sekä front-endin että back-endin kehittämiseen Vuella, JavaScriptillä ja TypeScriptillä. Olin vastuussa sovelluksen tiettyjen osien kehittämisestä ja tein suuria arkkitehtuurisia päätöksiä sovellukseen liittyen. Työskentelin läheisesti myös UX-tiimin kanssa.'
   },
   'wapice': {
     'title': 'Ohjelmistosuunnittelija',
@@ -27,7 +27,7 @@ export default {
   'microsoft_msthesis': {
     'title': 'Diplomityöntekijä, Imaging Algorithms and Middleware',
     'company': 'Nokia /Microsoft',
-    'description': 'Tein diplomityötäni Nokian Imaging Algorithms and Middleware -tiimissä Tampereella. Diplomityöni keskittyi mobiilikameroiden kuvantamisalgoritmien parantamiseen kahden kameran avulla. Diplomityössä tutkittiin mahdollisia kahden kameran avulla toteutettavia algoritmeja ja luotiin kahden kameran algoritmien kehitystyökalu. Kehitettävät algoritmit kohdistuivat automaattisen valkotasapainon säätöön, automaattisen valotusajan säätöön ja liikkeen aiheuttaman sumeuden poistamiseen.'
+    'description': 'Tein diplomityötäni Nokian Imaging Algorithms and Middleware -tiimissä Tampereella. Diplomityöni keskittyi mobiilikameroiden kuvantamisalgoritmien parantamiseen kahden kameran avulla. Tutkin kahden kameran avulla toteutettavia algoritmeja ja rakensin kahden kameran algoritmien kehitystyökalun. Kehitettävät algoritmit kohdistuivat automaattisen valkotasapainon säätöön, automaattisen valotusajan säätöön ja liikkeen aiheuttaman sumeuden poistamiseen.'
   },
 
   'nokia': {

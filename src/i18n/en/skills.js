@@ -65,6 +65,7 @@ export default {
     cms: 'CMS',
     dato_cms: 'DatoCMS',
     gatsby: 'Gatsby',
+    ux: 'UX design',
   },
   ratedSkills: {
     topSkills: {
