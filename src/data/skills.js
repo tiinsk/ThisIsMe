@@ -17,9 +17,9 @@ export default {
         color: 'linear-gradient(90deg, #ADE8D0 50%, #ACD899 100%)',
       },
       {
-        key: 'sketch',
-        value: 8,
-        color: 'linear-gradient(90deg, #FDC99D 50%, #F5A26E 100%)',
+        key: 'ux',
+        value: 5,
+        color: 'linear-gradient(90deg, #676767 25%, #000000 100%)',
       },
       {
         key: 'typescript',
@@ -58,6 +58,7 @@ export default {
       'css',
       'sass',
       'figma',
+      'sketch',
       'knex',
       'styled_components',
       'styled_systems',
