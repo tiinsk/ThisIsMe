@@ -85,6 +85,12 @@ export default {
       'digital_ocean',
       'nginx',
       'docker',
+      'npm',
+      'yarn',
+      'monorepos',
+      'workspaces',
+      'g_analytics',
+      'seo'
     ]
   }
 }

@@ -65,7 +65,13 @@ export default {
     cms: 'CMS',
     dato_cms: 'DatoCMS',
     gatsby: 'Gatsby',
-    ux: 'UX design',
+    ux: 'UX-suunnittelu',
+    g_analytics: 'Google Analytics',
+    seo: 'SEO',
+    monorepos: 'Monorepot',
+    npm: 'npm',
+    yarn: 'yarn',
+    workspaces: 'yarn/npm workspaces',
   },
   ratedSkills: {
     topSkills: {
