@@ -29,7 +29,9 @@ export default {
         'netlify',
         'graphql',
         'git',
-        'scrum'
+        'scrum',
+        'g_analytics',
+        'seo'
       ]
     },
     {
@@ -61,7 +63,9 @@ export default {
         'git',
         'jira',
         'scrum',
-        'kanban'
+        'kanban',
+        'g_analytics',
+        'seo'
       ]
     },
     {

@@ -18,6 +18,7 @@ export default [
       'javascript',
       'css',
       'ui_design',
+      'sketch',
     ],
     otherSkills: [
       'node',
@@ -50,6 +51,7 @@ export default [
       'react',
       'javascript',
       'ui_design',
+      'sketch',
     ],
     otherSkills: [
       'node',
@@ -103,6 +105,7 @@ export default [
       'sass',
       'git',
       'ui_design',
+      'sketch',
     ]
   },
   {
