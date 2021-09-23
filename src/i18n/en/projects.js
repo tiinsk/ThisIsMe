@@ -19,4 +19,8 @@ export default {
     name: 'Gym App',
     description: 'I started this project together with my husband. We planned that I would do the design part, and he would do the implementation part. This project is my first design only project, and it has taught me the most about design. This project is still in progress, I have still some fine-tuning to do, but my husband has already started to implement the mobile application by using Flutter and Hasura.'
   },
+  foodBlog: {
+    name: 'Food Blog',
+    description: "I created this site to demonstrate my web development and UX design skills. I wanted to learn something new, so I picked up Next.js and Contentful. The Demo version of the site is deployed with Vercel. I used stock images from Unsplash and recipes that I found online, so don't expect to find secret family recipes from this site!"
+  },
 };

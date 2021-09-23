@@ -76,6 +76,13 @@ const Project = ({strings, project}) => {
               </a>
             </div>
           }
+          { project.designs &&
+          <div>
+            <a href={project.designs} target="_blank" rel="noopener noreferrer">
+              {project.designs}
+            </a>
+          </div>
+          }
         </div>
       </div>
     </StyledConsoleProject>

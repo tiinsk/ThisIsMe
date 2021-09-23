@@ -72,6 +72,9 @@ export default {
     npm: 'npm',
     yarn: 'yarn',
     workspaces: 'yarn/npm workspaces',
+    contentful: 'Contentful',
+    nextjs: 'Next.js',
+    vercel: 'vercel'
   },
   ratedSkills: {
     topSkills: {
