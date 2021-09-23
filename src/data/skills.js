@@ -59,6 +59,7 @@ export default {
       'sass',
       'figma',
       'sketch',
+      'cms',
       'knex',
       'styled_components',
       'styled_systems',
@@ -67,6 +68,10 @@ export default {
       'jira',
     ],
     otherSkills: [
+      'gatsby',
+      'nextjs',
+      'datocms',
+      'contentful',
       'graphql',
       'apollo',
       'hapi',
@@ -87,9 +92,6 @@ export default {
       'docker',
       'npm',
       'yarn',
-      'monorepos',
-      'workspaces',
-      'g_analytics',
       'seo'
     ]
   }
