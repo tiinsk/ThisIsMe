@@ -30,9 +30,7 @@ const Project = ({strings, project}) => {
   return(
     <StyledConsoleProject>
       <DashedLine/>
-      <div className="project-name">
-        {strings.projects[project.key].name}
-      </div>
+      <div className="project-name" dangerouslySetInnerHTML={{__html: strings.projects[project.key].name}} />
       <div className="project-description">
         {strings.projects[project.key].description}
         <div className="skill-title">{strings.titles.skills}:</div>
