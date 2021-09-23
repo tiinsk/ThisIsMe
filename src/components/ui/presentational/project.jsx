@@ -104,7 +104,7 @@ const StyledProject = styled.div`
     --imageWidth: ${IMAGE_WIDTH}px;
     --imageHeight: ${IMAGE_HEIGHT}px;
     
-    @media (max-width: ${({theme}) => theme.breakpoints.smSize}) {
+    @media (max-width: ${({theme}) => theme.breakpoints.xlgSize}) {
       --imageWidth: ${IMAGE_WIDTH * 0.75}px;
       --imageHeight: ${IMAGE_HEIGHT * 0.75}px;
     }
@@ -167,7 +167,7 @@ const StyledProject = styled.div`
     .arrow-forward {
       right: ${({theme}) => theme.spaces.base(1)};
       
-      @media (max-width: ${({theme}) => theme.breakpoints.xlgSize}) {
+      @media (max-width: ${({theme}) => theme.breakpoints.lgSize}) {
         right: 0;
       }
     }
@@ -178,7 +178,12 @@ const StyledProject = styled.div`
       }
     
       .arrow-forward {
-        display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 1) ? 'initial' : 'none'};
+        display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 2) ? 'initial' : 'none'};
+        
+        @media (min-width: ${({theme}) => theme.breakpoints.xlgSize}) {
+          display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 1) ? 'initial' : 'none'};
+        }
+        
         @media (min-width: ${({theme}) => theme.breakpoints.xxlgSize}) {
           display: ${({currentImageIndex, totalImages}) => currentImageIndex < (totalImages - 2) ? 'initial' : 'none'};
         }
@@ -231,7 +236,7 @@ const Project = ({strings, project, index}) => {
         <div className="project">
           <div className="project-name">
             <div className="project-number">{`${index + 1 < 10 && '0'}${index + 1}`}</div>
-            <div>{strings.projects[project.key].name}</div>
+            <div dangerouslySetInnerHTML={{__html: strings.projects[project.key].name}}/>
             <div className="links">
               {
                 project.github &&
