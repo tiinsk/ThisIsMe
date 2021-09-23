@@ -12,7 +12,7 @@ export default {
       description: 'Vaihto-opiskeluaikanani Singaporessa halusin tehdä nettisivun, jossa voisin jakaa vaihto-opiskelukokemuksiani kavereideni ja perheeni kanssa. Olisin varmasti voinut helpommin käyttää jotain jo olemassa olevaa sivustoa, mutta tämä oli hyvä tilaisuus kokeilla tehdä jotain itse. Sivusto on ensimmäinen kokonaan itse tekemä vapaa-ajan projektini ja se on tehty Angular.js:llä ja Node.js:llä. Palattuani Singaporesta refactoroin suurimman osan koodista ja parantelin sivuston ulkonäköä melkoisesti.'
   },
   homeMonitor: {
-    name: 'Kodin tarkkailujärjestelmä',
+    name: 'Kodin tarkkailu&shy;järjestelmä',
     description: 'Tein kodin tarkkailujärjestelmän jolla voin tarkkailla lämpötilanvaihteluita asunnossani ja asuntoni ulkopuolella. Tämä projekti koostuukin useasta osasta: kahdesta lämpötila-anturista (joista toinene tarkkailee lämpötilaa ja toinen myös ilman kosteutta, painetta ja valoa), Raspberry Pi:stä joka lähettää sensorin datan pilveen, pilvi-API:sta joka tallentaa sensorin datan tietokantaan, sekä front-end palvelusta. Kaikki projektin eri osat on kirjoitettu JavaScriptillä.'
   },
   gymApp: {
