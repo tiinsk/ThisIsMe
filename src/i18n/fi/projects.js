@@ -19,4 +19,8 @@ export default {
     name: 'Kuntosali-sovellus',
     description: 'Aloitin työstämään tätä projektia yhdessä mieheni kanssa. Tarkoituksenamme on, että minä teen sovelluksen designit ja hän hoitaa sovelluskehityksen. Tämä on ensimmäinen täysin design projektini ja siksi projekti onkin opettanut minulle paljon. Projekti on vielä kesken, ja minulle on vielä designit viimeistelemättä. Mieheni on kuitenkin jo aloittanut sovelluskehityksen käyttäen Flutteria ja Hasuraa.'
   },
+  foodBlog: {
+    name: 'Ruoka Blogi',
+  description: 'Tein tämän sivun demonstroimaan web-kehitys ja UX-design taitojani. Halusin oppia jotain uutta, joten valitsin Next.js:n ja Contentfulin. Sivun demo-versio on deployattu Verceliä käyttäen. Sivustolla on käytetty stock-kuvia Unsplashistä ja reseptejä erinäisistä lähteistä internetistä, joten älä luule löytäväsi sukuni salaisia reseptejä tältä sivulta!'
+  },
 }

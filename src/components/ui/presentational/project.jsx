@@ -242,6 +242,10 @@ const Project = ({strings, project, index}) => {
                 <a href={project.link} target="_blank" rel="noopener noreferrer"><i
                 className="material-icons">public</i><span>{strings.website}</span></a>
               }
+              { project.designs &&
+              <a href={project.designs} target="_blank" rel="noopener noreferrer"><i
+                className="material-icons">palette</i><span>{strings.designs}</span></a>
+              }
             </div>
           </div>
           <Paragraph className="project-description">
