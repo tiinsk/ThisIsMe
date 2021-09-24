@@ -5,6 +5,12 @@ import {H2, H3, Paragraph} from '../../theme/fonts';
 import translate from '../main/translate';
 
 const StyledLangSkills = styled.div`
+  ${H3} {
+    @media (max-width: ${({theme}) => theme.breakpoints.xsSize}){
+      margin-top: ${({theme}) => theme.spaces.base(2)};
+    }
+  }
+  
   .lang-skills {
     display: flex;
 
