@@ -11,7 +11,11 @@ const StyledRatelessSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin-bottom: ${({theme}) => theme.spaces.base(2)};
+  }
+  ${H3} {
+    @media (max-width: ${({theme}) => theme.breakpoints.xsSize}){
+      margin-top: ${({theme}) => theme.spaces.base(2)};
+    }
   }
 `;
 

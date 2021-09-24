@@ -20,6 +20,12 @@ const StyledRatedSkills = styled.div`
       margin-bottom: 0;
     }
   }
+  
+  .top-skills-wrapper {
+    @media (max-width: ${({theme}) => theme.breakpoints.xsSize}){
+      margin-bottom: ${({theme}) => theme.spaces.base(2)};
+    }
+  }
 
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     .first-skill-wrapper {
@@ -57,7 +63,7 @@ class RatedSkills extends React.Component {
             this.setState({topSkillsEntered: false});
           }}
         >
-          <div>
+          <div className="top-skills-wrapper">
             <div className="first-skill-wrapper">
               <div className="rated-skills">
                 <SkillMeter

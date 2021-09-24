@@ -52,11 +52,14 @@ const StyledProject = styled.div`
   
       .links {
         display: flex;
-        margin: ${({theme}) => theme.spaces.base(0.5)} 0;
+        flex-wrap: wrap;
+        
+        margin-top: ${({theme}) => theme.spaces.base(0.5)};
         
         a { 
           display: inline-flex;
           align-items: center;
+          margin-bottom: ${({theme}) => theme.spaces.base(0.5)};
           
           &:hover span {
             text-decoration: underline;
@@ -75,10 +78,10 @@ const StyledProject = styled.div`
             font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
           }
           
-          &:not(:first-of-type):before {
+          &:not(:last-of-type):after {
             content: '';
             border-left: 1px solid ${({theme}) => theme.UI.colors.black};
-            height: 20px;
+            height: ${({theme}) => theme.spaces.base(0.5)};
             margin: 0 ${({theme}) => theme.spaces.base(0.5)};
           }
         }
