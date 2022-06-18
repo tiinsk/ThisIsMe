@@ -111,13 +111,13 @@ const Introduction = ({strings, language}) => {
             </a>
           </div>
         </div>
-        <LinkButton
+        {/*<LinkButton
           target="_blank"
           href={language === 'fi' ? cv_fi_pdf : cv_en_pdf}
         >
           <i className="material-icons">print</i>
           {strings.summary.printBtn}
-        </LinkButton>
+        </LinkButton>*/}
       </div>
       <div className="image-wrapper">
         <div className="own-image"/>
