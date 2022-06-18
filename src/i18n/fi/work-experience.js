@@ -1,7 +1,12 @@
 export default {
+  'wunderdog': {
+    'title': 'Seniori Ohjelmistosuunnittelija',
+    'company': 'Wunderdog',
+    'description': 'Työskentelen front-end konsulttina ja UX-suunnittelijana. Keskitymme tällä hetkellä projektissa parantamaan asiakkaan tuotteen brändiä, teknistä velkaa ja saavutettavuutta. Tavoitteenamme projektissa on rakentaa design system, joka helpottaisi uusien ominaisuuksien kehittämistä ja loisi yhtenäisen ilmeen jokaisen tuotteen eri osa-alueeseen välille. Minun tehtäväni projektissa on vetää front-end kehitystä, suunnitella brändiuudistuken vaiheita ja ohjata muita kehittäjiä.',
+  },
   'bitfactor': {
     'title': 'Ohjelmistosuunnittelija',
-    'company': 'Bitfactor Oy',
+    'company': 'Loihde Factor',
     'description': 'Työskentelin aiemmin UX-suunnittelijana yhdessä sisäisessä projektissa, sekä osallistuin Bitfactorin markkinointi-sivujen kehittämiseen käyttäen Gatsbyä, Javascriptia ja DatoCMS:ää. Tällä hetkellä työskentelen front-end konsulttina online-peliprojektissa, jossa olen vastuussa pelien hallintasovelluksen kehittämisestä.'
   },
   'vincit': {
@@ -16,7 +21,7 @@ export default {
   },
   'wapice': {
     'title': 'Ohjelmistosuunnittelija',
-    'company': 'Wapice Oy',
+    'company': 'Wapice',
     'description': 'Wapicella työskennellessäni olin mukana useissa asiakaslähtöisissä ohjelmistoprojekteissa. Toimin pääasiassa full-stack kehittäjänä käyttäen Reactia, JavaScriptiä, TypeScriptiä ja C#:ia. Yhdessä projekteista olin päävastuussa projektin web-kehityksestä ja web-arkkitehtuurista.'
   },
   'nokia_android': {

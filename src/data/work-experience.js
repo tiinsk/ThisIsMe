@@ -1,14 +1,38 @@
 export default {
   'workexp': [
     {
+      'key': 'wunderdog',
+      'from': {
+        'month': 1,
+        'year': 2022
+      },
+      'to': {
+        'month': null,
+        'year': null
+      },
+      'topSkills': [
+        'react',
+        'ui_design',
+      ],
+      'otherSkills': [
+        'javascript',
+        'typescript',
+        'css',
+        'figma',
+        'storybook',
+        'design_systems',
+        'amplitude',
+      ]
+    },
+    {
       'key': 'bitfactor',
       'from': {
         'month': 12,
         'year': 2020
       },
       'to': {
-        'month': null,
-        'year': null
+        'month': 12,
+        'year': 2021
       },
       'topSkills': [
         'javascript',
