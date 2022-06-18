@@ -2,7 +2,7 @@ export default {
   'wunderdog': {
     'title': 'Seniori Ohjelmistosuunnittelija',
     'company': 'Wunderdog',
-    'description': 'Työskentelen front-end konsulttina ja UX-suunnittelijana. Keskitymme tällä hetkellä projektissa parantamaan asiakkaan tuotteen brändiä, teknistä velkaa ja saavutettavuutta. Tavoitteenamme projektissa on rakentaa design system, joka helpottaisi uusien ominaisuuksien kehittämistä ja loisi yhtenäisen ilmeen jokaisen tuotteen eri osa-alueeseen välille. Minun tehtäväni projektissa on vetää front-end kehitystä, suunnitella brändiuudistuken vaiheita ja ohjata muita kehittäjiä.',
+    'description': 'Työskentelen front-end konsulttina ja UX-suunnittelijana. Keskitymme tällä hetkellä projektissa parantamaan asiakkaan tuotteen brändiä, teknistä velkaa ja saavutettavuutta. Tavoitteenamme projektissa on rakentaa design system, joka helpottaisi uusien ominaisuuksien kehittämistä ja loisi yhtenäisen ilmeen jokaisen tuotteen eri osa-alueen välille. Minun tehtäväni projektissa on vetää front-end kehitystä, suunnitella brändiuudistuken vaiheita ja ohjata muita kehittäjiä.',
   },
   'bitfactor': {
     'title': 'Ohjelmistosuunnittelija',
