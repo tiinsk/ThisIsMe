@@ -1,7 +1,12 @@
 export default {
+  'wunderdog': {
+    'title': 'Senior Software Developer',
+    'company': 'Wunderdog',
+    'description': "I work as a front-end consultant and UX designer. The project focuses on improving the existing application's branding, technical dept, and accessibility. Our goal is to create a design system to ease the development of new features and create a more unified look throughout the application. It is my role to lead the front-end development, plan the brand renewal steps, and coach other developers."
+  },
   'bitfactor': {
     'title': 'Software Engineer',
-    'company': 'Bitfactor',
+    'company': 'Loihde Factor',
     'description': "Previously, I worked as a UX designer on an internal project and participated in the development of Bitfactor's marketing websites using Gatsby, Javascript, and DatoCMS. Currently, I work as a front-end consultant on a project where I am responsible for developing a management website for the client's online games."
   },
   'vincit': {

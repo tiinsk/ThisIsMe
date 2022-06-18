@@ -74,7 +74,10 @@ export default {
     workspaces: 'yarn/npm workspaces',
     contentful: 'Contentful',
     nextjs: 'Next.js',
-    vercel: 'vercel'
+    vercel: 'vercel',
+    storybook: 'Storybook',
+    design_systems: 'Design Systems',
+    amplitude: 'Amplitude',
   },
   ratedSkills: {
     topSkills: {
