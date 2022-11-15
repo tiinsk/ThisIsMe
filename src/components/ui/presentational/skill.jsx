@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import {ReactComponent as PeakIcon} from '../../../assets/peakIcon.svg';
+import PeakIcon from '../../../assets/peakIcon.svg';
 import {TagText} from '../../../theme/fonts';
 import translate from '../../main/translate';
 

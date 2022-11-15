@@ -2,11 +2,12 @@ import moment from 'moment';
 import 'moment/locale/fi';
 import { CHOOSE_LANGUAGE } from '../actions/language_actions';
 
-const locale = localStorage.getItem('language') || 'en';
-moment.locale(locale);
+// TODO fix these to work with Gatsby
+//const locale = localStorage.getItem('language') || 'en';
+//moment.locale(locale);
 
 const initialState = {
-  language: locale
+  language: 'en'
 };
 
 const languageReducer = (state = initialState, action) => {
