@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import {some} from 'lodash';
 import {languageOptions} from '../i18n/languages';
 
 export const ADD_COMMAND = 'ADD_COMMAND';
@@ -39,7 +39,7 @@ export function parseCommand(command){
     if(commandArray.length > 3){
       dispatch(addErrorCommand());
     }
-    if(_.some({...commands, helpCommand, allCommand}, cmnd => cmnd === mainCommand)){
+    if(some({...commands, helpCommand, allCommand}, cmnd => cmnd === mainCommand)){
       const command = {
         command: mainCommand,
         language: 'en'
