@@ -1,15 +1,12 @@
 import React from 'react';
+import ConsoleSite from '../components/console/console-site';
 
-
-// TODO add console route content here
 const Console = () => {
     return (
-      <div>
-        Console goes here
-      </div>
+      <ConsoleSite/>
     );
 }
 
 export default Console;
 
-export const Head = () => <title>Console Page</title>
+export const Head = () => <title>tiina.dev - Console</title>
