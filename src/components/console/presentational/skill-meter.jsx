@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import {range} from 'lodash';
 import styled from 'styled-components/macro';
 
 const MAX_RATE = 10;
@@ -25,12 +25,12 @@ const SkillMeter = ({rate, name}) => {
         <td className="metrics">
           <span className="rates">
           {
-            _.range(rate).map(() => ' * ' )
+            range(rate).map(() => ' * ' )
           }
           </span>
           <span className="unrated">
             {
-              _.range(MAX_RATE-rate).map(() => ' * ' )
+              range(MAX_RATE-rate).map(() => ' * ' )
             }
           </span>
         </td>

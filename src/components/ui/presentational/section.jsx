@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import {get} from 'lodash';
 import styled from 'styled-components/macro';
 
 import translate from '../../../components/main/translate';
@@ -62,7 +62,7 @@ const Section = ({strings, children, titleId, maxWidth, bodyStyle = {}, ...props
         {children}
       </div>
       <div className="title">
-        {_.get(strings, titleId)}
+        {get(strings, titleId)}
       </div>
     </StyledSection>
   )

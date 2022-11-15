@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import {map, values, keys} from 'lodash';
 import React from 'react';
 import styled from 'styled-components/macro';
 
@@ -32,7 +32,7 @@ const Help = () => {
           <td className="command-col">where &lt;cmd&gt; is one of:</td>
           <td>
             {
-              _.map(_.values(commands), (cmd, i) => `${cmd}${i < _.keys(commands).length - 1 ? ', ' : ''}`)
+              map(values(commands), (cmd, i) => `${cmd}${i < keys(commands).length - 1 ? ', ' : ''}`)
             }
             <br/> OR {allCommand} (which prints all commands)
           </td>
