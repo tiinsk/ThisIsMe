@@ -30,5 +30,19 @@ module.exports = {
     __key: 'images'
   }, {
     resolve: 'gatsby-plugin-react-svg',
-  }, 'gatsby-plugin-lodash']
+  }, 'gatsby-plugin-lodash', {
+    resolve: 'gatsby-plugin-web-font-loader',
+    options: {
+      google: {
+        families: [
+          'Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i',
+          'Lato:100,100i,300,300i,400,400i,700,700i,900,900i',
+          'Quicksand:300,400,500,700',
+          'PT+Serif:700',
+          'Source+Code+Pro:400',
+          'Material+Icons',
+        ]
+      }
+    }
+  }]
 };
