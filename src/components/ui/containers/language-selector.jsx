@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
+import {Link} from 'gatsby';
 import styled from 'styled-components/macro';
 
 import {chooseLanguage} from '../../../actions/language_actions';
