@@ -20,6 +20,31 @@ const StyledSkillMeter = styled.div`
     margin: 0;
   }
 
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+  }
+
   .icon{
     flex-shrink: 0;
 
