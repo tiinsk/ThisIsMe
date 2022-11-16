@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import translate from '../../main/translate';
 import LanguageSelectorSmall from '../containers/language-selector-small';
 
 const StyledNavbar = styled.nav`
@@ -156,31 +155,31 @@ class Navbar extends React.Component {
               className="nav-item"
               onClick={() => this.props.onScrollToRef('workHistory')}
             >
-              {this.props.strings.titles.workHistory}
+              {this.props.header.workhistory}
             </li>
             <li
               className="nav-item"
               onClick={() => this.props.onScrollToRef('education')}
             >
-              {this.props.strings.titles.education}
+              {this.props.header.education}
             </li>
             <li
               className="nav-item"
               onClick={() => this.props.onScrollToRef('skills')}
             >
-              {this.props.strings.titles.skills}
+              {this.props.header.skills}
             </li>
             <li
               className="nav-item"
               onClick={() => this.props.onScrollToRef('projects')}
             >
-              {this.props.strings.titles.projects}
+              {this.props.header.projects}
             </li>
             <li
               className="nav-item"
               onClick={() => this.props.onScrollToRef('interests')}
             >
-              {this.props.strings.titles.interests}
+              {this.props.header.interests}
             </li>
           </ul>
         </StyledNavbar>
@@ -191,39 +190,39 @@ class Navbar extends React.Component {
           <ul className={`mobile-nav-items ${this.state.openMenu ? 'open' : ''}`}>
             <li
               className="mobile-nav-item"
-              onClick={() => this.onMobileNavItemClick('description')}
+              onClick={() => this.onMobileNavItemClick('aboutMe')}
             >
-              {this.props.strings.titles.aboutMe}
+              {this.props.header.aboutme}
             </li>
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('workHistory')}
             >
-              {this.props.strings.titles.workHistory}
+              {this.props.header.workhistory}
             </li>
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('education')}
             >
-              {this.props.strings.titles.education}
+              {this.props.header.education}
             </li>
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('skills')}
             >
-              {this.props.strings.titles.skills}
+              {this.props.header.skills}
             </li>
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('projects')}
             >
-              {this.props.strings.titles.projects}
+              {this.props.header.projects}
             </li>
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('interests')}
             >
-              {this.props.strings.titles.interests}
+              {this.props.header.interests}
             </li>
             <LanguageSelectorSmall onCloseMenu={() => this.toggleMenu()}/>
             <i
@@ -237,4 +236,4 @@ class Navbar extends React.Component {
   }
 };
 
-export default translate(Navbar);
+export default Navbar;
