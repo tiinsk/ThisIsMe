@@ -55,14 +55,14 @@ export const StyledSection = styled.div`
   }
 `;
 
-const Section = ({strings, children, titleId, maxWidth, bodyStyle = {}, ...props}) => {
+const Section = ({strings, children, titleId, title, maxWidth, bodyStyle = {}, ...props}) => {
   return(
     <StyledSection {...props}>
       <div className="section-body" style={{maxWidth, ...bodyStyle}}>
         {children}
       </div>
       <div className="title">
-        {get(strings, titleId)}
+        {title || get(strings, titleId)}
       </div>
     </StyledSection>
   )

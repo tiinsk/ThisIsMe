@@ -4,9 +4,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import background from '../../../assets/background.jpg';
-import contacts from '../../../data/contacts';
 import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
-import translate from '../../main/translate';
 import LanguageSelector from '../containers/language-selector';
 import HoverBubble, {StyledHoverBubble} from './hover-bubble';
 import Navbar from './navbar';
@@ -96,46 +94,46 @@ const StyledHeader = styled.div`
   }
 `;
 
-const Header = ({strings, onScrollToRef}) => {
+const Header = ({onScrollToRef, contacts, header}) => {
   return (
     <StyledHeader>
-      <Navbar onScrollToRef={onScrollToRef}/>
+      <Navbar header={header} onScrollToRef={onScrollToRef}/>
       <div className="name-titles">
         <div className="title">
-          {strings.titles.introduction}
+          {header.title}
         </div>
         <div className="name">
-          {contacts.name}
+          {header.name}
         </div>
         <div className="subtitle">
-          {strings.summary.title}
+          {header.subtitle}
         </div>
       </div>
       <div className="right-menu">
         <div className="links">
           <div className="link">
-            <a className="link-anchor" href={contacts.github} target="_blank" rel="noopener noreferrer">
+            <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub}/>
             </a>
-            <HoverBubble text={contacts.github} href={contacts.github} target="_blank"/>
+            <HoverBubble text={contacts.githubLink} href={contacts.githubLink} target="_blank"/>
           </div>
           <div className="link">
-            <a className="link-anchor" href={contacts.linkedin} target="_blank" rel="noopener noreferrer">
+            <a className="link-anchor" href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin}/>
             </a>
-            <HoverBubble text={contacts.linkedin} href={contacts.linkedin} target="_blank" rel="noopener noreferrer"/>
+            <HoverBubble text={contacts.linkedinLink} href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer"/>
           </div>
           <div className="link">
-            <a className="link-anchor" href={`mailto:${contacts.email}`}>
+            <a className="link-anchor" href={`mailto:${contacts.emailLink}`}>
               <span>@</span>
             </a>
-            <HoverBubble text={contacts.email} href={`mailto:${contacts.email}`}/>
+            <HoverBubble text={contacts.emailLink} href={`mailto:${contacts.emailLink}`}/>
           </div>
           <div className="link">
-            <a className="link-anchor" href={`tel:${contacts.phone}`}>
+            <a className="link-anchor" href={`tel:${contacts.phoneLink}`}>
               <i className="material-icons">phone</i>
             </a>
-            <HoverBubble text={contacts.phone} href={`tel:${contacts.phone}`}/>
+            <HoverBubble text={contacts.phoneLink} href={`tel:${contacts.phoneLink}`}/>
           </div>
         </div>
         <LanguageSelector/>
@@ -144,4 +142,4 @@ const Header = ({strings, onScrollToRef}) => {
   )
 };
 
-export default translate(Header);
+export default Header;

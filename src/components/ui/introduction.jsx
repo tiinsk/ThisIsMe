@@ -1,14 +1,11 @@
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
-import {connect} from 'react-redux';
 import styled from 'styled-components/macro';
 
 import cv_en_pdf from '../../assets/resume-EN.pdf';
 import cv_fi_pdf from '../../assets/resume-FI.pdf';
 import myImage from '../../assets/me_2_0_black.png';
-import translate from '../../components/main/translate';
-import contacts from '../../data/contacts';
 import {Paragraph} from '../../theme/fonts';
 import {LinkButton} from './presentational/button';
 
@@ -78,36 +75,34 @@ const StyledIntroduction = styled.div`
   }
 `;
 
-const Introduction = ({strings, language}) => {
+const Introduction = ({aboutMe, contacts}) => {
   return (
     <StyledIntroduction>
       <div className="summary">
-        <Paragraph className="summary-text">{strings.introduction}</Paragraph>
-        <Paragraph className="summary-text">{strings.introduction2}</Paragraph>
-        <Paragraph className="summary-text">{strings.introduction3}</Paragraph>
+        <Paragraph className="summary-text">{aboutMe.body}</Paragraph>
         <div className="links">
           <div className="link">
-            <a className="link-anchor" href={contacts.github} target="_blank" rel="noopener noreferrer">
+            <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub}/>
-              <span>{strings.contacts.github}</span>
+              <span>{contacts.githubName}</span>
             </a>
           </div>
           <div className="link">
-            <a className="link-anchor" href={contacts.linkedin} target="_blank" rel="noopener noreferrer">
+            <a className="link-anchor" href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin}/>
-              <span>{strings.contacts.linkedin}</span>
+              <span>{contacts.linkedinName}</span>
             </a>
           </div>
           <div className="link">
-            <a className="link-anchor" href={`mailto:${contacts.email}`}>
+            <a className="link-anchor" href={`mailto:${contacts.emailLink}`}>
               <span className="icon">@</span>
-              <span>{contacts.email}</span>
+              <span>{contacts.emailLink}</span>
             </a>
           </div>
           <div className="link">
-            <a className="link-anchor" href={`tel:${contacts.phone}`}>
+            <a className="link-anchor" href={`tel:${contacts.phoneLink}`}>
               <i className="material-icons">phone</i>
-              <span>{contacts.phone}</span>
+              <span>{contacts.phoneLink}</span>
             </a>
           </div>
         </div>
@@ -127,11 +122,5 @@ const Introduction = ({strings, language}) => {
 };
 
 
-function mapStateToProps({language}) {
-  return {
-    language: language.language
-  }
-}
-
-export default connect(mapStateToProps, null)(translate(Introduction));
+export default Introduction;
 
