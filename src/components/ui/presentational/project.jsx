@@ -279,13 +279,14 @@ const Project = ({strings, project, index}) => {
         <div className="project-images-wrapper">
           <SRLWrapper options={lightBoxOptions}>
             <div className="project-images" style={{left: imageLeft}}>
-              {
+              //TODO to be added back when datoCMS is added
+              {/*{
                 images.map(image => (
                   <a key={image.img} href={image.img} data-attribute="SRL">
                     <img className="project-image" src={image.thumb} alt="Project"/>
                   </a>
                 ))
-              }
+              }*/}
             </div>
           </SRLWrapper>
           <button
