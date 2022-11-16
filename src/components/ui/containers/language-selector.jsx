@@ -1,23 +1,15 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 import {Link} from 'gatsby';
 import styled from 'styled-components/macro';
 
-import {chooseLanguage} from '../../../actions/language_actions';
 import {languageOptions} from '../../../i18n/languages';
 import translate from '../../main/translate';
 import {ConsoleIcon} from './console-icon';
 
 
 const StyledLanguageSelector = styled.div`
- width: ${({theme}) => theme.langSelectionWidth};
+  width: ${({theme}) => theme.langSelectionWidth};
   flex-shrink: 0;
-
-  color: ${({theme}) => theme.UI.colors.bluishGrey};
-
-  font-family: ${({theme}) => theme.fonts.fontLato};
-  font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
 
   display: flex;
   flex-direction: column;
@@ -28,6 +20,11 @@ const StyledLanguageSelector = styled.div`
     height: 100px;
 
     cursor: pointer;
+    text-transform: none;
+    color: ${({theme}) => theme.UI.colors.bluishGrey};
+    font-family: ${({theme}) => theme.fonts.fontLato};
+    font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
+    font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
 
     position: relative;
 
@@ -59,19 +56,19 @@ const StyledLanguageSelector = styled.div`
   }
 `;
 
-const LanguageSelector = ({chooseLanguage, language}) => {
+const LanguageSelector = () => {
   return (
     <StyledLanguageSelector>
-      <div className={'lang' + (language === 'fi' ? ' selected' : '')} onClick={() => chooseLanguage('fi')}>
+      <Link className="lang" activeClassName="selected" to="/fi">
         <div className="text-wrapper">
           {languageOptions.fi}
         </div>
-      </div>
-      <div className={'lang' + (language === 'en' ? ' selected' : '')} onClick={() => chooseLanguage('en')}>
+      </Link>
+      <Link className="lang" activeClassName="selected" to="/">
         <div className="text-wrapper">
           {languageOptions.en}
         </div>
-      </div>
+      </Link>
       <div className="lang" style={{cursor: 'default'}}>
         <Link className="text-wrapper" to="/console">
           <ConsoleIcon/>
@@ -81,14 +78,4 @@ const LanguageSelector = ({chooseLanguage, language}) => {
   )
 };
 
-function mapStateToProps({language}) {
-  return {
-    language: language.language
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({chooseLanguage}, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(translate(LanguageSelector));
+export default translate(LanguageSelector);
