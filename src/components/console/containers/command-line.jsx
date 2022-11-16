@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import styled from 'styled-components/macro';
@@ -63,66 +63,52 @@ const StyledConsoleCommandLine = styled.div`
   }
 `;
 
-class CommandLine extends React.Component {
+const CommandLine = ({parseCommand, inputRef}) => {
+  const [input, setInput] = useState('')
+  const [cursorPosition, setCursorPosition] = useState(0)
 
-  constructor(props){
-    super(props);
-    this.state = {
-      input: '',
-      cursorPosition: 0,
-    }
-  }
-
-  keyDownHandler(keyCode, value) {
+  const keyDownHandler = (keyCode, value) => {
     if(keyCode === 13){
-      this.props.parseCommand(value);
-      this.setState({
-        input: ''
-      });
+      parseCommand(value);
+      setInput('')
     }
     //back <-
     else if(keyCode === 37){
-      if(this.state.cursorPosition > 0) {
-        this.setState({
-          cursorPosition: this.state.cursorPosition - 1
-        })
+      if(cursorPosition > 0) {
+        setCursorPosition(cursorPosition - 1)
       }
     }
     //forward ->
     else if(keyCode === 39){
-      if(this.state.cursorPosition < this.state.input.length) {
-        this.setState({
-          cursorPosition: this.state.cursorPosition + 1
-        })
+      if(cursorPosition < input.length) {
+        setCursorPosition(cursorPosition + 1)
       }
     }
   };
-  render(){
-    return(
-      <StyledConsoleCommandLine>
-        <i className="material-icons line-icon">keyboard_arrow_right</i>
-        <input
-          className="command-input"
-          id="command-input"
-          onKeyDown={({keyCode, target}) => this.keyDownHandler(keyCode, target.value) }
-          value={this.state.input}
-          onChange={({target}) => {
-            this.setState({
-              input: target.value,
-              cursorPosition: this.state.cursorPosition + 1
-            })
-          }}
-        />
-        <div
-          className="input-line"
-        >
-          <div>{this.state.input.slice(0,this.state.cursorPosition)}</div>
-          <div className="cursor"/>
-          <div>{this.state.input.slice(this.state.cursorPosition)}</div>
-        </div>
-      </StyledConsoleCommandLine>
-    )
-  }
+
+  return(
+    <StyledConsoleCommandLine>
+      <i className="material-icons line-icon">keyboard_arrow_right</i>
+      <input
+        className="command-input"
+        id="command-input"
+        ref={inputRef}
+        onKeyDown={({keyCode, target}) => keyDownHandler(keyCode, target.value) }
+        value={input}
+        onChange={({target}) => {
+          setInput(target.value)
+          setCursorPosition(cursorPosition + 1)
+        }}
+      />
+      <div
+        className="input-line"
+      >
+        <div>{input.slice(0, cursorPosition)}</div>
+        <div className="cursor"/>
+        <div>{input.slice(cursorPosition)}</div>
+      </div>
+    </StyledConsoleCommandLine>
+  )
 }
 
 function mapDispatchToProps(dispatch) {

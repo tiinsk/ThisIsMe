@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components/macro';
 
@@ -67,38 +67,42 @@ const StyledConsoleSite = styled.div`
   }
 `;
 
-class ConsoleSite extends React.Component {
+const ConsoleSite = ({commands}) => {
+  const inputRef = useRef(null)
 
-  componentDidMount() {
-    document.getElementById('command-input').focus();
-  }
+  useEffect(() => {
+    if(inputRef.current) {
+      //Does not work without setTimeout when user navigates to the page from home (refresh works though)
+      setTimeout(() => {
+        inputRef.current.focus()
+      }, 0)
+    }
+  }, [commands])
 
-  render() {
-    return (
-      <StyledConsoleSite>
-        <div className="console-site"
-             onClick={() => {
-               document.getElementById('command-input').focus();
-             }}
-        >
-          <div style={{margin: '0 1rem 1rem 1rem'}}>
-            <Typewriter text={`Hi there and welcome. You should try typing "${helpCommand}".`}/>
-          </div>
-          {
-            this.props.commands.map((cmd, i) => {
-              return (
-                <Command
-                  key={i}
-                  command={cmd}
-                />
-              );
-            })
-          }
-          <CommandLine/>
+  return (
+    <StyledConsoleSite>
+      <div className="console-site"
+           onClick={() => {
+             inputRef.current.focus()
+           }}
+      >
+        <div style={{margin: '0 1rem 1rem 1rem'}}>
+          <Typewriter text={`Hi there and welcome. You should try typing "${helpCommand}".`}/>
         </div>
-      </StyledConsoleSite>
-    )
-  }
+        {
+          commands.map((cmd, i) => {
+            return (
+              <Command
+                key={i}
+                command={cmd}
+              />
+            );
+          })
+        }
+        <CommandLine inputRef={inputRef}/>
+      </div>
+    </StyledConsoleSite>
+  )
 };
 
 function mapStateToProps({commands}) {
