@@ -47,12 +47,17 @@ const StyledLanguageSelectorSmall = styled.div`
 `;
 
 const LanguageSelectorSmall = ({onCloseMenu}) => {
+  const onClickLink = (language) => {
+    onCloseMenu()
+    localStorage.setItem('language', language)
+  }
+
   return (
     <StyledLanguageSelectorSmall>
-      <Link className="lang" activeClassName="selected" to="/fi">
+      <Link className="lang" activeClassName="selected" to="/fi" onClick={() => onClickLink('fi')}>
         <span>{languageOptions.fi}</span>
       </Link>
-      <Link className="lang" activeClassName="selected" to="/">
+      <Link className="lang" activeClassName="selected" to="/" onClick={() => onClickLink('en')}>
         <span>{languageOptions.en}</span>
       </Link>
       <div className="lang">

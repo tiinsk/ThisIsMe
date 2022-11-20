@@ -57,14 +57,19 @@ const StyledLanguageSelector = styled.div`
 `;
 
 const LanguageSelector = () => {
+
+  const onClickLink = (language) => {
+    localStorage.setItem('language', language)
+  }
+
   return (
     <StyledLanguageSelector>
-      <Link className="lang" activeClassName="selected" to="/fi">
+      <Link className="lang" activeClassName="selected" to="/fi" replace={true}  onClick={() => onClickLink('fi')}>
         <div className="text-wrapper">
           {languageOptions.fi}
         </div>
       </Link>
-      <Link className="lang" activeClassName="selected" to="/">
+      <Link className="lang" activeClassName="selected" to="/" replace={true} onClick={() => onClickLink('en')}>
         <div className="text-wrapper">
           {languageOptions.en}
         </div>
