@@ -1,9 +1,8 @@
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components/macro';
 
 import {helpCommand} from '../../actions/console_actions';
-import translate from '../main/translate';
 import CommandLine from './containers/command-line';
 import Command from './presentational/command';
 import Typewriter from './presentational/typewriter';
@@ -112,6 +111,6 @@ function mapStateToProps({commands}) {
 }
 
 
-export default connect(mapStateToProps, null)(translate(ConsoleSite));
+export default connect(mapStateToProps, null)(ConsoleSite);
 
 

@@ -2,8 +2,6 @@ import React from 'react';
 import {get} from 'lodash';
 import styled from 'styled-components/macro';
 
-import translate from '../../../components/main/translate';
-
 export const StyledSection = styled.div`
   position: relative;
   margin: 20rem 2rem 25rem 2rem;
@@ -55,17 +53,17 @@ export const StyledSection = styled.div`
   }
 `;
 
-const Section = ({strings, children, titleId, title, maxWidth, bodyStyle = {}, ...props}) => {
+const Section = ({children, titleId, title, maxWidth, bodyStyle = {}, ...props}) => {
   return(
     <StyledSection {...props}>
       <div className="section-body" style={{maxWidth, ...bodyStyle}}>
         {children}
       </div>
       <div className="title">
-        {title || get(strings, titleId)}
+        {title}
       </div>
     </StyledSection>
   )
 };
 
-export default translate(Section);
+export default Section;

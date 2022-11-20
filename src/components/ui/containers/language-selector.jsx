@@ -3,7 +3,6 @@ import {Link} from 'gatsby';
 import styled from 'styled-components/macro';
 
 import {languageOptions} from '../../../i18n/languages';
-import translate from '../../main/translate';
 import {ConsoleIcon} from './console-icon';
 
 
@@ -83,4 +82,4 @@ const LanguageSelector = () => {
   )
 };
 
-export default translate(LanguageSelector);
+export default LanguageSelector;

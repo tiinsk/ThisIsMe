@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 
 import PeakIcon from '../../../assets/peakIcon.svg';
 import {TagText} from '../../../theme/fonts';
-import translate from '../../main/translate';
 
 const StyledSkill = styled.div`
   ${TagText};
@@ -35,15 +34,15 @@ const StyledPeakIcon = styled(PeakIcon)`
   margin-right: ${({theme}) => theme.spaces.base(0.25)};
 `;
 
-const Skill = ({strings, skill, isPeakSkill = false}) => {
+const Skill = ({skill, isPeakSkill = false}) => {
   return (
     <StyledSkill isPeakSkill={isPeakSkill}>
       <div className="skill-wrapper">
         {isPeakSkill && <StyledPeakIcon/>}
-        {strings.skills.skillNames[skill] || skill}
+        {skill}
       </div>
     </StyledSkill>
   )
 };
 
-export default translate(Skill);
+export default Skill;
