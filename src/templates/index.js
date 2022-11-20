@@ -1,10 +1,17 @@
-import React from 'react';
-import {graphql} from 'gatsby';
+import React, {useEffect} from 'react';
+import {graphql, navigate} from 'gatsby';
 
 import Home from '../components/ui/home';
 
-const IndexPage = ({data}) => {
-  console.log(data)
+const IndexPage = ({data, pageContext}) => {
+  useEffect(() => {
+      const previousLang = localStorage.getItem('language');
+      if(previousLang && previousLang !== pageContext.locale) {
+        const prefix = pageContext.locale === 'en' ? '/fi' : '/';
+        navigate(prefix, {replace: true})
+      }
+  }, [])
+
   return (
     <Home data={data}/>
   );
