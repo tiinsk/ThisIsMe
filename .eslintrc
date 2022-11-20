@@ -1,10 +1,7 @@
 {
-  "extends": [
-    "react-app",
-    "prettier"
-  ],
+  "extends": ["react-app", "prettier"],
   "rules": {
     "quotes": [2, "single", { "avoidEscape": true }],
-    "indent": ["error", 2]
+    "indent": ["error", 2],
   }
 }
