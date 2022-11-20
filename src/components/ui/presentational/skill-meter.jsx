@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import translate from '../../main/translate';
-
 const MAX_RATE = 10;
 
 const StyledSkillMeter = styled.div`
@@ -104,7 +102,7 @@ const StyledSkillMeter = styled.div`
   }
 `;
 
-const SkillMeter = ({strings, name, icon, color1, color2, rate, entered}) => {
+const SkillMeter = ({name, icon, color1, color2, rate, entered}) => {
   return(
     <StyledSkillMeter>
       {icon && <div className="icon" style={
@@ -133,4 +131,4 @@ const SkillMeter = ({strings, name, icon, color1, color2, rate, entered}) => {
   )
 };
 
-export default translate(SkillMeter);
+export default SkillMeter;

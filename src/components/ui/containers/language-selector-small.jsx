@@ -3,7 +3,6 @@ import {Link} from 'gatsby';
 import styled from 'styled-components/macro';
 
 import {languageOptions} from '../../../i18n/languages';
-import translate from '../../main/translate';
 import {ConsoleIcon} from './console-icon';
 
 const StyledLanguageSelectorSmall = styled.div`
@@ -69,4 +68,4 @@ const LanguageSelectorSmall = ({onCloseMenu}) => {
   )
 };
 
-export default translate(LanguageSelectorSmall);
+export default LanguageSelectorSmall;

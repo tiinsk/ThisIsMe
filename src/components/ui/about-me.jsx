@@ -1,12 +1,10 @@
 import React from 'react';
 
 import Section from './presentational/section';
-import translate from '../main/translate';
 import Introduction from '../ui/introduction';
 import styled from 'styled-components/macro';
 
 const StyledAboutMe = styled.div`
-
 `;
 
 const AboutMe = ({scrollRef, aboutMe, contacts}) => {
@@ -22,5 +20,5 @@ const AboutMe = ({scrollRef, aboutMe, contacts}) => {
   )
 };
 
-export default translate(AboutMe);
+export default AboutMe;
 

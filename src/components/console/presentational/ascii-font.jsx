@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import getAsciiFont from '../../../utils/asciifonts';
-import translate from '../../main/translate';
 
 const StyledAsciiFont = styled.div`
 font-size: 1.2rem;
@@ -26,4 +25,4 @@ const AsciiFont = ({text}) => {
   )
 };
 
-export default translate(AsciiFont);
+export default AsciiFont;

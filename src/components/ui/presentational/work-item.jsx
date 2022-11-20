@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import {H3, H4, Paragraph} from '../../../theme/fonts';
-import translate from '../../main/translate';
 import Skill from './skill';
 
 const StyledWorkItem = styled.div`
@@ -39,7 +38,7 @@ const StyledWorkItem = styled.div`
 `;
 
 
-const WorkItem = ({strings, data, isOnLeft}) => {
+const WorkItem = ({data, isOnLeft}) => {
   return (
     <StyledWorkItem>
       <H3>
@@ -69,4 +68,4 @@ const WorkItem = ({strings, data, isOnLeft}) => {
   )
 };
 
-export default translate(WorkItem);
+export default WorkItem;
