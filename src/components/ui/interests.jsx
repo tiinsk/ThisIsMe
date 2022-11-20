@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 
 import {TravelPlane} from './presentational/plane';
 import travelPlanet from '../../assets/travel-planet.png';
-import translate from '../main/translate';
 import Section from './presentational/section';
 
 const StyledInterests = styled.div`
@@ -58,11 +57,11 @@ const StyledInterests = styled.div`
   }
 `;
 
-const Interests = ({strings, scrollRef}) => {
+const Interests = ({scrollRef, interests}) => {
   return (
     <div ref={scrollRef}>
       <Section
-        titleId="titles.interests"
+        title={interests.title}
       >
         <StyledInterests>
           <div className="planet">
@@ -71,8 +70,8 @@ const Interests = ({strings, scrollRef}) => {
           </div>
           <div className="interest-list">
             {
-              strings.interests.interest_list.map(interest => (
-                <div className="interest" key={interest}>{interest}</div>
+              interests.interests.map(interest => (
+                <div className="interest" key={interest.title}>{interest.title}</div>
               ))
             }
           </div>
@@ -82,4 +81,4 @@ const Interests = ({strings, scrollRef}) => {
   )
 };
 
-export default translate(Interests);
+export default Interests;

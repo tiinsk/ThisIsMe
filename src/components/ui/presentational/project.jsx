@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import SimpleReactLightbox, {SRLWrapper} from 'simple-react-lightbox';
 import styled from 'styled-components/macro';
 
-import translate from '../../../components/main/translate';
 import {theme} from '../../../theme';
 import {H1, Paragraph} from '../../../theme/fonts';
 import Skill from './skill';
@@ -208,13 +207,13 @@ const lightBoxOptions = {
   }
 };
 
-const Project = ({strings, project, index}) => {
+const Project = ({project, index}) => {
   const [imageIndex, setImageIndex] = useState(0);
-
+  /* TODO add when images have been moved to datoCMS
   const images = project.images.map(image => ({
     img: require(`../../../assets/projects/${project.key}/${image.img}`),
     thumb: require(`../../../assets/projects/${project.key}/${image.thumb}`)
-  }));
+  }));*/
 
   const onBack = () => {
     if (imageIndex > 0) {
@@ -233,44 +232,44 @@ const Project = ({strings, project, index}) => {
   return (
     <StyledProject
       currentImageIndex={imageIndex}
-      totalImages={project.images.length}
+      totalImages={0/*project.images.length*/}
     >
       <SimpleReactLightbox>
         <div className="project">
           <div className="project-name">
             <div className="project-number">{`${index + 1 < 10 && '0'}${index + 1}`}</div>
-            <div dangerouslySetInnerHTML={{__html: strings.projects[project.key].name}}/>
+            <div dangerouslySetInnerHTML={{__html: project.title}}/>
             <div className="links">
               {
-                project.github &&
-                <a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
-                  icon={faGithub}/><span>{strings.github}</span></a>
+                project.githubUrl &&
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
+                  icon={faGithub}/><span>{project.githubLinkName}</span></a>
               }
-              { project.link &&
-                <a href={project.link} target="_blank" rel="noopener noreferrer"><i
-                className="material-icons">public</i><span>{strings.website}</span></a>
+              { project.websiteUrl &&
+                <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer"><i
+                className="material-icons">public</i><span>{project.websiteName}</span></a>
               }
-              { project.designs &&
-              <a href={project.designs} target="_blank" rel="noopener noreferrer"><i
-                className="material-icons">palette</i><span>{strings.designs}</span></a>
+              { project.designsUrl &&
+              <a href={project.designsUrl} target="_blank" rel="noopener noreferrer"><i
+                className="material-icons">palette</i><span>{project.designs}</span></a>
               }
             </div>
           </div>
           <Paragraph className="project-description">
-            {strings.projects[project.key].description}
+            {project.body}
           </Paragraph>
           <div className="project-skills">
             {
-              project.topSkills.map((skill, i) => {
+              project.peakSkills.map((skill, i) => {
                 return (
-                  <Skill key={i} skill={skill} isPeakSkill={true}/>
+                  <Skill key={i} skill={skill.name} isPeakSkill={true}/>
                 )
               })
             }
             {
-              project.otherSkills.map((skill, i) => {
+              project.skills.map((skill, i) => {
                 return (
-                  <Skill key={i} skill={skill}/>
+                  <Skill key={i} skill={skill.name}/>
                 )
               })
             }
@@ -308,4 +307,4 @@ const Project = ({strings, project, index}) => {
   )
 };
 
-export default translate(Project);
+export default Project;

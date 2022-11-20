@@ -115,11 +115,11 @@ class TimeBubble extends React.Component {
   render() {
     const side = (this.props.index % 2) ? 'right' : 'left';
 
-    const fromMoment = moment({month: this.props.from.month - 1, year: this.props.from.year});
+    const fromMoment = moment(this.props.from);
 
     let toMoment;
-    if (this.props.to.month || this.props.to.year) {
-      toMoment = moment({month: this.props.to.month - 1, year: this.props.to.year});
+    if (this.props.to) {
+      toMoment = moment(this.props.to);
     }
 
     return (

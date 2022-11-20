@@ -23,31 +23,128 @@ export const Head = () => <title>tiina.dev</title>
 
 export const query = graphql`
   query DatoCMSQuery($locale: String!) {
-    header: datoCmsHeaderSection(locale: { eq: $locale }) {
-      title
-      name
-      subtitle
-      aboutme
-      projects
-      skills
-      interests
-      education
-      workhistory
+      header: datoCmsHeaderSection(locale: { eq: $locale }) {
+          title
+          name
+          subtitle
+          aboutme
+          projects
+          skills
+          interests
+          education
+          workhistory
+      }
+      aboutMe: datoCmsAboutMeSection(locale: { eq: $locale }) {
+          title
+          printButtonText
+          body
+      }
+      contacts: datoCmsContact(locale: { eq: $locale }) {
+          emailLink
+          emailName
+          githubLink
+          githubName
+          linkedinLink
+          linkedinName
+          phoneLink
+          phoneName
+      }
+      workHistory: datoCmsWorkHistorySection(locale: {eq: $locale}) {
+          title
+          workHistoryList {
+              company
+              title
+              startDate
+              endDate
+              body
+              peakSkills {
+                  name
+              }
+              skills {
+                  name
+              }
+          }
+      }
+      education: datoCmsEducationSection(locale: {eq: $locale}) {
+          title
+          educationList {
+              title
+              school
+              program
+              startDate
+              endDate
+              body
+          }
+      }
+      skills: datoCmsSkillSection(locale: {eq: $locale}) {
+          title
+          ratlessTopSkillTitle
+          ratelessTopSkillBody
+          ratelessOtherSkillTitle
+          ratelessOtherSkillBody
+          ratedTopSkillTitle
+          ratedTopSkillBody
+          ratedOtherSkillTitle
+          ratedOtherSkillBody
+          languageSkillTitle
+          ratelessTopSkills {
+              name
+          }
+          ratelessOtherSkills {
+              name
+          }
+          ratedOtherSkills {
+              rate
+              color1 {
+                hex
+              }
+              color2 {
+                hex
+              }
+              skill {
+                  name
+              }
+          }
+          ratedTopSkills {
+              rate
+              color1 {
+                hex
+              }
+              color2 {
+                hex
+              }
+              skill {
+                  name
+              }
+          }
+          languageSkills {
+              title
+              level
+              body
+          }
+      }
+      projects: datoCmsProjectSection(locale: {eq: $locale}) {
+          title 
+          projects {
+          title
+          body
+          githubLinkName
+          githubUrl
+          websiteName
+          websiteUrl
+          peakSkills {
+              name
+          }
+          skills {
+              name
+          }
+        }
+      }
+      interests: datoCmsInterestSection(locale: {eq: $locale}) {
+          title
+          interests {
+            title
+          }
+      }
     }
-    aboutMe: datoCmsAboutMeSection(locale: { eq: $locale }) {
-      title
-      printButtonText
-      body
-    }
-    contacts: datoCmsContact(locale: { eq: $locale }) {
-      emailLink
-      emailName
-      githubLink
-      githubName
-      linkedinLink
-      linkedinName
-      phoneLink
-      phoneName
-    }
-  }
 `

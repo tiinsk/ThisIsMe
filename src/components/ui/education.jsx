@@ -5,28 +5,25 @@ import EduItem from './presentational/edu-item';
 import TimeLine from './presentational/time-line';
 import TimeBubble from './presentational/time-bubble';
 
-import education from '../../data/education';
-
-
-const Education = ({scrollRef}) => {
+const Education = ({scrollRef, education}) => {
   return(
     <div className="education" ref={scrollRef}>
       <Section
-        titleId="titles.education"
+        title={education.title}
         maxWidth="1100px"
       >
         <TimeLine>
           {
-            education.educationList.map((school, i) => {
+            education.educationList.map((eduItem, i) => {
               return(
                 <TimeBubble
                   key={i}
-                  from={school.from}
-                  to={school.to}
+                  from={eduItem.startDate}
+                  to={eduItem.endDate}
                   index={i}
                 >
                   <EduItem
-                    data={school}
+                    data={eduItem}
                   />
                 </TimeBubble>
               );

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import {H3, Paragraph} from '../../theme/fonts';
-import translate from '../main/translate';
 import iceberg from './../../assets/iceberg.png';
 import LanguageSkills from './language-skills';
 import Section, {StyledSection} from './presentational/section';
@@ -65,11 +64,11 @@ const StyledSkills = styled.div`
 `;
 
 
-const Skills = ({scrollRef}) => {
+const Skills = ({scrollRef, skills}) => {
   return (
     <StyledSkills ref={scrollRef}>
       <Section
-        titleId="titles.skills"
+        title={skills.title}
         bodyStyle={{marginLeft: 0}}
       >
         <div>
@@ -78,15 +77,32 @@ const Skills = ({scrollRef}) => {
               <img src={iceberg} alt="Iceberg"/>
             </div>
             <div>
-              <RatedSkills/>
-              <RatelessSkills/>
+              <RatedSkills
+                topSkillTitle={skills.ratedTopSkillTitle}
+                topSkillBody={skills.ratedTopSkillBody}
+                otherSkillTitle={skills.ratedOtherSkillTitle}
+                otherSkillBody={skills.ratedOtherSkillBody}
+                topSkills={skills.ratedTopSkills}
+                otherSkills={skills.ratedOtherSkills}
+              />
+              <RatelessSkills
+                topSkillTitle={skills.ratelessTopSkillTitle}
+                topSkillBody={skills.ratelessTopSkillBody}
+                otherSkillTitle={skills.ratelessOtherSkillTitle}
+                otherSkillBody={skills.ratelessOtherSkillBody}
+                topSkills={skills.ratelessTopSkills}
+                otherSkills={skills.ratelessOtherSkills}
+              />
             </div>
           </div>
-          <LanguageSkills/>
+          <LanguageSkills
+            title={skills.languageSkillTitle}
+            languageSkills={skills.languageSkills}
+          />
         </div>
       </Section>
     </StyledSkills>
   );
 };
 
-export default translate(Skills);
+export default Skills;
