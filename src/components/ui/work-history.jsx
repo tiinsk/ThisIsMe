@@ -1,28 +1,25 @@
 import React from 'react';
 
-import workExperience from '../../data/work-experience';
-import translate from '../main/translate';
 import Section from './presentational/section';
 import TimeBubble from './presentational/time-bubble';
 import TimeLine from './presentational/time-line';
 import WorkItem from './presentational/work-item';
 
-const WorkHistory = ({scrollRef}) => {
-
+const WorkHistory = ({scrollRef, workHistory}) => {
   return (
     <div ref={scrollRef}>
       <Section
-        titleId="titles.workHistory"
+        title={workHistory.title}
         maxWidth="1100px"
       >
         <TimeLine>
           {
-            workExperience.workexp.map((workitem, i) => {
+            workHistory.workHistoryList.map((workitem, i) => {
               return (
                 <TimeBubble
                   key={i}
-                  from={workitem.from}
-                  to={workitem.to}
+                  from={workitem.startDate}
+                  to={workitem.endDate}
                   index={i}
                 >
                   <WorkItem
@@ -39,4 +36,4 @@ const WorkHistory = ({scrollRef}) => {
   )
 };
 
-export default translate(WorkHistory);
+export default WorkHistory;

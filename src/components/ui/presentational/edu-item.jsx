@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import {H3, H4, Paragraph} from '../../../theme/fonts';
-import translate from '../../main/translate';
 
 const StyledEduItem = styled.div`
   .degree {
@@ -19,34 +18,20 @@ const StyledEduItem = styled.div`
   }
 `;
 
-const EduItem = ({strings, data}) => {
-  let translations = strings.education.educationList[data.key];
+const EduItem = ({data}) => {
   return (
     <StyledEduItem>
-      <H3>{translations.school}</H3>
-      <H4 className="degree">{`${translations.title}${translations.program ? ',' : ''}`}</H4>
+      <H3>{data.school}</H3>
+      <H4 className="degree">{`${data.title}${data.program ? ',' : ''}`}</H4>
       {
-        translations.program ?
-          <H4 className="program">{translations.program}</H4> : null
+        data.program ?
+          <H4 className="program">{data.program}</H4> : null
       }
-      {translations.major || translations.minor || translations.thesis ?
-        <>
-          {
-            translations.major ?
-              <Paragraph>{strings.education.major}: {translations.major}</Paragraph> : null
-          }
-          {
-            translations.minor ?
-              <Paragraph>{strings.education.minor}: {translations.minor}</Paragraph> : null
-          }
-          {
-            translations.thesis ?
-              <Paragraph>{strings.education.thesis}: {translations.thesis}</Paragraph> : null
-          }
-        </> : null
+      {data.body ?
+        <Paragraph>{data.body}</Paragraph> : null
       }
     </StyledEduItem>
   )
 };
 
-export default translate(EduItem);
+export default EduItem;

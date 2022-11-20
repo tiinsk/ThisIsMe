@@ -2,9 +2,7 @@ import React from 'react';
 import {Waypoint} from 'react-waypoint';
 import styled from 'styled-components/macro';
 
-import skills from '../../data/skills';
 import {H3, Paragraph} from '../../theme/fonts';
-import translate from '../main/translate';
 import SkillMeter from './presentational/skill-meter';
 
 const StyledRatedSkills = styled.div`
@@ -53,8 +51,8 @@ class RatedSkills extends React.Component {
   render() {
     return (
       <StyledRatedSkills>
-        <H3>{this.props.strings.skills.ratedSkills.topSkills.title}</H3>
-        <Paragraph>{this.props.strings.skills.ratedSkills.topSkills.subtitle}</Paragraph>
+        <H3>{this.props.topSkillTitle}</H3>
+        <Paragraph>{this.props.topSkillBody}</Paragraph>
         <Waypoint
           onEnter={() => {
             this.setState({topSkillsEntered: true})
@@ -67,22 +65,26 @@ class RatedSkills extends React.Component {
             <div className="first-skill-wrapper">
               <div className="rated-skills">
                 <SkillMeter
-                  rate={skills.ratedSkills.highestSkill.value}
-                  icon={skills.ratedSkills.highestSkill.key}
-                  color={skills.ratedSkills.highestSkill.color}
+                  rate={this.props.topSkills[0].rate}
+                  icon={undefined}
+                  name={this.props.topSkills[0].skill.name}
+                  color1={this.props.topSkills[0].color1.hex}
+                  color2={this.props.topSkills[0].color2.hex}
                   entered={this.state.topSkillsEntered}
                 />
               </div>
             </div>
             <div className="rated-skills">
               {
-                skills.ratedSkills.topSkills.map((skill, i) => {
+                this.props.topSkills.slice(1).map((skillItem, i) => {
                   return (
                     <SkillMeter
                       key={i}
-                      rate={skill.value}
-                      icon={skill.key}
-                      color={skill.color}
+                      rate={skillItem.rate}
+                      icon={undefined}
+                      name={skillItem.skill.name}
+                      color1={skillItem.color1.hex}
+                      color2={skillItem.color2.hex}
                       entered={this.state.topSkillsEntered}
                     />
                   )
@@ -91,8 +93,8 @@ class RatedSkills extends React.Component {
             </div>
           </div>
         </Waypoint>
-        <H3>{this.props.strings.skills.ratedSkills.otherSkills.title}</H3>
-        <Paragraph>{this.props.strings.skills.ratedSkills.otherSkills.subtitle}</Paragraph>
+        <H3>{this.props.otherSkillTitle}</H3>
+        <Paragraph>{this.props.otherSkillBody}</Paragraph>
         <Waypoint
           onEnter={() => {
             this.setState({otherSkillsEntered: true})
@@ -103,13 +105,15 @@ class RatedSkills extends React.Component {
         >
           <div className="rated-skills">
             {
-              skills.ratedSkills.otherSkills.map((skill, i) => {
+              this.props.otherSkills.map((skillItem, i) => {
                 return (
                   <SkillMeter
                     key={i}
-                    rate={skill.value}
-                    icon={skill.key}
-                    color={skill.color}
+                    rate={skillItem.rate}
+                    icon={undefined}
+                    color1={skillItem.color1.hex}
+                    color2={skillItem.color2.hex}
+                    name={skillItem.skill.name}
                     entered={this.state.otherSkillsEntered}
                   />
                 )
@@ -120,6 +124,6 @@ class RatedSkills extends React.Component {
       </StyledRatedSkills>
     );
   }
-};
+}
 
-export default translate(RatedSkills);
+export default RatedSkills;

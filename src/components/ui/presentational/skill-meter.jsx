@@ -104,16 +104,16 @@ const StyledSkillMeter = styled.div`
   }
 `;
 
-const SkillMeter = ({strings, icon, color, rate, entered}) => {
+const SkillMeter = ({strings, name, icon, color1, color2, rate, entered}) => {
   return(
     <StyledSkillMeter>
-      <div className="icon" style={
+      {icon && <div className="icon" style={
         {
           backgroundImage: `url(${require(`../../../assets/skills/${icon}.svg`)}`
         }
-      }/>
+      }/>}
       <div className="skill-bar-wrapper">
-        <div className="skill-name">{strings.skills.skillNames[icon] || icon}</div>
+        <div className="skill-name">{name}</div>
         <div
           className="skill-rate"
         >
@@ -124,7 +124,7 @@ const SkillMeter = ({strings, icon, color, rate, entered}) => {
             className={`fill ${entered ? 'animated slideInLeft' : ''}`}
             style={{
               width: `${rate/MAX_RATE*100}%`,
-              background: color
+              background: `linear-gradient(90deg, ${color1} 50%, ${color2} 100%)`
             }}
           />
         </div>

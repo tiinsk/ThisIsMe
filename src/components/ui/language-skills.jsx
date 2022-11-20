@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import {H2, H3, Paragraph} from '../../theme/fonts';
-import translate from '../main/translate';
 
 const StyledLangSkills = styled.div`
   ${H3} {
@@ -58,25 +57,25 @@ const StyledLangSkills = styled.div`
 `;
 
 
-const LanguageSkills = ({strings}) => {
+const LanguageSkills = ({title, languageSkills}) => {
   return (
     <StyledLangSkills>
-      <H3>{strings.skills.langSkills}</H3>
+      <H3>{title}</H3>
       <div className="lang-skills">
         {
-          strings.skills.languages.map((language) => {
+          languageSkills.map((language) => {
             return (
-              <div className="language" key={language.language}>
+              <div className="language" key={language.title}>
                 <div className="lang-title">
                   <H2 className="lang-name">
-                    {language.language}
+                    {language.title}
                   </H2>
                   <div className="lang-level">
                     {language.level}
                   </div>
                 </div>
                 <Paragraph>
-                  {language.text}
+                  {language.body}
                 </Paragraph>
               </div>
             )
@@ -87,4 +86,4 @@ const LanguageSkills = ({strings}) => {
   );
 }
 
-export default translate(LanguageSkills);
+export default LanguageSkills;

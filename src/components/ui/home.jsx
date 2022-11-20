@@ -1,6 +1,5 @@
 import React from 'react';
 
-import translate from '../main/translate';
 import AboutMe from './about-me';
 import Education from './education';
 import Interests from './interests';
@@ -39,15 +38,15 @@ class Home extends React.Component {
         <Header header={this.props.data.header} contacts={this.props.data.contacts} onScrollToRef={(section) => this.onScrollToRef(section)}/>
         <div>
           <AboutMe aboutMe={this.props.data.aboutMe} contacts={this.props.data.contacts} scrollRef={this.scrollRefs.aboutMe}/>
-          <WorkHistory scrollRef={this.scrollRefs.workHistory}/>
-          <Education scrollRef={this.scrollRefs.education}/>
-          <Skills scrollRef={this.scrollRefs.skills}/>
-          <Projects scrollRef={this.scrollRefs.projects}/>
-          <Interests scrollRef={this.scrollRefs.interests}/>
+          <WorkHistory workHistory={this.props.data.workHistory} scrollRef={this.scrollRefs.workHistory}/>
+          <Education education={this.props.data.education} scrollRef={this.scrollRefs.education}/>
+          <Skills skills={this.props.data.skills} scrollRef={this.scrollRefs.skills}/>
+          <Projects projects={this.props.data.projects} scrollRef={this.scrollRefs.projects}/>
+          <Interests interests={this.props.data.interests} scrollRef={this.scrollRefs.interests}/>
         </div>
       </div>
     );
   }
 }
 
-export default translate(Home);
+export default Home;

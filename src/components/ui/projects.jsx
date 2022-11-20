@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import projects from '../../data/projects';
-import translate from '../main/translate';
 import Project from './presentational/project';
 import Section, {StyledSection} from './presentational/section';
 
@@ -23,16 +21,16 @@ const StyledProjects = styled.div`
   }
 `;
 
-const Projects = ({scrollRef}) => {
+const Projects = ({scrollRef, projects}) => {
   return (
     <StyledProjects ref={scrollRef}>
       <Section
-        titleId="titles.projects"
+        title={projects.title}
         style={{marginRight: 0}}
       >
         <div className="projects">
           {
-            projects.map((project, i) => {
+            projects.projects.map((project, i) => {
               return (
                 <Project
                   key={i}
@@ -48,4 +46,4 @@ const Projects = ({scrollRef}) => {
   )
 };
 
-export default translate(Projects);
+export default Projects;

@@ -43,23 +43,23 @@ const WorkItem = ({strings, data, isOnLeft}) => {
   return (
     <StyledWorkItem>
       <H3>
-        {strings.workExperience[data.key].company}
+        {data.company}
       </H3>
       <H4>
-        {strings.workExperience[data.key].title}
+        {data.title}
       </H4>
       <div>
-        <Paragraph>{strings.workExperience[data.key].description}</Paragraph>
+        <Paragraph>{data.body}</Paragraph>
         <div className={`wrapper ${isOnLeft ? 'left' : 'right'}`}>
-          {data.topSkills ? data.topSkills.map((skill, i) => {
+          {data.peakSkills ? data.peakSkills.map((skill, i) => {
             return (
-              <Skill key={i} skill={skill} isPeakSkill={true}/>
+              <Skill key={i} skill={skill.name} isPeakSkill={true}/>
             )
           }) : null
           }
-          {data.otherSkills ? data.otherSkills.map((skill, i) => {
+          {data.skills ? data.skills.map((skill, i) => {
             return (
-              <Skill key={i} skill={skill}/>
+              <Skill key={i} skill={skill.name}/>
             )
           }) : null
           }

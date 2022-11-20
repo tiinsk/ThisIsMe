@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import skills from '../../data/skills';
 import {H3, Paragraph} from '../../theme/fonts';
-import translate from '../main/translate';
 import Skill from './presentational/skill';
 
 const StyledRatelessSkills = styled.div`
@@ -19,27 +17,27 @@ const StyledRatelessSkills = styled.div`
   }
 `;
 
-const RatelessSkills = ({strings}) => {
+const RatelessSkills = ({topSkillTitle, topSkillBody, otherSkillTitle, otherSkillBody, topSkills, otherSkills}) => {
   return (
     <StyledRatelessSkills>
-      <H3>{strings.skills.ratelessSkills.topSkills.title}</H3>
-      <Paragraph>{strings.skills.ratelessSkills.topSkills.subtitle}</Paragraph>
+      <H3>{topSkillTitle}</H3>
+      <Paragraph>{topSkillBody}</Paragraph>
       <div className="rateless-skills">
         {
-          skills.ratelessSkills.topSkills.map((skill, i) => {
+          topSkills.map((skill, i) => {
             return (
-              <Skill key={i} skill={skill} isPeakSkill={true}/>
+              <Skill key={i} skill={skill.name} isPeakSkill={true}/>
             )
           })
         }
       </div>
-      <H3>{strings.skills.ratelessSkills.otherSkills.title}</H3>
-      <Paragraph>{strings.skills.ratelessSkills.otherSkills.subtitle}</Paragraph>
+      <H3>{otherSkillTitle}</H3>
+      <Paragraph>{otherSkillBody}</Paragraph>
       <div className="rateless-skills">
         {
-          skills.ratelessSkills.otherSkills.map((skill, i) => {
+          otherSkills.map((skill, i) => {
             return (
-              <Skill key={i} skill={skill}/>
+              <Skill key={i} skill={skill.name}/>
             )
           })
         }
@@ -48,4 +46,4 @@ const RatelessSkills = ({strings}) => {
   );
 };
 
-export default translate(RatelessSkills);
+export default RatelessSkills;
