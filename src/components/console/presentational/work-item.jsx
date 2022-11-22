@@ -1,6 +1,7 @@
 import React from 'react';
 import DashedLine from './dashed-line';
 import styled from 'styled-components/macro';
+import moment from 'moment';
 
 const StyledConsoleWorkItem = styled.div`
   .dates{
@@ -19,34 +20,34 @@ const StyledConsoleWorkItem = styled.div`
   }
 `;
 
-const WorkItem = ({strings, data}) => {
+const WorkItem = ({data}) => {
   return(
     <StyledConsoleWorkItem>
       <DashedLine/>
       <div className="dates">
-        <span>{`${data.from.month}/${data.from.year}`} - </span>{data.to && data.to.month && data.to.year ? <span>{`${data.to.month}/${data.to.year}`}</span> : null }
+        <span>{`${moment(data.startDate).format('MM/YYYY')}`} - </span>{data.endDate ? <span>{`${moment(data.endDate).format('MM/YYYY')}`}</span> : null }
       </div>
       <div className="company">
-        {strings.workExperience[data.key].company}
+        {data.company}
       </div>
       <div className="work-title">
-        {strings.workExperience[data.key].title}
+        {data.title}
       </div>
       <div className="work-description">
-        {strings.workExperience[data.key].description}
+        {data.body}
         <div className="rateless-skills">
-          { data.topSkills ? data.topSkills.map( (skill,i) => {
+          { data.peakSkills ? data.peakSkills.map( (skill,i) => {
             return(
               <div key={i} className="rateless-skill">
-                <span className="line">/</span><span className="asterix">*</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>
+                <span className="line">/</span><span className="asterix">*</span>{skill.name}<span className="line">/</span>
               </div>
             )
           }) : null
           }
-          { data.otherSkills ? data.otherSkills.map( (skill,i) => {
+          { data.skillls ? data.skills.map( (skill,i) => {
             return(
               <div key={i} className="rateless-skill">
-                <span className="line">/</span>{strings.skills.skillNames[skill] || skill}<span className="line">/</span>
+                <span className="line">/</span>{skill.name}<span className="line">/</span>
               </div>
             )
           }) : null

@@ -8,20 +8,14 @@ const StyledConsoleIntroduction = styled.div`
   }
 `;
 
-const Introduction = ({strings}) => {
+const Introduction = ({data}) => {
   return(
     <StyledConsoleIntroduction>
       <p className="title">
-        {strings.summary.title}
+        {data.header.subtitle}
       </p>
       <p>
-        {strings.introduction}
-      </p>
-      <p>
-        {strings.introduction2}
-      </p>
-      <p>
-        {strings.introduction3}
+        {data.aboutMe.body}
       </p>
     </StyledConsoleIntroduction>
   )
