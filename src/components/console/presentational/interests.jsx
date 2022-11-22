@@ -46,7 +46,6 @@ class Interests extends React.Component {
   render() {
     return (
       <StyledConsoleInterests>
-        <div className="interests-title">{this.props.strings.interests.travelling}</div>
         {
           this.state.windowWidth !== 'MD' ?
             <SmallMap/> :
@@ -54,11 +53,11 @@ class Interests extends React.Component {
         }
         <div className="rateless-skills">
           {
-            this.props.strings.interests.interest_list.map((interest, i) => {
+            this.props.data.interests.interests.map((interest, i) => {
               return (
                 <div className="rateless-skill" key={i}>
                   <span className="line">/</span>
-                  {interest}
+                  {interest.title}
                   <span className="line">/</span>
                 </div>
               );

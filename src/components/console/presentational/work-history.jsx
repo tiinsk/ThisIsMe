@@ -1,13 +1,12 @@
 import React from 'react';
 
-import workExperience from '../../../data/work-experience';
 import WorkItem from './work-item';
 
-const WorkHistory = ({strings}) => {
+const WorkHistory = ({strings, data}) => {
   return (
     <div>
       {
-        workExperience.workexp.map((workitem, i) => {
+        data.workHistory.workHistoryList.map((workitem, i) => {
           return (
             <WorkItem
               strings={strings}

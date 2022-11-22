@@ -26,32 +26,32 @@ const StyledConsoleProject = styled.div`
   }
 `;
 
-const Project = ({strings, project}) => {
+const Project = ({project, skillsTitle, linksTitle}) => {
   return(
     <StyledConsoleProject>
       <DashedLine/>
-      <div className="project-name" dangerouslySetInnerHTML={{__html: strings.projects[project.key].name}} />
+      <div className="project-name" dangerouslySetInnerHTML={{__html: project.title}} />
       <div className="project-description">
-        {strings.projects[project.key].description}
-        <div className="skill-title">{strings.titles.skills}:</div>
+        {project.body}
+        <div className="skill-title">{skillsTitle}:</div>
         <div className="rateless-skills">
           {
-            project.topSkills.map( (skill,i) => {
+            project.peakSkills.map( (skill,i) => {
               return (
                 <div key={i} className="rateless-skill">
                   <span className="line">/</span><span className="asterix">*</span>
-                  {strings.skills.skillNames[skill] || skill}
+                  {skill.name}
                   <span className="line">/</span>
                 </div>
               )
             })
           }
           {
-            project.otherSkills.map( (skill,i) => {
+            project.skills.map( (skill,i) => {
               return (
                 <div key={i} className="rateless-skill">
                   <span className="line">/</span>
-                  {strings.skills.skillNames[skill] || skill}
+                  {skill.name}
                   <span className="line">/</span>
                 </div>
               )
@@ -59,25 +59,25 @@ const Project = ({strings, project}) => {
           }
         </div>
         <div className="links">
-          {(project.link || project.github) && <div className="link-title">{strings.links}:</div>}
-          {project.link &&
+          {(project.githubUrl || project.websiteUrl || project.designsUrl) && <div className="link-title">{linksTitle}:</div>}
+          {project.websiteUrl &&
             <div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                {project.link}
+              <a href={project.websiteUrll} target="_blank" rel="noopener noreferrer">
+                {project.websiteUrll}
               </a>
             </div>
           }
-          { project.github &&
+          { project.githubUrl &&
             <div>
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                {project.github}
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                {project.githubUrl}
               </a>
             </div>
           }
-          { project.designs &&
+          { project.designsUrl &&
           <div>
-            <a href={project.designs} target="_blank" rel="noopener noreferrer">
-              {project.designs}
+            <a href={project.designsUrl} target="_blank" rel="noopener noreferrer">
+              {project.designsUrl}
             </a>
           </div>
           }

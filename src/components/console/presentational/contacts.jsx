@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import contacts from '../../../data/contacts';
-
 const StyledConsoleContacts = styled.div`
   border-top:  2px solid ${({theme}) => theme.console.colors.green};
   border-bottom: 2px solid ${({theme}) => theme.console.colors.green};
@@ -25,7 +23,7 @@ const StyledConsoleContacts = styled.div`
 
 const divider = '//';
 
-const Contacts = () => {
+const Contacts = ({data}) => {
 
   return (
     <StyledConsoleContacts>
@@ -34,13 +32,10 @@ const Contacts = () => {
       </div>
 
       <div className="detail">
-        <span>{divider}</span>{contacts.name}<span>{divider}</span>
+        <span>{divider}</span>{data.contacts.phoneLink}<span>{divider}</span>
       </div>
       <div className="detail">
-        <span>{divider}</span>{contacts.phone}<span>{divider}</span>
-      </div>
-      <div className="detail">
-        <span>{divider}</span>{contacts.email}<span>{divider}</span>
+        <span>{divider}</span>{data.contacts.emailLink}<span>{divider}</span>
       </div>
 
       <div className="detail">
@@ -49,15 +44,15 @@ const Contacts = () => {
 
       <div className="detail">
         <span>{divider}</span>
-        <a href={contacts.github} target="_blank" rel="noopener noreferrer">
-          {contacts.github}
+        <a href={data.contacts.githubLink} target="_blank" rel="noopener noreferrer">
+          {data.contacts.githubLink}
         </a>
         <span>{divider}</span>
       </div>
       <div className="detail">
         <span>{divider}</span>
-        <a href={contacts.linkedin} target="_blank" rel="noopener noreferrer">
-          {contacts.linkedin}
+        <a href={data.contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
+          {data.contacts.linkedinLink}
         </a>
         <span>{divider}</span>
       </div>
