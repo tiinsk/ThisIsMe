@@ -1,152 +1,51 @@
-import React, {useEffect} from 'react';
-import {graphql, navigate} from 'gatsby';
+import React, { useEffect } from 'react';
+import { graphql, navigate } from 'gatsby';
 import moment from 'moment';
 
 import Home from '../components/ui/home';
 
-const IndexPage = ({data, pageContext}) => {
+const IndexPage = ({ data, pageContext }) => {
   useEffect(() => {
     moment.locale(pageContext.locale);
     const previousLang = localStorage.getItem('language');
-    if(previousLang && previousLang !== pageContext.locale) {
+    if (previousLang && previousLang !== pageContext.locale) {
       const prefix = pageContext.locale === 'en' ? '/fi' : '/';
-      navigate(prefix, {replace: true})
+      navigate(prefix, { replace: true });
     }
-  }, [])
+  }, []);
 
-  return (
-    <Home data={data}/>
-  );
-}
+  return <Home data={data} />;
+};
 
 export default IndexPage;
 
-export const Head = () => <title>tiina.dev</title>
+export const Head = () => <title>tiina.dev</title>;
 
 export const query = graphql`
   query DatoCMSQuery($locale: String!) {
     header: datoCmsHeaderSection(locale: { eq: $locale }) {
-      title
-      name
-      subtitle
-      aboutme
-      projects
-      skills
-      interests
-      education
-      workhistory
+      ...HeaderFragment
     }
     aboutMe: datoCmsAboutMeSection(locale: { eq: $locale }) {
-      title
-      printButtonText
-      body
+      ...AboutMeFragment
     }
     contacts: datoCmsContact(locale: { eq: $locale }) {
-      emailLink
-      emailName
-      githubLink
-      githubName
-      linkedinLink
-      linkedinName
-      phoneLink
-      phoneName
+      ...ContactFragment
     }
-    workHistory: datoCmsWorkHistorySection(locale: {eq: $locale}) {
-      title
-      workHistoryList {
-        company
-        title
-        startDate
-        endDate
-        body
-        peakSkills {
-          name
-        }
-        skills {
-          name
-        }
-      }
+    workHistory: datoCmsWorkHistorySection(locale: { eq: $locale }) {
+      ...WorkHistoryFragment
     }
-    education: datoCmsEducationSection(locale: {eq: $locale}) {
-      title
-      educationList {
-        title
-        school
-        program
-        startDate
-        endDate
-        body
-      }
+    education: datoCmsEducationSection(locale: { eq: $locale }) {
+      ...EducationFragment
     }
-    skills: datoCmsSkillSection(locale: {eq: $locale}) {
-      title
-      ratlessTopSkillTitle
-      ratelessTopSkillBody
-      ratelessOtherSkillTitle
-      ratelessOtherSkillBody
-      ratedTopSkillTitle
-      ratedTopSkillBody
-      ratedOtherSkillTitle
-      ratedOtherSkillBody
-      languageSkillTitle
-      ratelessTopSkills {
-        name
-      }
-      ratelessOtherSkills {
-        name
-      }
-      ratedOtherSkills {
-        rate
-        color1 {
-          hex
-        }
-        color2 {
-          hex
-        }
-        skill {
-          name
-        }
-      }
-      ratedTopSkills {
-        rate
-        color1 {
-          hex
-        }
-        color2 {
-          hex
-        }
-        skill {
-          name
-        }
-      }
-      languageSkills {
-        title
-        level
-        body
-      }
+    skills: datoCmsSkillSection(locale: { eq: $locale }) {
+      ...SkillsFragment
     }
-    projects: datoCmsProjectSection(locale: {eq: $locale}) {
-      title 
-      projects {
-        title
-        body
-        githubLinkName
-        githubUrl
-        websiteName
-        websiteUrl
-        peakSkills {
-          name
-        }
-        skills {
-          name
-        }
-      }
+    projects: datoCmsProjectSection(locale: { eq: $locale }) {
+      ...ProjectsFragment
     }
-    interests: datoCmsInterestSection(locale: {eq: $locale}) {
-      title
-      interests {
-        title
-      }
+    interests: datoCmsInterestSection(locale: { eq: $locale }) {
+      ...InterestsFragment
     }
   }
-`
+`;
