@@ -2,8 +2,8 @@ import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components/macro';
+import {GatsbyImage} from 'gatsby-plugin-image';
 
-import background from '../../../assets/background.jpg';
 import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 import LanguageSelector from '../containers/language-selector';
 import HoverBubble, {StyledHoverBubble} from './hover-bubble';
@@ -12,10 +12,6 @@ import Navbar from './navbar';
 const StyledHeader = styled.div`
   width: calc(100vw - ${({theme}) => theme.rightMenuWidth});
   height: 100vh;
-  background-image: url(${background});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom left;
   
   position: relative;
   
@@ -94,9 +90,26 @@ const StyledHeader = styled.div`
   }
 `;
 
+const HeaderImg = styled(GatsbyImage)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  img {
+    object-position: ${({ $posX, $posY }) => `${$posX * 100}% ${$posY * 100}%`};
+  }
+`
+
 const Header = ({onScrollToRef, contacts, header}) => {
   return (
     <StyledHeader>
+      <HeaderImg
+        image={header.image.gatsbyImageData}
+        $posX={header.image.focalPoint.x}
+        $posY={header.image.focalPoint.y}
+        alt={header.image.alt}
+      />
       <Navbar header={header} onScrollToRef={onScrollToRef}/>
       <div className="name-titles">
         <div className="title">

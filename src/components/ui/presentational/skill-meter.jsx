@@ -107,7 +107,7 @@ const SkillMeter = ({name, icon, color1, color2, rate, entered}) => {
     <StyledSkillMeter>
       {icon && <div className="icon" style={
         {
-          backgroundImage: `url(${require(`../../../assets/skills/${icon}.svg`)}`
+          backgroundImage: `url(${icon})`
         }
       }/>}
       <div className="skill-bar-wrapper">

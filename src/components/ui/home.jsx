@@ -35,7 +35,11 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Header header={this.props.data.header} contacts={this.props.data.contacts} onScrollToRef={(section) => this.onScrollToRef(section)}/>
+        <Header
+          header={this.props.data.header}
+          contacts={this.props.data.contacts}
+          onScrollToRef={(section) => this.onScrollToRef(section)}
+        />
         <div>
           <AboutMe aboutMe={this.props.data.aboutMe} contacts={this.props.data.contacts} scrollRef={this.scrollRefs.aboutMe}/>
           <WorkHistory workHistory={this.props.data.workHistory} scrollRef={this.scrollRefs.workHistory}/>

@@ -7,6 +7,7 @@ import styled from 'styled-components/macro';
 import {theme} from '../../../theme';
 import {H1, Paragraph} from '../../../theme/fonts';
 import Skill from './skill';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const IMAGE_WIDTH = 450;
 const IMAGE_HEIGHT = 400;
@@ -209,11 +210,12 @@ const lightBoxOptions = {
 
 const Project = ({project, index}) => {
   const [imageIndex, setImageIndex] = useState(0);
-  /* TODO add when images have been moved to datoCMS
-  const images = project.images.map(image => ({
-    img: require(`../../../assets/projects/${project.key}/${image.img}`),
-    thumb: require(`../../../assets/projects/${project.key}/${image.thumb}`)
-  }));*/
+
+  const images = project.images.map((image, i) => ({
+    img: image.url,
+    thumb: project.thumbnails[i].gatsbyImageData,
+    alt: image.alt
+  }));
 
   const onBack = () => {
     if (imageIndex > 0) {
@@ -232,7 +234,7 @@ const Project = ({project, index}) => {
   return (
     <StyledProject
       currentImageIndex={imageIndex}
-      totalImages={0/*project.images.length*/}
+      totalImages={images.length}
     >
       <SimpleReactLightbox>
         <div className="project">
@@ -247,7 +249,7 @@ const Project = ({project, index}) => {
               }
               { project.websiteUrl &&
                 <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer"><i
-                className="material-icons">public</i><span>{project.websiteName}</span></a>
+                  className="material-icons">public</i><span>{project.websiteName}</span></a>
               }
               { project.designsUrl &&
               <a href={project.designsUrl} target="_blank" rel="noopener noreferrer"><i
@@ -278,14 +280,18 @@ const Project = ({project, index}) => {
         <div className="project-images-wrapper">
           <SRLWrapper options={lightBoxOptions}>
             <div className="project-images" style={{left: imageLeft}}>
-              //TODO to be added back when datoCMS is added
-              {/*{
+              {
                 images.map(image => (
                   <a key={image.img} href={image.img} data-attribute="SRL">
-                    <img className="project-image" src={image.thumb} alt="Project"/>
+                    <GatsbyImage
+                      className="project-image"
+                      image={image.thumb}
+                      alt={image.alt}
+                      srl_gallery_image="true"
+                    />
                   </a>
                 ))
-              }*/}
+              }
             </div>
           </SRLWrapper>
           <button
