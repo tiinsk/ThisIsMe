@@ -66,7 +66,7 @@ class RatedSkills extends React.Component {
               <div className="rated-skills">
                 <SkillMeter
                   rate={this.props.topSkills[0].rate}
-                  icon={undefined}
+                  icon={this.props.topSkills[0].image.url}
                   name={this.props.topSkills[0].skill.name}
                   color1={this.props.topSkills[0].color1.hex}
                   color2={this.props.topSkills[0].color2.hex}
@@ -81,7 +81,7 @@ class RatedSkills extends React.Component {
                     <SkillMeter
                       key={i}
                       rate={skillItem.rate}
-                      icon={undefined}
+                      icon={skillItem.image.url}
                       name={skillItem.skill.name}
                       color1={skillItem.color1.hex}
                       color2={skillItem.color2.hex}
@@ -110,7 +110,7 @@ class RatedSkills extends React.Component {
                   <SkillMeter
                     key={i}
                     rate={skillItem.rate}
-                    icon={undefined}
+                    icon={skillItem.image.url}
                     color1={skillItem.color1.hex}
                     color2={skillItem.color2.hex}
                     name={skillItem.skill.name}

@@ -11,6 +11,14 @@ export const headerFragment = graphql`
     interests
     education
     workhistory
+    image {
+      gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+      focalPoint {
+        x
+        y
+      }
+      alt
+    }
   }
 `;
 
@@ -19,6 +27,10 @@ export const aboutMeFragment = graphql`
     title
     printButtonText
     body
+    image {
+      gatsbyImageData(width: 200, placeholder: BLURRED)
+      alt
+    }
   }
 `;
 
@@ -89,6 +101,9 @@ export const skillsFragment = graphql`
     }
     ratedOtherSkills {
       rate
+      image {
+        url
+      }
       color1 {
         hex
       }
@@ -101,6 +116,9 @@ export const skillsFragment = graphql`
     }
     ratedTopSkills {
       rate
+      image {
+        url
+      }
       color1 {
         hex
       }
@@ -115,6 +133,10 @@ export const skillsFragment = graphql`
       title
       level
       body
+    }
+    image {
+      gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+      alt
     }
   }
 `;
@@ -137,6 +159,13 @@ export const projectsFragment = graphql`
       skills {
         name
       }
+      images {
+        url
+        alt
+      }
+      thumbnails {
+        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+      }
     }
   }
 `;
@@ -146,6 +175,10 @@ export const interestsFragment = graphql`
     title
     interests {
       title
+    }
+    image {
+      gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+      alt
     }
   }
 `;

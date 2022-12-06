@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import {H3, Paragraph} from '../../theme/fonts';
-import iceberg from './../../assets/iceberg.png';
 import LanguageSkills from './language-skills';
 import Section, {StyledSection} from './presentational/section';
 import RatedSkills from './rated-skills';
 import RatelessSkills from './rateless-skills';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const StyledSkills = styled.div`
   ${H3} {
@@ -31,11 +31,6 @@ const StyledSkills = styled.div`
       flex-shrink: 0;
       margin-left: -90px;
       overflow: hidden;
-      
-      img {
-        position: relative;
-        width: 100%;
-      }
     }
     
     @media (max-width: ${({theme}) => theme.breakpoints.lgSize}){
@@ -47,10 +42,8 @@ const StyledSkills = styled.div`
     @media (max-width: ${({theme}) => theme.breakpoints.mdSize}){
       .iceberg {
         width: 35%;
-        img {
-          position: relative;
-          width: 200%;
-          left: 0;
+        .gatsby-image-wrapper {
+         width: 200%;
         }
       }
     } 
@@ -74,7 +67,7 @@ const Skills = ({scrollRef, skills}) => {
         <div>
           <div className="skills-wrapper">
             <div className="iceberg">
-              <img src={iceberg} alt="Iceberg"/>
+              <GatsbyImage image={skills.image.gatsbyImageData} alt={skills.image.alt}/>
             </div>
             <div>
               <RatedSkills

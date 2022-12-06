@@ -5,9 +5,9 @@ import styled from 'styled-components/macro';
 
 import cv_en_pdf from '../../assets/resume-EN.pdf';
 import cv_fi_pdf from '../../assets/resume-FI.pdf';
-import myImage from '../../assets/me_2_0_black.png';
 import {Paragraph} from '../../theme/fonts';
 import {LinkButton} from './presentational/button';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const ImageSize = '180px';
 
@@ -59,21 +59,20 @@ const StyledIntroduction = styled.div`
       padding-left: 0;
       margin-bottom: ${({theme}) => theme.spaces.baseSize};
     }
-
-    .own-image {
-      background-image: url(${myImage});
-      width: ${ImageSize};
-      height: ${ImageSize};
-      border-radius: 50%;
-      background-size: 200px;
-      background-position: left top;
-    }
   }
   
   @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
     flex-direction: column-reverse;
   }
 `;
+
+const MyImage = styled(GatsbyImage)`
+  width: ${ImageSize};
+  height: ${ImageSize};
+  border-radius: 50%;
+  background-size: 200px;
+  background-position: left top;
+`
 
 const Introduction = ({aboutMe, contacts}) => {
   return (
@@ -115,7 +114,7 @@ const Introduction = ({aboutMe, contacts}) => {
         </LinkButton>*/}
       </div>
       <div className="image-wrapper">
-        <div className="own-image"/>
+        <MyImage image={aboutMe.image.gatsbyImageData} alt={aboutMe.image.alt}/>
       </div>
     </StyledIntroduction>
   )
