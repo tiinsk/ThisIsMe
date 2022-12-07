@@ -1,5 +1,3 @@
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components/macro';
 
@@ -8,6 +6,8 @@ import cv_fi_pdf from '../../assets/resume-FI.pdf';
 import {Paragraph} from '../../theme/fonts';
 import {LinkButton} from './presentational/button';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { Github } from '../icons/github';
+import { Linkedin } from '../icons/linkedin';
 
 const ImageSize = '180px';
 
@@ -82,13 +82,13 @@ const Introduction = ({aboutMe, contacts}) => {
         <div className="links">
           <div className="link">
             <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub}/>
+              <Github size="17px" color="black"/>
               <span>{contacts.githubName}</span>
             </a>
           </div>
           <div className="link">
             <a className="link-anchor" href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin}/>
+              <Linkedin size="17px" color="black"/>
               <span>{contacts.linkedinName}</span>
             </a>
           </div>

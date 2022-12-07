@@ -1,5 +1,3 @@
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {useState} from 'react';
 import SimpleReactLightbox, {SRLWrapper} from 'simple-react-lightbox';
 import styled from 'styled-components/macro';
@@ -8,6 +6,7 @@ import {theme} from '../../../theme';
 import {H1, Paragraph} from '../../../theme/fonts';
 import Skill from './skill';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { Github } from '../../icons/github';
 
 const IMAGE_WIDTH = 450;
 const IMAGE_HEIGHT = 400;
@@ -244,8 +243,7 @@ const Project = ({project, index}) => {
             <div className="links">
               {
                 project.githubUrl &&
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
-                  icon={faGithub}/><span>{project.githubLinkName}</span></a>
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><Github size="17px" color="black"/><span>{project.githubLinkName}</span></a>
               }
               { project.websiteUrl &&
                 <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer"><i
