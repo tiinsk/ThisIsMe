@@ -8,6 +8,8 @@ import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 import LanguageSelector from '../containers/language-selector';
 import HoverBubble, {StyledHoverBubble} from './hover-bubble';
 import Navbar from './navbar';
+import { Linkedin } from '../../icons/linkedin';
+import { Github } from '../../icons/github';
 
 const StyledHeader = styled.div`
   width: calc(100vw - ${({theme}) => theme.rightMenuWidth});
@@ -126,13 +128,13 @@ const Header = ({onScrollToRef, contacts, header}) => {
         <div className="links">
           <div className="link">
             <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub}/>
+              <Github height="17px" color="black"/>
             </a>
             <HoverBubble text={contacts.githubLink} href={contacts.githubLink} target="_blank"/>
           </div>
           <div className="link">
             <a className="link-anchor" href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin}/>
+              <Linkedin height="17px" color="black"/>
             </a>
             <HoverBubble text={contacts.linkedinLink} href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer"/>
           </div>
