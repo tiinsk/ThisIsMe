@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { graphql, navigate } from 'gatsby';
 import moment from 'moment';
+import { HelmetDatoCms } from 'gatsby-source-datocms';
 
 import Home from '../components/ui/home';
 import Layout from '../layout';
@@ -17,6 +18,7 @@ const IndexPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <HelmetDatoCms favicon={data.site.faviconMetaTags} />
       <Home data={data} />
     </Layout>
   );
@@ -51,6 +53,11 @@ export const query = graphql`
     }
     interests: datoCmsInterestSection(locale: { eq: $locale }) {
       ...InterestsFragment
+    }
+    site: datoCmsSite {
+      faviconMetaTags {
+        ...GatsbyDatoCmsFaviconMetaTags
+      }
     }
   }
 `;

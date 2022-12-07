@@ -30,6 +30,7 @@ const Console = ({ data }) => {
 
   return (
     <Layout>
+      <HelmetDatoCms favicon={data.site.faviconMetaTags} />
       <ConsoleSite data={consoleData} />
     </Layout>
   );
@@ -88,6 +89,11 @@ export const query = graphql`
     }
     interestsEN: datoCmsInterestSection(locale: { eq: "en" }) {
       ...InterestsFragment
+    }
+    site: datoCmsSite {
+      faviconMetaTags {
+        ...GatsbyDatoCmsFaviconMetaTags
+      }
     }
   }
 `;
