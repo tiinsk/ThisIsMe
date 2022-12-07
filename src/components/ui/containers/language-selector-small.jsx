@@ -31,7 +31,7 @@ const StyledLanguageSelectorSmall = styled.div`
     }
     
 
-    &:not(:first-of-type):before {
+    &:not(:first-child):before {
       content: '';
       height: 15px;
       width: 1px;
