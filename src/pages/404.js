@@ -1,18 +1,21 @@
-import * as React from 'react'
+import * as React from 'react';
 import Section from '../components/ui/presentational/section';
-import {H3, Paragraph} from '../theme/fonts';
+import { H3, Paragraph } from '../theme/fonts';
+import Layout from '../layout';
 
 const NotFoundPage = () => {
   return (
-    <Section>
-      <H3>Page not found</H3>
-      <Paragraph>
-        Sorry 😔, we couldn’t find what you were looking for.
-      </Paragraph>
-    </Section>
-  )
-}
+    <Layout>
+      <Section>
+        <H3>Page not found</H3>
+        <Paragraph>
+          Sorry 😔, we couldn’t find what you were looking for.
+        </Paragraph>
+      </Section>
+    </Layout>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>tiina.dev - Not found</title>
+export const Head = () => <title>tiina.dev - Not found</title>;

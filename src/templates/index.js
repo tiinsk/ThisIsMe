@@ -3,6 +3,7 @@ import { graphql, navigate } from 'gatsby';
 import moment from 'moment';
 
 import Home from '../components/ui/home';
+import Layout from '../layout';
 
 const IndexPage = ({ data, pageContext }) => {
   useEffect(() => {
@@ -14,7 +15,11 @@ const IndexPage = ({ data, pageContext }) => {
     }
   }, []);
 
-  return <Home data={data} />;
+  return (
+    <Layout>
+      <Home data={data} />
+    </Layout>
+  );
 };
 
 export default IndexPage;

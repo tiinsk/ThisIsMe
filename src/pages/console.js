@@ -1,6 +1,8 @@
 import React from 'react';
 import ConsoleSite from '../components/console/console-site';
 import { graphql } from 'gatsby';
+import { HelmetDatoCms } from 'gatsby-source-datocms';
+import Layout from '../layout';
 
 const Console = ({ data }) => {
   const consoleData = {
@@ -23,10 +25,14 @@ const Console = ({ data }) => {
       skills: data.skillsEN,
       projects: data.projectsEN,
       interests: data.interestsEN,
-    }
-  }
+    },
+  };
 
-  return <ConsoleSite data={consoleData}/>;
+  return (
+    <Layout>
+      <ConsoleSite data={consoleData} />
+    </Layout>
+  );
 };
 
 export default Console;
