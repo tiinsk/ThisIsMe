@@ -30,7 +30,7 @@ const StyledLanguageSelector = styled.div`
     display: flex;
     width: 100%;
 
-    &:not(:first-of-type):before {
+    &:not(:first-child):before {
       content: "";
       height: 1px;
       width: 15px;
