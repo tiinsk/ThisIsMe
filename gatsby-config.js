@@ -42,7 +42,8 @@ module.exports = {
           'Source+Code+Pro:400',
           'Material+Icons',
         ]
-      }
+      },
+      timeout: 20000 // = 20 seconds
     }
   }]
 };
