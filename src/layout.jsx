@@ -29,6 +29,12 @@ export const GlobalStyle = createGlobalStyle`
     font-feature-settings: 'liga';
   }
 
+  .wf-loading, .wf-materialicons-n4-inactive {
+    .material-icons {
+      display: none;
+    }
+  }
+
   body{
     font-family: "Open Sans";
     margin: 0;
