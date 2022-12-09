@@ -249,9 +249,9 @@ const Project = ({project, index}) => {
                 <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer"><i
                   className="material-icons">public</i><span>{project.websiteName}</span></a>
               }
-              { project.designsUrl &&
-              <a href={project.designsUrl} target="_blank" rel="noopener noreferrer"><i
-                className="material-icons">palette</i><span>{project.designs}</span></a>
+              { project.designUrl &&
+              <a href={project.designUrl} target="_blank" rel="noopener noreferrer"><i
+                className="material-icons">palette</i><span>{project.designName}</span></a>
               }
             </div>
           </div>

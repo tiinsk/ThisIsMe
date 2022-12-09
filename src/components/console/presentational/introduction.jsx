@@ -14,9 +14,7 @@ const Introduction = ({data}) => {
       <p className="title">
         {data.header.subtitle}
       </p>
-      <p>
-        {data.aboutMe.body}
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: data.aboutMe.body }}/>
     </StyledConsoleIntroduction>
   )
 };

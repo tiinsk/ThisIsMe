@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import {H3, H4, Paragraph} from '../../../theme/fonts';
+import {H3, H4, ParagraphStyle} from '../../../theme/fonts';
 
 const StyledEduItem = styled.div`
   .degree {
@@ -13,6 +13,7 @@ const StyledEduItem = styled.div`
     margin-bottom: ${({theme}) => theme.spaces.base(0.5)};
   }
   p {
+    ${ParagraphStyle};
     margin-top: ${({theme}) => theme.spaces.base(0.25)};
     margin-bottom: 0;
   }
@@ -28,7 +29,7 @@ const EduItem = ({data}) => {
           <H4 className="program">{data.program}</H4> : null
       }
       {data.body ?
-        <Paragraph>{data.body}</Paragraph> : null
+        <div dangerouslySetInnerHTML={{ __html: data.body }} /> : null
       }
     </StyledEduItem>
   )

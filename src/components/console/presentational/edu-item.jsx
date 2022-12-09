@@ -40,7 +40,7 @@ const EduItem = ({ data }) => {
 
       {data.body ? (
         <div className="edu-description">
-          <div>{data.body}</div>
+          <div dangerouslySetInnerHTML={{ __html: data.body }} />
         </div>
       ) : null}
     </StyledConsoleEduItem>

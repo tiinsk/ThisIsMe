@@ -62,8 +62,8 @@ const Project = ({project, skillsTitle, linksTitle}) => {
           {(project.githubUrl || project.websiteUrl || project.designsUrl) && <div className="link-title">{linksTitle}:</div>}
           {project.websiteUrl &&
             <div>
-              <a href={project.websiteUrll} target="_blank" rel="noopener noreferrer">
-                {project.websiteUrll}
+              <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                {project.websiteUrl}
               </a>
             </div>
           }
@@ -74,10 +74,10 @@ const Project = ({project, skillsTitle, linksTitle}) => {
               </a>
             </div>
           }
-          { project.designsUrl &&
+          { project.designUrl &&
           <div>
-            <a href={project.designsUrl} target="_blank" rel="noopener noreferrer">
-              {project.designsUrl}
+            <a href={project.designUrl} target="_blank" rel="noopener noreferrer">
+              {project.designUrl}
             </a>
           </div>
           }
