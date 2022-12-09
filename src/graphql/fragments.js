@@ -153,6 +153,8 @@ export const projectsFragment = graphql`
       githubUrl
       websiteName
       websiteUrl
+      designName
+      designUrl
       peakSkills {
         name
       }

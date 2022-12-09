@@ -62,7 +62,7 @@ export const H1 = css`
   text-transform: uppercase;
 `;
 
-export const H2 = styled.span`
+export const H2 = styled.h2`
   color: ${({theme}) => theme.UI.colors.berry};
   font-family: ${({theme}) => theme.fonts.fontQuicksand};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
@@ -71,7 +71,7 @@ export const H2 = styled.span`
   margin: ${({theme}) => theme.spaces.base(0.5)} 0;
 `;
 
-export const H3 = styled.p`
+export const H3 = styled.h3`
   color: ${({theme}) => theme.UI.colors.black};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
@@ -80,7 +80,7 @@ export const H3 = styled.p`
    margin: ${({theme}) => theme.spaces.base(0.5)} 0;
 `;
 
-export const H4 = styled.p`
+export const H4 = styled.h4`
   color: ${({theme}) => theme.UI.colors.black};
   font-family: ${({theme}) => theme.fonts.fontLato};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
@@ -88,13 +88,17 @@ export const H4 = styled.p`
   margin: ${({theme}) => theme.spaces.base(0.5)} 0;
 `;
 
-export const Paragraph = styled.p`
+export const ParagraphStyle = css`
   color: ${({theme}) => theme.UI.colors.darkGrey};
   font-family: ${({theme}) => theme.fonts.fontOpenSans};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
   font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
   line-height: 2.5rem;
   margin: ${({theme}) => theme.spaces.base(0.5)} 0 ${({theme}) => theme.spaces.base(1)} 0;
+`
+
+export const Paragraph = styled.p`
+  ${ParagraphStyle};
 `;
 
 export const ButtonText = css`

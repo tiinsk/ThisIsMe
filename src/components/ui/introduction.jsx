@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 
 import cv_en_pdf from '../../assets/resume-EN.pdf';
 import cv_fi_pdf from '../../assets/resume-FI.pdf';
-import {Paragraph} from '../../theme/fonts';
+import {ParagraphStyle} from '../../theme/fonts';
 import {LinkButton} from './presentational/button';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Github } from '../icons/github';
@@ -20,6 +20,9 @@ const StyledIntroduction = styled.div`
     .summary-text {
       margin-top: 0;
       margin-bottom: ${({theme}) => theme.spaces.base(1)};
+      p {
+        ${ParagraphStyle};
+      }
     }
     
     .links {
@@ -78,7 +81,7 @@ const Introduction = ({aboutMe, contacts}) => {
   return (
     <StyledIntroduction>
       <div className="summary">
-        <Paragraph className="summary-text">{aboutMe.body}</Paragraph>
+        <div className="summary-text" dangerouslySetInnerHTML={{ __html: aboutMe.body }}/>
         <div className="links">
           <div className="link">
             <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
