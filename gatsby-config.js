@@ -40,7 +40,6 @@ module.exports = {
           'Quicksand:300,400,700',
           'PT+Serif:700',
           'Source+Code+Pro:400',
-          'Material+Icons',
         ]
       },
       timeout: 20000 // = 20 seconds
