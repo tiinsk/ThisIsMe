@@ -1,11 +1,14 @@
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
+import { HelmetDatoCms } from 'gatsby-source-datocms';
+
 import { Anchor } from './theme/fonts';
 import { theme } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
   body{
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     margin: 0;
     font-size: 1.5rem;
   
@@ -60,13 +63,26 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query MetaQuery {
+      site: datoCmsSite {
+        faviconMetaTags {
+          ...GatsbyDatoCmsFaviconMetaTags
+        }
+      }
+    }
+  `);
+
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <HelmetDatoCms favicon={data.site.faviconMetaTags} />
         {children}
       </ThemeProvider>
     </React.Fragment>
   );
-}
+};
+
+export default Layout;
