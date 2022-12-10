@@ -32,10 +32,10 @@ const Contacts = ({data}) => {
       </div>
 
       <div className="detail">
-        <span>{divider}</span>{data.contacts.phoneLink}<span>{divider}</span>
+        <span>{divider}</span>{data.contacts.links[2].title}<span>{divider}</span>
       </div>
       <div className="detail">
-        <span>{divider}</span>{data.contacts.emailLink}<span>{divider}</span>
+        <span>{divider}</span>{data.contacts.links[3].title}<span>{divider}</span>
       </div>
 
       <div className="detail">
@@ -44,15 +44,15 @@ const Contacts = ({data}) => {
 
       <div className="detail">
         <span>{divider}</span>
-        <a href={data.contacts.githubLink} target="_blank" rel="noopener noreferrer">
-          {data.contacts.githubLink}
+        <a href={data.contacts.links[0].url} target="_blank" rel="noopener noreferrer">
+          {data.contacts.links[0].url}
         </a>
         <span>{divider}</span>
       </div>
       <div className="detail">
         <span>{divider}</span>
-        <a href={data.contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
-          {data.contacts.linkedinLink}
+        <a href={data.contacts.links[1].url} target="_blank" rel="noopener noreferrer">
+          {data.contacts.links[1].url}
         </a>
         <span>{divider}</span>
       </div>

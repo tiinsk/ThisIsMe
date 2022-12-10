@@ -59,28 +59,14 @@ const Project = ({project, skillsTitle, linksTitle}) => {
           }
         </div>
         <div className="links">
-          {(project.githubUrl || project.websiteUrl || project.designsUrl) && <div className="link-title">{linksTitle}:</div>}
-          {project.websiteUrl &&
-            <div>
-              <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
-                {project.websiteUrl}
+          {project.links.length > 0 && <div className="link-title">{linksTitle}:</div>}
+          {project.links.map((link) => (
+            <div key={link.url}>
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.url}
               </a>
             </div>
-          }
-          { project.githubUrl &&
-            <div>
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                {project.githubUrl}
-              </a>
-            </div>
-          }
-          { project.designUrl &&
-          <div>
-            <a href={project.designUrl} target="_blank" rel="noopener noreferrer">
-              {project.designUrl}
-            </a>
-          </div>
-          }
+          ))}
         </div>
       </div>
     </StyledConsoleProject>

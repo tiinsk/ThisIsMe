@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import DashedLine from './dashed-line';
-import moment from 'moment';
 
 const StyledConsoleEduItem = styled.div`
   margin: 0.5rem 0;
@@ -27,14 +26,14 @@ const EduItem = ({ data }) => {
     <StyledConsoleEduItem>
       <DashedLine />
       <div className="dates">
-        <span>{`${moment(data.startDate).format('MM/YYYY')}`} - </span>
-        {data.endDate ? (
-          <span>{`${moment(data.endDate).format('MM/YYYY')}`}</span>
-        ) : null}
+        <span>{data.startDate} - </span>
+        {data.endDate ? <span>{data.endDate}</span> : null}
       </div>
       <div>
-        <span className="school">{data.school}</span> - {' '}
-        <span className="edu-title">{`${data.title} ${data.program ? ' - ' : ''}`}</span>{' '}
+        <span className="school">{data.school}</span> -{' '}
+        <span className="edu-title">{`${data.title} ${
+          data.program ? ' - ' : ''
+        }`}</span>{' '}
         {data.program ? <span className="program">{data.program}</span> : null}
       </div>
 

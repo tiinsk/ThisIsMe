@@ -8,6 +8,7 @@ import {LinkButton} from './presentational/button';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Github } from '../icons/github';
 import { Linkedin } from '../icons/linkedin';
+import { Icon } from '../icons';
 
 const ImageSize = '180px';
 
@@ -83,30 +84,14 @@ const Introduction = ({aboutMe, contacts}) => {
       <div className="summary">
         <div className="summary-text" dangerouslySetInnerHTML={{ __html: aboutMe.body }}/>
         <div className="links">
-          <div className="link">
-            <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
-              <Github size="17px" color="black"/>
-              <span>{contacts.githubName}</span>
-            </a>
-          </div>
-          <div className="link">
-            <a className="link-anchor" href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
-              <Linkedin size="17px" color="black"/>
-              <span>{contacts.linkedinName}</span>
-            </a>
-          </div>
-          <div className="link">
-            <a className="link-anchor" href={`mailto:${contacts.emailLink}`}>
-              <span className="icon">@</span>
-              <span>{contacts.emailLink}</span>
-            </a>
-          </div>
-          <div className="link">
-            <a className="link-anchor" href={`tel:${contacts.phoneLink}`}>
-              <i className="material-icons">phone</i>
-              <span>{contacts.phoneLink}</span>
-            </a>
-          </div>
+          {contacts.links.map((link) => (
+            <div key={link.url} className="link">
+              <a className="link-anchor" href={link.url} target={link.target} rel="noopener noreferrer">
+                <Icon type={link.icon} size="2.2rem"/>
+                <span>{link.title}</span>
+              </a>
+            </div>
+          ))}
         </div>
         {/*<LinkButton
           target="_blank"

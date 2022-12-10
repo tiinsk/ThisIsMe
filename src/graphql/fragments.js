@@ -37,14 +37,12 @@ export const aboutMeFragment = graphql`
 export const contactFragment = graphql`
   fragment ContactFragment on DatoCmsContact {
     title
-    emailLink
-    emailName
-    githubLink
-    githubName
-    linkedinLink
-    linkedinName
-    phoneLink
-    phoneName
+    links {
+      title
+      url
+      icon
+      target
+    }
   }
 `;
 
@@ -54,8 +52,8 @@ export const workHistoryFragment = graphql`
     workHistoryList {
       company
       title
-      startDate
-      endDate
+      startDate(locale: $locale, formatString: "MMM YYYY")
+      endDate(locale: $locale, formatString: "MMM YYYY")
       body
       peakSkills {
         name
@@ -74,8 +72,8 @@ export const educationFragment = graphql`
       title
       school
       program
-      startDate
-      endDate
+      startDate(locale: $locale, formatString: "MMM YYYY")
+      endDate(locale: $locale, formatString: "MMM YYYY")
       body
     }
   }
@@ -149,12 +147,11 @@ export const projectsFragment = graphql`
     projects {
       title
       body
-      githubLinkName
-      githubUrl
-      websiteName
-      websiteUrl
-      designName
-      designUrl
+      links {
+        title
+        icon
+        url
+      }
       peakSkills {
         name
       }
@@ -183,4 +180,38 @@ export const interestsFragment = graphql`
       alt
     }
   }
+`;
+
+
+export const ConsoleWorkHistoryFragment = graphql`
+    fragment ConsoleWorkHistoryFragment on DatoCmsWorkHistorySection {
+        title
+        workHistoryList {
+            company
+            title
+            startDate(formatString: "MM/YYYY")
+            endDate(formatString: "MM/YYYY")
+            body
+            peakSkills {
+                name
+            }
+            skills {
+                name
+            }
+        }
+    }
+`;
+
+export const ConsoleEducationFragment = graphql`
+    fragment ConsoleEducationFragment on DatoCmsEducationSection {
+        title
+        educationList {
+            title
+            school
+            program
+            startDate(formatString: "MM/YYYY")
+            endDate(formatString: "MM/YYYY")
+            body
+        }
+    }
 `;
