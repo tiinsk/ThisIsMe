@@ -63,8 +63,8 @@ const StyledSkillMeter = styled.div`
     margin-left: ${({theme}) => theme.spaces.base(0.5)};
 
     .skill-name {
-      font-family: ${({theme}) => theme.fonts.fontQuicksand};
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
+      font-family: ${({theme}) => theme.fonts.fontOpenSans};
+      font-weight: ${({theme}) => theme.fontWeights.fontWeightLight};
       color: ${({theme}) => theme.UI.colors.grey};
     }
 

@@ -9,7 +9,6 @@ export const variables = {
   },
   fonts: {
     fontLato: 'Lato, sans-serif',
-    fontQuicksand: 'Quicksand, sans-serif',
     fontOpenSans: 'Open sans, sans-serif',
     fontPTSerif: 'PT Serif, serif',
     fontSourceCode: 'Source Code Pro, monospace',
