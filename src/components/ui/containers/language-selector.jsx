@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'gatsby';
 import styled from 'styled-components/macro';
 
-import {languageOptions} from '../../../i18n/languages';
 import {ConsoleIcon} from './console-icon';
 
 
@@ -65,12 +64,12 @@ const LanguageSelector = () => {
     <StyledLanguageSelector>
       <Link className="lang" activeClassName="selected" to="/fi" replace={true}  onClick={() => onClickLink('fi')}>
         <div className="text-wrapper">
-          {languageOptions.fi}
+          Suomi
         </div>
       </Link>
       <Link className="lang" activeClassName="selected" to="/" replace={true} onClick={() => onClickLink('en')}>
         <div className="text-wrapper">
-          {languageOptions.en}
+          English
         </div>
       </Link>
       <div className="lang" style={{cursor: 'default'}}>

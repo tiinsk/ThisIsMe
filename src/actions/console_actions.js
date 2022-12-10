@@ -1,5 +1,4 @@
 import {some} from 'lodash';
-import {languageOptions} from '../i18n/languages';
 
 export const ADD_COMMAND = 'ADD_COMMAND';
 
@@ -15,6 +14,8 @@ export const commands = {
 
 export const helpCommand = 'help';
 export const allCommand = 'all';
+
+const languageOptions = ['fi', 'en']
 
 export function addCommand(command){
   return{
@@ -44,7 +45,7 @@ export function parseCommand(command){
         command: mainCommand,
         language: 'en'
       };
-      if(commandArray[1] === '-l' && commandArray[2] && Object.keys(languageOptions).some(lang => lang === commandArray[2])){
+      if(commandArray[1] === '-l' && commandArray[2] && languageOptions.some(lang => lang === commandArray[2])){
         command.language = commandArray[2];
       }
       else if(commandArray[1]){

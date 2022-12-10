@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'gatsby';
 import styled from 'styled-components/macro';
 
-import {languageOptions} from '../../../i18n/languages';
 import {ConsoleIcon} from './console-icon';
 
 const StyledLanguageSelectorSmall = styled.div`
@@ -54,10 +53,10 @@ const LanguageSelectorSmall = ({onCloseMenu}) => {
   return (
     <StyledLanguageSelectorSmall>
       <Link className="lang" activeClassName="selected" to="/fi" onClick={() => onClickLink('fi')}>
-        <span>{languageOptions.fi}</span>
+        <span>Suomi</span>
       </Link>
       <Link className="lang" activeClassName="selected" to="/" onClick={() => onClickLink('en')}>
-        <span>{languageOptions.en}</span>
+        <span>English</span>
       </Link>
       <div className="lang">
         <Link to="/console" style={{height: '26px'}} onClick={onCloseMenu}>
