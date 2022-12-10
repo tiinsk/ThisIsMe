@@ -22,13 +22,6 @@ module.exports = {
       'trackingId': '-'
     }
   }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      'name': 'images',
-      'path': './src/images/'
-    },
-    __key: 'images'
-  }, {
     resolve: 'gatsby-plugin-react-svg',
   }, 'gatsby-plugin-lodash', {
     resolve: 'gatsby-plugin-web-font-loader',
