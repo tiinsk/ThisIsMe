@@ -36,16 +36,12 @@
     "styled-components": "^5.3.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --ext .js --ext .jsx ./src",
-    "gatsby:develop": "NODE_ENV=development && gatsby develop",
-    "gatsby:start": "gatsby develop",
-    "gatsby:build": "gatsby build",
-    "gatsby:serve": "gatsby serve",
-    "gatsby:clean": "gatsby clean"
+    "develop": "NODE_ENV=development && gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "eslint --ext .js --ext .jsx ./src"
   },
   "browserslist": {
     "production": [
