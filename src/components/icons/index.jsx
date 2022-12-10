@@ -8,6 +8,8 @@ import { Email } from './email';
 import { Public } from './public';
 import { Palette } from './palette';
 import { ChevronRight } from './chevron-right';
+import { ArrowForward } from './arrow-forward';
+import { ArrowBack } from './arrow-back';
 
 const getIcon = (type, size, color) => {
   switch (type) {
@@ -25,6 +27,10 @@ const getIcon = (type, size, color) => {
       return <Palette size={size} color={color} />;
     case 'chevron-right':
       return <ChevronRight size={size} color={color} />;
+    case 'arrow-forward':
+      return <ArrowForward size={size} color={color} />;
+    case 'arrow-back':
+      return <ArrowBack size={size} color={color} />;
     default:
       return undefined;
   }
