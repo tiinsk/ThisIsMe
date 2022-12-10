@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import styled from 'styled-components/macro';
 
 import {parseCommand} from '../../../actions/console_actions';
+import { Icon } from '../../icons';
 
 const StyledConsoleCommandLine = styled.div`
   width: 100%;
@@ -88,7 +89,7 @@ const CommandLine = ({parseCommand, inputRef}) => {
 
   return(
     <StyledConsoleCommandLine>
-      <i className="material-icons line-icon">keyboard_arrow_right</i>
+      <Icon type="chevron-right" subTheme="console" color="green" size="2rem"/>
       <input
         className="command-input"
         id="command-input"

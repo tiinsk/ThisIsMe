@@ -3,38 +3,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Anchor } from './theme/fonts';
 import { theme } from './theme';
 
-export const GlobalStyle = createGlobalStyle`  
-  .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
-
-  .wf-loading, .wf-materialicons-n4-inactive {
-    .material-icons {
-      display: none;
-    }
-  }
-
+export const GlobalStyle = createGlobalStyle`
   body{
     font-family: "Open Sans";
     margin: 0;
