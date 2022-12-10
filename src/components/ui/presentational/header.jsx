@@ -4,10 +4,9 @@ import {GatsbyImage} from 'gatsby-plugin-image';
 
 import {PageName, PageSubtitle, PageTitle} from '../../../theme/fonts';
 import LanguageSelector from '../containers/language-selector';
-import HoverBubble, {StyledHoverBubble} from './hover-bubble';
+import {StyledHoverBubble} from './hover-bubble';
 import Navbar from './navbar';
-import { Linkedin } from '../../icons/linkedin';
-import { Github } from '../../icons/github';
+import { Icon } from '../../icons';
 
 const StyledHeader = styled.div`
   width: calc(100vw - ${({theme}) => theme.rightMenuWidth});
@@ -124,30 +123,13 @@ const Header = ({onScrollToRef, contacts, header}) => {
       </div>
       <div className="right-menu">
         <div className="links">
-          <div className="link">
-            <a className="link-anchor" href={contacts.githubLink} target="_blank" rel="noopener noreferrer">
-              <Github height="17px" color="black"/>
-            </a>
-            <HoverBubble text={contacts.githubLink} href={contacts.githubLink} target="_blank"/>
-          </div>
-          <div className="link">
-            <a className="link-anchor" href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer">
-              <Linkedin height="17px" color="black"/>
-            </a>
-            <HoverBubble text={contacts.linkedinLink} href={contacts.linkedinLink} target="_blank" rel="noopener noreferrer"/>
-          </div>
-          <div className="link">
-            <a className="link-anchor" href={`mailto:${contacts.emailLink}`}>
-              <span>@</span>
-            </a>
-            <HoverBubble text={contacts.emailLink} href={`mailto:${contacts.emailLink}`}/>
-          </div>
-          <div className="link">
-            <a className="link-anchor" href={`tel:${contacts.phoneLink}`}>
-              <i className="material-icons">phone</i>
-            </a>
-            <HoverBubble text={contacts.phoneLink} href={`tel:${contacts.phoneLink}`}/>
-          </div>
+          {contacts.links.map((link) => (
+            <div key={link.url} className="link">
+              <a className="link-anchor" href={link.url} target={link.target} rel="noopener noreferrer">
+                <Icon type={link.icon}/>
+              </a>
+            </div>
+          ))}
         </div>
         <LanguageSelector/>
       </div>

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { graphql, navigate } from 'gatsby';
-import moment from 'moment';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 
 import Home from '../components/ui/home';
@@ -8,7 +7,6 @@ import Layout from '../layout';
 
 const IndexPage = ({ data, pageContext }) => {
   useEffect(() => {
-    moment.locale(pageContext.locale);
     const previousLang = localStorage.getItem('language');
     if (previousLang && previousLang !== pageContext.locale) {
       const prefix = pageContext.locale === 'en' ? '/fi' : '/';

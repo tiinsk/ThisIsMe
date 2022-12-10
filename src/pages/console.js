@@ -52,10 +52,10 @@ export const query = graphql`
       ...ContactFragment
     }
     workHistoryFI: datoCmsWorkHistorySection(locale: { eq: "fi" }) {
-      ...WorkHistoryFragment
+      ...ConsoleWorkHistoryFragment
     }
     educationFI: datoCmsEducationSection(locale: { eq: "fi" }) {
-      ...EducationFragment
+      ...ConsoleEducationFragment
     }
     skillsFI: datoCmsSkillSection(locale: { eq: "fi" }) {
       ...SkillsFragment
@@ -76,10 +76,10 @@ export const query = graphql`
       ...ContactFragment
     }
     workHistoryEN: datoCmsWorkHistorySection(locale: { eq: "en" }) {
-      ...WorkHistoryFragment
+      ...ConsoleWorkHistoryFragment
     }
     educationEN: datoCmsEducationSection(locale: { eq: "en" }) {
-      ...EducationFragment
+      ...ConsoleEducationFragment
     }
     skillsEN: datoCmsSkillSection(locale: { eq: "en" }) {
       ...SkillsFragment
