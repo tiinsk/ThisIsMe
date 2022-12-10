@@ -282,10 +282,10 @@ const Project = ({ project, index }) => {
             </div>
           </SRLWrapper>
           <button className="arrow arrow-back" onClick={onBack}>
-            <i className="material-icons">arrow_back</i>
+            <Icon type="arrow-back" color="white" size="2.4rem"/>
           </button>
           <button className="arrow arrow-forward" onClick={onForward}>
-            <i className="material-icons">arrow_forward</i>
+            <Icon type="arrow-forward" color="white" size="2.4rem"/>
           </button>
         </div>
       </SimpleReactLightbox>
