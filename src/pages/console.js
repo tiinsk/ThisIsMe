@@ -1,7 +1,6 @@
 import React from 'react';
 import ConsoleSite from '../components/console/console-site';
 import { graphql } from 'gatsby';
-import { HelmetDatoCms } from 'gatsby-source-datocms';
 import Layout from '../layout';
 
 const Console = ({ data }) => {
@@ -30,7 +29,6 @@ const Console = ({ data }) => {
 
   return (
     <Layout>
-      <HelmetDatoCms favicon={data.site.faviconMetaTags} />
       <ConsoleSite data={consoleData} />
     </Layout>
   );
@@ -89,11 +87,6 @@ export const query = graphql`
     }
     interestsEN: datoCmsInterestSection(locale: { eq: "en" }) {
       ...InterestsFragment
-    }
-    site: datoCmsSite {
-      faviconMetaTags {
-        ...GatsbyDatoCmsFaviconMetaTags
-      }
     }
   }
 `;
