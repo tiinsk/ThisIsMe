@@ -17,11 +17,6 @@ module.exports = {
       'apiToken': process.env.datoApiToken,
     }
   }, 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp', 'gatsby-plugin-styled-components', {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      'trackingId': '-'
-    }
-  }, {
     resolve: 'gatsby-plugin-react-svg',
   }, 'gatsby-plugin-lodash', {
     resolve: 'gatsby-plugin-web-font-loader',
@@ -30,7 +25,6 @@ module.exports = {
         families: [
           'Open+Sans:300,400,700',
           'Lato:300,400,700',
-          'Quicksand:300,400,700',
           'PT+Serif:700',
           'Source+Code+Pro:400',
         ]

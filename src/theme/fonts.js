@@ -64,7 +64,7 @@ export const H1 = css`
 
 export const H2 = styled.h2`
   color: ${({theme}) => theme.UI.colors.berry};
-  font-family: ${({theme}) => theme.fonts.fontQuicksand};
+  font-family: ${({theme}) => theme.fonts.fontOpenSans};
   font-weight: ${({theme}) => theme.fontWeights.fontWeightMedium};
   font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
   text-transform: capitalize;
