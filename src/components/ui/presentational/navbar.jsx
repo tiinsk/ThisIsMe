@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import LanguageSelectorSmall from '../containers/language-selector-small';
+import { Icon } from '../../icons';
 
 const StyledNavbar = styled.nav`
   position: absolute;
   top: 0;
   width: 100%;
-  height: ${({theme}) => theme.navBarHeight};
+  height: ${({ theme }) => theme.navBarHeight};
 
   .nav-list {
     height: 100%;
@@ -19,21 +20,20 @@ const StyledNavbar = styled.nav`
     justify-content: space-around;
 
     padding: 0;
-    margin: 0 ${({theme}) => theme.spaces.base(2)};
+    margin: 0 ${({ theme }) => theme.spaces.base(2)};
 
     .nav-item {
-      font-size: ${({theme}) => theme.fontSizes.fontSizeDefault};
+      font-size: ${({ theme }) => theme.fontSizes.fontSizeDefault};
       text-transform: uppercase;
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
-      color: ${({theme}) => theme.UI.colors.white};
+      font-weight: ${({ theme }) => theme.fontWeights.fontWeightRegular};
+      color: ${({ theme }) => theme.UI.colors.white};
       text-align: center;
 
       cursor: pointer;
     }
   }
- 
 
-  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+  @media (max-width: ${({ theme }) => theme.breakpoints.smSize}) {
     .nav-list {
       display: none;
     }
@@ -44,16 +44,16 @@ const StyledMobileNavbar = styled.div`
   display: none;
   justify-content: flex-end;
 
-  .home-icon{
+  .home-icon {
     position: absolute;
     top: 0;
     right: 0;
-    
-    padding: ${({theme}) => theme.spaces.baseSize};
-    
+
+    padding: ${({ theme }) => theme.spaces.baseSize};
+
     .material-icons {
-      color: ${({theme}) => theme.UI.colors.white};
-      font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
+      color: ${({ theme }) => theme.UI.colors.white};
+      font-size: ${({ theme }) => theme.fontSizes.fontSizeXXLarge};
     }
   }
 
@@ -70,11 +70,11 @@ const StyledMobileNavbar = styled.div`
     right: 0;
     bottom: 0;
     z-index: 1;
-    
+
     margin: 0;
     padding: 0;
 
-    background: ${({theme}) => theme.UI.colors.white};
+    background: ${({ theme }) => theme.UI.colors.white};
 
     flex-direction: column;
     justify-content: center;
@@ -82,69 +82,70 @@ const StyledMobileNavbar = styled.div`
 
     .mobile-nav-item {
       display: block;
-      font-size: ${({theme}) => theme.fontSizes.fontSizeXLarge};
-      margin-bottom: ${({theme}) => theme.spaces.baseSize};
-      color: ${({theme}) => theme.UI.colors.black};
-      
+      font-size: ${({ theme }) => theme.fontSizes.fontSizeXLarge};
+      margin-bottom: ${({ theme }) => theme.spaces.baseSize};
+      color: ${({ theme }) => theme.UI.colors.black};
+
       text-transform: uppercase;
-      font-weight: ${({theme}) => theme.fontWeights.fontWeightRegular};
+      font-weight: ${({ theme }) => theme.fontWeights.fontWeightRegular};
       cursor: pointer;
     }
 
     .close {
-      color: ${({theme}) => theme.UI.colors.black};
-      padding: ${({theme}) => theme.spaces.baseSize};
+      color: ${({ theme }) => theme.UI.colors.black};
+      padding: ${({ theme }) => theme.spaces.baseSize};
       position: absolute;
       top: 0;
       right: 0;
 
       cursor: pointer;
 
-      font-size: ${({theme}) => theme.fontSizes.fontSizeXXLarge};
+      font-size: ${({ theme }) => theme.fontSizes.fontSizeXXLarge};
     }
     .language-selector-small {
       .lang {
-        color: $${({theme}) => theme.UI.colors.lightGrey};
-        border-color: $${({theme}) => theme.UI.colors.lightGrey};
+        color: ${({ theme }) => theme.UI.colors.lightGrey};
+        border-color: ${({ theme }) => theme.UI.colors.lightGrey};
         &.selected {
           color: white;
         }
       }
     }
   }
-  
-  @media (max-width: ${({theme}) => theme.breakpoints.smSize}){
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smSize}) {
     display: flex;
   }
 `;
 
-
 class Navbar extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      openMenu: false
-    }
+      openMenu: false,
+    };
   }
 
-  toggleMenu() {
-    if (this.state.openMenu) {
+  setMobileMenuClass(setOpen) {
+    if (!setOpen) {
       document.body.classList.remove('mobile-menu-open');
     } else {
       document.body.classList.add('mobile-menu-open');
     }
+  }
+
+  toggleMenu() {
+    this.setMobileMenuClass(!this.state.openMenu)
 
     this.setState({
-      openMenu: !this.state.openMenu
-    })
+      openMenu: !this.state.openMenu,
+    });
   }
 
   onMobileNavItemClick(navItem) {
     this.toggleMenu();
     this.props.onScrollToRef(navItem);
   }
-
 
   render() {
     return (
@@ -185,9 +186,11 @@ class Navbar extends React.Component {
         </StyledNavbar>
         <StyledMobileNavbar>
           <button className="home-icon" onClick={() => this.toggleMenu()}>
-            <i className="material-icons">menu</i>
+            <Icon type="menu" size="2.4rem" color="white" />
           </button>
-          <ul className={`mobile-nav-items ${this.state.openMenu ? 'open' : ''}`}>
+          <ul
+            className={`mobile-nav-items ${this.state.openMenu ? 'open' : ''}`}
+          >
             <li
               className="mobile-nav-item"
               onClick={() => this.onMobileNavItemClick('aboutMe')}
@@ -224,16 +227,15 @@ class Navbar extends React.Component {
             >
               {this.props.header.interests}
             </li>
-            <LanguageSelectorSmall onCloseMenu={() => this.toggleMenu()}/>
-            <i
-              className="close material-icons"
-              onClick={() => this.toggleMenu()}
-            >clear</i>
+            <LanguageSelectorSmall onCloseMenu={() => this.setMobileMenuClass(false)} />
+            <button className="close" onClick={() => this.toggleMenu()}>
+              <Icon type="clear" size="2.4rem" />
+            </button>
           </ul>
         </StyledMobileNavbar>
       </>
-    )
+    );
   }
-};
+}
 
 export default Navbar;

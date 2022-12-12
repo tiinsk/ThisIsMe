@@ -82,7 +82,7 @@ export const educationFragment = graphql`
 export const skillsFragment = graphql`
   fragment SkillsFragment on DatoCmsSkillSection {
     title
-    ratlessTopSkillTitle
+    ratelessTopSkillTitle
     ratelessTopSkillBody
     ratelessOtherSkillTitle
     ratelessOtherSkillBody

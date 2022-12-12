@@ -59,7 +59,7 @@ const LanguageSelectorSmall = ({onCloseMenu}) => {
         <span>English</span>
       </Link>
       <div className="lang">
-        <Link to="/console" style={{height: '26px'}} onClick={onCloseMenu}>
+        <Link to="/console" style={{height: '26px'}} onClick={() => onCloseMenu()}>
           <ConsoleIcon/>
         </Link>
       </div>
