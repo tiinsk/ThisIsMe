@@ -10,6 +10,8 @@ import { Palette } from './palette';
 import { ChevronRight } from './chevron-right';
 import { ArrowForward } from './arrow-forward';
 import { ArrowBack } from './arrow-back';
+import { Menu } from './menu';
+import { Clear } from './clear';
 
 const getIcon = (type, size, color) => {
   switch (type) {
@@ -31,6 +33,10 @@ const getIcon = (type, size, color) => {
       return <ArrowForward size={size} color={color} />;
     case 'arrow-back':
       return <ArrowBack size={size} color={color} />;
+    case 'menu':
+      return <Menu size={size} color={color} />;
+    case 'clear':
+      return <Clear size={size} color={color} />;
     default:
       return undefined;
   }
