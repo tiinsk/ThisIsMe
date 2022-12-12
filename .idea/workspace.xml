@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5935a594-1f34-4efa-b617-de7a1a538ef0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/icons/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/containers/language-selector-small.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/containers/language-selector-small.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/presentational/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/presentational/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/rateless-skills.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/rateless-skills.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphql/fragments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/fragments.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectId" id="1h9NmKgx9ZiTwWqZ7GOJhjAYz3O" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="inde&#9;FILE&#9;file:///Users/tiina/thisisme/index.html&#10;proje&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/project.jsx&#10;anmi&#9;FILE&#9;file:///Users/tiina/thisisme/node_modules/animate.css/animate.min.css&#10;time&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/time_bubble.jsx&#10;home&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/containers/home.jsx&#10;home.s&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/home.scss&#10;conta&#9;FILE&#9;file:///Users/tiina/thisisme/app/data/contacts.js&#10;map&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/console/presentational/map.jsx&#10;tra&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/travel_map.jsx&#10;console-con&#9;null&#9;null&#10;main&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/main.scss&#10;projects&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/console/presentational/projects.jsx&#10;summary-te&#9;null&#9;null&#10;image-wrapp&#9;null&#9;null&#10;skills.&#9;FILE&#9;file:///Users/tiina/thisisme/app/i18n/en/skills.js&#10;skills.js&#9;FILE&#9;file:///Users/tiina/thisisme/app/data/skills.js&#10;hea&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/header.jsx&#10;education&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/education.jsx&#10;wo&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/work_history.jsx&#10;projec&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/project.scss&#10;project&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/console/presentational/project.jsx&#10;work&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/work_history.jsx&#10;work_hi&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/work_history.jsx&#10;work_i&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/work_item.jsx&#10;travel&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/travel_map.jsx&#10;trave&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/travel_map.scss&#10;in&#9;FILE&#9;file:///Users/tiina/thisisme/index.html&#10;skills&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/skills.jsx&#10;hover&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/hover_bubble.scss&#10;index&#9;FILE&#9;file:///Users/tiina/thisisme/index.html&#10;intere&#9;FILE&#9;file:///Users/tiina/thisisme/app/i18n/en/interests.js&#10;console/in&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/console/presentational/interests.jsx&#10;skill&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/skill.scss&#10;data/&#9;FILE&#9;file:///Users/tiina/thisisme/app/data&#10;he&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/header.scss&#10;en.&#9;FILE&#9;file:///Users/tiina/thisisme/app/i18n/en/en.js&#10;pro&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/projects.jsx&#10;edu&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/education.jsx&#10;se&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/section.scss&#10;sec&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/section.jsx&#10;ui_&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/ui_site.jsx&#10;na&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/navbar.jsx&#10;fi.&#9;FILE&#9;file:///Users/tiina/thisisme/app/i18n/fi/fi.js&#10;heade&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/presentational/header.jsx&#10;ma&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/main.scss&#10;intro&#9;FILE&#9;file:///Users/tiina/thisisme/app/stylesheets/ui/introduction.scss&#10;Int&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/introduction.jsx&#10;Intro&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/console/presentational/introduction.jsx&#10;ui_si&#9;FILE&#9;file:///Users/tiina/thisisme/app/components/ui/ui_site.jsx&#10;summary-b&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/icons" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/icons" />
+      <recent name="$PROJECT_DIR$/src/assets/projects" />
+      <recent name="$PROJECT_DIR$/src/assets/projects/cottagePage" />
+      <recent name="$PROJECT_DIR$/src/assets/projects/travelPics" />
+      <recent name="$PROJECT_DIR$/src/assets/projects/thisIsMe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/projects/gymApp" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/components/ui" />
+      <recent name="$PROJECT_DIR$/src/components/ui/containers" />
+      <recent name="$PROJECT_DIR$/src/assets/projects/cottagePage" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5935a594-1f34-4efa-b617-de7a1a538ef0" name="Default Changelist" comment="" />
+      <created>1559068838410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559068838410</updated>
+      <workItem from="1559068839998" duration="123917000" />
+      <workItem from="1561585664339" duration="3224000" />
+      <workItem from="1562961067570" duration="2430000" />
+      <workItem from="1564341330247" duration="2760000" />
+      <workItem from="1565576835059" duration="857000" />
+      <workItem from="1599419506633" duration="7990000" />
+      <workItem from="1599937496825" duration="32526000" />
+      <workItem from="1601235036757" duration="78098000" />
+      <workItem from="1604832788518" duration="578000" />
+      <workItem from="1605258964373" duration="2096000" />
+      <workItem from="1613577872381" duration="1324000" />
+      <workItem from="1613668659542" duration="2423000" />
+      <workItem from="1618850072029" duration="6365000" />
+      <workItem from="1623417969649" duration="1226000" />
+      <workItem from="1623570248624" duration="282000" />
+      <workItem from="1623579104342" duration="4625000" />
+      <workItem from="1632232373206" duration="10965000" />
+      <workItem from="1635070975985" duration="577000" />
+      <workItem from="1640182777671" duration="335000" />
+      <workItem from="1640701607926" duration="14189000" />
+      <workItem from="1642610863531" duration="8000" />
+      <workItem from="1655541714607" duration="1670000" />
+      <workItem from="1658069678705" duration="4000" />
+      <workItem from="1661435073782" duration="1102000" />
+      <workItem from="1663144610269" duration="2769000" />
+      <workItem from="1667926144536" duration="9418000" />
+      <workItem from="1668107548048" duration="11825000" />
+      <workItem from="1668621412674" duration="65189000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
